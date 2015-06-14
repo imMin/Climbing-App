@@ -21,6 +21,7 @@
 		6F74C41B1B2AC17500C0FD85 /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F74C41A1B2AC17500C0FD85 /* ConnectViewController.swift */; };
 		6F74C41D1B2D5F8A00C0FD85 /* LogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F74C41C1B2D5F8A00C0FD85 /* LogCell.swift */; };
 		6F8B0DD91B2D839E0014BF02 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F8B0DD81B2D839E0014BF02 /* MapKit.framework */; };
+		6F8B0DDB1B2D96550014BF02 /* BrowseCragCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B0DDA1B2D96550014BF02 /* BrowseCragCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		6F74C41A1B2AC17500C0FD85 /* ConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
 		6F74C41C1B2D5F8A00C0FD85 /* LogCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogCell.swift; sourceTree = "<group>"; };
 		6F8B0DD81B2D839E0014BF02 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6F8B0DDA1B2D96550014BF02 /* BrowseCragCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseCragCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				6F74C3F01B29FA5D00C0FD85 /* AppDelegate.swift */,
 				6F74C3F21B29FA5D00C0FD85 /* ViewController.swift */,
 				6F74C3F41B29FA5D00C0FD85 /* Main.storyboard */,
+				6F8B0DDA1B2D96550014BF02 /* BrowseCragCell.swift */,
 				6F74C41C1B2D5F8A00C0FD85 /* LogCell.swift */,
 				6F74C41A1B2AC17500C0FD85 /* ConnectViewController.swift */,
 				6F74C4181B2AC16A00C0FD85 /* SavedViewController.swift */,
@@ -245,6 +248,7 @@
 				6F74C3F11B29FA5D00C0FD85 /* AppDelegate.swift in Sources */,
 				6F74C4131B2ABFCA00C0FD85 /* MyLogViewController.swift in Sources */,
 				6F74C4151B2ABFDB00C0FD85 /* BrowseViewController.swift in Sources */,
+				6F8B0DDB1B2D96550014BF02 /* BrowseCragCell.swift in Sources */,
 				6F74C41B1B2AC17500C0FD85 /* ConnectViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

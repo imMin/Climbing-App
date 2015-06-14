@@ -8,14 +8,28 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class BrowseViewController: UIViewController {
+class BrowseViewController: UIViewController, CLLocationManagerDelegate{
 	
 	@IBOutlet weak var locationMapView: MKMapView!
+	@IBOutlet weak var cragTableView: UITableView!
+	
+	
+	var locationManager: CLLocationManager!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
 		locationMapView.showsUserLocation = true
+		
+		if (CLLocationManager.locationServicesEnabled())
+		{
+			locationManager = CLLocationManager()
+			locationManager.delegate = self
+			locationManager.desiredAccuracy = kCLLocationAccuracyBest
+			locationManager.requestAlwaysAuthorization()
+			locationManager.startUpdatingLocation()
+		}
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,14 +38,14 @@ class BrowseViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
+	func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+		let location = locations.last as! CLLocation
+		
+		let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+		let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+		
+		self.locationMapView.setRegion(region, animated: true)
+	}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
