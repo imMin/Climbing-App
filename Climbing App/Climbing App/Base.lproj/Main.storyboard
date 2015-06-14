@@ -97,9 +97,62 @@
                     <view key="view" contentMode="scaleToFill" id="o7K-tj-tSg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.2666666667" green="0.66666666669999997" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="lUw-mu-vgj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="RIm-HE-dHC" userLabel="Graph View">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" red="0.2666666667" green="0.66666666669999997" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="LHl-D1-l46" userLabel="Log Table View">
+                                        <rect key="frame" x="0.0" y="300" width="320" height="600"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LogCell" rowHeight="60" id="chi-jI-bv4" customClass="LogCell" customModule="Climbing_App" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="22" width="320" height="60"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="chi-jI-bv4" id="gck-IO-eZW">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.10a" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oyk-bU-ttf">
+                                                            <rect key="frame" x="20" y="15" width="320" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Granite Planet San Francisco" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JC3-G8-eh8">
+                                                            <rect key="frame" x="70" y="19" width="230" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="levelLabel" destination="oyk-bU-ttf" id="5rS-s3-qaB"/>
+                                                    <outlet property="locationLabel" destination="JC3-G8-eh8" id="DPG-1Z-tk5"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ifk-CA-RtQ"/>
+                    <connections>
+                        <outlet property="graphView" destination="RIm-HE-dHC" id="vcF-eH-JYu"/>
+                        <outlet property="logTableView" destination="LHl-D1-l46" id="6hK-vM-Cpn"/>
+                        <outlet property="scrollView" destination="lUw-mu-vgj" id="19S-Qz-8vN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CO8-ci-kd9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,9 +165,18 @@
                     <view key="view" contentMode="scaleToFill" id="XP6-FN-wSA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.98039215690000003" green="0.79607843140000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="aNj-YU-57K">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="sfg-88-4kx"/>
+                    <connections>
+                        <outlet property="locationMapView" destination="aNj-YU-57K" id="cmd-Yh-aml"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r1t-qU-FVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -180,7 +242,7 @@
         <!--Navigation Controller-->
         <scene sceneID="NKH-af-DDw">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mnp-Zn-crK" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="mnp-Zn-crK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2fc-Pa-hCd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -198,7 +260,7 @@
         <!--Navigation Controller-->
         <scene sceneID="8Th-7c-niZ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hkz-g4-OJr" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="hkz-g4-OJr" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="56K-Xy-Kg2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

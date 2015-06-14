@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import MapKit
 
 class BrowseViewController: UIViewController {
-
+	
+	@IBOutlet weak var locationMapView: MKMapView!
+	
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+		locationMapView.showsUserLocation = true
     }
 
     override func didReceiveMemoryWarning() {
