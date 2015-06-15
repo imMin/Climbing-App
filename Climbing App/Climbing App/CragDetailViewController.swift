@@ -8,16 +8,31 @@
 
 import UIKit
 
-class CragDetailViewController: UIViewController {
+class CragDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+	
+	var cragName: String!
+	var climbNumber: String!
+	var cragDistance: String!
 	
 	@IBOutlet weak var cragNameLabel: UILabel!
 	@IBOutlet weak var climbNumberLabel: UILabel!
 	@IBOutlet weak var cragDistanceLabel: UILabel!
+	@IBOutlet weak var climbTableView: UITableView!
 	
+	var climbNames = ["Triple Overhang", "The Great Roof", "Swiss Cheese", "The Great Roof", "Tripple Overhang"]
+	var climbLevels = ["5.9", "5.10a", "5.12b", "5.11a", "5.10c"]
+	var climbTypes = ["sports", "top rope", "sports", "top rope", "sports"]
+	var climbNumbers = ["172", "15", "23", "42", "42"]
 	
-
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		climbTableView.delegate = self
+		climbTableView.dataSource = self
+		
+		self.cragNameLabel.text = cragName
+		self.climbNumberLabel.text = climbNumber
+		self.cragDistanceLabel.text = cragDistance
 
         // Do any additional setup after loading the view.
     }
@@ -26,16 +41,33 @@ class CragDetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+	@IBAction func didPressBackButton(sender: AnyObject) {
+		navigationController?.popViewControllerAnimated(true)
+	}
+	
+	//table view funcations
+	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return climbNames.count
+	}
+	
+	func tableView(tableView: UITableView, sectionForSectionIndexTitle title: String, atIndex index: Int) -> Int {
+		return 1
+	}
+	
+	func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+		return 1
+	}
+	
+	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+		var cell = climbTableView.dequeueReusableCellWithIdentifier("ClimbCell") as! ClimbCell
+		
+		cell.climbNameLabel.text = climbNames[indexPath.row]
+		cell.climbNumberLabel.text = climbNumbers[indexPath.row]
+		cell.climbTypeLabel.text = climbTypes[indexPath.row]
+		cell.climbNumberLabel.text = climbNumbers[indexPath.row]
+		
+		return cell
+	}
 
 }

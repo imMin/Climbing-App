@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TabBarViewController: UIViewController {
+class TabBarViewController: UIViewController, UIViewControllerTransitioningDelegate {
 
 	@IBOutlet weak var myLogButton: UIButton!
 	@IBOutlet weak var browseButton: UIButton!
@@ -26,7 +26,7 @@ class TabBarViewController: UIViewController {
 	var selectedViewController: UIViewController!
 	var viewControllers: [UIViewController]!
 	var buttons: [UIButton]!
-
+	let transition = addTransition()
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,4 +81,17 @@ class TabBarViewController: UIViewController {
 	}
 	
 	
+	@IBAction func didPressAddButton(sender: AnyObject) {
+		addViewController.transitioningDelegate = self
+		presentViewController(addViewController, animated: true, completion: nil)
+		
+	}
+	
+	func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+		return transition
+	}
+	
+	func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+		return transition
+	}
 }

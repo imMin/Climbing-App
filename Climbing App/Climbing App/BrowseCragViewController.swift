@@ -1,5 +1,5 @@
 //
-//  BrowseViewController.swift
+//  BrowseCragViewController.swift
 //  Climbing App
 //
 //  Created by Min Hu on 6/12/15.
@@ -10,19 +10,19 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class BrowseViewController: UIViewController, CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate {
+class BrowseCragViewController: UIViewController, CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate {
 	
 	@IBOutlet weak var locationMapView: MKMapView!
 	@IBOutlet weak var cragTableView: UITableView!
 	
-	
+	var region: String!
 	var locationManager: CLLocationManager!
 	
 	var cragNames = ["cragName1", "cragName2", "cragName3", "cragName4", "cragName5", "cragName6", "cragName7", "cragName8", "cragName9", "cragName10"]
 	
 	var cragDistances = ["0.3mi", "0.5mi", "0.7mi", "1.5mi", "1.8mi", "2.1mi", "14mi", "15mi", "18mi", "22mi"]
 	
-	var climbNumbers = ["3", "5", "4", "5", "7", "2", "3", "4", "3", "2"]
+	var climbNumbers = ["3 routes", "5 routes", "4 routes", "5 routes", "7 routes", "2 routes", "3 routes", "4 routes", "3 routes", "2 routes"]
 	
 	var regions = ["Castle Rock", "Mt Diablo", "Yosemite"]
 	
@@ -32,16 +32,16 @@ class BrowseViewController: UIViewController, CLLocationManagerDelegate, UITable
 		cragTableView.delegate = self
 		cragTableView.dataSource = self
 		
-		locationMapView.showsUserLocation = true
+		//locationMapView.showsUserLocation = true
 		
-		if (CLLocationManager.locationServicesEnabled())
-		{
-			locationManager = CLLocationManager()
-			locationManager.delegate = self
-			locationManager.desiredAccuracy = kCLLocationAccuracyBest
-			locationManager.requestAlwaysAuthorization()
-			locationManager.startUpdatingLocation()
-		}
+		//if (CLLocationManager.locationServicesEnabled())
+		//{
+		//	locationManager = CLLocationManager()
+		//	locationManager.delegate = self
+		//	locationManager.desiredAccuracy = kCLLocationAccuracyBest
+		//	locationManager.requestAlwaysAuthorization()
+		//	locationManager.startUpdatingLocation()
+		//}
     }
 
     override func didReceiveMemoryWarning() {
@@ -96,6 +96,22 @@ class BrowseViewController: UIViewController, CLLocationManagerDelegate, UITable
 		return 40
 	}
 	
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		if (segue.identifier == "cragDetailSegue") {
+			
+			// initialize new view controller and cast it as your view controller
+			var viewController = segue.destinationViewController as! CragDetailViewController
+			
+			let indexPath : NSIndexPath = self.cragTableView.indexPathForSelectedRow()!
+			
+			// your new view controller should have property that will store passed value
+			viewController.cragName = cragNames[indexPath.row]
+			viewController.cragDistance = cragDistances[indexPath.row]
+			viewController.climbNumber = climbNumbers[indexPath.row]
+		}
+	}
 	
-	
+	@IBAction func didPressBackButton(sender: AnyObject) {
+		navigationController?.popViewControllerAnimated(true)
+	}
 }

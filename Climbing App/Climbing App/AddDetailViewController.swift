@@ -1,22 +1,15 @@
 //
-//  AddViewController.swift
+//  AddDetailViewController.swift
 //  Climbing App
 //
-//  Created by Min Hu on 6/12/15.
+//  Created by Min Hu on 6/15/15.
 //  Copyright (c) 2015 Min Hu. All rights reserved.
 //
 
 import UIKit
 
-class AddViewController: UIViewController, UIViewControllerTransitioningDelegate {
+class AddDetailViewController: UIViewController {
 
-	
-	required init(coder aDecoder: NSCoder) {
-		super.init(coder: aDecoder)
-		modalPresentationStyle = UIModalPresentationStyle.Custom
-		transitioningDelegate = self
-	}
-	
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,6 +20,10 @@ class AddViewController: UIViewController, UIViewControllerTransitioningDelegate
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+	
+	@IBAction func didPressCancelButton(sender: AnyObject) {
+		dismissViewControllerAnimated(true, completion: nil)
+	}
+	
 
 }
