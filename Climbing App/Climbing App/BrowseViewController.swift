@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class BrowseViewController: UIViewController, CLLocationManagerDelegate{
+class BrowseViewController: UIViewController, CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate {
 	
 	@IBOutlet weak var locationMapView: MKMapView!
 	@IBOutlet weak var cragTableView: UITableView!
@@ -18,8 +18,20 @@ class BrowseViewController: UIViewController, CLLocationManagerDelegate{
 	
 	var locationManager: CLLocationManager!
 	
+	var cragNames = ["cragName1", "cragName2", "cragName3", "cragName4", "cragName5", "cragName6", "cragName7", "cragName8", "cragName9", "cragName10"]
+	
+	var cragDistances = ["0.3mi", "0.5mi", "0.7mi", "1.5mi", "1.8mi", "2.1mi", "14mi", "15mi", "18mi", "22mi"]
+	
+	var climbNumbers = ["3", "5", "4", "5", "7", "2", "3", "4", "3", "2"]
+	
+	var regions = ["Castle Rock", "Mt Diablo", "Yosemite"]
+	
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		cragTableView.delegate = self
+		cragTableView.dataSource = self
+		
 		locationMapView.showsUserLocation = true
 		
 		if (CLLocationManager.locationServicesEnabled())
@@ -46,6 +58,44 @@ class BrowseViewController: UIViewController, CLLocationManagerDelegate{
 		
 		self.locationMapView.setRegion(region, animated: true)
 	}
+	
+	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return 4
+	}
+	
+	func tableView(tableView: UITableView, sectionForSectionIndexTitle title: String, atIndex index: Int) -> Int {
+		return 7
+	}
 
-
+	func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+		return regions.count
+	}
+	
+	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+		var cell = cragTableView.dequeueReusableCellWithIdentifier("BrowseCragCell") as! BrowseCragCell
+		
+		cell.cragNameLabel.text = cragNames[indexPath.row]
+		cell.cragDistanceLabel.text = cragDistances[indexPath.row]
+		cell.climbNumberLabel.text = climbNumbers[indexPath.row]
+		
+		return cell
+	}
+	
+	func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+		var headerView = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 80))
+		headerView.backgroundColor = UIColor(white: 0.2, alpha: 0.5)
+		
+		var label = UILabel(frame:CGRect(x: 10, y: 0, width: 300, height: 40))
+		label.text = regions[section]
+		headerView.addSubview(label)
+		
+		return headerView
+	}
+	
+	func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+		return 40
+	}
+	
+	
+	
 }

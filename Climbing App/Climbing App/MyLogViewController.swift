@@ -118,8 +118,8 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
 		headerView.backgroundColor = UIColor(white: 0.2, alpha: 0.5)
 		
 		var label = UILabel(frame: CGRect(x: 10, y: 0, width: 300, height: 40))
-//		label.text = dates[index.row]
-		label.text = "June 14, 2015"
+		label.text = dates[section]
+//		label.text = "June 14, 2015"
 		headerView.addSubview(label)
 		
 		return headerView
@@ -127,6 +127,21 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
 	
 	func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
 		return 40
+	}
+	
+	
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		if (segue.identifier == "logDetailSegue") {
+			
+			// initialize new view controller and cast it as your view controller
+			var viewController = segue.destinationViewController as! LogDetailViewController
+			
+			let indexPath : NSIndexPath = self.logTableView.indexPathForSelectedRow()!
+			
+			// your new view controller should have property that will store passed value
+			viewController.level = levels[indexPath.row]
+			viewController.location = locations[indexPath.row]
+		}
 	}
 	
 }

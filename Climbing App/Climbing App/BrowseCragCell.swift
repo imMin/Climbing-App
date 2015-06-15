@@ -11,6 +11,9 @@ import UIKit
 class BrowseCragCell: UITableViewCell {
 	
 	
+	@IBOutlet weak var cragNameLabel: UILabel!
+	@IBOutlet weak var cragDistanceLabel: UILabel!
+	@IBOutlet weak var climbNumberLabel: UILabel!
 	
 
     override func awakeFromNib() {
