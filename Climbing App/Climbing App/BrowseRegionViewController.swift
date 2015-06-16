@@ -7,18 +7,23 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
-class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, CLLocationManagerDelegate, MKMapViewDelegate
+{
 
-	
 	var regions = ["Castle Rock North", "Castle Rock South", "Yosemite Valley", "Yosemite Fall", "El Capitain", "Mt Diablo"]
 	
 	var distances = ["5 mi", "24 mi", "135 mi", "200 mi", "234 mi", "300 mi"]
 	var climbNumbers = ["32 routes", "37 routes", "200 routes", "232 routes", "323 routes", "30 routes"]
-	
+	var manager:CLLocationManager!
+	var myLocations:[CLLocation] = []
+//	var location :
 	
 	@IBOutlet weak var regionCollectionView: UICollectionView!
 	
+	@IBOutlet weak var regionMapView: MKMapView!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +31,27 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 		regionCollectionView.delegate = self
 		regionCollectionView.dataSource = self
 
-        // Do any additional setup after loading the view.
-    }
+		//Set up Location Manager
+		manager = CLLocationManager()
+		manager.delegate = self
+		manager.desiredAccuracy = kCLLocationAccuracyBest
+		manager.requestAlwaysAuthorization()
+		manager.startUpdatingLocation()
+		
+		//Set up Map View
+		regionMapView.delegate = self
+		regionMapView.mapType = MKMapType.Satellite
+		regionMapView.showsUserLocation = true
+		
+		
+		var region : MKCoordinateRegion
+		region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(37.786639, -122.407553), MKCoordinateSpanMake(0.01, 0.01))
+		region = regionMapView.regionThatFits(region)
+		regionMapView.setRegion(region, animated: false)
+		
+//		regionMapView.setCenterCoordinate(CLLocationCoordinate2DMake(, ), animated: true)
+		
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

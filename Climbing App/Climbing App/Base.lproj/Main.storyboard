@@ -338,11 +338,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="h9a-1c-SvX">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Knj-d4-dkY">
-                                <rect key="frame" x="0.0" y="200" width="320" height="386"/>
+                                <rect key="frame" x="0.0" y="300" width="320" height="386"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="Mxa-f3-K7a">
@@ -398,6 +398,7 @@
                     <navigationItem key="navigationItem" id="BOS-6u-hbD"/>
                     <connections>
                         <outlet property="regionCollectionView" destination="Knj-d4-dkY" id="A2c-wk-vUU"/>
+                        <outlet property="regionMapView" destination="h9a-1c-SvX" id="BoN-X6-qQG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A2J-gV-DCS" userLabel="First Responder" sceneMemberID="firstResponder"/>
