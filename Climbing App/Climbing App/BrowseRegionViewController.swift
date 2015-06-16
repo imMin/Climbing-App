@@ -19,7 +19,7 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 	var climbNumbers = ["32 routes", "37 routes", "200 routes", "232 routes", "323 routes", "30 routes"]
 	var manager:CLLocationManager!
 	var myLocations:[CLLocation] = []
-//	var location :
+	var location: CLLocation!
 	
 	@IBOutlet weak var regionCollectionView: UICollectionView!
 	
@@ -40,12 +40,12 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 		
 		//Set up Map View
 		regionMapView.delegate = self
-		regionMapView.mapType = MKMapType.Satellite
+		regionMapView.mapType = MKMapType.Hybrid
+		regionMapView.showsPointsOfInterest = false
 		regionMapView.showsUserLocation = true
 		
-		
 		var region : MKCoordinateRegion
-		region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(37.786639, -122.407553), MKCoordinateSpanMake(0.01, 0.01))
+		region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(39.3761, -104.8535), MKCoordinateSpanMake(0.4, 0.4))
 		region = regionMapView.regionThatFits(region)
 		regionMapView.setRegion(region, animated: false)
 		
@@ -89,6 +89,27 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 //		// your new view controller should have property that will store passed value
 //		viewController.region = regions[indexPath.row]
 	}
+	}
+	
+	func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]) {
+//		location = "\(locations[0])"
+		myLocations.append(locations[0] as! CLLocation)
+		
+		let spanX = 0.4
+		let spanY = 0.4
+		var newRegion = MKCoordinateRegion(center: regionMapView.userLocation.coordinate, span: MKCoordinateSpanMake(spanX, spanY))
+		regionMapView.setRegion(newRegion, animated: true)
+		
+//		if (myLocations.count > 1){
+//			var sourceIndex = myLocations.count - 1
+//			var destinationIndex = myLocations.count - 2
+//			
+//			let c1 = myLocations[sourceIndex].coordinate
+//			let c2 = myLocations[destinationIndex].coordinate
+//			var a = [c1, c2]
+//			var polyline = MKPolyline(coordinates: &a, count: a.count)
+//			theMap.addOverlay(polyline)
+//		}
 	}
 
 }
