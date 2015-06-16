@@ -17,21 +17,23 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CAJ-3h-2SD">
-                                        <rect key="frame" x="19" y="4" width="28" height="28"/>
+                                        <rect key="frame" x="19" y="4" width="26" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="mylog_tab">
+                                        <state key="normal" image="mylog2_tab">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <state key="selected" image="mylog2_tab_selected-1"/>
                                         <connections>
                                             <action selector="currentPressedButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qFx-JW-n2E"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qyS-1e-0UZ">
-                                        <rect key="frame" x="79" y="5" width="27" height="28"/>
+                                        <rect key="frame" x="79" y="5" width="26" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="search_tab">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <state key="selected" image="search_tab_selected-1"/>
                                         <connections>
                                             <action selector="currentPressedButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="452-KA-zki"/>
                                         </connections>
@@ -47,21 +49,23 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Vu9-MO-vxp">
-                                        <rect key="frame" x="213" y="5" width="28" height="28"/>
+                                        <rect key="frame" x="214" y="5" width="26" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="saved_tab">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <state key="selected" image="saved_tab_selected-1"/>
                                         <connections>
                                             <action selector="currentPressedButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9WK-iv-13f"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TOx-Mp-iac">
-                                        <rect key="frame" x="273" y="5" width="26" height="29"/>
+                                        <rect key="frame" x="273" y="4" width="26" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="forum_tab">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <state key="selected" image="forum_tab_selected-1"/>
                                         <connections>
                                             <action selector="currentPressedButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="uEK-xy-rxL"/>
                                         </connections>
@@ -87,11 +91,6 @@
                                         <color key="textColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view alpha="0.29999999999999966" contentMode="scaleToFill" id="LHw-1x-zYN">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HVK-fP-TPo">
                                         <rect key="frame" x="206" y="26" width="42" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -99,6 +98,11 @@
                                         <color key="textColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view alpha="0.29999999999999966" contentMode="scaleToFill" id="LHw-1x-zYN">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -113,10 +117,14 @@
                     <connections>
                         <outlet property="addButton" destination="6Sp-Op-n3Q" id="V0y-nY-klC"/>
                         <outlet property="browseButton" destination="qyS-1e-0UZ" id="qxj-xK-zbf"/>
+                        <outlet property="browseLabel" destination="J7K-Bz-fMD" id="YSC-iO-CYa"/>
                         <outlet property="connectButton" destination="TOx-Mp-iac" id="8I8-XF-8Nf"/>
                         <outlet property="contentView" destination="c8e-DF-uAP" id="BPx-OJ-xsn"/>
+                        <outlet property="forumLabel" destination="Rcm-QP-lmN" id="HMS-c9-mVm"/>
                         <outlet property="myLogButton" destination="CAJ-3h-2SD" id="bN4-Y2-QTF"/>
+                        <outlet property="myLogLabel" destination="azB-nz-EFF" id="J1H-xY-OTN"/>
                         <outlet property="savedButton" destination="Vu9-MO-vxp" id="56J-Iq-74L"/>
+                        <outlet property="savedLabel" destination="HVK-fP-TPo" id="qKe-68-7Wo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -664,32 +672,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.80000000000000004" contentMode="scaleToFill" id="oaz-HZ-NGK" userLabel="backgroundView">
+                            <view alpha="0.10000000000000001" contentMode="scaleToFill" id="oaz-HZ-NGK" userLabel="backgroundView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Rwy-6m-Nee" appends="YES" id="evs-Vk-TGu"/>
+                                </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SZe-0Y-net">
-                                <rect key="frame" x="71" y="469" width="58" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SZe-0Y-net">
+                                <rect key="frame" x="85" y="450" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="5 Scale">
+                                <state key="normal" image="5 scale">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="2PO-Zh-aCX" kind="modal" id="Zmn-Nj-gPV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8GY-yA-xJe">
-                                <rect key="frame" x="185" y="469" width="54" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8GY-yA-xJe">
+                                <rect key="frame" x="176" y="450" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="V Scale">
+                                <state key="normal" image="V scale">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="fiveButton" destination="SZe-0Y-net" id="x7d-er-oW3"/>
+                        <outlet property="vButton" destination="8GY-yA-xJe" id="FBk-YK-OpA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxH-XW-TOT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Rwy-6m-Nee">
+                    <connections>
+                        <action selector="didTapBackground:" destination="uKY-8z-3kN" id="2q9-n2-Ywq"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2289" y="874"/>
         </scene>
@@ -749,11 +770,17 @@
         </scene>
     </scenes>
     <resources>
+        <image name="5 scale" width="84" height="84"/>
+        <image name="V scale" width="84" height="84"/>
         <image name="add_tab" width="214" height="194"/>
-        <image name="forum_tab" width="158" height="176"/>
-        <image name="mylog_tab" width="168" height="180"/>
-        <image name="saved_tab" width="172" height="174"/>
-        <image name="search_tab" width="164" height="168"/>
+        <image name="forum_tab" width="52" height="52"/>
+        <image name="forum_tab_selected-1" width="52" height="52"/>
+        <image name="mylog2_tab" width="52" height="52"/>
+        <image name="mylog2_tab_selected-1" width="52" height="52"/>
+        <image name="saved_tab" width="52" height="52"/>
+        <image name="saved_tab_selected-1" width="52" height="52"/>
+        <image name="search_tab" width="52" height="52"/>
+        <image name="search_tab_selected-1" width="52" height="52"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

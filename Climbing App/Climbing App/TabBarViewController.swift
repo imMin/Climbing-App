@@ -17,17 +17,29 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 	@IBOutlet weak var connectButton: UIButton!
 	@IBOutlet weak var contentView: UIView!
 	
+    @IBOutlet weak var myLogLabel: UILabel!
+    @IBOutlet weak var browseLabel: UILabel!
+    @IBOutlet weak var forumLabel: UILabel!
+    @IBOutlet weak var savedLabel: UILabel!
+    
 	var myLogViewController: UIViewController!
 	var browseViewController: UIViewController!
 	var addViewController: UIViewController!
 	var savedViewController: UIViewController!
 	var connectViewController: UIViewController!
 	var selectedButton: UIButton!
+    var selectedLabel: UILabel!
 	var selectedViewController: UIViewController!
 	var viewControllers: [UIViewController]!
 	var buttons: [UIButton]!
 	let transition = addTransition()
-	
+    var labels: [UILabel]!
+    
+    let redColor = UIColor(red: 242/255, green: 89/255, blue: 64/255, alpha: 1.0)
+    let selectedColor = UIColor.darkGrayColor()
+
+    let grayColor = UIColor(red: 191/255, green: 191/255, blue: 191/255, alpha: 1.0)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 		
@@ -41,12 +53,15 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 		
 		viewControllers = [myLogViewController, browseViewController, savedViewController, connectViewController]
 		buttons = [myLogButton, browseButton, savedButton, connectButton]
-		
+		labels = [myLogLabel, browseLabel, savedLabel, forumLabel]
 		
 		loadContentView(myLogViewController)
 		myLogButton.selected = true
+        myLogLabel.textColor = selectedColor
 	}
 
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -57,8 +72,11 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 			if (sender.tag == i){
 				setButtons()
 				selectedButton = buttons[i]
+                selectedLabel = labels[i]
 				selectedViewController = viewControllers[i]
 				selectedButton.selected = true
+                selectedLabel.textColor = selectedColor
+                
 				for view in contentView.subviews{
 					view.removeFromSuperview()
 				}
@@ -70,6 +88,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 	func setButtons(){
 		for i in 0 ..< 4 {
 			buttons[i].selected = false
+            labels[i].textColor = grayColor
 		}
 	}
 	
