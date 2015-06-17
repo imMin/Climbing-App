@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TabBarViewController: UIViewController, UIViewControllerTransitioningDelegate, PathMenuDelegate {
+class TabBarViewController: UIViewController, UIViewControllerTransitioningDelegate {
 
 	@IBOutlet weak var myLogButton: UIButton!
 	@IBOutlet weak var browseButton: UIButton!
@@ -25,6 +25,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
     @IBOutlet weak var savedLabel: UILabel!
 	@IBOutlet weak var backgroundView: UIView!
 	
+    var flyoutOpen: Bool! = false
     
 	var myLogViewController: UIViewController!
 	var browseViewController: UIViewController!
@@ -78,7 +79,6 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 		myLogButton.selected = true
         myLogLabel.textColor = selectedColor
         
-//        setupPathMenu()
 	}
 
 
@@ -146,28 +146,73 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 	@IBAction func didPressAddButton(sender: AnyObject) {
 //		addViewController.transitioningDelegate = self
 //		presentViewController(addViewController, animated: true, completion: nil)
+        
+        var angle: CGFloat?
+
 		fiveButton.alpha = 1
 		vButton.alpha = 1
-		transitionIn()
-	}
+        
+        if flyoutOpen == false {
+            handleAddButtonTap()
+            transitionIn()
+
+        }
+        else if flyoutOpen == true {
+            handleAddButtonTap()
+            transitionOut()
+
+        }
+        
+
+    
+    }
+    
+    
+ func handleAddButtonTap() {
+        var angle: CGFloat?
+        
+        if flyoutOpen == false {
+                angle = CGFloat(M_PI_4) + CGFloat(M_PI)
+        }
+        else if flyoutOpen == true {
+                angle = 0.0
+        }
+    
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+            self.addButton.transform = CGAffineTransformMakeRotation(angle!)
+        })
+        
+    }
+    
 	
 	func transitionIn(){
-		UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: nil, animations: { () -> Void in
+		UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.25, options: nil, animations: { () -> Void in
 			self.fiveButton.center = self.fiveButtonFinalPosition
-			self.vButton.center = self.vButtonFinalPosition
+            self.vButton.center = self.vButtonFinalPosition
 			self.backgroundView.alpha = 0.5
 			}, completion: nil)
+        
+        flyoutOpen = true
+
 	}
 	
 	func transitionOut() {
-		
 		UIView.animateWithDuration(0.4, delay: 0.0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: nil, animations: { () -> Void in
 			self.fiveButton.center = self.buttonsInitialPosition
-			self.vButton.center = self.buttonsInitialPosition
-			self.backgroundView.alpha = 0
+             self.vButton.center = self.buttonsInitialPosition
+			
+            self.backgroundView.alpha = 0
 			}, completion: nil)
+        
+        flyoutOpen = false
+
 	}
 	
+    @IBAction func didTapFlyoutBackground(sender: AnyObject) {
+        handleAddButtonTap()
+        transitionOut()
+    }
+    
 	func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
 		return transition
 	}
@@ -177,7 +222,8 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 	}
     
 	@IBAction func didPressFiveButton(sender: AnyObject) {
-		transitionOut()
+        handleAddButtonTap()
+        transitionOut()
 		performSegueWithIdentifier("fiveButtonSegue", sender: self)
 	}
 }
