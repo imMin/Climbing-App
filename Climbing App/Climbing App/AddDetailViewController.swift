@@ -9,9 +9,16 @@
 import UIKit
 
 class AddDetailViewController: UIViewController {
-
+	
+	var routeName: String!
+	var level: String!
+	@IBOutlet weak var routeNameLabel: UILabel!
+	@IBOutlet weak var levelLabel: UILabel!
+	
     override func viewDidLoad() {
         super.viewDidLoad()
+		routeNameLabel.text = routeName
+		levelLabel.text = level
 
         // Do any additional setup after loading the view.
     }
