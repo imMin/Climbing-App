@@ -10,11 +10,14 @@ import UIKit
 
 class AddViewController: UIViewController, UIViewControllerTransitioningDelegate {
 
+    @IBOutlet var mainView: UIView!
+    @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var fiveButton: UIButton!
     @IBOutlet weak var vButton: UIButton!
     
     var startingPoint: CGFloat!
-
+    
+    
     
 	required init(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
@@ -26,21 +29,34 @@ class AddViewController: UIViewController, UIViewControllerTransitioningDelegate
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        setupMenu()
+        mainView.backgroundColor = UIColor.clearColor()
+                
+    }
+    
+    
+
+    func setupMenu() {
         startingPoint = 650
         fiveButton.center.y = startingPoint
         vButton.center.y = startingPoint
-    }
+        backgroundView.backgroundColor = UIColor(red:0.0, green:0.0, blue:0.0, alpha:0.1)
 
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
     
     override func viewDidAppear(animated: Bool) {
         fiveButton.alpha = 1
         vButton.alpha = 1
+
+        backgroundView.backgroundColor = UIColor(red:0.0, green:0.0, blue:0.0, alpha:0.1)
         
         UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: nil, animations: { () -> Void in
             self.fiveButton.frame.origin.y = 450
@@ -54,6 +70,11 @@ class AddViewController: UIViewController, UIViewControllerTransitioningDelegate
     }
     
     func transitionOut() {
+        
+        UIView.animateWithDuration(0.4, animations: { () -> Void in
+            self.backgroundView.backgroundColor = UIColor.clearColor()
+        })
+        
         UIView.animateWithDuration(0.4, delay: 0.0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: nil, animations: { () -> Void in
             self.fiveButton.frame.origin.y = 650
             }, completion: nil)
@@ -65,9 +86,11 @@ class AddViewController: UIViewController, UIViewControllerTransitioningDelegate
     
     
     @IBAction func didTapBackground(sender: UITapGestureRecognizer) {
+        println("background tapped!")
         transitionOut()
         delay(0.2) {
             self.dismissViewControllerAnimated(true, completion: nil)
         }
     }
+
 }

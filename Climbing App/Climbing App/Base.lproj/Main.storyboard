@@ -28,9 +28,8 @@
                                             <view alpha="0.29999999999999966" contentMode="scaleToFill" id="LHw-1x-zYN">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CAJ-3h-2SD">
+                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CAJ-3h-2SD">
                                                 <rect key="frame" x="20" y="8" width="26" height="26"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="mylog2_tab">
@@ -41,7 +40,7 @@
                                                     <action selector="currentPressedButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qFx-JW-n2E"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qyS-1e-0UZ">
+                                            <button opaque="NO" tag="1" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qyS-1e-0UZ">
                                                 <rect key="frame" x="81" y="8" width="26" height="26"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="search_tab">
@@ -52,7 +51,7 @@
                                                     <action selector="currentPressedButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="452-KA-zki"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Vu9-MO-vxp">
+                                            <button opaque="NO" tag="2" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Vu9-MO-vxp">
                                                 <rect key="frame" x="216" y="9" width="26" height="26"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="saved_tab">
@@ -63,7 +62,7 @@
                                                     <action selector="currentPressedButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9WK-iv-13f"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="3" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TOx-Mp-iac">
+                                            <button opaque="NO" tag="3" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TOx-Mp-iac">
                                                 <rect key="frame" x="275" y="7" width="26" height="26"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="forum_tab">
@@ -689,14 +688,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="jwC-bz-rH7"/>
                     <connections>
+                        <outlet property="backgroundView" destination="oaz-HZ-NGK" id="A0j-Gj-fyV"/>
                         <outlet property="fiveButton" destination="SZe-0Y-net" id="x7d-er-oW3"/>
+                        <outlet property="mainView" destination="IA9-kV-ilt" id="JZi-yQ-MSg"/>
                         <outlet property="vButton" destination="8GY-yA-xJe" id="FBk-YK-OpA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxH-XW-TOT" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="Rwy-6m-Nee">
                     <connections>
-                        <action selector="didTapBackground:" destination="uKY-8z-3kN" id="2q9-n2-Ywq"/>
+                        <action selector="didTapBackground:" destination="uKY-8z-3kN" id="adh-yT-1mN"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
