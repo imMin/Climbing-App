@@ -10,13 +10,15 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class BrowseCragViewController: UIViewController, CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate {
+class BrowseCragViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate, MKMapViewDelegate {
 	
-	@IBOutlet weak var locationMapView: MKMapView!
+	@IBOutlet weak var cragMapView: MKMapView!
 	@IBOutlet weak var cragTableView: UITableView!
 	
 	var region: String!
-	var locationManager: CLLocationManager!
+	var manager:CLLocationManager!
+	var myLocations:[CLLocation] = []
+	var location: CLLocation!
 	
 	var cragNames = ["cragName1", "cragName2", "cragName3", "cragName4", "cragName5", "cragName6", "cragName7", "cragName8", "cragName9", "cragName10"]
 	
@@ -32,16 +34,24 @@ class BrowseCragViewController: UIViewController, CLLocationManagerDelegate, UIT
 		cragTableView.delegate = self
 		cragTableView.dataSource = self
 		
-		//locationMapView.showsUserLocation = true
+		//Set up Location Manager
+		manager = CLLocationManager()
+		manager.delegate = self
+		manager.desiredAccuracy = kCLLocationAccuracyBest
+		manager.requestAlwaysAuthorization()
+		manager.startUpdatingLocation()
 		
-		//if (CLLocationManager.locationServicesEnabled())
-		//{
-		//	locationManager = CLLocationManager()
-		//	locationManager.delegate = self
-		//	locationManager.desiredAccuracy = kCLLocationAccuracyBest
-		//	locationManager.requestAlwaysAuthorization()
-		//	locationManager.startUpdatingLocation()
-		//}
+		//Set up Map View
+		cragMapView.delegate = self
+		cragMapView.mapType = MKMapType.Hybrid
+		cragMapView.showsPointsOfInterest = false
+		cragMapView.showsUserLocation = true
+		
+		var region : MKCoordinateRegion
+		region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(39.3761, -104.8535), MKCoordinateSpanMake(0.01, 0.01))
+		region = cragMapView.regionThatFits(region)
+		cragMapView.setRegion(region, animated: false)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,14 +60,14 @@ class BrowseCragViewController: UIViewController, CLLocationManagerDelegate, UIT
     }
     
 
-	func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-		let location = locations.last as! CLLocation
-		
-		let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-		let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-		
-		self.locationMapView.setRegion(region, animated: true)
-	}
+//	func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+//		let location = locations.last as! CLLocation
+//		
+//		let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+//		let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+//		
+//		self.cragMapView.setRegion(region, animated: true)
+//	}
 	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return 4
@@ -114,4 +124,17 @@ class BrowseCragViewController: UIViewController, CLLocationManagerDelegate, UIT
 	@IBAction func didPressBackButton(sender: AnyObject) {
 		navigationController?.popViewControllerAnimated(true)
 	}
+	
+	
+	func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]) {
+		//		location = "\(locations[0])"
+		myLocations.append(locations[0] as! CLLocation)
+		
+		let spanX = 0.01
+		let spanY = 0.01
+		var newRegion = MKCoordinateRegion(center: cragMapView.userLocation.coordinate, span: MKCoordinateSpanMake(spanX, spanY))
+		cragMapView.setRegion(newRegion, animated: true)
+
+	}
+
 }
