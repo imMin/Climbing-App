@@ -18,7 +18,6 @@ class AddViewController: UIViewController, UIViewControllerTransitioningDelegate
     var startingPoint: CGFloat!
     
     
-    
 	required init(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		modalPresentationStyle = UIModalPresentationStyle.Custom

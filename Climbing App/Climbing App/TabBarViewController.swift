@@ -32,13 +32,14 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 	var selectedViewController: UIViewController!
 	var viewControllers: [UIViewController]!
 	var buttons: [UIButton]!
+    
 	let transition = addTransition()
     var labels: [UILabel]!
     
     let redColor = UIColor(red: 242/255, green: 89/255, blue: 64/255, alpha: 1.0)
     let selectedColor = UIColor.darkGrayColor()
 
-    let grayColor = UIColor(red: 191/255, green: 191/255, blue: 191/255, alpha: 1.0)
+    let grayColor = UIColor(red: 175/255, green: 175/255, blue: 175/255, alpha: 1.0)
     
     var blackView: UIView?
 
