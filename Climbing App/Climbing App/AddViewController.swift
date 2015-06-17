@@ -93,4 +93,9 @@ class AddViewController: UIViewController, UIViewControllerTransitioningDelegate
         }
     }
 
+	@IBAction func didPressFiveButton(sender: AnyObject) {
+		transitionOut()
+		performSegueWithIdentifier("fiveButtonSegue", sender: self)
+		self.dismissViewControllerAnimated(true, completion: nil)
+	}
 }

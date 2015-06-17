@@ -697,7 +697,7 @@
         <!--Add View Controller-->
         <scene sceneID="NFc-Um-U2m">
             <objects>
-                <viewController id="uKY-8z-3kN" customClass="AddViewController" customModule="Climbing_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddViewController" id="uKY-8z-3kN" customClass="AddViewController" customModule="Climbing_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IA9-kV-ilt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -718,15 +718,19 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="PZH-qE-q5c" kind="push" id="Zk5-uu-wEL"/>
+                                    <action selector="didPressFiveButton:" destination="uKY-8z-3kN" eventType="touchUpInside" id="h1f-Lc-9YN"/>
+                                    <segue destination="PZH-qE-q5c" kind="modal" identifier="fiveButtonSegue" id="mEz-Ar-e8T"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8GY-yA-xJe">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="vScaleSegue" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8GY-yA-xJe">
                                 <rect key="frame" x="176" y="450" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="V scale">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="PZH-qE-q5c" kind="modal" id="Fob-yO-hug"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -805,7 +809,7 @@
         <!--Navigation Controller-->
         <scene sceneID="MUw-tz-g2u">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PZH-qE-q5c" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="PZH-qE-q5c" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="0bj-hb-uNW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yln-vU-rCs">
@@ -841,4 +845,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="mEz-Ar-e8T"/>
+    </inferredMetricsTieBreakers>
 </document>
