@@ -76,6 +76,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 				selectedViewController = viewControllers[i]
 				selectedButton.selected = true
                 selectedLabel.textColor = selectedColor
+                playBounceAnimation(selectedButton)
                 
 				for view in contentView.subviews{
 					view.removeFromSuperview()
@@ -99,6 +100,17 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 		ViewController.didMoveToParentViewController(self)
 	}
 	
+    
+    func playBounceAnimation(icon : UIButton) {
+        
+        let bounceAnimation = CAKeyframeAnimation(keyPath: "transform.scale")
+        bounceAnimation.values = [1.0 ,1.4, 0.9, 1.15, 0.95, 1.02, 1.0]
+        bounceAnimation.duration = 0.7
+        bounceAnimation.calculationMode = kCAAnimationCubic
+        
+        icon.layer.addAnimation(bounceAnimation, forKey: "bounceAnimation")
+        
+    }
 	
 	@IBAction func didPressAddButton(sender: AnyObject) {
 		addViewController.transitioningDelegate = self
