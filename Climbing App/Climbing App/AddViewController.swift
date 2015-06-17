@@ -30,8 +30,10 @@ class AddViewController: UIViewController, UIViewControllerTransitioningDelegate
         // Do any additional setup after loading the view.
         
         setupMenu()
-        mainView.backgroundColor = UIColor.clearColor()
-                
+//        mainView.backgroundColor = UIColor.clearColor()
+		self.navigationController?.view.backgroundColor = UIColor.clearColor()
+		
+		
     }
     
     
@@ -41,7 +43,6 @@ class AddViewController: UIViewController, UIViewControllerTransitioningDelegate
         fiveButton.center.y = startingPoint
         vButton.center.y = startingPoint
         backgroundView.backgroundColor = UIColor(red:0.0, green:0.0, blue:0.0, alpha:0.1)
-
     }
     
     

@@ -17,6 +17,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3jS-ZK-fYm">
+                                <rect key="frame" x="131" y="505" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="V scale">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="d7p-HD-XC7">
+                                <rect key="frame" x="131" y="505" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="5 scale">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                             <view contentMode="scaleToFill" id="cDD-7K-XKX" userLabel="Tab">
                                 <rect key="frame" x="0.0" y="508" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -600,7 +614,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7gy-T5-wbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2867" y="1737"/>
+            <point key="canvasLocation" x="2936" y="1759"/>
         </scene>
         <!--Saved View Controller-->
         <scene sceneID="28m-cQ-oAR">
@@ -644,7 +658,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="72" id="Rp3-I9-Y0W">
-                                        <rect key="frame" x="0.0" y="86" width="320" height="72"/>
+                                        <rect key="frame" x="0.0" y="22" width="320" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rp3-I9-Y0W" id="jhx-Dc-bgh">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
@@ -691,7 +705,7 @@
                             <view alpha="0.10000000000000001" contentMode="scaleToFill" id="oaz-HZ-NGK" userLabel="backgroundView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.1529411765" green="0.20784313730000001" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Rwy-6m-Nee" appends="YES" id="evs-Vk-TGu"/>
@@ -704,7 +718,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="lg4-tz-jwk" kind="push" id="Zk5-uu-wEL"/>
+                                    <segue destination="PZH-qE-q5c" kind="push" id="Zk5-uu-wEL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8GY-yA-xJe">
@@ -715,6 +729,7 @@
                                 </state>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="jwC-bz-rH7"/>
                     <connections>
@@ -788,22 +803,23 @@
             <point key="canvasLocation" x="1022" y="1031"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="eao-ZK-tfc">
+        <scene sceneID="MUw-tz-g2u">
             <objects>
-                <navigationController storyboardIdentifier="AddViewController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Khe-Je-d3q" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PZH-qE-q5c" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CaL-ub-IM8">
+                    <navigationItem key="navigationItem" id="0bj-hb-uNW"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yln-vU-rCs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="uKY-8z-3kN" kind="relationship" relationship="rootViewController" id="16K-7p-2Nv"/>
+                        <segue destination="lg4-tz-jwk" kind="relationship" relationship="rootViewController" id="MBj-O1-NNl"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jhj-Fp-PWl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nRY-mz-ezM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2289" y="874"/>
+            <point key="canvasLocation" x="2470" y="1753"/>
         </scene>
     </scenes>
     <resources>
