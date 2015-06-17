@@ -69,5 +69,21 @@ class CragDetailViewController: UIViewController, UITableViewDataSource, UITable
 		
 		return cell
 	}
+	
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		if (segue.identifier == "routeDetailSegue") {
+			
+			// initialize new view controller and cast it as your view controller
+			var viewController = segue.destinationViewController as! RouteDetailViewController
+			
+			let indexPath : NSIndexPath = self.climbTableView.indexPathForSelectedRow()!
+			
+			// your new view controller should have property that will store passed value
+			viewController.routeName = climbNames[indexPath.row]
+			viewController.distance = cragDistance
+			viewController.climb = climbNumbers[indexPath.row]
+			viewController.level = climbLevels[indexPath.row]
+		}
+	}
 
 }

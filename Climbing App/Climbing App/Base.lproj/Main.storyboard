@@ -486,11 +486,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ClimbCell" rowHeight="105" id="nyP-8K-Uhe" customClass="ClimbCell" customModule="Climbing_App" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ClimbCell" rowHeight="105" id="nyP-8K-Uhe" customClass="ClimbCell" customModule="Climbing_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="22" width="320" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nyP-8K-Uhe" id="8XF-XN-tpe">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="104"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.9" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6Rl-Ti-PK5">
@@ -528,6 +528,7 @@
                                             <outlet property="climbNameLabel" destination="Acg-oP-P7V" id="Hgn-ph-dD6"/>
                                             <outlet property="climbNumberLabel" destination="0Hc-Sp-hiu" id="4KQ-y3-UqS"/>
                                             <outlet property="climbTypeLabel" destination="otv-IM-THJ" id="jat-j6-NVk"/>
+                                            <segue destination="9fa-Sk-Kgo" kind="push" identifier="routeDetailSegue" id="XpQ-1T-xHj"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -574,6 +575,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m9e-q2-jPq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1812" y="2265"/>
+        </scene>
+        <!--Route Detail View Controller-->
+        <scene sceneID="teR-xB-i16">
+            <objects>
+                <viewController id="9fa-Sk-Kgo" customClass="RouteDetailViewController" customModule="Climbing_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Wq-ex-veS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Great Roof" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IXM-S9-18V">
+                                <rect key="frame" x="179" y="49" width="117" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.9" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EmP-h4-AgY">
+                                <rect key="frame" x="272" y="84" width="24" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="153 mi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YRU-Pb-ssB">
+                                <rect key="frame" x="245" y="174" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AkP-qc-uX6">
+                                <rect key="frame" x="254" y="145" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sports, top rope" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Z1a-cN-XnW">
+                                <rect key="frame" x="174" y="118" width="123" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BOx-zc-9fV"/>
+                    <connections>
+                        <outlet property="climbLabel" destination="AkP-qc-uX6" id="rlo-h4-cDf"/>
+                        <outlet property="distanceLabel" destination="YRU-Pb-ssB" id="SJt-QQ-v92"/>
+                        <outlet property="levelLabel" destination="EmP-h4-AgY" id="xIj-nn-oig"/>
+                        <outlet property="routeNameLabel" destination="IXM-S9-18V" id="2hH-IJ-gX4"/>
+                        <outlet property="typeLabel" destination="Z1a-cN-XnW" id="dqp-6C-Huz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2q9-qr-Qv8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2204" y="2265"/>
         </scene>
         <!--Add Detail View Controller-->
         <scene sceneID="6k2-ep-sWr">
