@@ -17,20 +17,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3jS-ZK-fYm">
-                                <rect key="frame" x="131" y="505" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="V scale">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="d7p-HD-XC7">
-                                <rect key="frame" x="131" y="505" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="5 scale">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <view contentMode="scaleToFill" id="cDD-7K-XKX" userLabel="Tab">
                                 <rect key="frame" x="0.0" y="508" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,32 +103,58 @@
                                             </label>
                                         </subviews>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6Sp-Op-n3Q" userLabel="Add Button">
-                                        <rect key="frame" x="134" y="0.0" width="54" height="54"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="add_tab">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="didPressAddButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xAs-OE-qOr"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </view>
+                            <view contentMode="scaleToFill" id="p5C-zv-EpS" userLabel="backgroundView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3jS-ZK-fYm" userLabel="vButton">
+                                <rect key="frame" x="131" y="505" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="V scale">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="d7p-HD-XC7" userLabel="fiveButton">
+                                <rect key="frame" x="131" y="505" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="5 scale">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressFiveButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="RwQ-X9-Grt"/>
+                                    <segue destination="PZH-qE-q5c" kind="modal" identifier="fiveButtonSegue" id="bBT-Yq-9d0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6Sp-Op-n3Q" userLabel="Add Button">
+                                <rect key="frame" x="134" y="508" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="add_tab">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressAddButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xAs-OE-qOr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="addButton" destination="6Sp-Op-n3Q" id="V0y-nY-klC"/>
+                        <outlet property="backgroundView" destination="p5C-zv-EpS" id="VVO-f9-mXJ"/>
                         <outlet property="browseButton" destination="qyS-1e-0UZ" id="qxj-xK-zbf"/>
                         <outlet property="browseLabel" destination="J7K-Bz-fMD" id="YSC-iO-CYa"/>
                         <outlet property="connectButton" destination="TOx-Mp-iac" id="8I8-XF-8Nf"/>
                         <outlet property="contentView" destination="c8e-DF-uAP" id="BPx-OJ-xsn"/>
+                        <outlet property="fiveButton" destination="d7p-HD-XC7" id="NXN-0n-2Xs"/>
                         <outlet property="forumLabel" destination="Rcm-QP-lmN" id="HMS-c9-mVm"/>
                         <outlet property="myLogButton" destination="CAJ-3h-2SD" id="bN4-Y2-QTF"/>
                         <outlet property="myLogLabel" destination="azB-nz-EFF" id="J1H-xY-OTN"/>
                         <outlet property="savedButton" destination="Vu9-MO-vxp" id="56J-Iq-74L"/>
                         <outlet property="savedLabel" destination="HVK-fP-TPo" id="qKe-68-7Wo"/>
+                        <outlet property="vButton" destination="3jS-ZK-fYm" id="v85-oY-x47"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -614,7 +626,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7gy-T5-wbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2936" y="1759"/>
+            <point key="canvasLocation" x="2289" y="1594"/>
         </scene>
         <!--Saved View Controller-->
         <scene sceneID="28m-cQ-oAR">
@@ -719,7 +731,6 @@
                                 </state>
                                 <connections>
                                     <action selector="didPressFiveButton:" destination="uKY-8z-3kN" eventType="touchUpInside" id="h1f-Lc-9YN"/>
-                                    <segue destination="PZH-qE-q5c" kind="modal" identifier="fiveButtonSegue" id="mEz-Ar-e8T"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="vScaleSegue" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8GY-yA-xJe">
@@ -728,9 +739,6 @@
                                 <state key="normal" image="V scale">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="PZH-qE-q5c" kind="modal" id="Fob-yO-hug"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -823,7 +831,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nRY-mz-ezM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2470" y="1753"/>
+            <point key="canvasLocation" x="2289" y="867"/>
         </scene>
     </scenes>
     <resources>
@@ -845,7 +853,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="mEz-Ar-e8T"/>
-    </inferredMetricsTieBreakers>
 </document>
