@@ -34,6 +34,19 @@
 		6F8B0DD91B2D839E0014BF02 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F8B0DD81B2D839E0014BF02 /* MapKit.framework */; };
 		6F9637591B325AE3002EDB49 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9637581B325AE3002EDB49 /* AddPhotoViewController.swift */; };
 		A119B2A41B301F55001A0370 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = A119B2A31B301F55001A0370 /* Common.swift */; };
+		A14649491B325DD400DFF014 /* CameraSessionView.m in Sources */ = {isa = PBXBuildFile; fileRef = A14649301B325DD400DFF014 /* CameraSessionView.m */; };
+		A146494A1B325DD400DFF014 /* CameraDismissButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A14649341B325DD400DFF014 /* CameraDismissButton.m */; };
+		A146494B1B325DD400DFF014 /* CameraFlashButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A14649361B325DD400DFF014 /* CameraFlashButton.m */; };
+		A146494C1B325DD400DFF014 /* CameraFocalReticule.m in Sources */ = {isa = PBXBuildFile; fileRef = A14649381B325DD400DFF014 /* CameraFocalReticule.m */; };
+		A146494D1B325DD400DFF014 /* CameraShutterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A146493A1B325DD400DFF014 /* CameraShutterButton.m */; };
+		A146494E1B325DD400DFF014 /* CameraToggleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A146493C1B325DD400DFF014 /* CameraToggleButton.m */; };
+		A146494F1B325DD400DFF014 /* LaunchCameraButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A146493E1B325DD400DFF014 /* LaunchCameraButton.m */; };
+		A14649501B325DD400DFF014 /* Cool Camera Mockup.sketch in Resources */ = {isa = PBXBuildFile; fileRef = A146493F1B325DD400DFF014 /* Cool Camera Mockup.sketch */; };
+		A14649511B325DD400DFF014 /* PaintCodeFile.pcvd in Resources */ = {isa = PBXBuildFile; fileRef = A14649401B325DD400DFF014 /* PaintCodeFile.pcvd */; };
+		A14649521B325DD400DFF014 /* CameraStyleKitClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A14649431B325DD400DFF014 /* CameraStyleKitClass.m */; };
+		A14649531B325DD400DFF014 /* CaptureSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A14649461B325DD400DFF014 /* CaptureSessionManager.m */; };
+		A14649541B325DD400DFF014 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = A14649481B325DD400DFF014 /* Constants.m */; };
+		A146495E1B32633A00DFF014 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A146495D1B32633A00DFF014 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +91,30 @@
 		6F8B0DD81B2D839E0014BF02 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		6F9637581B325AE3002EDB49 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
 		A119B2A31B301F55001A0370 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		A146492F1B325DD400DFF014 /* CameraSessionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraSessionView.h; sourceTree = "<group>"; };
+		A14649301B325DD400DFF014 /* CameraSessionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraSessionView.m; sourceTree = "<group>"; };
+		A14649331B325DD400DFF014 /* CameraDismissButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraDismissButton.h; sourceTree = "<group>"; };
+		A14649341B325DD400DFF014 /* CameraDismissButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraDismissButton.m; sourceTree = "<group>"; };
+		A14649351B325DD400DFF014 /* CameraFlashButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraFlashButton.h; sourceTree = "<group>"; };
+		A14649361B325DD400DFF014 /* CameraFlashButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraFlashButton.m; sourceTree = "<group>"; };
+		A14649371B325DD400DFF014 /* CameraFocalReticule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraFocalReticule.h; sourceTree = "<group>"; };
+		A14649381B325DD400DFF014 /* CameraFocalReticule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraFocalReticule.m; sourceTree = "<group>"; };
+		A14649391B325DD400DFF014 /* CameraShutterButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraShutterButton.h; sourceTree = "<group>"; };
+		A146493A1B325DD400DFF014 /* CameraShutterButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraShutterButton.m; sourceTree = "<group>"; };
+		A146493B1B325DD400DFF014 /* CameraToggleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraToggleButton.h; sourceTree = "<group>"; };
+		A146493C1B325DD400DFF014 /* CameraToggleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraToggleButton.m; sourceTree = "<group>"; };
+		A146493D1B325DD400DFF014 /* LaunchCameraButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchCameraButton.h; sourceTree = "<group>"; };
+		A146493E1B325DD400DFF014 /* LaunchCameraButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchCameraButton.m; sourceTree = "<group>"; };
+		A146493F1B325DD400DFF014 /* Cool Camera Mockup.sketch */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cool Camera Mockup.sketch"; sourceTree = "<group>"; };
+		A14649401B325DD400DFF014 /* PaintCodeFile.pcvd */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = PaintCodeFile.pcvd; sourceTree = "<group>"; };
+		A14649421B325DD400DFF014 /* CameraStyleKitClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraStyleKitClass.h; sourceTree = "<group>"; };
+		A14649431B325DD400DFF014 /* CameraStyleKitClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraStyleKitClass.m; sourceTree = "<group>"; };
+		A14649451B325DD400DFF014 /* CaptureSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureSessionManager.h; sourceTree = "<group>"; };
+		A14649461B325DD400DFF014 /* CaptureSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureSessionManager.m; sourceTree = "<group>"; };
+		A14649471B325DD400DFF014 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		A14649481B325DD400DFF014 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		A146495C1B3262AD00DFF014 /* Climbing_App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Climbing_App-Bridging-Header.h"; sourceTree = "<group>"; };
+		A146495D1B32633A00DFF014 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A146495E1B32633A00DFF014 /* AVFoundation.framework in Frameworks */,
 				6F8B0DD91B2D839E0014BF02 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +140,7 @@
 		6F74C3E21B29FA5D00C0FD85 = {
 			isa = PBXGroup;
 			children = (
+				A146495D1B32633A00DFF014 /* AVFoundation.framework */,
 				6F8B0DD81B2D839E0014BF02 /* MapKit.framework */,
 				6F74C3ED1B29FA5D00C0FD85 /* Climbing App */,
 				6F74C4031B29FA5D00C0FD85 /* Climbing AppTests */,
@@ -123,7 +162,9 @@
 			children = (
 				6F74C3F01B29FA5D00C0FD85 /* AppDelegate.swift */,
 				6F1F9DD11B2EC06900E284BE /* RegionCell.swift */,
+				A146492D1B325DD400DFF014 /* CustomizableCamera */,
 				6F74C3F21B29FA5D00C0FD85 /* ViewController.swift */,
+				A146495C1B3262AD00DFF014 /* Climbing_App-Bridging-Header.h */,
 				6F74C3F41B29FA5D00C0FD85 /* Main.storyboard */,
 				6F9637581B325AE3002EDB49 /* AddPhotoViewController.swift */,
 				6F4D65261B315D3E009F9600 /* SelectRouteViewController.swift */,
@@ -174,6 +215,75 @@
 				6F74C4051B29FA5D00C0FD85 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A146492D1B325DD400DFF014 /* CustomizableCamera */ = {
+			isa = PBXGroup;
+			children = (
+				A146492E1B325DD400DFF014 /* Camera View */,
+				A14649311B325DD400DFF014 /* Graphical Assets */,
+				A14649441B325DD400DFF014 /* Model Classes */,
+			);
+			path = CustomizableCamera;
+			sourceTree = "<group>";
+		};
+		A146492E1B325DD400DFF014 /* Camera View */ = {
+			isa = PBXGroup;
+			children = (
+				A146492F1B325DD400DFF014 /* CameraSessionView.h */,
+				A14649301B325DD400DFF014 /* CameraSessionView.m */,
+			);
+			path = "Camera View";
+			sourceTree = "<group>";
+		};
+		A14649311B325DD400DFF014 /* Graphical Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A14649321B325DD400DFF014 /* CameraViewComponents */,
+				A146493F1B325DD400DFF014 /* Cool Camera Mockup.sketch */,
+				A14649401B325DD400DFF014 /* PaintCodeFile.pcvd */,
+				A14649411B325DD400DFF014 /* UI Assets */,
+			);
+			path = "Graphical Assets";
+			sourceTree = "<group>";
+		};
+		A14649321B325DD400DFF014 /* CameraViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				A14649331B325DD400DFF014 /* CameraDismissButton.h */,
+				A14649341B325DD400DFF014 /* CameraDismissButton.m */,
+				A14649351B325DD400DFF014 /* CameraFlashButton.h */,
+				A14649361B325DD400DFF014 /* CameraFlashButton.m */,
+				A14649371B325DD400DFF014 /* CameraFocalReticule.h */,
+				A14649381B325DD400DFF014 /* CameraFocalReticule.m */,
+				A14649391B325DD400DFF014 /* CameraShutterButton.h */,
+				A146493A1B325DD400DFF014 /* CameraShutterButton.m */,
+				A146493B1B325DD400DFF014 /* CameraToggleButton.h */,
+				A146493C1B325DD400DFF014 /* CameraToggleButton.m */,
+				A146493D1B325DD400DFF014 /* LaunchCameraButton.h */,
+				A146493E1B325DD400DFF014 /* LaunchCameraButton.m */,
+			);
+			path = CameraViewComponents;
+			sourceTree = "<group>";
+		};
+		A14649411B325DD400DFF014 /* UI Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A14649421B325DD400DFF014 /* CameraStyleKitClass.h */,
+				A14649431B325DD400DFF014 /* CameraStyleKitClass.m */,
+			);
+			path = "UI Assets";
+			sourceTree = "<group>";
+		};
+		A14649441B325DD400DFF014 /* Model Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A14649451B325DD400DFF014 /* CaptureSessionManager.h */,
+				A14649461B325DD400DFF014 /* CaptureSessionManager.m */,
+				A14649471B325DD400DFF014 /* Constants.h */,
+				A14649481B325DD400DFF014 /* Constants.m */,
+			);
+			path = "Model Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +368,8 @@
 			files = (
 				6F74C3F61B29FA5D00C0FD85 /* Main.storyboard in Resources */,
 				6F74C3FB1B29FA5D00C0FD85 /* LaunchScreen.xib in Resources */,
+				A14649511B325DD400DFF014 /* PaintCodeFile.pcvd in Resources */,
+				A14649501B325DD400DFF014 /* Cool Camera Mockup.sketch in Resources */,
 				6F74C3F81B29FA5D00C0FD85 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,23 +391,33 @@
 				6F4D65271B315D3E009F9600 /* SelectRouteViewController.swift in Sources */,
 				6F1F9DCE1B2EBDE900E284BE /* BrowseRegionViewController.swift in Sources */,
 				6F4D65291B316342009F9600 /* SelectRouteCell.swift in Sources */,
+				A14649541B325DD400DFF014 /* Constants.m in Sources */,
+				A146494B1B325DD400DFF014 /* CameraFlashButton.m in Sources */,
 				6F1F9DC61B2E8DE100E284BE /* CragDetailViewController.swift in Sources */,
 				6F74C3F31B29FA5D00C0FD85 /* ViewController.swift in Sources */,
 				6F1F9DC81B2E97F500E284BE /* ClimbCell.swift in Sources */,
+				A14649491B325DD400DFF014 /* CameraSessionView.m in Sources */,
+				A146494F1B325DD400DFF014 /* LaunchCameraButton.m in Sources */,
 				6F74C4111B2ABAF900C0FD85 /* TabBarViewController.swift in Sources */,
 				6F74C41D1B2D5F8A00C0FD85 /* LogCell.swift in Sources */,
+				A146494A1B325DD400DFF014 /* CameraDismissButton.m in Sources */,
 				6F74C4191B2AC16A00C0FD85 /* SavedViewController.swift in Sources */,
 				A119B2A41B301F55001A0370 /* Common.swift in Sources */,
+				A14649531B325DD400DFF014 /* CaptureSessionManager.m in Sources */,
 				6F1F9DCA1B2EAB3B00E284BE /* addTransition.swift in Sources */,
 				6F74C4171B2ABFE900C0FD85 /* AddViewController.swift in Sources */,
+				A14649521B325DD400DFF014 /* CameraStyleKitClass.m in Sources */,
 				6F74C3F11B29FA5D00C0FD85 /* AppDelegate.swift in Sources */,
 				6F74C4131B2ABFCA00C0FD85 /* MyLogViewController.swift in Sources */,
 				6F74C4151B2ABFDB00C0FD85 /* BrowseCragViewController.swift in Sources */,
+				A146494E1B325DD400DFF014 /* CameraToggleButton.m in Sources */,
 				6F1F9DD21B2EC06900E284BE /* RegionCell.swift in Sources */,
 				6F1F9DC41B2E76E700E284BE /* LogDetailViewController.swift in Sources */,
 				6F9637591B325AE3002EDB49 /* AddPhotoViewController.swift in Sources */,
+				A146494D1B325DD400DFF014 /* CameraShutterButton.m in Sources */,
 				6F1F9DCC1B2EB65E00E284BE /* AddDetailViewController.swift in Sources */,
 				6F1F9DC21B2E4C3200E284BE /* BrowseCragCell.swift in Sources */,
+				A146494C1B325DD400DFF014 /* CameraFocalReticule.m in Sources */,
 				6F4D65251B315059009F9600 /* RouteDetailViewController.swift in Sources */,
 				6F74C41B1B2AC17500C0FD85 /* ConnectViewController.swift in Sources */,
 			);
@@ -427,6 +549,7 @@
 				INFOPLIST_FILE = "Climbing App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Climbing App/Climbing_App-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -437,6 +560,7 @@
 				INFOPLIST_FILE = "Climbing App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Climbing App/Climbing_App-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -8,8 +8,10 @@
 
 import UIKit
 
-class AddPhotoViewController: UIViewController {
+var cameraView: CameraSessionView!
 
+class AddPhotoViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

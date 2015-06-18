@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>F84966B2-C5C2-4F3D-B89F-1CBF6F072D20</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Climbing App</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>F15BCDC760BB826B08FD5ECDA82EF49F8EDE8F02</key>
 		<string>https://github.com/uxmin/Climbing-App.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Climbing App/Climbing App.xcodeproj/project.xcworkspace</string>
+	<string>Climbing App/Climbing App.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>F15BCDC760BB826B08FD5ECDA82EF49F8EDE8F02</key>
