@@ -10,12 +10,15 @@ import UIKit
 
 var cameraView: CameraSessionView!
 
-class AddPhotoViewController: UIViewController {
+class AddPhotoViewController: UIViewController, CACameraSessionDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        cameraView = CameraSessionView(frame: self.view.frame)
+        cameraView.delegate = self
+        view.addSubview(cameraView)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,6 +26,13 @@ class AddPhotoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func didCaptureImage(image: UIImage!) {
+        //use the image that is received
+    }
+    
+    func didCaptureImageWithData(imageData: NSData!) {
+        //use the image's data that is received
+    }
 
     /*
     // MARK: - Navigation
