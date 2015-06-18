@@ -41,5 +41,9 @@ class RouteDetailViewController: UIViewController {
     }
     
 
+	@IBAction func didPressBackButton(sender: AnyObject) {
+		navigationController?.popViewControllerAnimated(true)
+		
+	}
 
 }

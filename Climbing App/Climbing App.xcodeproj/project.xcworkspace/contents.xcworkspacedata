@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../SelectRouteViewController.swift">
-   </FileRef>
-   <FileRef
       location = "self:Climbing App.xcodeproj">
    </FileRef>
 </Workspace>
