@@ -9,7 +9,7 @@
 #ifndef Climbing_App_Climbing_App_Bridging_Header_h
 #define Climbing_App_Climbing_App_Bridging_Header_h
 
-#import "CameraSessionView.h"
+#import <Parse/Parse.h>
 #import "TGCameraViewController.h"
 #import "TGCamera.h"
 #import "TGCameraColor.h"
