@@ -87,12 +87,12 @@ class RouteDetailViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     
-    @IBAction func didPressChoosePhoto(sender: AnyObject) {
-        picker.allowsEditing = false //2
-        picker.sourceType = .PhotoLibrary //3
-        
-        picker.modalPresentationStyle = .Popover
-        presentViewController(picker, animated: true, completion: nil)//4
-    }
+//    @IBAction func didPressChoosePhoto(sender: AnyObject) {
+//        picker.allowsEditing = false //2
+//        picker.sourceType = .PhotoLibrary //3
+//        
+//        picker.modalPresentationStyle = .Popover
+//        presentViewController(picker, animated: true, completion: nil)//4
+//    }
     
 }

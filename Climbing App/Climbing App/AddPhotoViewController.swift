@@ -11,6 +11,7 @@ import UIKit
 class AddPhotoViewController: UIViewController, TGCameraDelegate {
     
     @IBOutlet weak var photoView: UIImageView!
+    @IBOutlet weak var captionTextView: UITextView!
     var navController: TGCameraNavigationController!
     var triggerOpen: Bool = true
     
@@ -61,14 +62,10 @@ class AddPhotoViewController: UIViewController, TGCameraDelegate {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    
-    func didCaptureImage(image: UIImage!) {
-        //use the image that is received
+    @IBAction func didPressBack(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func didCaptureImageWithData(imageData: NSData!) {
-        //use the image's data that is received
-    }
 
     /*
     // MARK: - Navigation
