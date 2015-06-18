@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import MobileCoreServices
+import AssetsLibrary
+import AVFoundation
+import CoreImage
+import Foundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

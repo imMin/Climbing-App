@@ -10,5 +10,6 @@
 #define Climbing_App_Climbing_App_Bridging_Header_h
 
 #import "CameraSessionView.h"
+#import "TGCameraViewController.h"
 
 #endif

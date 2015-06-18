@@ -636,6 +636,16 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bSL-1r-xQh">
+                                <rect key="frame" x="179" y="296" width="98" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Choose Photo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressChoosePhoto:" destination="9fa-Sk-Kgo" eventType="touchUpInside" id="QaK-zi-s0v"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="l0m-UD-iq6">
                                 <rect key="frame" x="41" y="296" width="74" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -643,19 +653,21 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="IBf-kN-IVv" kind="modal" id="zTp-5L-dpy"/>
+                                    <action selector="didPressAddPhoto:" destination="9fa-Sk-Kgo" eventType="touchUpInside" id="06u-e6-R74"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="BOx-zc-9fV"/>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="climbLabel" destination="AkP-qc-uX6" id="rlo-h4-cDf"/>
                         <outlet property="distanceLabel" destination="YRU-Pb-ssB" id="SJt-QQ-v92"/>
                         <outlet property="levelLabel" destination="EmP-h4-AgY" id="xIj-nn-oig"/>
                         <outlet property="routeNameLabel" destination="IXM-S9-18V" id="2hH-IJ-gX4"/>
                         <outlet property="typeLabel" destination="Z1a-cN-XnW" id="dqp-6C-Huz"/>
+                        <segue destination="IBf-kN-IVv" kind="modal" identifier="addPhotoSegue" id="LhI-0p-KLR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2q9-qr-Qv8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -671,6 +683,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hpX-8L-hWs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -797,7 +811,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="72" id="Rp3-I9-Y0W">
-                                        <rect key="frame" x="0.0" y="86" width="320" height="72"/>
+                                        <rect key="frame" x="0.0" y="22" width="320" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rp3-I9-Y0W" id="jhx-Dc-bgh">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
