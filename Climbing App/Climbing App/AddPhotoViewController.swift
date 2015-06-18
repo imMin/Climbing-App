@@ -7,26 +7,27 @@
 //
 
 import UIKit
-import MobileCoreServices
-import AssetsLibrary
-import AVFoundation
-import CoreImage
-import Foundation
 
-
-//var cameraView: CameraSessionView!
-
-class AddPhotoViewController: UIViewController, CACameraSessionDelegate {
+class AddPhotoViewController: UIViewController, TGCameraDelegate {
+    
+    @IBOutlet weak var photoView: UIImageView!
+    var navController: TGCameraNavigationController!
+    var triggerOpen: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        cameraView = CameraSessionView(frame: self.view.frame)
-//        cameraView.delegate = self
-//        view.addSubview(cameraView)
-        
 
         
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        if triggerOpen == true {
+        navController = TGCameraNavigationController.newWithCameraDelegate(self)
+        exposeCamera()
+            triggerOpen = false
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +35,31 @@ class AddPhotoViewController: UIViewController, CACameraSessionDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    func exposeCamera() {
+        self.presentViewController(navController, animated: true, completion: nil)
+    }
     
+    func cameraWillTakePhoto() {
+        
+    }
+    
+    func cameraDidSavePhotoAtPath(assetURL: NSURL!) {
+            //when implemented, an image will be saved on user's device
+    }
+    
+    func cameraDidCancel() {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+
+    func cameraDidTakePhoto(image: UIImage!) {
+        photoView.image = image
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func cameraDidSelectAlbumPhoto(image: UIImage!) {
+        photoView.image = image
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     
     func didCaptureImage(image: UIImage!) {

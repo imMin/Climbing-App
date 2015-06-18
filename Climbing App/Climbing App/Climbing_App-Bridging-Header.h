@@ -11,5 +11,7 @@
 
 #import "CameraSessionView.h"
 #import "TGCameraViewController.h"
+#import "TGCamera.h"
+#import "TGCameraColor.h"
 
 #endif

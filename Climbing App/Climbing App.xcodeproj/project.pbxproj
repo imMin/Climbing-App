@@ -49,6 +49,9 @@
 		A14649541B325DD400DFF014 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = A14649481B325DD400DFF014 /* Constants.m */; };
 		A146495E1B32633A00DFF014 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A146495D1B32633A00DFF014 /* AVFoundation.framework */; };
 		A14649BE1B32759000DFF014 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A14649BD1B32759000DFF014 /* CoreLocation.framework */; };
+		A14649C01B32A42900DFF014 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A14649BF1B32A42900DFF014 /* CoreMedia.framework */; };
+		A14649C21B32A43100DFF014 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A14649C11B32A43100DFF014 /* QuartzCore.framework */; };
+		A14649C41B32A43B00DFF014 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A14649C31B32A43B00DFF014 /* ImageIO.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +122,9 @@
 		A146495C1B3262AD00DFF014 /* Climbing_App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Climbing_App-Bridging-Header.h"; sourceTree = "<group>"; };
 		A146495D1B32633A00DFF014 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A14649BD1B32759000DFF014 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A14649BF1B32A42900DFF014 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		A14649C11B32A43100DFF014 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A14649C31B32A43B00DFF014 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		BEB2311AF90DE04A18F8AF95 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F1F0E6F419874C7D294D1121 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +134,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A14649C41B32A43B00DFF014 /* ImageIO.framework in Frameworks */,
+				A14649C21B32A43100DFF014 /* QuartzCore.framework in Frameworks */,
+				A14649C01B32A42900DFF014 /* CoreMedia.framework in Frameworks */,
 				A14649BE1B32759000DFF014 /* CoreLocation.framework in Frameworks */,
 				A146495E1B32633A00DFF014 /* AVFoundation.framework in Frameworks */,
 				6F8B0DD91B2D839E0014BF02 /* MapKit.framework in Frameworks */,
@@ -148,8 +157,6 @@
 		6F74C3E21B29FA5D00C0FD85 = {
 			isa = PBXGroup;
 			children = (
-				A146495D1B32633A00DFF014 /* AVFoundation.framework */,
-				6F8B0DD81B2D839E0014BF02 /* MapKit.framework */,
 				6F74C3ED1B29FA5D00C0FD85 /* Climbing App */,
 				6F74C4031B29FA5D00C0FD85 /* Climbing AppTests */,
 				6F74C3EC1B29FA5D00C0FD85 /* Products */,
@@ -177,8 +184,8 @@
 				6F74C3F21B29FA5D00C0FD85 /* ViewController.swift */,
 				6F74C3F41B29FA5D00C0FD85 /* Main.storyboard */,
 				6F9637581B325AE3002EDB49 /* AddPhotoViewController.swift */,
-				6F4D65261B315D3E009F9600 /* SelectRouteViewController.swift */,
 				6F4D65241B315059009F9600 /* RouteDetailViewController.swift */,
+				6F4D65261B315D3E009F9600 /* SelectRouteViewController.swift */,
 				6F1F9DCD1B2EBDE900E284BE /* BrowseRegionViewController.swift */,
 				6F1F9DCB1B2EB65E00E284BE /* AddDetailViewController.swift */,
 				A119B2A31B301F55001A0370 /* Common.swift */,
@@ -308,6 +315,11 @@
 		BC20C5E3B76E6373D30D80E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A14649C31B32A43B00DFF014 /* ImageIO.framework */,
+				A14649C11B32A43100DFF014 /* QuartzCore.framework */,
+				A14649BF1B32A42900DFF014 /* CoreMedia.framework */,
+				A146495D1B32633A00DFF014 /* AVFoundation.framework */,
+				6F8B0DD81B2D839E0014BF02 /* MapKit.framework */,
 				A14649BD1B32759000DFF014 /* CoreLocation.framework */,
 				4A698EF0F3B9F716CA986E7D /* libPods.a */,
 			);
@@ -610,6 +622,7 @@
 			baseConfigurationReference = F1F0E6F419874C7D294D1121 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "Climbing App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -622,6 +635,7 @@
 			baseConfigurationReference = BEB2311AF90DE04A18F8AF95 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "Climbing App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

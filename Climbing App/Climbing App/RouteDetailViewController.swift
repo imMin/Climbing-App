@@ -52,7 +52,7 @@ class RouteDetailViewController: UIViewController, UIImagePickerControllerDelega
         
 
         var editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
-        var metaData = UIImagePickerControllerMediaMetadata as! String
+        var metaData = UIImagePickerControllerMediaMetadata as String
 
    
     }
@@ -67,15 +67,17 @@ class RouteDetailViewController: UIViewController, UIImagePickerControllerDelega
 	}
 
     @IBAction func didPressAddPhoto(sender: AnyObject) {
-        if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
-            picker.allowsEditing = false
-            picker.sourceType = UIImagePickerControllerSourceType.Camera
-            picker.cameraCaptureMode = .Photo
-            presentViewController(picker, animated: true, completion: nil)
-        } else {
-            noCamera()
-        }
+//        if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
+//            picker.allowsEditing = false
+//            picker.sourceType = UIImagePickerControllerSourceType.Camera
+//            picker.cameraCaptureMode = .Photo
+//            presentViewController(picker, animated: true, completion: nil)
+//        } else {
+//            noCamera()
+//        }
 
+        performSegueWithIdentifier("addPhotoSegue", sender: nil)
+        
     }
     func noCamera(){
         let alertVC = UIAlertController(title: "No Camera", message: "Sorry, this device has no camera", preferredStyle: .Alert)

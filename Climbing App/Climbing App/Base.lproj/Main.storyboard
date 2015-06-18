@@ -811,7 +811,7 @@
                         <outlet property="levelLabel" destination="EmP-h4-AgY" id="xIj-nn-oig"/>
                         <outlet property="routeNameLabel" destination="IXM-S9-18V" id="2hH-IJ-gX4"/>
                         <outlet property="typeLabel" destination="Z1a-cN-XnW" id="dqp-6C-Huz"/>
-                        <segue destination="IBf-kN-IVv" kind="modal" identifier="addPhotoSegue" id="LhI-0p-KLR"/>
+                        <segue destination="IBf-kN-IVv" kind="modal" identifier="addPhotoSegue" modalTransitionStyle="crossDissolve" id="LhI-0p-KLR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2q9-qr-Qv8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -825,10 +825,26 @@
                     <view key="view" contentMode="scaleToFill" id="cWY-gK-mn1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oxG-q4-oOL">
+                                <rect key="frame" x="255" y="20" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="TTc-aM-BAP">
+                                <rect key="frame" x="-5" y="66" width="325" height="325"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="photoView" destination="TTc-aM-BAP" id="arR-4f-phf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hpX-8L-hWs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
