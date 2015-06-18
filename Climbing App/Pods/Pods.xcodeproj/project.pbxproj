@@ -1,0 +1,1454 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		041E89ECD606823E654B1A51 /* UIWebView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DCF6C380BFAAC827A04250F /* UIWebView+AFNetworking.h */; };
+		04C84CAC5A89CFD32932A929 /* PFTwitterUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E99D2DBC70D52AAA96D290BF /* PFTwitterUtils.h */; };
+		07623E9015F3C69DC3E0944B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CE08ECE52FE74A45B32DD8 /* AudioToolbox.framework */; };
+		0856DE985777CAC4D685778B /* AFHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = E8CA7BE614192DF7585E3123 /* AFHTTPRequestOperation.h */; };
+		08B32100D6F2D014E46992F8 /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 44ACBEE44903A22BFD66691A /* AFSecurityPolicy.h */; };
+		09A176DB7E85300E9C02D363 /* PFFile.h in Headers */ = {isa = PBXBuildFile; fileRef = B8DDE511159751E3055004EF /* PFFile.h */; };
+		0BA1246476B3DA4D3DB3960F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5370610572887F41C49BA15B /* CoreLocation.framework */; };
+		0C37438DEC5228CAAECA06DF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7249823AB8B8A0974760514A /* AVFoundation.framework */; };
+		12468AF52588E1A7361E5D38 /* TGCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 200E8BF37BC3921B71C4463C /* TGCameraViewController.m */; };
+		13F38BAD88273286A4E3B5CF /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C374EE44F5C1EC4BAD11272 /* UIRefreshControl+AFNetworking.m */; };
+		15BA900AEACB2A2DCAB603FA /* Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 735F7237353A4F0CE97D4CD3 /* Empty.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		17BF92EEABA7DBE828F94AE6 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = F333C835021E938129EFC27D /* AFSecurityPolicy.m */; };
+		1B37037B9D45BF57FB33243C /* BFCancellationTokenSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4D4A4A73F64BF447493C37 /* BFCancellationTokenSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1D751DF05D3CEDCCDD10B05C /* TGCameraShot.m in Sources */ = {isa = PBXBuildFile; fileRef = A9083CDEB968182A55AD3EF0 /* TGCameraShot.m */; };
+		1D8341A6256C8A7AA8BFEDB6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290CA695966D1F0E270826BD /* CoreGraphics.framework */; };
+		1DB17F69DB06C865CAE6BC46 /* TGCameraFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = B8CC277481C9AA455B9CE560 /* TGCameraFunctions.h */; };
+		20084DDC213AFF124B0CBFE8 /* TGCameraColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F8F4F97A6757700E5E9678 /* TGCameraColor.m */; };
+		251899612AB2331112D1DB92 /* PFQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EE9C0C30B3B37040F54E3DE /* PFQuery.h */; };
+		25A137F66667C4EADAD48C4B /* TGCameraSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD20DF11F438CD10B697E8C3 /* TGCameraSlideView.m */; };
+		25FBBD031B22C6B63487A11F /* PFAnalytics.h in Headers */ = {isa = PBXBuildFile; fileRef = C49C51F412D1E6A42FF5D9A7 /* PFAnalytics.h */; };
+		26F6AEB20FA8DA194F09E1EC /* TGCameraGridView.h in Headers */ = {isa = PBXBuildFile; fileRef = C0CC383D53DF343E3E3B8BF5 /* TGCameraGridView.h */; };
+		2724666A2D688EF579DDAD22 /* Bolts.h in Headers */ = {isa = PBXBuildFile; fileRef = 681F135F1856BEA7AF137AEB /* Bolts.h */; };
+		27C20B588AB65457DC8FCF43 /* AFHTTPRequestOperationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB91DA2592CFC0B9AC9B6FD /* AFHTTPRequestOperationManager.h */; };
+		2A89616ECA7E196A85A7C7E4 /* TGCameraColor.h in Headers */ = {isa = PBXBuildFile; fileRef = BCC682200101705C0CC29510 /* TGCameraColor.h */; };
+		2B388A2EF6251D64C0D1F06C /* BFTaskCompletionSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 53581404EE079F99EB2A526D /* BFTaskCompletionSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		2B3C3695ABB31BA614B3146A /* PFSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E5ED658A4C8F235CE84BFA /* PFSession.h */; };
+		2D037EEB1102F225E44C5FD2 /* UIRefreshControl+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 6140029E112617FE645CCF87 /* UIRefreshControl+AFNetworking.h */; };
+		33033A5947D4E1F3F92D451F /* Bolts.m in Sources */ = {isa = PBXBuildFile; fileRef = 12EEED6B38105BD05D8BAB2C /* Bolts.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		38E13948CC8F957FA946EEC4 /* UIKit+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 872AC270C6891627A6E4C97C /* UIKit+AFNetworking.h */; };
+		3B56C767088187390D902859 /* Parse.h in Headers */ = {isa = PBXBuildFile; fileRef = 333006012D49BE36D7CF8A32 /* Parse.h */; };
+		3BAD8E197377441460DE6DBF /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D0FAE2E245D3C20D9FA5D8C8 /* UIImageView+AFNetworking.m */; };
+		3E24E38D77352BE86AFEF036 /* PFObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 53CEFE5FC1A5F1BFAD94ACE3 /* PFObject.h */; };
+		3F343D3CA5536CAA951544BA /* TGCameraFlash.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BA3455F899CD0840D01D79 /* TGCameraFlash.m */; };
+		41AB21429F6A52F7FC393CBA /* PF_Twitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DF022C4AFA4920E3C8C40F5 /* PF_Twitter.h */; };
+		4600452AE4C415C6211333FE /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B7F3855205B4A6ABBDB47D /* Pods-dummy.m */; };
+		460636E733ADE80E7D081F18 /* Pods-Parse-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A946231F188D014E970C97EC /* Pods-Parse-dummy.m */; };
+		4A3C91C656266E4BFF332648 /* BFTask.h in Headers */ = {isa = PBXBuildFile; fileRef = F374041046E04BE7693A2D76 /* BFTask.h */; };
+		4A6AD168A7A521C2E961548A /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = C34F9C7CC8B684687C4E4F90 /* UIButton+AFNetworking.m */; };
+		4B6DFA052F16574876962DC3 /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E36907DDC33F9FE4D6A58B5 /* AFNetworking.h */; };
+		4EBEAC0128EE29E3CE4E934C /* TGAssetsLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = BBA8D27FF28DB6EE7102212C /* TGAssetsLibrary.h */; };
+		4EC48FF80B0413A7A81321ED /* TGCameraAuthorizationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BE4A8CB79BB6FCFC128184BB /* TGCameraAuthorizationViewController.h */; };
+		507ED9ECD39947581621915B /* BFCancellationToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 8149FEEA1D07802E67B56B0A /* BFCancellationToken.h */; };
+		516FEF6D4DD6F29012FDB07A /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 891E51F992A18F6A5D51F57F /* AFURLRequestSerialization.m */; };
+		51B427C4A46097CF2EF836FA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F30E245BB6689F2C715634A /* UIKit.framework */; };
+		53BAE1BD24A6AF99AAB8187C /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7833D55113E49E6478C673BE /* AssetsLibrary.framework */; };
+		54E82D36F920CFF4CFC0A2C1 /* PFRole.h in Headers */ = {isa = PBXBuildFile; fileRef = BAC14B45B5DEF00C0F2457A4 /* PFRole.h */; };
+		569FC93F0CB63DE94F41C4E0 /* BFExecutor.h in Headers */ = {isa = PBXBuildFile; fileRef = CC66E17C32CBEDD03AFE701F /* BFExecutor.h */; };
+		56DCAB3761E76058B7C78503 /* TGAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = E09B615856D1EBE69B1F5D95 /* TGAlbum.m */; };
+		57E1494B2470582671D0005F /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9C04D0D0496A9D38ED1454 /* AFHTTPRequestOperationManager.m */; };
+		5A5B2187C39CA259CB3B3C78 /* PFPush.h in Headers */ = {isa = PBXBuildFile; fileRef = ACA840CF1EB02B106D25C963 /* PFPush.h */; };
+		5B1ECBB1EABF2AA7BEF6A32C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D460FBAC4C72D561ABF0F5A /* Foundation.framework */; };
+		5BD84D41A4A917A7960118AA /* TGCameraGrid.h in Headers */ = {isa = PBXBuildFile; fileRef = 96603B0B8E7BFDC6466D372F /* TGCameraGrid.h */; };
+		5E1CFBBD94528604AD585421 /* TGAssetsLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = CA19D091391D19A6B825249E /* TGAssetsLibrary.m */; };
+		5E35B0B24AD21272ED4DE13F /* PFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 543F1A52382A6252FD05EAFD /* PFNetworkActivityIndicatorManager.h */; };
+		5E55D701A6E51E42FE03B571 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE7DE2629756EA32EEA2B46B /* SystemConfiguration.framework */; };
+		5FC379402246E2BF04F4448B /* PFACL.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F05D48B2AB1C010986216CF /* PFACL.h */; };
+		60964931C8093C8F19905424 /* PFConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A82E99271725FDA7FEEE28B /* PFConfig.h */; };
+		60972FA0C379C1D056A88E5A /* TGTintedLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CDF7D4B972CF3D373F4A7B6 /* TGTintedLabel.h */; };
+		60AD78E3D9D6462C76FB429A /* BFExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F4D544294208D79D1C8DC4 /* BFExecutor.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		61EC5FBC0C29F146FCF06623 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F53B3E2A9CA4A5F94512FA /* MobileCoreServices.framework */; };
+		64ACA8ECB884D3A0EBA3C85F /* UIProgressView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AAEDCDCFCCE35C999954F0B /* UIProgressView+AFNetworking.h */; };
+		65FC72ED32E86675C1AF9500 /* TGTintedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C73A2D7DB6C2A23BACC31A0B /* TGTintedButton.m */; };
+		687F093A33E89F6D2053F946 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA45CAFD5DC519C7F13C161 /* AFHTTPSessionManager.m */; };
+		6E740B7434F7F8219E679FE4 /* TGCameraNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E07BB985EBBFDF991351536B /* TGCameraNavigationController.m */; };
+		6FF70E06CE58B722C44DFBC5 /* TGAssetImageFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC7E7297522872A4A523A87 /* TGAssetImageFile.m */; };
+		703F6BE3A931A940C8F11F43 /* TGCameraFocusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5D497D33718F4B37991FB3 /* TGCameraFocusView.m */; };
+		715854421CC51763BB8795D8 /* BFCancellationTokenRegistration.m in Sources */ = {isa = PBXBuildFile; fileRef = C04427AC53D545284FFD8D6C /* BFCancellationTokenRegistration.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		721250110AFF9DCD1E3B1EA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D460FBAC4C72D561ABF0F5A /* Foundation.framework */; };
+		7369948FDD13F1C8B2AE430A /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C77E1E2520042E7F4E9220AD /* AFURLConnectionOperation.m */; };
+		7424674D37BC5D40543A8769 /* TGCameraSlideDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA823E133402D79CC9A7500 /* TGCameraSlideDownView.m */; };
+		76156F8668275749D65DCE98 /* Pods-Bolts-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 143368AD2D2926EA21F74BB0 /* Pods-Bolts-dummy.m */; };
+		78961158EFB554CD73507C9B /* TGCameraNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = BD9C7AED4861D748DCD0099C /* TGCameraNavigationController.h */; };
+		79F5919769BD6EAB1E64D86D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF298B9686FCA80A8D257466 /* Security.framework */; };
+		7B025445397D8B41B7016E49 /* TGCameraFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 016F98444EDCA7907A7335C6 /* TGCameraFilterView.m */; };
+		7B3556DA8E96A490C94AA332 /* BFCancellationTokenSource.h in Headers */ = {isa = PBXBuildFile; fileRef = F27043F92A8851104D07D2A0 /* BFCancellationTokenSource.h */; };
+		7C8C70089E1659AAEA735896 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D460FBAC4C72D561ABF0F5A /* Foundation.framework */; };
+		7D815B2E247E78084B2FF049 /* PFConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CC946CC571B9E9B7E798973 /* PFConstants.h */; };
+		7F0E5FB678FF6ABFFCE9415C /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EC13B8A75DA976B19F1C36 /* UIProgressView+AFNetworking.m */; };
+		872B5BC625A8326C6F677057 /* BoltsVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = B50BE7762DCDE3627315EBAD /* BoltsVersion.h */; };
+		8B3ECA51A9EA18DC65623D3C /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 73B9589318CB0DAC6F27F076 /* AFURLSessionManager.h */; };
+		8BCC060E5DA7F237B0491BF6 /* UIImage+CameraFilters.h in Headers */ = {isa = PBXBuildFile; fileRef = DFD2A1635D7FFF5C88183BCD /* UIImage+CameraFilters.h */; };
+		8F8B9E63E7FA6E00E7B9C270 /* TGCameraAuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B026A69E28002D42C9C671 /* TGCameraAuthorizationViewController.m */; };
+		93C0EFFEAA41DC9DB218549D /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 74D415B21BDA426E4ACF3ADC /* AFNetworkReachabilityManager.h */; };
+		9595534A453E6928A5C1D363 /* TGCameraSlideDownView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F811A21421DD85FAAA5064D /* TGCameraSlideDownView.h */; };
+		97DFBD9BB76B8B722F8CF8F0 /* TGCameraGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 692A1C34EB46BF4A54F63BC8 /* TGCameraGrid.m */; };
+		98B0F30F8A6B1B8AF507E71E /* PFRelation.h in Headers */ = {isa = PBXBuildFile; fileRef = F2AB9B83537DEB5C8415C311 /* PFRelation.h */; };
+		98B13808E4B3F3491D49A3E7 /* BFTaskCompletionSource.h in Headers */ = {isa = PBXBuildFile; fileRef = A727E2F2E110884A99BD8D79 /* BFTaskCompletionSource.h */; };
+		9905601AC3929BDD10AE28C7 /* TGCameraFocusView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D1BD94A6A81DA7D4C9665FF /* TGCameraFocusView.h */; };
+		9B633FE7FF4E9F050FE889AD /* UIAlertView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E01E7CDC4AAABE19DE1762 /* UIAlertView+AFNetworking.m */; };
+		9C3C1443D597047226C6FAD4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE7DE2629756EA32EEA2B46B /* SystemConfiguration.framework */; };
+		9C4D38E8DF1C8BB9F1D159A4 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA101B4C120DCDE62325C8A /* AFURLSessionManager.m */; };
+		9E2CEC8AC40C2EC73B308247 /* PFGeoPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 43426F6A0DDB36B0589CDE2B /* PFGeoPoint.h */; };
+		9F0A564044E778D47CE93690 /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = AEAA35B2530836EA30F7EE38 /* AFURLRequestSerialization.h */; };
+		9F67A156DC6DD5B4785E474C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F53B3E2A9CA4A5F94512FA /* MobileCoreServices.framework */; };
+		A0B1280616C00FBB3A07160F /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FFE6A521AE9BEADF5342E3 /* AFNetworkActivityIndicatorManager.m */; };
+		A1A8ABE7C5126B5961CCCD28 /* TGCameraSlideUpView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BF793A45E55A65473A080DC /* TGCameraSlideUpView.h */; };
+		A1E1417FA3897647EE0FDA83 /* TGTintedButton.h in Headers */ = {isa = PBXBuildFile; fileRef = B6464886F5A47F674140D079 /* TGTintedButton.h */; };
+		A33C7B6BBD8A561AD1894E9C /* PFCloud.h in Headers */ = {isa = PBXBuildFile; fileRef = B0592D13FD8BD0A61CE8F483 /* PFCloud.h */; };
+		A44B0DD89F80E59BE71DC8D5 /* PFNullability.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B407FE3AC3B14BBB33727F /* PFNullability.h */; };
+		A5A95D991FB04A5BE199CA17 /* BFCancellationTokenRegistration.h in Headers */ = {isa = PBXBuildFile; fileRef = E111A30F21ED4E2E79DC327D /* BFCancellationTokenRegistration.h */; };
+		A5FA4049A21B3A40697ECEE3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD0496C83023CD4FA556B0B6 /* QuartzCore.framework */; };
+		A76D73B7BD1FCDA42568FEB3 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 67461B46F08168E4FE8EE9ED /* UIWebView+AFNetworking.m */; };
+		A87A4A93EF441AA8B5B174A5 /* TGCameraFlash.h in Headers */ = {isa = PBXBuildFile; fileRef = C85521F1E611F7174647F888 /* TGCameraFlash.h */; };
+		AB89D67FD384498770B31333 /* BFCancellationToken.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAE323E5A1688221C273A33 /* BFCancellationToken.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		AE91F72BCD6C15C7E7D2C577 /* TGCameraToggle.m in Sources */ = {isa = PBXBuildFile; fileRef = A395172F37CEC6F96B0BAC3D /* TGCameraToggle.m */; };
+		B044083C9983543D0FD0066D /* TGCameraSlideUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0554A9853D0AA64CEAD87E32 /* TGCameraSlideUpView.m */; };
+		B2CC60CE7CCD3EBA2475BAE5 /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 94AB1BDDC94A3033B2CB42E3 /* AFHTTPSessionManager.h */; };
+		B2E0F790BD5C036547033DF1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD0456CDB655B2D2DA2938B /* CFNetwork.framework */; };
+		B7BED420A297FE23D704B4DA /* TGCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 7467BBCF8586DDFD148ACFF6 /* TGCamera.h */; };
+		B7C6D4E45E345AD92CE077E0 /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = BA0AACF8B558E4DCDA8EF2AB /* AFURLResponseSerialization.h */; };
+		B94B230FC6DD01AE0AB06F6B /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 892690D4C750B6FC51971561 /* AFNetworkActivityIndicatorManager.h */; };
+		BA4D331C72DB57A02C577A7B /* UIImage+CameraFilters.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F97BA3E909CDCDC318EF66F /* UIImage+CameraFilters.m */; };
+		BC89C14C965EDA9C958EA5BB /* TGPhotoViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D748018220D12FD47FA5A0B1 /* TGPhotoViewController.h */; };
+		BCDDE98FC830455DB9A62106 /* PFObject+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 3450A0AEEE7F004F58DBF58D /* PFObject+Subclass.h */; };
+		BD1A02A2253291D9EFC15887 /* Pods-AFNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A4D1920CF18585562121F9 /* Pods-AFNetworking-dummy.m */; };
+		BD44B2D61DAB0C123D9289B2 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3302EAA8904B84E7B9055A81 /* CoreImage.framework */; };
+		BF16372B884E76EA07F68C74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D460FBAC4C72D561ABF0F5A /* Foundation.framework */; };
+		BF6E6595D0449404C564DD07 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F53B3E2A9CA4A5F94512FA /* MobileCoreServices.framework */; };
+		C097D3C3ABBB283CDD286BA7 /* TGCameraShot.h in Headers */ = {isa = PBXBuildFile; fileRef = A8CC613F7E9246A90F914D8A /* TGCameraShot.h */; };
+		C0FFB8F9C8BC5ABD261AEC72 /* UIImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = EFC150A07B102ADD36EB7007 /* UIImageView+AFNetworking.h */; };
+		C21F502E2A974EF323A06DC3 /* PFUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1595D3156A7F2531999339D4 /* PFUser.h */; };
+		C23D2AA878A105DB2FF2A15C /* UIButton+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = CA9695C83AF3F72684888610 /* UIButton+AFNetworking.h */; };
+		C6849DD9AF7E720D9A6EF68B /* TGAlbum.h in Headers */ = {isa = PBXBuildFile; fileRef = 92C2F9B48ED5B8B6017C1407 /* TGAlbum.h */; };
+		C6888156AF17820E5A7ED183 /* TGTintedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 29937DC87ADC5062B4BE32DB /* TGTintedLabel.m */; };
+		C68CB66A11475929C6AB60A5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF298B9686FCA80A8D257466 /* Security.framework */; };
+		C892FF39DC95B59D976B1124 /* BFTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B622D9540075CA7770BE5FF /* BFTask.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CAD822291A933319BDAF75C7 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAE7B15B51CCF3C60B922B1 /* AFNetworkReachabilityManager.m */; };
+		CD637B6C5D85CA5BA27FC884 /* Pods-TGCameraViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FCADB53B99DB179E27B6F9 /* Pods-TGCameraViewController-dummy.m */; };
+		CF5B4455DE1FE134AB32003E /* UIAlertView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 913D7AB54A82A67FDCDD89B0 /* UIAlertView+AFNetworking.h */; };
+		D37D2900B0C31969B3F764A5 /* TGCameraSlideView.h in Headers */ = {isa = PBXBuildFile; fileRef = 239B8D8BE79FA165DE19E4DB /* TGCameraSlideView.h */; };
+		D95EE2088A2321983312F5F9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290CA695966D1F0E270826BD /* CoreGraphics.framework */; };
+		DA545FEE62606E179FD12B56 /* UIActivityIndicatorView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = A1C1B965CDB5F21A6C74CD29 /* UIActivityIndicatorView+AFNetworking.h */; };
+		DABFBBDEA2DDFF95BFEFF280 /* TGCameraFilterView.h in Headers */ = {isa = PBXBuildFile; fileRef = 32F907F336CDDCBCA37C4AF1 /* TGCameraFilterView.h */; };
+		DB6A494FD300A0F6005D7E64 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC8BC0981438EB1A9B1D262 /* AFHTTPRequestOperation.m */; };
+		DC57810215EBC20F08EE4DC8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E58512705348AAB98C29B7 /* StoreKit.framework */; };
+		DF2BEDAF44E1E88887889823 /* PFAnonymousUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = F836D49BDB953B67141145E1 /* PFAnonymousUtils.h */; };
+		E16B492AF01DC2696FA56A9B /* PFSubclassing.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F1F391ACB2B602429705A80 /* PFSubclassing.h */; };
+		E2335AFFFB5D9BD7BCC03017 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 781A1887F5BBD9FA04F98F28 /* AFURLResponseSerialization.m */; };
+		E41F2E54716018ECFB25508B /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA5AD0F20FEDA6DC7B9ACA7 /* UIActivityIndicatorView+AFNetworking.m */; };
+		E4537BB278311DB3C68BE169 /* PFProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = 7689E4DC18908BB1BD908102 /* PFProduct.h */; };
+		E4F82CD35ED36DB03DD6D18F /* TGCameraGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB6B9B3357CE29D37C4C36D2 /* TGCameraGridView.m */; };
+		E775021C172F53A0FF2145DC /* TGCameraFocus.m in Sources */ = {isa = PBXBuildFile; fileRef = F63A29132F83A3A49384317B /* TGCameraFocus.m */; };
+		E7BD45304E32C4AC9B6012B5 /* TGCameraViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 71BAA78F99C4DC8784C8A9D7 /* TGCameraViewController.h */; };
+		E8437C27E80E03BB236FC057 /* TGCameraToggle.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DB6B2F0BD2F1527F86D2A28 /* TGCameraToggle.h */; };
+		ECCC01D2D060F8754A5FBA18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D460FBAC4C72D561ABF0F5A /* Foundation.framework */; };
+		EFB603095A100FBA422136BF /* PFInstallation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E28470E143561B23580379F /* PFInstallation.h */; };
+		EFB9718E65CBBC75AFDCE831 /* TGCameraFocus.h in Headers */ = {isa = PBXBuildFile; fileRef = 435B1264915D25630DEE4743 /* TGCameraFocus.h */; };
+		F4AD7F2654F60B8EB9201933 /* TGCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE76AB908451FE83FA4C9D9 /* TGCamera.m */; };
+		F5D61D88C28A12236B95501A /* TGAssetImageFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BECDC103EAEB1DA429FAA81 /* TGAssetImageFile.h */; };
+		FD1C2C6726AE4531C9A33EC4 /* PFPurchase.h in Headers */ = {isa = PBXBuildFile; fileRef = 78867E68D7F747C61824C3FB /* PFPurchase.h */; };
+		FE09AC86B8021792E5438C6B /* AFURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 8194E6D43E567B39EEE97EA9 /* AFURLConnectionOperation.h */; };
+		FE84CF28ECA0964DBEC3A5F7 /* TGPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CE1A1B36441FA5FAA2BAEC /* TGPhotoViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		09DFB1870FD894F1CB9BF149 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB6EA4D7DBB6EB24B3BC0655 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A64AABEEFE6AE92F39E8721A;
+			remoteInfo = "Pods-TGCameraViewController";
+		};
+		0A5926105DB38B9A8D7D5E3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB6EA4D7DBB6EB24B3BC0655 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBB59D56BC16803BC5CE2BD8;
+			remoteInfo = "Pods-Bolts";
+		};
+		2924BFDE169F487D1DF49486 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB6EA4D7DBB6EB24B3BC0655 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5FB06AFFF386D27786913EFF;
+			remoteInfo = "Pods-AFNetworking";
+		};
+		607E0540B6BB07639F69105B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB6EA4D7DBB6EB24B3BC0655 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E50C8129CDF355CBC0CF09A;
+			remoteInfo = "Pods-Parse";
+		};
+		D7AE49B1FF18019D05FB8D0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB6EA4D7DBB6EB24B3BC0655 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBB59D56BC16803BC5CE2BD8;
+			remoteInfo = "Pods-Bolts";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		016F98444EDCA7907A7335C6 /* TGCameraFilterView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraFilterView.m; path = TGCameraViewController/Classes/UI/TGCameraFilterView.m; sourceTree = "<group>"; };
+		0554A9853D0AA64CEAD87E32 /* TGCameraSlideUpView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraSlideUpView.m; path = TGCameraViewController/Classes/UI/TGCameraSlideUpView.m; sourceTree = "<group>"; };
+		05F8F4F97A6757700E5E9678 /* TGCameraColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraColor.m; path = TGCameraViewController/Classes/Helper/TGCameraColor.m; sourceTree = "<group>"; };
+		0984E22A41E1887298D45BA6 /* Pods-Parse-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Parse-Private.xcconfig"; sourceTree = "<group>"; };
+		09E01E7CDC4AAABE19DE1762 /* UIAlertView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+AFNetworking.m"; path = "UIKit+AFNetworking/UIAlertView+AFNetworking.m"; sourceTree = "<group>"; };
+		0AC8BC0981438EB1A9B1D262 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperation.m; path = AFNetworking/AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		0C2E09BE47E2B39161D9EE5F /* Pods-Bolts.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Bolts.xcconfig"; sourceTree = "<group>"; };
+		0CC946CC571B9E9B7E798973 /* PFConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFConstants.h; path = Parse.framework/Headers/PFConstants.h; sourceTree = "<group>"; };
+		0E7DB738522C545158809A78 /* libPods-AFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AFNetworking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F05D48B2AB1C010986216CF /* PFACL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFACL.h; path = Parse.framework/Headers/PFACL.h; sourceTree = "<group>"; };
+		0F30E245BB6689F2C715634A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		12EEED6B38105BD05D8BAB2C /* Bolts.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Bolts.m; path = Bolts/Common/Bolts.m; sourceTree = "<group>"; };
+		139DD980BFC4F937B1D9D9DE /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		143368AD2D2926EA21F74BB0 /* Pods-Bolts-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Bolts-dummy.m"; sourceTree = "<group>"; };
+		1595D3156A7F2531999339D4 /* PFUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFUser.h; path = Parse.framework/Headers/PFUser.h; sourceTree = "<group>"; };
+		15AF8C9024B17620184123A7 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1A82E99271725FDA7FEEE28B /* PFConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFConfig.h; path = Parse.framework/Headers/PFConfig.h; sourceTree = "<group>"; };
+		200E8BF37BC3921B71C4463C /* TGCameraViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraViewController.m; path = TGCameraViewController/Classes/Control/TGCameraViewController.m; sourceTree = "<group>"; };
+		20CE08ECE52FE74A45B32DD8 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		239B8D8BE79FA165DE19E4DB /* TGCameraSlideView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraSlideView.h; path = TGCameraViewController/Classes/UI/TGCameraSlideView.h; sourceTree = "<group>"; };
+		24BA470C771C2941DCCB79ED /* TGPhotoViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = TGPhotoViewController.xib; path = TGCameraViewController/Classes/View/Base.lproj/TGPhotoViewController.xib; sourceTree = "<group>"; };
+		24E5ED658A4C8F235CE84BFA /* PFSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFSession.h; path = Parse.framework/Headers/PFSession.h; sourceTree = "<group>"; };
+		25F53B3E2A9CA4A5F94512FA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		290CA695966D1F0E270826BD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		29937DC87ADC5062B4BE32DB /* TGTintedLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGTintedLabel.m; path = TGCameraViewController/Classes/UI/TGTintedLabel.m; sourceTree = "<group>"; };
+		2A60B1AF125A597D49AE9D04 /* TGCameraViewController.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = TGCameraViewController.xcassets; path = TGCameraViewController/TGCameraViewController.xcassets; sourceTree = "<group>"; };
+		2B622D9540075CA7770BE5FF /* BFTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFTask.m; path = Bolts/Common/BFTask.m; sourceTree = "<group>"; };
+		2BECDC103EAEB1DA429FAA81 /* TGAssetImageFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGAssetImageFile.h; path = TGCameraViewController/Classes/Model/TGAssetImageFile.h; sourceTree = "<group>"; };
+		2E36907DDC33F9FE4D6A58B5 /* AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
+		32F907F336CDDCBCA37C4AF1 /* TGCameraFilterView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraFilterView.h; path = TGCameraViewController/Classes/UI/TGCameraFilterView.h; sourceTree = "<group>"; };
+		3302EAA8904B84E7B9055A81 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreImage.framework; sourceTree = DEVELOPER_DIR; };
+		333006012D49BE36D7CF8A32 /* Parse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Parse.h; path = Parse.framework/Headers/Parse.h; sourceTree = "<group>"; };
+		3450A0AEEE7F004F58DBF58D /* PFObject+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PFObject+Subclass.h"; path = "Parse.framework/Headers/PFObject+Subclass.h"; sourceTree = "<group>"; };
+		38722AD90F02A4C611EE812B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		398FD68D4F443A2E40F0D1B8 /* TGCameraViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = TGCameraViewController.xib; path = TGCameraViewController/Classes/View/Base.lproj/TGCameraViewController.xib; sourceTree = "<group>"; };
+		3BF793A45E55A65473A080DC /* TGCameraSlideUpView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraSlideUpView.h; path = TGCameraViewController/Classes/UI/TGCameraSlideUpView.h; sourceTree = "<group>"; };
+		3C374EE44F5C1EC4BAD11272 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIRefreshControl+AFNetworking.m"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
+		3CB995D8D5810F64B9B8D40C /* Pods-Parse.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Parse.xcconfig"; sourceTree = "<group>"; };
+		3E28470E143561B23580379F /* PFInstallation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFInstallation.h; path = Parse.framework/Headers/PFInstallation.h; sourceTree = "<group>"; };
+		43426F6A0DDB36B0589CDE2B /* PFGeoPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFGeoPoint.h; path = Parse.framework/Headers/PFGeoPoint.h; sourceTree = "<group>"; };
+		435B1264915D25630DEE4743 /* TGCameraFocus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraFocus.h; path = TGCameraViewController/Classes/Helper/TGCameraFocus.h; sourceTree = "<group>"; };
+		444FF9F5349CD8F2852DA905 /* Pods-AFNetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AFNetworking.xcconfig"; sourceTree = "<group>"; };
+		44ACBEE44903A22BFD66691A /* AFSecurityPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFSecurityPolicy.h; path = AFNetworking/AFSecurityPolicy.h; sourceTree = "<group>"; };
+		4B62A4989FAB31384F28EA21 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		4C3F9369DD659AE5EAF813B9 /* libPods-Bolts.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bolts.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D460FBAC4C72D561ABF0F5A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4DAE7B15B51CCF3C60B922B1 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkReachabilityManager.m; path = AFNetworking/AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		4E5D497D33718F4B37991FB3 /* TGCameraFocusView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraFocusView.m; path = TGCameraViewController/Classes/UI/TGCameraFocusView.m; sourceTree = "<group>"; };
+		4F1F391ACB2B602429705A80 /* PFSubclassing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFSubclassing.h; path = Parse.framework/Headers/PFSubclassing.h; sourceTree = "<group>"; };
+		53581404EE079F99EB2A526D /* BFTaskCompletionSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFTaskCompletionSource.m; path = Bolts/Common/BFTaskCompletionSource.m; sourceTree = "<group>"; };
+		5370610572887F41C49BA15B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		53CEFE5FC1A5F1BFAD94ACE3 /* PFObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObject.h; path = Parse.framework/Headers/PFObject.h; sourceTree = "<group>"; };
+		53EC13B8A75DA976B19F1C36 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIProgressView+AFNetworking.m"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
+		543F1A52382A6252FD05EAFD /* PFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFNetworkActivityIndicatorManager.h; path = Parse.framework/Headers/PFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		5CC7E7297522872A4A523A87 /* TGAssetImageFile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGAssetImageFile.m; path = TGCameraViewController/Classes/Model/TGAssetImageFile.m; sourceTree = "<group>"; };
+		5D9C04D0D0496A9D38ED1454 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperationManager.m; path = AFNetworking/AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		5DCF6C380BFAAC827A04250F /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWebView+AFNetworking.h"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
+		6140029E112617FE645CCF87 /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIRefreshControl+AFNetworking.h"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
+		640C567A7716714C256AE26A /* Pods-TGCameraViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TGCameraViewController.xcconfig"; sourceTree = "<group>"; };
+		67461B46F08168E4FE8EE9ED /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWebView+AFNetworking.m"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		681F135F1856BEA7AF137AEB /* Bolts.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Bolts.h; path = Bolts/Common/Bolts.h; sourceTree = "<group>"; };
+		692A1C34EB46BF4A54F63BC8 /* TGCameraGrid.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraGrid.m; path = TGCameraViewController/Classes/Helper/TGCameraGrid.m; sourceTree = "<group>"; };
+		6AEE48B88A2DDB7901D98862 /* Pods-TGCameraViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TGCameraViewController-prefix.pch"; sourceTree = "<group>"; };
+		6CDF7D4B972CF3D373F4A7B6 /* TGTintedLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGTintedLabel.h; path = TGCameraViewController/Classes/UI/TGTintedLabel.h; sourceTree = "<group>"; };
+		6D1BD94A6A81DA7D4C9665FF /* TGCameraFocusView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraFocusView.h; path = TGCameraViewController/Classes/UI/TGCameraFocusView.h; sourceTree = "<group>"; };
+		6D7A4C91BBD3C58FC7FA97DD /* Pods-TGCameraViewController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TGCameraViewController-Private.xcconfig"; sourceTree = "<group>"; };
+		6DB6B2F0BD2F1527F86D2A28 /* TGCameraToggle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraToggle.h; path = TGCameraViewController/Classes/Helper/TGCameraToggle.h; sourceTree = "<group>"; };
+		6DF022C4AFA4920E3C8C40F5 /* PF_Twitter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PF_Twitter.h; path = Parse.framework/Headers/PF_Twitter.h; sourceTree = "<group>"; };
+		6EA5AD0F20FEDA6DC7B9ACA7 /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIActivityIndicatorView+AFNetworking.m"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
+		6EB91DA2592CFC0B9AC9B6FD /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperationManager.h; path = AFNetworking/AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		6F97BA3E909CDCDC318EF66F /* UIImage+CameraFilters.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+CameraFilters.m"; path = "TGCameraViewController/Classes/Category/UIImage+CameraFilters.m"; sourceTree = "<group>"; };
+		71BAA78F99C4DC8784C8A9D7 /* TGCameraViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraViewController.h; path = TGCameraViewController/Classes/Control/TGCameraViewController.h; sourceTree = "<group>"; };
+		7249823AB8B8A0974760514A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		735F7237353A4F0CE97D4CD3 /* Empty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Empty.m; sourceTree = "<group>"; };
+		73B9589318CB0DAC6F27F076 /* AFURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
+		7467BBCF8586DDFD148ACFF6 /* TGCamera.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCamera.h; path = TGCameraViewController/Classes/Helper/TGCamera.h; sourceTree = "<group>"; };
+		74B407FE3AC3B14BBB33727F /* PFNullability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFNullability.h; path = Parse.framework/Headers/PFNullability.h; sourceTree = "<group>"; };
+		74D415B21BDA426E4ACF3ADC /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = AFNetworking/AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		7689E4DC18908BB1BD908102 /* PFProduct.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFProduct.h; path = Parse.framework/Headers/PFProduct.h; sourceTree = "<group>"; };
+		781A1887F5BBD9FA04F98F28 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		7833D55113E49E6478C673BE /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/AssetsLibrary.framework; sourceTree = DEVELOPER_DIR; };
+		78867E68D7F747C61824C3FB /* PFPurchase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPurchase.h; path = Parse.framework/Headers/PFPurchase.h; sourceTree = "<group>"; };
+		7AAEDCDCFCCE35C999954F0B /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIProgressView+AFNetworking.h"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
+		8149FEEA1D07802E67B56B0A /* BFCancellationToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFCancellationToken.h; path = Bolts/Common/BFCancellationToken.h; sourceTree = "<group>"; };
+		8194E6D43E567B39EEE97EA9 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLConnectionOperation.h; path = AFNetworking/AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		82E58512705348AAB98C29B7 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
+		872AC270C6891627A6E4C97C /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIKit+AFNetworking.h"; path = "UIKit+AFNetworking/UIKit+AFNetworking.h"; sourceTree = "<group>"; };
+		87CE1A1B36441FA5FAA2BAEC /* TGPhotoViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGPhotoViewController.m; path = TGCameraViewController/Classes/Control/TGPhotoViewController.m; sourceTree = "<group>"; };
+		880246DFE01FC749CE7C806B /* TGCameraViewController.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = TGCameraViewController.bundle; path = TGCameraViewController/Resources/TGCameraViewController.bundle; sourceTree = "<group>"; };
+		891E51F992A18F6A5D51F57F /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		892690D4C750B6FC51971561 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityIndicatorManager.h; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h"; sourceTree = "<group>"; };
+		89F4D544294208D79D1C8DC4 /* BFExecutor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFExecutor.m; path = Bolts/Common/BFExecutor.m; sourceTree = "<group>"; };
+		89FFE6A521AE9BEADF5342E3 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m"; sourceTree = "<group>"; };
+		8AB1D89CAAD4E0257F17508D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B9FCC9C34DD00C6F155A064 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		8FE76AB908451FE83FA4C9D9 /* TGCamera.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCamera.m; path = TGCameraViewController/Classes/Helper/TGCamera.m; sourceTree = "<group>"; };
+		913D7AB54A82A67FDCDD89B0 /* UIAlertView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+AFNetworking.h"; path = "UIKit+AFNetworking/UIAlertView+AFNetworking.h"; sourceTree = "<group>"; };
+		92C2F9B48ED5B8B6017C1407 /* TGAlbum.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGAlbum.h; path = TGCameraViewController/Classes/Helper/TGAlbum.h; sourceTree = "<group>"; };
+		93B7F3855205B4A6ABBDB47D /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		94AB1BDDC94A3033B2CB42E3 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = AFNetworking/AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		96603B0B8E7BFDC6466D372F /* TGCameraGrid.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraGrid.h; path = TGCameraViewController/Classes/Helper/TGCameraGrid.h; sourceTree = "<group>"; };
+		9BB2D1BC8475A723F92BADC2 /* libPods-Parse.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Parse.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EE9C0C30B3B37040F54E3DE /* PFQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFQuery.h; path = Parse.framework/Headers/PFQuery.h; sourceTree = "<group>"; };
+		9F811A21421DD85FAAA5064D /* TGCameraSlideDownView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraSlideDownView.h; path = TGCameraViewController/Classes/UI/TGCameraSlideDownView.h; sourceTree = "<group>"; };
+		9FA45CAFD5DC519C7F13C161 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = AFNetworking/AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		A1C1B965CDB5F21A6C74CD29 /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIActivityIndicatorView+AFNetworking.h"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
+		A395172F37CEC6F96B0BAC3D /* TGCameraToggle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraToggle.m; path = TGCameraViewController/Classes/Helper/TGCameraToggle.m; sourceTree = "<group>"; };
+		A727E2F2E110884A99BD8D79 /* BFTaskCompletionSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFTaskCompletionSource.h; path = Bolts/Common/BFTaskCompletionSource.h; sourceTree = "<group>"; };
+		A8CC613F7E9246A90F914D8A /* TGCameraShot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraShot.h; path = TGCameraViewController/Classes/Helper/TGCameraShot.h; sourceTree = "<group>"; };
+		A9083CDEB968182A55AD3EF0 /* TGCameraShot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraShot.m; path = TGCameraViewController/Classes/Helper/TGCameraShot.m; sourceTree = "<group>"; };
+		A946231F188D014E970C97EC /* Pods-Parse-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Parse-dummy.m"; sourceTree = "<group>"; };
+		AA7980F1A2A9DDF8D3BAB8BC /* TGCameraAuthorizationViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = TGCameraAuthorizationViewController.xib; path = TGCameraViewController/Classes/View/Base.lproj/TGCameraAuthorizationViewController.xib; sourceTree = "<group>"; };
+		ACA840CF1EB02B106D25C963 /* PFPush.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPush.h; path = Parse.framework/Headers/PFPush.h; sourceTree = "<group>"; };
+		AE7DE2629756EA32EEA2B46B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		AEAA35B2530836EA30F7EE38 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		B0592D13FD8BD0A61CE8F483 /* PFCloud.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFCloud.h; path = Parse.framework/Headers/PFCloud.h; sourceTree = "<group>"; };
+		B0B026A69E28002D42C9C671 /* TGCameraAuthorizationViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraAuthorizationViewController.m; path = TGCameraViewController/Classes/Control/TGCameraAuthorizationViewController.m; sourceTree = "<group>"; };
+		B3A4D1920CF18585562121F9 /* Pods-AFNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AFNetworking-dummy.m"; sourceTree = "<group>"; };
+		B50BE7762DCDE3627315EBAD /* BoltsVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BoltsVersion.h; path = Bolts/Common/BoltsVersion.h; sourceTree = "<group>"; };
+		B6464886F5A47F674140D079 /* TGTintedButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGTintedButton.h; path = TGCameraViewController/Classes/UI/TGTintedButton.h; sourceTree = "<group>"; };
+		B783576608941EEC8E2DBBA4 /* libPods-TGCameraViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TGCameraViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8CC277481C9AA455B9CE560 /* TGCameraFunctions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraFunctions.h; path = TGCameraViewController/Classes/Helper/TGCameraFunctions.h; sourceTree = "<group>"; };
+		B8DDE511159751E3055004EF /* PFFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFFile.h; path = Parse.framework/Headers/PFFile.h; sourceTree = "<group>"; };
+		BA0AACF8B558E4DCDA8EF2AB /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		BAC14B45B5DEF00C0F2457A4 /* PFRole.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFRole.h; path = Parse.framework/Headers/PFRole.h; sourceTree = "<group>"; };
+		BAD0456CDB655B2D2DA2938B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		BBA8D27FF28DB6EE7102212C /* TGAssetsLibrary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGAssetsLibrary.h; path = TGCameraViewController/Classes/Helper/TGAssetsLibrary.h; sourceTree = "<group>"; };
+		BCC682200101705C0CC29510 /* TGCameraColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraColor.h; path = TGCameraViewController/Classes/Helper/TGCameraColor.h; sourceTree = "<group>"; };
+		BD9C7AED4861D748DCD0099C /* TGCameraNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraNavigationController.h; path = TGCameraViewController/Classes/Control/TGCameraNavigationController.h; sourceTree = "<group>"; };
+		BE4A8CB79BB6FCFC128184BB /* TGCameraAuthorizationViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraAuthorizationViewController.h; path = TGCameraViewController/Classes/Control/TGCameraAuthorizationViewController.h; sourceTree = "<group>"; };
+		BEA101B4C120DCDE62325C8A /* AFURLSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
+		BF298B9686FCA80A8D257466 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		C04427AC53D545284FFD8D6C /* BFCancellationTokenRegistration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFCancellationTokenRegistration.m; path = Bolts/Common/BFCancellationTokenRegistration.m; sourceTree = "<group>"; };
+		C0CC383D53DF343E3E3B8BF5 /* TGCameraGridView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraGridView.h; path = TGCameraViewController/Classes/UI/TGCameraGridView.h; sourceTree = "<group>"; };
+		C34F9C7CC8B684687C4E4F90 /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+AFNetworking.m"; path = "UIKit+AFNetworking/UIButton+AFNetworking.m"; sourceTree = "<group>"; };
+		C49C51F412D1E6A42FF5D9A7 /* PFAnalytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFAnalytics.h; path = Parse.framework/Headers/PFAnalytics.h; sourceTree = "<group>"; };
+		C73A2D7DB6C2A23BACC31A0B /* TGTintedButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGTintedButton.m; path = TGCameraViewController/Classes/UI/TGTintedButton.m; sourceTree = "<group>"; };
+		C77E1E2520042E7F4E9220AD /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLConnectionOperation.m; path = AFNetworking/AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		C81145EBFA88D2F2C128EA99 /* Pods-AFNetworking-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AFNetworking-Private.xcconfig"; sourceTree = "<group>"; };
+		C85521F1E611F7174647F888 /* TGCameraFlash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraFlash.h; path = TGCameraViewController/Classes/Helper/TGCameraFlash.h; sourceTree = "<group>"; };
+		CA19D091391D19A6B825249E /* TGAssetsLibrary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGAssetsLibrary.m; path = TGCameraViewController/Classes/Helper/TGAssetsLibrary.m; sourceTree = "<group>"; };
+		CA9695C83AF3F72684888610 /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+AFNetworking.h"; path = "UIKit+AFNetworking/UIButton+AFNetworking.h"; sourceTree = "<group>"; };
+		CC66E17C32CBEDD03AFE701F /* BFExecutor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFExecutor.h; path = Bolts/Common/BFExecutor.h; sourceTree = "<group>"; };
+		CD0496C83023CD4FA556B0B6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		CD20DF11F438CD10B697E8C3 /* TGCameraSlideView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraSlideView.m; path = TGCameraViewController/Classes/UI/TGCameraSlideView.m; sourceTree = "<group>"; };
+		CEAE323E5A1688221C273A33 /* BFCancellationToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFCancellationToken.m; path = Bolts/Common/BFCancellationToken.m; sourceTree = "<group>"; };
+		D005FC873E781C73BB4CA9C7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		D0FAE2E245D3C20D9FA5D8C8 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		D748018220D12FD47FA5A0B1 /* TGPhotoViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGPhotoViewController.h; path = TGCameraViewController/Classes/Control/TGPhotoViewController.h; sourceTree = "<group>"; };
+		DA8F89E8A858F026BF4FF3DC /* libParse.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libParse.a; sourceTree = "<group>"; };
+		DF59578DB81AE1B911DB774E /* Pods-Bolts-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Bolts-Private.xcconfig"; sourceTree = "<group>"; };
+		DFD2A1635D7FFF5C88183BCD /* UIImage+CameraFilters.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+CameraFilters.h"; path = "TGCameraViewController/Classes/Category/UIImage+CameraFilters.h"; sourceTree = "<group>"; };
+		E07BB985EBBFDF991351536B /* TGCameraNavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraNavigationController.m; path = TGCameraViewController/Classes/Control/TGCameraNavigationController.m; sourceTree = "<group>"; };
+		E09B615856D1EBE69B1F5D95 /* TGAlbum.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGAlbum.m; path = TGCameraViewController/Classes/Helper/TGAlbum.m; sourceTree = "<group>"; };
+		E111A30F21ED4E2E79DC327D /* BFCancellationTokenRegistration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFCancellationTokenRegistration.h; path = Bolts/Common/BFCancellationTokenRegistration.h; sourceTree = "<group>"; };
+		E8CA7BE614192DF7585E3123 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperation.h; path = AFNetworking/AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		E99D2DBC70D52AAA96D290BF /* PFTwitterUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFTwitterUtils.h; path = Parse.framework/Headers/PFTwitterUtils.h; sourceTree = "<group>"; };
+		EAA823E133402D79CC9A7500 /* TGCameraSlideDownView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraSlideDownView.m; path = TGCameraViewController/Classes/UI/TGCameraSlideDownView.m; sourceTree = "<group>"; };
+		ED06CFFBF5EAE7ED476CC6A2 /* Pods-Bolts-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Bolts-prefix.pch"; sourceTree = "<group>"; };
+		EFC150A07B102ADD36EB7007 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		F0FCADB53B99DB179E27B6F9 /* Pods-TGCameraViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TGCameraViewController-dummy.m"; sourceTree = "<group>"; };
+		F27043F92A8851104D07D2A0 /* BFCancellationTokenSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFCancellationTokenSource.h; path = Bolts/Common/BFCancellationTokenSource.h; sourceTree = "<group>"; };
+		F2AB9B83537DEB5C8415C311 /* PFRelation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFRelation.h; path = Parse.framework/Headers/PFRelation.h; sourceTree = "<group>"; };
+		F333C835021E938129EFC27D /* AFSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = AFNetworking/AFSecurityPolicy.m; sourceTree = "<group>"; };
+		F374041046E04BE7693A2D76 /* BFTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFTask.h; path = Bolts/Common/BFTask.h; sourceTree = "<group>"; };
+		F4E812FA94DC7EFFA23E23C2 /* Pods-AFNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AFNetworking-prefix.pch"; sourceTree = "<group>"; };
+		F57D9FA3955F15271B103633 /* Pods-Parse-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Parse-prefix.pch"; sourceTree = "<group>"; };
+		F5BA3455F899CD0840D01D79 /* TGCameraFlash.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraFlash.m; path = TGCameraViewController/Classes/Helper/TGCameraFlash.m; sourceTree = "<group>"; };
+		F63A29132F83A3A49384317B /* TGCameraFocus.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraFocus.m; path = TGCameraViewController/Classes/Helper/TGCameraFocus.m; sourceTree = "<group>"; };
+		F706FA20CBCA26E6E9AF46B2 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		F836D49BDB953B67141145E1 /* PFAnonymousUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFAnonymousUtils.h; path = Parse.framework/Headers/PFAnonymousUtils.h; sourceTree = "<group>"; };
+		FA4D4A4A73F64BF447493C37 /* BFCancellationTokenSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFCancellationTokenSource.m; path = Bolts/Common/BFCancellationTokenSource.m; sourceTree = "<group>"; };
+		FB6B9B3357CE29D37C4C36D2 /* TGCameraGridView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraGridView.m; path = TGCameraViewController/Classes/UI/TGCameraGridView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0C992CC4E7115466A86E2A21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF16372B884E76EA07F68C74 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1027F822090BDD64639DEC17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C37438DEC5228CAAECA06DF /* AVFoundation.framework in Frameworks */,
+				53BAE1BD24A6AF99AAB8187C /* AssetsLibrary.framework in Frameworks */,
+				BD44B2D61DAB0C123D9289B2 /* CoreImage.framework in Frameworks */,
+				ECCC01D2D060F8754A5FBA18 /* Foundation.framework in Frameworks */,
+				9F67A156DC6DD5B4785E474C /* MobileCoreServices.framework in Frameworks */,
+				51B427C4A46097CF2EF836FA /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D2F28D91EE78B6706D84E14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B1ECBB1EABF2AA7BEF6A32C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D463D2EA64D9D128E020EE8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D8341A6256C8A7AA8BFEDB6 /* CoreGraphics.framework in Frameworks */,
+				7C8C70089E1659AAEA735896 /* Foundation.framework in Frameworks */,
+				BF6E6595D0449404C564DD07 /* MobileCoreServices.framework in Frameworks */,
+				79F5919769BD6EAB1E64D86D /* Security.framework in Frameworks */,
+				9C3C1443D597047226C6FAD4 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1D004114C1787FB16613C05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07623E9015F3C69DC3E0944B /* AudioToolbox.framework in Frameworks */,
+				B2E0F790BD5C036547033DF1 /* CFNetwork.framework in Frameworks */,
+				D95EE2088A2321983312F5F9 /* CoreGraphics.framework in Frameworks */,
+				0BA1246476B3DA4D3DB3960F /* CoreLocation.framework in Frameworks */,
+				721250110AFF9DCD1E3B1EA8 /* Foundation.framework in Frameworks */,
+				61EC5FBC0C29F146FCF06623 /* MobileCoreServices.framework in Frameworks */,
+				A5FA4049A21B3A40697ECEE3 /* QuartzCore.framework in Frameworks */,
+				C68CB66A11475929C6AB60A5 /* Security.framework in Frameworks */,
+				DC57810215EBC20F08EE4DC8 /* StoreKit.framework in Frameworks */,
+				5E55D701A6E51E42FE03B571 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		010B750BD5CE17EA479B181E /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				44ACBEE44903A22BFD66691A /* AFSecurityPolicy.h */,
+				F333C835021E938129EFC27D /* AFSecurityPolicy.m */,
+			);
+			name = Security;
+			sourceTree = "<group>";
+		};
+		050F3EF8E5AF16E5CE640AD2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AA7980F1A2A9DDF8D3BAB8BC /* TGCameraAuthorizationViewController.xib */,
+				880246DFE01FC749CE7C806B /* TGCameraViewController.bundle */,
+				2A60B1AF125A597D49AE9D04 /* TGCameraViewController.xcassets */,
+				398FD68D4F443A2E40F0D1B8 /* TGCameraViewController.xib */,
+				24BA470C771C2941DCCB79ED /* TGPhotoViewController.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0DC6E0B97517D6A8B488371F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				139DD980BFC4F937B1D9D9DE /* Pods-acknowledgements.markdown */,
+				F706FA20CBCA26E6E9AF46B2 /* Pods-acknowledgements.plist */,
+				93B7F3855205B4A6ABBDB47D /* Pods-dummy.m */,
+				8B9FCC9C34DD00C6F155A064 /* Pods-environment.h */,
+				4B62A4989FAB31384F28EA21 /* Pods-resources.sh */,
+				D005FC873E781C73BB4CA9C7 /* Pods.debug.xcconfig */,
+				38722AD90F02A4C611EE812B /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		0E7BAEC4851BCFFEAA63EC8C /* Bolts */ = {
+			isa = PBXGroup;
+			children = (
+				CD3AF13DBBC4C6FEEFED86B0 /* Support Files */,
+				D1017F3C8503A91F808456C0 /* Tasks */,
+			);
+			path = Bolts;
+			sourceTree = "<group>";
+		};
+		0F69E7FB5CAE60D2F22EBFE7 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				2E36907DDC33F9FE4D6A58B5 /* AFNetworking.h */,
+				F7DC1F122B4E5EE0F5D714CF /* NSURLConnection */,
+				5150E16258FA7F0E77F3DB59 /* NSURLSession */,
+				ED2E505948B5822CDB1CF851 /* Reachability */,
+				010B750BD5CE17EA479B181E /* Security */,
+				EBAB56CD0E6ACE3647DA5EF8 /* Serialization */,
+				89DEC37557D1E303F9A1C000 /* Support Files */,
+				78B4DBF100E2E875B6CDB276 /* UIKit */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		19BAE8E9447D82C39A89FA52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA8F89E8A858F026BF4FF3DC /* libParse.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1BEC69AA5822FBA2880BD350 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0DC6E0B97517D6A8B488371F /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4E6F487D0A63D50A7AB84D65 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8AB1D89CAAD4E0257F17508D /* libPods.a */,
+				0E7DB738522C545158809A78 /* libPods-AFNetworking.a */,
+				4C3F9369DD659AE5EAF813B9 /* libPods-Bolts.a */,
+				9BB2D1BC8475A723F92BADC2 /* libPods-Parse.a */,
+				B783576608941EEC8E2DBBA4 /* libPods-TGCameraViewController.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5150E16258FA7F0E77F3DB59 /* NSURLSession */ = {
+			isa = PBXGroup;
+			children = (
+				94AB1BDDC94A3033B2CB42E3 /* AFHTTPSessionManager.h */,
+				9FA45CAFD5DC519C7F13C161 /* AFHTTPSessionManager.m */,
+				73B9589318CB0DAC6F27F076 /* AFURLSessionManager.h */,
+				BEA101B4C120DCDE62325C8A /* AFURLSessionManager.m */,
+			);
+			name = NSURLSession;
+			sourceTree = "<group>";
+		};
+		6AD6838BE812D33B0EDCCE3F = {
+			isa = PBXGroup;
+			children = (
+				15AF8C9024B17620184123A7 /* Podfile */,
+				DF1D2CB426AFC9AC5944FFB2 /* Frameworks */,
+				74226D9F36883AD60CF96AA4 /* Pods */,
+				4E6F487D0A63D50A7AB84D65 /* Products */,
+				1BEC69AA5822FBA2880BD350 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		74226D9F36883AD60CF96AA4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F69E7FB5CAE60D2F22EBFE7 /* AFNetworking */,
+				0E7BAEC4851BCFFEAA63EC8C /* Bolts */,
+				84BA3483B8B6DBDFB5BBD7BA /* Parse */,
+				A103E928B2512DB6124C8E6B /* TGCameraViewController */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7636C3F8266F5C7A5EDA4653 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3CB995D8D5810F64B9B8D40C /* Pods-Parse.xcconfig */,
+				0984E22A41E1887298D45BA6 /* Pods-Parse-Private.xcconfig */,
+				A946231F188D014E970C97EC /* Pods-Parse-dummy.m */,
+				F57D9FA3955F15271B103633 /* Pods-Parse-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-Parse";
+			sourceTree = "<group>";
+		};
+		78B4DBF100E2E875B6CDB276 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				892690D4C750B6FC51971561 /* AFNetworkActivityIndicatorManager.h */,
+				89FFE6A521AE9BEADF5342E3 /* AFNetworkActivityIndicatorManager.m */,
+				A1C1B965CDB5F21A6C74CD29 /* UIActivityIndicatorView+AFNetworking.h */,
+				6EA5AD0F20FEDA6DC7B9ACA7 /* UIActivityIndicatorView+AFNetworking.m */,
+				913D7AB54A82A67FDCDD89B0 /* UIAlertView+AFNetworking.h */,
+				09E01E7CDC4AAABE19DE1762 /* UIAlertView+AFNetworking.m */,
+				CA9695C83AF3F72684888610 /* UIButton+AFNetworking.h */,
+				C34F9C7CC8B684687C4E4F90 /* UIButton+AFNetworking.m */,
+				EFC150A07B102ADD36EB7007 /* UIImageView+AFNetworking.h */,
+				D0FAE2E245D3C20D9FA5D8C8 /* UIImageView+AFNetworking.m */,
+				872AC270C6891627A6E4C97C /* UIKit+AFNetworking.h */,
+				7AAEDCDCFCCE35C999954F0B /* UIProgressView+AFNetworking.h */,
+				53EC13B8A75DA976B19F1C36 /* UIProgressView+AFNetworking.m */,
+				6140029E112617FE645CCF87 /* UIRefreshControl+AFNetworking.h */,
+				3C374EE44F5C1EC4BAD11272 /* UIRefreshControl+AFNetworking.m */,
+				5DCF6C380BFAAC827A04250F /* UIWebView+AFNetworking.h */,
+				67461B46F08168E4FE8EE9ED /* UIWebView+AFNetworking.m */,
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
+		7E122C6789450467F78BD918 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				640C567A7716714C256AE26A /* Pods-TGCameraViewController.xcconfig */,
+				6D7A4C91BBD3C58FC7FA97DD /* Pods-TGCameraViewController-Private.xcconfig */,
+				F0FCADB53B99DB179E27B6F9 /* Pods-TGCameraViewController-dummy.m */,
+				6AEE48B88A2DDB7901D98862 /* Pods-TGCameraViewController-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-TGCameraViewController";
+			sourceTree = "<group>";
+		};
+		84BA3483B8B6DBDFB5BBD7BA /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				735F7237353A4F0CE97D4CD3 /* Empty.m */,
+				0F05D48B2AB1C010986216CF /* PFACL.h */,
+				C49C51F412D1E6A42FF5D9A7 /* PFAnalytics.h */,
+				F836D49BDB953B67141145E1 /* PFAnonymousUtils.h */,
+				B0592D13FD8BD0A61CE8F483 /* PFCloud.h */,
+				1A82E99271725FDA7FEEE28B /* PFConfig.h */,
+				0CC946CC571B9E9B7E798973 /* PFConstants.h */,
+				B8DDE511159751E3055004EF /* PFFile.h */,
+				43426F6A0DDB36B0589CDE2B /* PFGeoPoint.h */,
+				3E28470E143561B23580379F /* PFInstallation.h */,
+				543F1A52382A6252FD05EAFD /* PFNetworkActivityIndicatorManager.h */,
+				74B407FE3AC3B14BBB33727F /* PFNullability.h */,
+				53CEFE5FC1A5F1BFAD94ACE3 /* PFObject.h */,
+				3450A0AEEE7F004F58DBF58D /* PFObject+Subclass.h */,
+				7689E4DC18908BB1BD908102 /* PFProduct.h */,
+				78867E68D7F747C61824C3FB /* PFPurchase.h */,
+				ACA840CF1EB02B106D25C963 /* PFPush.h */,
+				9EE9C0C30B3B37040F54E3DE /* PFQuery.h */,
+				F2AB9B83537DEB5C8415C311 /* PFRelation.h */,
+				BAC14B45B5DEF00C0F2457A4 /* PFRole.h */,
+				24E5ED658A4C8F235CE84BFA /* PFSession.h */,
+				4F1F391ACB2B602429705A80 /* PFSubclassing.h */,
+				E99D2DBC70D52AAA96D290BF /* PFTwitterUtils.h */,
+				1595D3156A7F2531999339D4 /* PFUser.h */,
+				6DF022C4AFA4920E3C8C40F5 /* PF_Twitter.h */,
+				333006012D49BE36D7CF8A32 /* Parse.h */,
+				19BAE8E9447D82C39A89FA52 /* Frameworks */,
+				7636C3F8266F5C7A5EDA4653 /* Support Files */,
+			);
+			path = Parse;
+			sourceTree = "<group>";
+		};
+		89DEC37557D1E303F9A1C000 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				444FF9F5349CD8F2852DA905 /* Pods-AFNetworking.xcconfig */,
+				C81145EBFA88D2F2C128EA99 /* Pods-AFNetworking-Private.xcconfig */,
+				B3A4D1920CF18585562121F9 /* Pods-AFNetworking-dummy.m */,
+				F4E812FA94DC7EFFA23E23C2 /* Pods-AFNetworking-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-AFNetworking";
+			sourceTree = "<group>";
+		};
+		A103E928B2512DB6124C8E6B /* TGCameraViewController */ = {
+			isa = PBXGroup;
+			children = (
+				92C2F9B48ED5B8B6017C1407 /* TGAlbum.h */,
+				E09B615856D1EBE69B1F5D95 /* TGAlbum.m */,
+				2BECDC103EAEB1DA429FAA81 /* TGAssetImageFile.h */,
+				5CC7E7297522872A4A523A87 /* TGAssetImageFile.m */,
+				BBA8D27FF28DB6EE7102212C /* TGAssetsLibrary.h */,
+				CA19D091391D19A6B825249E /* TGAssetsLibrary.m */,
+				7467BBCF8586DDFD148ACFF6 /* TGCamera.h */,
+				8FE76AB908451FE83FA4C9D9 /* TGCamera.m */,
+				BE4A8CB79BB6FCFC128184BB /* TGCameraAuthorizationViewController.h */,
+				B0B026A69E28002D42C9C671 /* TGCameraAuthorizationViewController.m */,
+				BCC682200101705C0CC29510 /* TGCameraColor.h */,
+				05F8F4F97A6757700E5E9678 /* TGCameraColor.m */,
+				32F907F336CDDCBCA37C4AF1 /* TGCameraFilterView.h */,
+				016F98444EDCA7907A7335C6 /* TGCameraFilterView.m */,
+				C85521F1E611F7174647F888 /* TGCameraFlash.h */,
+				F5BA3455F899CD0840D01D79 /* TGCameraFlash.m */,
+				435B1264915D25630DEE4743 /* TGCameraFocus.h */,
+				F63A29132F83A3A49384317B /* TGCameraFocus.m */,
+				6D1BD94A6A81DA7D4C9665FF /* TGCameraFocusView.h */,
+				4E5D497D33718F4B37991FB3 /* TGCameraFocusView.m */,
+				B8CC277481C9AA455B9CE560 /* TGCameraFunctions.h */,
+				96603B0B8E7BFDC6466D372F /* TGCameraGrid.h */,
+				692A1C34EB46BF4A54F63BC8 /* TGCameraGrid.m */,
+				C0CC383D53DF343E3E3B8BF5 /* TGCameraGridView.h */,
+				FB6B9B3357CE29D37C4C36D2 /* TGCameraGridView.m */,
+				BD9C7AED4861D748DCD0099C /* TGCameraNavigationController.h */,
+				E07BB985EBBFDF991351536B /* TGCameraNavigationController.m */,
+				A8CC613F7E9246A90F914D8A /* TGCameraShot.h */,
+				A9083CDEB968182A55AD3EF0 /* TGCameraShot.m */,
+				9F811A21421DD85FAAA5064D /* TGCameraSlideDownView.h */,
+				EAA823E133402D79CC9A7500 /* TGCameraSlideDownView.m */,
+				3BF793A45E55A65473A080DC /* TGCameraSlideUpView.h */,
+				0554A9853D0AA64CEAD87E32 /* TGCameraSlideUpView.m */,
+				239B8D8BE79FA165DE19E4DB /* TGCameraSlideView.h */,
+				CD20DF11F438CD10B697E8C3 /* TGCameraSlideView.m */,
+				6DB6B2F0BD2F1527F86D2A28 /* TGCameraToggle.h */,
+				A395172F37CEC6F96B0BAC3D /* TGCameraToggle.m */,
+				71BAA78F99C4DC8784C8A9D7 /* TGCameraViewController.h */,
+				200E8BF37BC3921B71C4463C /* TGCameraViewController.m */,
+				D748018220D12FD47FA5A0B1 /* TGPhotoViewController.h */,
+				87CE1A1B36441FA5FAA2BAEC /* TGPhotoViewController.m */,
+				B6464886F5A47F674140D079 /* TGTintedButton.h */,
+				C73A2D7DB6C2A23BACC31A0B /* TGTintedButton.m */,
+				6CDF7D4B972CF3D373F4A7B6 /* TGTintedLabel.h */,
+				29937DC87ADC5062B4BE32DB /* TGTintedLabel.m */,
+				DFD2A1635D7FFF5C88183BCD /* UIImage+CameraFilters.h */,
+				6F97BA3E909CDCDC318EF66F /* UIImage+CameraFilters.m */,
+				050F3EF8E5AF16E5CE640AD2 /* Resources */,
+				7E122C6789450467F78BD918 /* Support Files */,
+			);
+			path = TGCameraViewController;
+			sourceTree = "<group>";
+		};
+		B5A96561E8518B548F51896F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				7249823AB8B8A0974760514A /* AVFoundation.framework */,
+				7833D55113E49E6478C673BE /* AssetsLibrary.framework */,
+				20CE08ECE52FE74A45B32DD8 /* AudioToolbox.framework */,
+				BAD0456CDB655B2D2DA2938B /* CFNetwork.framework */,
+				290CA695966D1F0E270826BD /* CoreGraphics.framework */,
+				3302EAA8904B84E7B9055A81 /* CoreImage.framework */,
+				5370610572887F41C49BA15B /* CoreLocation.framework */,
+				4D460FBAC4C72D561ABF0F5A /* Foundation.framework */,
+				25F53B3E2A9CA4A5F94512FA /* MobileCoreServices.framework */,
+				CD0496C83023CD4FA556B0B6 /* QuartzCore.framework */,
+				BF298B9686FCA80A8D257466 /* Security.framework */,
+				82E58512705348AAB98C29B7 /* StoreKit.framework */,
+				AE7DE2629756EA32EEA2B46B /* SystemConfiguration.framework */,
+				0F30E245BB6689F2C715634A /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CD3AF13DBBC4C6FEEFED86B0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0C2E09BE47E2B39161D9EE5F /* Pods-Bolts.xcconfig */,
+				DF59578DB81AE1B911DB774E /* Pods-Bolts-Private.xcconfig */,
+				143368AD2D2926EA21F74BB0 /* Pods-Bolts-dummy.m */,
+				ED06CFFBF5EAE7ED476CC6A2 /* Pods-Bolts-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-Bolts";
+			sourceTree = "<group>";
+		};
+		D1017F3C8503A91F808456C0 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				8149FEEA1D07802E67B56B0A /* BFCancellationToken.h */,
+				CEAE323E5A1688221C273A33 /* BFCancellationToken.m */,
+				E111A30F21ED4E2E79DC327D /* BFCancellationTokenRegistration.h */,
+				C04427AC53D545284FFD8D6C /* BFCancellationTokenRegistration.m */,
+				F27043F92A8851104D07D2A0 /* BFCancellationTokenSource.h */,
+				FA4D4A4A73F64BF447493C37 /* BFCancellationTokenSource.m */,
+				CC66E17C32CBEDD03AFE701F /* BFExecutor.h */,
+				89F4D544294208D79D1C8DC4 /* BFExecutor.m */,
+				F374041046E04BE7693A2D76 /* BFTask.h */,
+				2B622D9540075CA7770BE5FF /* BFTask.m */,
+				A727E2F2E110884A99BD8D79 /* BFTaskCompletionSource.h */,
+				53581404EE079F99EB2A526D /* BFTaskCompletionSource.m */,
+				681F135F1856BEA7AF137AEB /* Bolts.h */,
+				12EEED6B38105BD05D8BAB2C /* Bolts.m */,
+				B50BE7762DCDE3627315EBAD /* BoltsVersion.h */,
+			);
+			name = Tasks;
+			sourceTree = "<group>";
+		};
+		DF1D2CB426AFC9AC5944FFB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5A96561E8518B548F51896F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBAB56CD0E6ACE3647DA5EF8 /* Serialization */ = {
+			isa = PBXGroup;
+			children = (
+				AEAA35B2530836EA30F7EE38 /* AFURLRequestSerialization.h */,
+				891E51F992A18F6A5D51F57F /* AFURLRequestSerialization.m */,
+				BA0AACF8B558E4DCDA8EF2AB /* AFURLResponseSerialization.h */,
+				781A1887F5BBD9FA04F98F28 /* AFURLResponseSerialization.m */,
+			);
+			name = Serialization;
+			sourceTree = "<group>";
+		};
+		ED2E505948B5822CDB1CF851 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				74D415B21BDA426E4ACF3ADC /* AFNetworkReachabilityManager.h */,
+				4DAE7B15B51CCF3C60B922B1 /* AFNetworkReachabilityManager.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
+		F7DC1F122B4E5EE0F5D714CF /* NSURLConnection */ = {
+			isa = PBXGroup;
+			children = (
+				E8CA7BE614192DF7585E3123 /* AFHTTPRequestOperation.h */,
+				0AC8BC0981438EB1A9B1D262 /* AFHTTPRequestOperation.m */,
+				6EB91DA2592CFC0B9AC9B6FD /* AFHTTPRequestOperationManager.h */,
+				5D9C04D0D0496A9D38ED1454 /* AFHTTPRequestOperationManager.m */,
+				8194E6D43E567B39EEE97EA9 /* AFURLConnectionOperation.h */,
+				C77E1E2520042E7F4E9220AD /* AFURLConnectionOperation.m */,
+			);
+			name = NSURLConnection;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		006141B95B3DB510AAD80408 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0856DE985777CAC4D685778B /* AFHTTPRequestOperation.h in Headers */,
+				27C20B588AB65457DC8FCF43 /* AFHTTPRequestOperationManager.h in Headers */,
+				B2CC60CE7CCD3EBA2475BAE5 /* AFHTTPSessionManager.h in Headers */,
+				B94B230FC6DD01AE0AB06F6B /* AFNetworkActivityIndicatorManager.h in Headers */,
+				93C0EFFEAA41DC9DB218549D /* AFNetworkReachabilityManager.h in Headers */,
+				4B6DFA052F16574876962DC3 /* AFNetworking.h in Headers */,
+				08B32100D6F2D014E46992F8 /* AFSecurityPolicy.h in Headers */,
+				FE09AC86B8021792E5438C6B /* AFURLConnectionOperation.h in Headers */,
+				9F0A564044E778D47CE93690 /* AFURLRequestSerialization.h in Headers */,
+				B7C6D4E45E345AD92CE077E0 /* AFURLResponseSerialization.h in Headers */,
+				8B3ECA51A9EA18DC65623D3C /* AFURLSessionManager.h in Headers */,
+				DA545FEE62606E179FD12B56 /* UIActivityIndicatorView+AFNetworking.h in Headers */,
+				CF5B4455DE1FE134AB32003E /* UIAlertView+AFNetworking.h in Headers */,
+				C23D2AA878A105DB2FF2A15C /* UIButton+AFNetworking.h in Headers */,
+				C0FFB8F9C8BC5ABD261AEC72 /* UIImageView+AFNetworking.h in Headers */,
+				38E13948CC8F957FA946EEC4 /* UIKit+AFNetworking.h in Headers */,
+				64ACA8ECB884D3A0EBA3C85F /* UIProgressView+AFNetworking.h in Headers */,
+				2D037EEB1102F225E44C5FD2 /* UIRefreshControl+AFNetworking.h in Headers */,
+				041E89ECD606823E654B1A51 /* UIWebView+AFNetworking.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2131466DE384FAF25793A6E3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6849DD9AF7E720D9A6EF68B /* TGAlbum.h in Headers */,
+				F5D61D88C28A12236B95501A /* TGAssetImageFile.h in Headers */,
+				4EBEAC0128EE29E3CE4E934C /* TGAssetsLibrary.h in Headers */,
+				B7BED420A297FE23D704B4DA /* TGCamera.h in Headers */,
+				4EC48FF80B0413A7A81321ED /* TGCameraAuthorizationViewController.h in Headers */,
+				2A89616ECA7E196A85A7C7E4 /* TGCameraColor.h in Headers */,
+				DABFBBDEA2DDFF95BFEFF280 /* TGCameraFilterView.h in Headers */,
+				A87A4A93EF441AA8B5B174A5 /* TGCameraFlash.h in Headers */,
+				EFB9718E65CBBC75AFDCE831 /* TGCameraFocus.h in Headers */,
+				9905601AC3929BDD10AE28C7 /* TGCameraFocusView.h in Headers */,
+				1DB17F69DB06C865CAE6BC46 /* TGCameraFunctions.h in Headers */,
+				5BD84D41A4A917A7960118AA /* TGCameraGrid.h in Headers */,
+				26F6AEB20FA8DA194F09E1EC /* TGCameraGridView.h in Headers */,
+				78961158EFB554CD73507C9B /* TGCameraNavigationController.h in Headers */,
+				C097D3C3ABBB283CDD286BA7 /* TGCameraShot.h in Headers */,
+				9595534A453E6928A5C1D363 /* TGCameraSlideDownView.h in Headers */,
+				A1A8ABE7C5126B5961CCCD28 /* TGCameraSlideUpView.h in Headers */,
+				D37D2900B0C31969B3F764A5 /* TGCameraSlideView.h in Headers */,
+				E8437C27E80E03BB236FC057 /* TGCameraToggle.h in Headers */,
+				E7BD45304E32C4AC9B6012B5 /* TGCameraViewController.h in Headers */,
+				BC89C14C965EDA9C958EA5BB /* TGPhotoViewController.h in Headers */,
+				A1E1417FA3897647EE0FDA83 /* TGTintedButton.h in Headers */,
+				60972FA0C379C1D056A88E5A /* TGTintedLabel.h in Headers */,
+				8BCC060E5DA7F237B0491BF6 /* UIImage+CameraFilters.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		724A90ED9679E1198A93C0A9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FC379402246E2BF04F4448B /* PFACL.h in Headers */,
+				25FBBD031B22C6B63487A11F /* PFAnalytics.h in Headers */,
+				DF2BEDAF44E1E88887889823 /* PFAnonymousUtils.h in Headers */,
+				A33C7B6BBD8A561AD1894E9C /* PFCloud.h in Headers */,
+				60964931C8093C8F19905424 /* PFConfig.h in Headers */,
+				7D815B2E247E78084B2FF049 /* PFConstants.h in Headers */,
+				09A176DB7E85300E9C02D363 /* PFFile.h in Headers */,
+				9E2CEC8AC40C2EC73B308247 /* PFGeoPoint.h in Headers */,
+				EFB603095A100FBA422136BF /* PFInstallation.h in Headers */,
+				5E35B0B24AD21272ED4DE13F /* PFNetworkActivityIndicatorManager.h in Headers */,
+				A44B0DD89F80E59BE71DC8D5 /* PFNullability.h in Headers */,
+				BCDDE98FC830455DB9A62106 /* PFObject+Subclass.h in Headers */,
+				3E24E38D77352BE86AFEF036 /* PFObject.h in Headers */,
+				E4537BB278311DB3C68BE169 /* PFProduct.h in Headers */,
+				FD1C2C6726AE4531C9A33EC4 /* PFPurchase.h in Headers */,
+				5A5B2187C39CA259CB3B3C78 /* PFPush.h in Headers */,
+				251899612AB2331112D1DB92 /* PFQuery.h in Headers */,
+				98B0F30F8A6B1B8AF507E71E /* PFRelation.h in Headers */,
+				54E82D36F920CFF4CFC0A2C1 /* PFRole.h in Headers */,
+				2B3C3695ABB31BA614B3146A /* PFSession.h in Headers */,
+				E16B492AF01DC2696FA56A9B /* PFSubclassing.h in Headers */,
+				04C84CAC5A89CFD32932A929 /* PFTwitterUtils.h in Headers */,
+				C21F502E2A974EF323A06DC3 /* PFUser.h in Headers */,
+				41AB21429F6A52F7FC393CBA /* PF_Twitter.h in Headers */,
+				3B56C767088187390D902859 /* Parse.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97868BDC7A7ABF77E8A2303B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				507ED9ECD39947581621915B /* BFCancellationToken.h in Headers */,
+				A5A95D991FB04A5BE199CA17 /* BFCancellationTokenRegistration.h in Headers */,
+				7B3556DA8E96A490C94AA332 /* BFCancellationTokenSource.h in Headers */,
+				569FC93F0CB63DE94F41C4E0 /* BFExecutor.h in Headers */,
+				4A3C91C656266E4BFF332648 /* BFTask.h in Headers */,
+				98B13808E4B3F3491D49A3E7 /* BFTaskCompletionSource.h in Headers */,
+				2724666A2D688EF579DDAD22 /* Bolts.h in Headers */,
+				872B5BC625A8326C6F677057 /* BoltsVersion.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5FB06AFFF386D27786913EFF /* Pods-AFNetworking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AD10C3D85B450CE1ADB013B /* Build configuration list for PBXNativeTarget "Pods-AFNetworking" */;
+			buildPhases = (
+				0EEDD4043A223652B9B8354A /* Sources */,
+				D463D2EA64D9D128E020EE8C /* Frameworks */,
+				006141B95B3DB510AAD80408 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-AFNetworking";
+			productName = "Pods-AFNetworking";
+			productReference = 0E7DB738522C545158809A78 /* libPods-AFNetworking.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7E50C8129CDF355CBC0CF09A /* Pods-Parse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30BD6C60E2BDCA7B516DFDFF /* Build configuration list for PBXNativeTarget "Pods-Parse" */;
+			buildPhases = (
+				75D0053A90F7950C13DF2B2E /* Sources */,
+				F1D004114C1787FB16613C05 /* Frameworks */,
+				724A90ED9679E1198A93C0A9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70CBC0FD4D77ACAA0997808A /* PBXTargetDependency */,
+			);
+			name = "Pods-Parse";
+			productName = "Pods-Parse";
+			productReference = 9BB2D1BC8475A723F92BADC2 /* libPods-Parse.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A64AABEEFE6AE92F39E8721A /* Pods-TGCameraViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D43F3F716A6EF2B5D5D215D /* Build configuration list for PBXNativeTarget "Pods-TGCameraViewController" */;
+			buildPhases = (
+				168D7EA9845470A6191EB84F /* Sources */,
+				1027F822090BDD64639DEC17 /* Frameworks */,
+				2131466DE384FAF25793A6E3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TGCameraViewController";
+			productName = "Pods-TGCameraViewController";
+			productReference = B783576608941EEC8E2DBBA4 /* libPods-TGCameraViewController.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CBB59D56BC16803BC5CE2BD8 /* Pods-Bolts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC297A1B2144D0DA9A307AC3 /* Build configuration list for PBXNativeTarget "Pods-Bolts" */;
+			buildPhases = (
+				461AF11DF2254F2D9BBA6063 /* Sources */,
+				0C992CC4E7115466A86E2A21 /* Frameworks */,
+				97868BDC7A7ABF77E8A2303B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Bolts";
+			productName = "Pods-Bolts";
+			productReference = 4C3F9369DD659AE5EAF813B9 /* libPods-Bolts.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D7130EB23BB461D1841CC3A1 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80ABC6B776517BC5AD838424 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				93E46AA6CA88FE8941E0B6BE /* Sources */,
+				8D2F28D91EE78B6706D84E14 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5872EF921BF7CDAE0C39C45C /* PBXTargetDependency */,
+				F9ADB9CE2B717F26ED8E6BA3 /* PBXTargetDependency */,
+				FDEBA2EFA059615E78E3DF21 /* PBXTargetDependency */,
+				88581C5C193E0FC48BD65A09 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 8AB1D89CAAD4E0257F17508D /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB6EA4D7DBB6EB24B3BC0655 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+			};
+			buildConfigurationList = E80A964EF299824AF6447927 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6AD6838BE812D33B0EDCCE3F;
+			productRefGroup = 4E6F487D0A63D50A7AB84D65 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D7130EB23BB461D1841CC3A1 /* Pods */,
+				5FB06AFFF386D27786913EFF /* Pods-AFNetworking */,
+				CBB59D56BC16803BC5CE2BD8 /* Pods-Bolts */,
+				7E50C8129CDF355CBC0CF09A /* Pods-Parse */,
+				A64AABEEFE6AE92F39E8721A /* Pods-TGCameraViewController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0EEDD4043A223652B9B8354A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB6A494FD300A0F6005D7E64 /* AFHTTPRequestOperation.m in Sources */,
+				57E1494B2470582671D0005F /* AFHTTPRequestOperationManager.m in Sources */,
+				687F093A33E89F6D2053F946 /* AFHTTPSessionManager.m in Sources */,
+				A0B1280616C00FBB3A07160F /* AFNetworkActivityIndicatorManager.m in Sources */,
+				CAD822291A933319BDAF75C7 /* AFNetworkReachabilityManager.m in Sources */,
+				17BF92EEABA7DBE828F94AE6 /* AFSecurityPolicy.m in Sources */,
+				7369948FDD13F1C8B2AE430A /* AFURLConnectionOperation.m in Sources */,
+				516FEF6D4DD6F29012FDB07A /* AFURLRequestSerialization.m in Sources */,
+				E2335AFFFB5D9BD7BCC03017 /* AFURLResponseSerialization.m in Sources */,
+				9C4D38E8DF1C8BB9F1D159A4 /* AFURLSessionManager.m in Sources */,
+				BD1A02A2253291D9EFC15887 /* Pods-AFNetworking-dummy.m in Sources */,
+				E41F2E54716018ECFB25508B /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				9B633FE7FF4E9F050FE889AD /* UIAlertView+AFNetworking.m in Sources */,
+				4A6AD168A7A521C2E961548A /* UIButton+AFNetworking.m in Sources */,
+				3BAD8E197377441460DE6DBF /* UIImageView+AFNetworking.m in Sources */,
+				7F0E5FB678FF6ABFFCE9415C /* UIProgressView+AFNetworking.m in Sources */,
+				13F38BAD88273286A4E3B5CF /* UIRefreshControl+AFNetworking.m in Sources */,
+				A76D73B7BD1FCDA42568FEB3 /* UIWebView+AFNetworking.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		168D7EA9845470A6191EB84F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD637B6C5D85CA5BA27FC884 /* Pods-TGCameraViewController-dummy.m in Sources */,
+				56DCAB3761E76058B7C78503 /* TGAlbum.m in Sources */,
+				6FF70E06CE58B722C44DFBC5 /* TGAssetImageFile.m in Sources */,
+				5E1CFBBD94528604AD585421 /* TGAssetsLibrary.m in Sources */,
+				F4AD7F2654F60B8EB9201933 /* TGCamera.m in Sources */,
+				8F8B9E63E7FA6E00E7B9C270 /* TGCameraAuthorizationViewController.m in Sources */,
+				20084DDC213AFF124B0CBFE8 /* TGCameraColor.m in Sources */,
+				7B025445397D8B41B7016E49 /* TGCameraFilterView.m in Sources */,
+				3F343D3CA5536CAA951544BA /* TGCameraFlash.m in Sources */,
+				E775021C172F53A0FF2145DC /* TGCameraFocus.m in Sources */,
+				703F6BE3A931A940C8F11F43 /* TGCameraFocusView.m in Sources */,
+				97DFBD9BB76B8B722F8CF8F0 /* TGCameraGrid.m in Sources */,
+				E4F82CD35ED36DB03DD6D18F /* TGCameraGridView.m in Sources */,
+				6E740B7434F7F8219E679FE4 /* TGCameraNavigationController.m in Sources */,
+				1D751DF05D3CEDCCDD10B05C /* TGCameraShot.m in Sources */,
+				7424674D37BC5D40543A8769 /* TGCameraSlideDownView.m in Sources */,
+				B044083C9983543D0FD0066D /* TGCameraSlideUpView.m in Sources */,
+				25A137F66667C4EADAD48C4B /* TGCameraSlideView.m in Sources */,
+				AE91F72BCD6C15C7E7D2C577 /* TGCameraToggle.m in Sources */,
+				12468AF52588E1A7361E5D38 /* TGCameraViewController.m in Sources */,
+				FE84CF28ECA0964DBEC3A5F7 /* TGPhotoViewController.m in Sources */,
+				65FC72ED32E86675C1AF9500 /* TGTintedButton.m in Sources */,
+				C6888156AF17820E5A7ED183 /* TGTintedLabel.m in Sources */,
+				BA4D331C72DB57A02C577A7B /* UIImage+CameraFilters.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		461AF11DF2254F2D9BBA6063 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB89D67FD384498770B31333 /* BFCancellationToken.m in Sources */,
+				715854421CC51763BB8795D8 /* BFCancellationTokenRegistration.m in Sources */,
+				1B37037B9D45BF57FB33243C /* BFCancellationTokenSource.m in Sources */,
+				60AD78E3D9D6462C76FB429A /* BFExecutor.m in Sources */,
+				C892FF39DC95B59D976B1124 /* BFTask.m in Sources */,
+				2B388A2EF6251D64C0D1F06C /* BFTaskCompletionSource.m in Sources */,
+				33033A5947D4E1F3F92D451F /* Bolts.m in Sources */,
+				76156F8668275749D65DCE98 /* Pods-Bolts-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75D0053A90F7950C13DF2B2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15BA900AEACB2A2DCAB603FA /* Empty.m in Sources */,
+				460636E733ADE80E7D081F18 /* Pods-Parse-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93E46AA6CA88FE8941E0B6BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4600452AE4C415C6211333FE /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5872EF921BF7CDAE0C39C45C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-AFNetworking";
+			target = 5FB06AFFF386D27786913EFF /* Pods-AFNetworking */;
+			targetProxy = 2924BFDE169F487D1DF49486 /* PBXContainerItemProxy */;
+		};
+		70CBC0FD4D77ACAA0997808A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Bolts";
+			target = CBB59D56BC16803BC5CE2BD8 /* Pods-Bolts */;
+			targetProxy = D7AE49B1FF18019D05FB8D0A /* PBXContainerItemProxy */;
+		};
+		88581C5C193E0FC48BD65A09 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TGCameraViewController";
+			target = A64AABEEFE6AE92F39E8721A /* Pods-TGCameraViewController */;
+			targetProxy = 09DFB1870FD894F1CB9BF149 /* PBXContainerItemProxy */;
+		};
+		F9ADB9CE2B717F26ED8E6BA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Bolts";
+			target = CBB59D56BC16803BC5CE2BD8 /* Pods-Bolts */;
+			targetProxy = 0A5926105DB38B9A8D7D5E3E /* PBXContainerItemProxy */;
+		};
+		FDEBA2EFA059615E78E3DF21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Parse";
+			target = 7E50C8129CDF355CBC0CF09A /* Pods-Parse */;
+			targetProxy = 607E0540B6BB07639F69105B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0068AA157BEC08537DA28EA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D005FC873E781C73BB4CA9C7 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2E75AE0CF74C04BCE097F4E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D7A4C91BBD3C58FC7FA97DD /* Pods-TGCameraViewController-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TGCameraViewController/Pods-TGCameraViewController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		40004CD2CCB130DBF636E8B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF59578DB81AE1B911DB774E /* Pods-Bolts-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Bolts/Pods-Bolts-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4EBC9D982C983970DD20A99B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38722AD90F02A4C611EE812B /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		7B4CD202E984C98DAF151D95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0984E22A41E1887298D45BA6 /* Pods-Parse-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Parse/Pods-Parse-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9828661B1D9B76F7FFF42B48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C81145EBFA88D2F2C128EA99 /* Pods-AFNetworking-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-AFNetworking/Pods-AFNetworking-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		AE4FA441A11162F71F8311E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0984E22A41E1887298D45BA6 /* Pods-Parse-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Parse/Pods-Parse-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		BFB3EEC2ED9829F0625EC46D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C37B38ADFE35671D8989A7FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C81145EBFA88D2F2C128EA99 /* Pods-AFNetworking-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-AFNetworking/Pods-AFNetworking-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CFD047ED0EB110932E24905C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D7A4C91BBD3C58FC7FA97DD /* Pods-TGCameraViewController-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TGCameraViewController/Pods-TGCameraViewController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D00C0FE28C1ABA8B5F8C1657 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		FDFB8DAD6C833750001D33BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF59578DB81AE1B911DB774E /* Pods-Bolts-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Bolts/Pods-Bolts-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		30BD6C60E2BDCA7B516DFDFF /* Build configuration list for PBXNativeTarget "Pods-Parse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B4CD202E984C98DAF151D95 /* Debug */,
+				AE4FA441A11162F71F8311E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D43F3F716A6EF2B5D5D215D /* Build configuration list for PBXNativeTarget "Pods-TGCameraViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E75AE0CF74C04BCE097F4E8 /* Debug */,
+				CFD047ED0EB110932E24905C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AD10C3D85B450CE1ADB013B /* Build configuration list for PBXNativeTarget "Pods-AFNetworking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C37B38ADFE35671D8989A7FD /* Debug */,
+				9828661B1D9B76F7FFF42B48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80ABC6B776517BC5AD838424 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0068AA157BEC08537DA28EA1 /* Debug */,
+				4EBC9D982C983970DD20A99B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC297A1B2144D0DA9A307AC3 /* Build configuration list for PBXNativeTarget "Pods-Bolts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40004CD2CCB130DBF636E8B7 /* Debug */,
+				FDFB8DAD6C833750001D33BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E80A964EF299824AF6447927 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D00C0FE28C1ABA8B5F8C1657 /* Debug */,
+				BFB3EEC2ED9829F0625EC46D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB6EA4D7DBB6EB24B3BC0655 /* Project object */;
+}

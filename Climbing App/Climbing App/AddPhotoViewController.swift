@@ -7,17 +7,25 @@
 //
 
 import UIKit
+import MobileCoreServices
+import AssetsLibrary
+import AVFoundation
+import CoreImage
+import Foundation
 
-var cameraView: CameraSessionView!
+
+//var cameraView: CameraSessionView!
 
 class AddPhotoViewController: UIViewController, CACameraSessionDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        cameraView = CameraSessionView(frame: self.view.frame)
-        cameraView.delegate = self
-        view.addSubview(cameraView)
+//        cameraView = CameraSessionView(frame: self.view.frame)
+//        cameraView.delegate = self
+//        view.addSubview(cameraView)
+        
+
         
     }
 
@@ -25,6 +33,9 @@ class AddPhotoViewController: UIViewController, CACameraSessionDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    
+    
     
     func didCaptureImage(image: UIImage!) {
         //use the image that is received
