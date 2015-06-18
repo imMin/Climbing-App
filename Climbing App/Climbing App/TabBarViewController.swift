@@ -25,6 +25,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
     @IBOutlet weak var savedLabel: UILabel!
 	@IBOutlet weak var backgroundView: UIView!
 	
+    @IBOutlet weak var addClimbLabel: UILabel!
     var flyoutOpen: Bool! = false
     
 	var myLogViewController: UIViewController!
@@ -38,8 +39,10 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 	var viewControllers: [UIViewController]!
 	var buttons: [UIButton]!
 	var startingPoint: CGFloat!
-	var fiveButtonFinalPosition = CGPointMake(115, 450)
-	var vButtonFinalPosition = CGPointMake(205, 450)
+	var fiveButtonFinalPosition = CGPointMake(115, 460)
+	var vButtonFinalPosition = CGPointMake(205, 460)
+    var addClimbLabelFinalPosition = CGPointMake(160, 408)
+    var addClimbLabelInitialPosition = CGPointMake(160, 700)
 	var buttonsInitialPosition : CGPoint!
 
 	let transition = addTransition()
@@ -93,7 +96,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 		startingPoint = 650
 		fiveButton.center.y = startingPoint
 		vButton.center.y = startingPoint
-//		backgroundView.backgroundColor = UIColor(red:0.0, green:0.0, blue:0.0, alpha:0.1)
+//		backgroundView.backgroundColor = UIColor(red:0.0, green:0.0, blue:0.0, alpha:0.2)
 	}
 	
 
@@ -186,9 +189,10 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
     
 	
 	func transitionIn(){
-		UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.25, options: nil, animations: { () -> Void in
+		UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.25, options: nil, animations: { () -> Void in
 			self.fiveButton.center = self.fiveButtonFinalPosition
             self.vButton.center = self.vButtonFinalPosition
+            self.addClimbLabel.center = self.addClimbLabelFinalPosition
 			self.backgroundView.alpha = 0.5
 			}, completion: nil)
         
@@ -200,7 +204,8 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 		UIView.animateWithDuration(0.4, delay: 0.0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: nil, animations: { () -> Void in
 			self.fiveButton.center = self.buttonsInitialPosition
              self.vButton.center = self.buttonsInitialPosition
-			
+            self.addClimbLabel.center = self.addClimbLabelInitialPosition
+
             self.backgroundView.alpha = 0
 			}, completion: nil)
         
