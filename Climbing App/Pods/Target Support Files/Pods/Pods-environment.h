@@ -54,6 +54,12 @@
 #define COCOAPODS_VERSION_MINOR_Bolts_Tasks 2
 #define COCOAPODS_VERSION_PATCH_Bolts_Tasks 0
 
+// MVCarouselCollectionView
+#define COCOAPODS_POD_AVAILABLE_MVCarouselCollectionView
+#define COCOAPODS_VERSION_MAJOR_MVCarouselCollectionView 1
+#define COCOAPODS_VERSION_MINOR_MVCarouselCollectionView 0
+#define COCOAPODS_VERSION_PATCH_MVCarouselCollectionView 4
+
 // Parse
 #define COCOAPODS_POD_AVAILABLE_Parse
 #define COCOAPODS_VERSION_MAJOR_Parse 1
