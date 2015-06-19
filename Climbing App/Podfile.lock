@@ -21,21 +21,18 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - Bolts/Tasks (1.2.0)
-  - MVCarouselCollectionView (1.0.4)
   - Parse (1.7.4):
     - Bolts/Tasks (>= 1.1.5)
   - TGCameraViewController (2.2)
 
 DEPENDENCIES:
   - AFNetworking
-  - MVCarouselCollectionView
   - Parse
   - TGCameraViewController
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   Bolts: d176cb1e0012175589e389a9db49b85e27787576
-  MVCarouselCollectionView: fa489c2d184ff33345ceaef65c485778b86baeaf
   Parse: 6ca512c6e860b66739c95151b2f76ac4712b7842
   TGCameraViewController: 0222c0a0d636976423066bdec6d0bafea1673a63
 
