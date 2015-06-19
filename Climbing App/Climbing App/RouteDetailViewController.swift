@@ -26,7 +26,8 @@ class RouteDetailViewController: UIViewController, UIImagePickerControllerDelega
 	
     var hasNewPhoto: Bool!
     var newPhoto: UIImage!
-	
+	    
+    @IBOutlet weak var carouselContainerView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 		routeNameLabel.text = routeName
