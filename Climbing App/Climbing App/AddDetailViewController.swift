@@ -21,12 +21,25 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate {
 	var scrollVelocity: CGPoint!
 	var pageNumber: Int!
 	var previousPageNumber: Int!
+	var rect : CGRect!
+	var context: CGContextRef!
+	var typeButtons: [UIButton]!
+	var styleButtons: [UIButton]!
+	
+//	var typeSegBackgroundImage: UIImage!
+	@IBOutlet weak var leadButton: UIButton!
+	@IBOutlet weak var topRopeButton: UIButton!
+	@IBOutlet weak var tradButton: UIButton!
+	@IBOutlet weak var onSightButton: UIButton!
+	@IBOutlet weak var flashButton: UIButton!
+	@IBOutlet weak var redPointButton: UIButton!
 	
 	
 	@IBOutlet weak var routeNameLabel: UILabel!
 	@IBOutlet weak var levelLabel: UILabel!
 	@IBOutlet weak var levelScrollView: UIScrollView!
 	@IBOutlet weak var touchableView: UIView!
+	@IBOutlet weak var typeSegmentedControl: UISegmentedControl!
 	
 	@IBOutlet weak var five6Label: UILabel!
 	@IBOutlet weak var five7Label: UILabel!
@@ -61,7 +74,7 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate {
 		
 		routeNameLabel.text = routeName
 		
-		levelLabel.text = level
+//		levelLabel.text = level
 		levelScrollView.contentSize = CGSizeMake(CGFloat(levels.count) * 100, 80.0)
 		levelScrollView.clipsToBounds = false
 		
@@ -76,10 +89,14 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate {
 		
 		touchableView.addGestureRecognizer(levelScrollView.panGestureRecognizer)
 		
-//		levelScrollView.panGestureRecognizer.actionForLayer(levelScrollView, forKey: "onCustomPan")
-//		levelScrollView.panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "onCustomPan")
-//		var panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "onCustomPan:")
-//		levelScrollView.addGestureRecognizer(panGestureRecognizer)
+		
+		typeButtons = [leadButton, topRopeButton, tradButton]
+		
+		styleButtons = [onSightButton, flashButton, redPointButton]
+		
+		typeButtons[1].selected = true
+		styleButtons[1].selected = true
+
     }
 	
 	override func viewWillAppear(animated: Bool) {
@@ -98,6 +115,12 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate {
 	
 	func setScale(){
 		previousPageNumber = pageNumber
+		for (var i = 0; i < levels.count; i++ ){
+			if (i != selectedLevel){
+				levelLabels[i].alpha = 0.44
+			}
+		}
+		
 		levelLabels[selectedLevel].transform = CGAffineTransformScale(levelLabels[selectedLevel].transform, 1.2, 1.2)
 	}
 	
@@ -108,9 +131,10 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate {
 		if (previousPageNumber != currentPageNumber && currentPageNumber < levelLabels.count && currentPageNumber >= 0) {
 			let label = levelLabels[currentPageNumber]
 			label.transform = CGAffineTransformScale(label.transform, 1.2, 1.2)
+			levelLabels[currentPageNumber].alpha = 1
 			
 			levelLabels[previousPageNumber].transform = CGAffineTransformIdentity
-//			levelLabels[previousPageNumber]
+			levelLabels[previousPageNumber].alpha = 0.44
 			
 			previousPageNumber = currentPageNumber
 		}
@@ -140,4 +164,27 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate {
 		return value * ratio + r2Min - r1Min * ratio
 	}
 	
+	@IBAction func didSelectType(sender: AnyObject) {
+		for (var i = 0; i < typeButtons.count; i++){
+			if sender.tag != i{
+				typeButtons[i].selected = false
+			}
+			else{
+				typeButtons[i].selected = true
+			}
+		}
+		
+	}
+	
+	@IBAction func didSelectStyle(sender: AnyObject) {
+		for (var i = 0; i < styleButtons.count; i++){
+			if sender.tag != i{
+				styleButtons[i].selected = false
+			}
+			else {
+				styleButtons[i].selected = true
+			}
+		}
+	
+	}
 }
