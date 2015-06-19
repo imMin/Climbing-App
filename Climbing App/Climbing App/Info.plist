@@ -37,6 +37,7 @@
 		<string>SF-UI-Display-Semibold.otf</string>
 		<string>SF-UI-Display-Thin.otf</string>
 		<string>SF-UI-Display-Ultralight.otf</string>
+		<string>VarelaRound-Regular.otf</string>
 	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
