@@ -19,6 +19,8 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate {
 	var moved: Float!
 	var movedLevel: Int!
 	var scrollVelocity: CGPoint!
+	var pageNumber: Int!
+	var previousPageNumber: Int!
 	
 	
 	@IBOutlet weak var routeNameLabel: UILabel!
@@ -56,20 +58,23 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-//		println(levelLabel)
+		
 		routeNameLabel.text = routeName
+		
 		levelLabel.text = level
 		levelScrollView.contentSize = CGSizeMake(CGFloat(levels.count) * 100, 80.0)
 		levelScrollView.clipsToBounds = false
-		touchableView.addGestureRecognizer(levelScrollView.panGestureRecognizer)
-		findSelectedlevel()
-//		println(selectedLevel)
-		levelScrollView.contentOffset.x = CGFloat(100 * selectedLevel)
+		
+		selectedLevel = find(levels, level)
+		pageNumber = selectedLevel
+		self.changePage(selectedLevel, animated: false)
 		
 		
 		levelLabels = [five6Label, five7Label, five8Label, five9Label, five10aLabel, five10bLabel, five10cLabel, five10dLabel, five11aLabel, five11bLabel, five11cLabel, five11dLabel, five12aLabel, five12bLabel, five12cLabel, five12dLabel, five13aLabel, five13bLabel, five13cLabel, five13dLabel, five14aLabel, five14bLabel, five14cLabel, five14dLabel]
 
 		levelScrollView.delegate = self
+		
+		touchableView.addGestureRecognizer(levelScrollView.panGestureRecognizer)
 		
 //		levelScrollView.panGestureRecognizer.actionForLayer(levelScrollView, forKey: "onCustomPan")
 //		levelScrollView.panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "onCustomPan")
@@ -90,36 +95,24 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate {
 		dismissViewControllerAnimated(true, completion: nil)
 	}
 	
-	func findSelectedlevel(){
-		for (var i = 0; i < levels.count; i++){
-			if levels[i] == levelLabel.text {
-				selectedLevel = i
-			}
-		}
-	}
 	
 	func setScale(){
-		
+		previousPageNumber = pageNumber
 		levelLabels[selectedLevel].transform = CGAffineTransformScale(levelLabels[selectedLevel].transform, 1.2, 1.2)
 	}
 	
-//	func onCustomPan(panGestureRecognizer: UIPanGestureRecognizer){
-//		var translation = panGestureRecognizer.translationInView(levelScrollView)
-//		
-//		var scale = convertValue(Float(translation.x), r1Min: 0, r1Max: 100, r2Min: 1.0, r2Max: 0.833333333)
-//		levelLabels[selectedLevel].transform = CGAffineTransformScale(levelLabels[selectedLevel].transform, CGFloat(scale), CGFloat(scale))
-//	}
-	
 	func scrollViewDidScroll(scrollView: UIScrollView) {
-//		println(moved)
-		
-//		var scale = convertValue(moved, r1Min: 0, r1Max: 100.0, r2Min: 1.0, r2Max: 0.8333333)
-		//		println(selectedLevel)
-		//		println(five9Label.center)
-		//		println(offset)
-//		levelLabels[selectedLevel].transform = CGAffineTransformScale(levelLabels[selectedLevel].transform, CGFloat(scale), CGFloat(scale))
 
+		let currentPageNumber = Int(round(scrollView.contentOffset.x / 100))
 
+		if (previousPageNumber != currentPageNumber && currentPageNumber < levelLabels.count && currentPageNumber >= 0) {
+			let label = levelLabels[currentPageNumber]
+			label.transform = CGAffineTransformScale(label.transform, 1.2, 1.2)
+			
+			levelLabels[previousPageNumber].transform = CGAffineTransformIdentity
+			
+			previousPageNumber = currentPageNumber
+		}
 	}
 	
 	func scrollViewWillBeginDragging(scrollView: UIScrollView) {
@@ -128,40 +121,16 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate {
 	
 	func scrollViewDidEndDragging(scrollView: UIScrollView,
 		willDecelerate decelerate: Bool) {
-			scrollVelocity = levelScrollView.panGestureRecognizer.velocityInView(view)
 			
-			moved = Float(scrollView.contentOffset.x) - initialOffset
-			movedLevel = Int(abs(moved)/100)
-//			println(moved)
-//			println(scrollVelocity)
-			if (((moved > 0) && (scrollVelocity.x < 0)) || (moved > 50)) {
-				levelLabels[selectedLevel].transform = CGAffineTransformScale(levelLabels[selectedLevel].transform, CGFloat(0.83333), CGFloat(0.83333))
-				levelLabels[selectedLevel+1+movedLevel].transform = CGAffineTransformScale(levelLabels[selectedLevel+1].transform, 1.2, 1.2)
-				selectedLevel = selectedLevel + 1 + movedLevel
-			}
-			else if (((moved < 0) && (scrollVelocity.x > 0)) || (moved < -50 )) {
-				levelLabels[selectedLevel].transform = CGAffineTransformScale(levelLabels[selectedLevel].transform, CGFloat(0.83333), CGFloat(0.83333))
-				levelLabels[selectedLevel-1-movedLevel].transform = CGAffineTransformScale(levelLabels[selectedLevel+1].transform, 1.2, 1.2)
-				selectedLevel = selectedLevel - 1 - movedLevel
-			}
-
-			// This method is called right as the user lifts their finger
 	}
 	
 	func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-//		moved = Float(scrollView.contentOffset.x) - initialOffset
-//		println(moved)
-//		if moved >= 100 {
-//			levelLabels[selectedLevel].transform = CGAffineTransformScale(levelLabels[selectedLevel].transform, CGFloat(0.83333), CGFloat(0.83333))
-//			levelLabels[selectedLevel+1].transform = CGAffineTransformScale(levelLabels[selectedLevel+1].transform, 1.2, 1.2)
-//			selectedLevel = selectedLevel + 1
-//		}
-//		else if moved <= -100 {
-//			levelLabels[selectedLevel].transform = CGAffineTransformScale(levelLabels[selectedLevel].transform, CGFloat(0.83333), CGFloat(0.83333))
-//			levelLabels[selectedLevel-1].transform = CGAffineTransformScale(levelLabels[selectedLevel+1].transform, 1.2, 1.2)
-//			selectedLevel = selectedLevel - 1
-//		}
-		// This method is called when the scrollview finally stops scrolling.
+		pageNumber = Int(scrollView.contentOffset.x / 100)
+	}
+	
+	func changePage(page: Int, animated: Bool) {
+		let x = CGFloat(page) * levelScrollView.frame.size.width
+		levelScrollView.setContentOffset(CGPointMake(x, 0), animated: animated)
 	}
 	
 	
