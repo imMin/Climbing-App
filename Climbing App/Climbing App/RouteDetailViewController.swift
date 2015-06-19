@@ -24,6 +24,8 @@ class RouteDetailViewController: UIViewController, UIImagePickerControllerDelega
 	@IBOutlet weak var distanceLabel: UILabel!
 	@IBOutlet weak var climbLabel: UILabel!
 	
+    var hasNewPhoto: Bool!
+    var newPhoto: UIImage!
 	
     override func viewDidLoad() {
         super.viewDidLoad()

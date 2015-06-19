@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddPhotoViewController: UIViewController, TGCameraDelegate {
+class AddPhotoViewController: UIViewController, TGCameraDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var captionTextView: UITextView!
@@ -37,15 +37,36 @@ class AddPhotoViewController: UIViewController, TGCameraDelegate {
     }
 
     func exposeCamera() {
-        self.presentViewController(navController, animated: true, completion: nil)
+        
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+            self.presentViewController(navController, animated: true, completion: nil)
+            return
+        } else {
+            var pickerController = TGAlbum.imagePickerControllerWithDelegate(self)
+            self.presentViewController(pickerController, animated: true, completion: nil)
+            
+        }
+        
     }
     
     func cameraWillTakePhoto() {
-        
+
+
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+        photoView.image = TGAlbum.imageWithMediaInfo(info)
+        self.dismissViewControllerAnimated(true, completion: nil)
+
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func cameraDidSavePhotoAtPath(assetURL: NSURL!) {
             //when implemented, an image will be saved on user's device
+        
     }
     
     func cameraDidCancel() {
@@ -62,10 +83,18 @@ class AddPhotoViewController: UIViewController, TGCameraDelegate {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    @IBAction func didPressBack(sender: AnyObject) {
+    @IBAction func didPressCancel(sender: AnyObject) {
+        println("did Press Cancel")
         dismissViewControllerAnimated(true, completion: nil)
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        println("calling prepareForSegue")
+        var viewController = segue.destinationViewController as! RouteDetailViewController
+        
+        viewController.hasNewPhoto = true
+        viewController.newPhoto = photoView.image
+    }
 
     /*
     // MARK: - Navigation
