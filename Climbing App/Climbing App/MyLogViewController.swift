@@ -114,10 +114,10 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
 	}
 	
 	func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-		var headerView = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 40))
+		var headerView = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 30))
 		headerView.backgroundColor = UIColor(white: 0.2, alpha: 0.5)
 		
-		var label = UILabel(frame: CGRect(x: 10, y: 0, width: 300, height: 40))
+		var label = UILabel(frame: CGRect(x: 10, y: 0, width: 300, height: 30))
 		label.text = dates[section]
 //		label.text = "June 14, 2015"
 		headerView.addSubview(label)

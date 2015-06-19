@@ -24,7 +24,10 @@ class RouteDetailViewController: UIViewController, UIImagePickerControllerDelega
 	@IBOutlet weak var distanceLabel: UILabel!
 	@IBOutlet weak var climbLabel: UILabel!
 	
-	
+    var hasNewPhoto: Bool!
+    var newPhoto: UIImage!
+	    
+    @IBOutlet weak var carouselContainerView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 		routeNameLabel.text = routeName

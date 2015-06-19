@@ -43,6 +43,7 @@
 		6F74C41D1B2D5F8A00C0FD85 /* LogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F74C41C1B2D5F8A00C0FD85 /* LogCell.swift */; };
 		6F8B0DD91B2D839E0014BF02 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F8B0DD81B2D839E0014BF02 /* MapKit.framework */; };
 		6F9637591B325AE3002EDB49 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9637581B325AE3002EDB49 /* AddPhotoViewController.swift */; };
+		8898B2931B33EA54007F07A7 /* VarelaRound-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8898B2921B33EA54007F07A7 /* VarelaRound-Regular.otf */; };
 		A119B2A41B301F55001A0370 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = A119B2A31B301F55001A0370 /* Common.swift */; };
 		A146495E1B32633A00DFF014 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A146495D1B32633A00DFF014 /* AVFoundation.framework */; };
 		A14649BE1B32759000DFF014 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A14649BD1B32759000DFF014 /* CoreLocation.framework */; };
@@ -102,6 +103,7 @@
 		6F74C41C1B2D5F8A00C0FD85 /* LogCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogCell.swift; sourceTree = "<group>"; };
 		6F8B0DD81B2D839E0014BF02 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		6F9637581B325AE3002EDB49 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
+		8898B2921B33EA54007F07A7 /* VarelaRound-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VarelaRound-Regular.otf"; sourceTree = "<group>"; };
 		A119B2A31B301F55001A0370 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		A146495C1B3262AD00DFF014 /* Climbing_App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Climbing_App-Bridging-Header.h"; sourceTree = "<group>"; };
 		A146495D1B32633A00DFF014 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -212,6 +214,7 @@
 		6F74C3EE1B29FA5D00C0FD85 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8898B2911B33EA32007F07A7 /* fonts */,
 				6F74C3EF1B29FA5D00C0FD85 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -232,6 +235,14 @@
 				6F74C4051B29FA5D00C0FD85 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8898B2911B33EA32007F07A7 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8898B2921B33EA54007F07A7 /* VarelaRound-Regular.otf */,
+			);
+			name = fonts;
 			sourceTree = "<group>";
 		};
 		9E62765D3558BD65C9EA4B1A /* Pods */ = {
@@ -345,6 +356,7 @@
 				6F63CAE31B33DA37000F0BF4 /* SF-UI-Display-Regular.otf in Resources */,
 				6F63CAE11B33DA37000F0BF4 /* SF-UI-Display-Light.otf in Resources */,
 				6F63CADF1B33DA37000F0BF4 /* SF-UI-Display-Bold.otf in Resources */,
+				8898B2931B33EA54007F07A7 /* VarelaRound-Regular.otf in Resources */,
 				6F63CAE21B33DA37000F0BF4 /* SF-UI-Display-Medium.otf in Resources */,
 				6F63CAE61B33DA37000F0BF4 /* SF-UI-Display-Ultralight.otf in Resources */,
 				6F74C3FB1B29FA5D00C0FD85 /* LaunchScreen.xib in Resources */,

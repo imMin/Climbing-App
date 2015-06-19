@@ -142,7 +142,8 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
         bounceAnimation.duration = 0.7
         bounceAnimation.calculationMode = kCAAnimationCubic
         
-        icon.layer.addAnimation(bounceAnimation, forKey: "bounceAnimation")
+//      Commenting out the bounce on the icons for now.
+//        icon.layer.addAnimation(bounceAnimation, forKey: "bounceAnimation")
         
     }
 	
