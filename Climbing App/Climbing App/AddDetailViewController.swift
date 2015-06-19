@@ -110,6 +110,7 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate {
 			label.transform = CGAffineTransformScale(label.transform, 1.2, 1.2)
 			
 			levelLabels[previousPageNumber].transform = CGAffineTransformIdentity
+			levelLabels[previousPageNumber]
 			
 			previousPageNumber = currentPageNumber
 		}
