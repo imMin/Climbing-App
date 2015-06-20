@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RouteDetailViewController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelegate {
 	
 	var routeName: String!
 	var level: String!
@@ -24,10 +24,15 @@ class RouteDetailViewController: UIViewController, UIImagePickerControllerDelega
 	@IBOutlet weak var distanceLabel: UILabel!
 	@IBOutlet weak var climbLabel: UILabel!
 	
-    var hasNewPhoto: Bool!
+    @IBOutlet weak var scrollView: UIScrollView!
+    var hasNewPhoto: Bool = false
     var newPhoto: UIImage!
 	    
-    @IBOutlet weak var carouselContainerView: UIView!
+    @IBOutlet weak var imageButton: UIButton!
+    let photos = PhotosProvider().photos
+    
+    @IBOutlet weak var climbingPhotosView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 		routeNameLabel.text = routeName
@@ -36,9 +41,16 @@ class RouteDetailViewController: UIViewController, UIImagePickerControllerDelega
 		distanceLabel.text = distance
 		climbLabel.text = climb
         
-        picker.delegate = self
+        let buttonImage = UIImage(named: PrimaryImageName)
+        imageButton?.setBackgroundImage(buttonImage, forState: .Normal)
 
         // Do any additional setup after loading the view.
+        scrollView.contentSize = CGSizeMake(320, 1475)
+        climbingPhotosView.frame.origin.y = 213
+        
+        if hasNewPhoto == true {
+            addNewPhoto()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,22 +58,11 @@ class RouteDetailViewController: UIViewController, UIImagePickerControllerDelega
         // Dispose of any resources that can be recreated.
     }
     
-    //MARK: Delegates
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
-        var chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
-//        myImageView.contentMode = .ScaleAspectFit //3
-//        myImageView.image = chosenImage //4
-//        dismissViewControllerAnimated(true, completion: nil) //5
-        
-
-        var editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
-        var metaData = UIImagePickerControllerMediaMetadata as String
-
-   
-    }
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        dismissViewControllerAnimated(true, completion: nil)
-        
+    func addNewPhoto() {
+        scrollView.contentSize = CGSizeMake(320, 1648)
+        UIView.animateWithDuration(0.7, animations: { () -> Void in
+            self.climbingPhotosView.frame.origin.y += self.imageButton.frame.height
+        })
     }
 
 	@IBAction func didPressBackButton(sender: AnyObject) {
@@ -70,14 +71,6 @@ class RouteDetailViewController: UIViewController, UIImagePickerControllerDelega
 	}
 
     @IBAction func didPressAddPhoto(sender: AnyObject) {
-//        if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
-//            picker.allowsEditing = false
-//            picker.sourceType = UIImagePickerControllerSourceType.Camera
-//            picker.cameraCaptureMode = .Photo
-//            presentViewController(picker, animated: true, completion: nil)
-//        } else {
-//            noCamera()
-//        }
 
         performSegueWithIdentifier("addPhotoSegue", sender: nil)
         
@@ -89,13 +82,103 @@ class RouteDetailViewController: UIViewController, UIImagePickerControllerDelega
         presentViewController(alertVC, animated: true, completion: nil)
     }
     
+    @IBAction func didTapImageButton(sender: AnyObject) {
+        let photosViewController = NYTPhotosViewController(photos: self.photos)
+        photosViewController.delegate = self
+        presentViewController(photosViewController, animated: true, completion: nil)
+        
+        updateImagesOnPhotosViewController(photosViewController, afterDelayWithPhotos: photos)
+
+    }
     
-//    @IBAction func didPressChoosePhoto(sender: AnyObject) {
-//        picker.allowsEditing = false //2
-//        picker.sourceType = .PhotoLibrary //3
-//        
-//        picker.modalPresentationStyle = .Popover
-//        presentViewController(picker, animated: true, completion: nil)//4
-//    }
+    func updateImagesOnPhotosViewController(photosViewController: NYTPhotosViewController, afterDelayWithPhotos: [ExamplePhoto]) {
+        
+        let delayTime = dispatch_time(DISPATCH_TIME_NOW, 5 * Int64(NSEC_PER_SEC))
+        
+        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            for photo in self.photos {
+                if photo.image == nil {
+                    photo.image = UIImage(named: PrimaryImageName)
+                    photosViewController.updateImageForPhoto(photo)
+                }
+            }
+        }
+    }
+    
+    
+    // MARK: - NYTPhotosViewControllerDelegate
+    
+    func photosViewController(photosViewController: NYTPhotosViewController!, handleActionButtonTappedForPhoto photo: NYTPhoto!) -> Bool {
+        
+        if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+            
+            let shareActivityViewController = UIActivityViewController(activityItems: [photo.image], applicationActivities: nil)
+            
+            shareActivityViewController.completionWithItemsHandler = {(activityType: String!, completed: Bool, items: [AnyObject]!, NSError) in
+                if completed {
+                    photosViewController.delegate?.photosViewController!(photosViewController, actionCompletedWithActivityType: activityType)
+                }
+            }
+            
+            shareActivityViewController.popoverPresentationController?.barButtonItem = photosViewController.rightBarButtonItem
+            photosViewController.presentViewController(shareActivityViewController, animated: true, completion: nil)
+            
+            return true
+        }
+        
+        return false
+    }
+    
+    func photosViewController(photosViewController: NYTPhotosViewController!, referenceViewForPhoto photo: NYTPhoto!) -> UIView! {
+        if photo as? ExamplePhoto == photos[NoReferenceViewPhotoIndex] {
+            /** Swift 1.2
+            *  if photo as! ExamplePhoto == photos[PhotosProvider.NoReferenceViewPhotoIndex]
+            */
+            return nil
+        }
+        return imageButton
+    }
+    
+    func photosViewController(photosViewController: NYTPhotosViewController!, loadingViewForPhoto photo: NYTPhoto!) -> UIView! {
+        if photo as! ExamplePhoto == photos[CustomEverythingPhotoIndex] {
+            /** Swift 1.2
+            *  if photo as! ExamplePhoto == photos[PhotosProvider.CustomEverythingPhotoIndex]
+            */
+            var label = UILabel()
+            label.text = "Custom Loading..."
+            label.textColor = UIColor.greenColor()
+            return label
+        }
+        return nil
+    }
+    
+    func photosViewController(photosViewController: NYTPhotosViewController!, captionViewForPhoto photo: NYTPhoto!) -> UIView! {
+        if photo as! ExamplePhoto == photos[CustomEverythingPhotoIndex] {
+            /** Swift 1.2
+            *  if photo as! ExamplePhoto == photos[PhotosProvider.CustomEverythingPhotoIndex]
+            */
+            var label = UILabel()
+            label.text = "Custom Caption View"
+            label.textColor = UIColor.whiteColor()
+            label.backgroundColor = UIColor.redColor()
+            return label
+        }
+        return nil
+    }
+    
+    func photosViewController(photosViewController: NYTPhotosViewController!, didNavigateToPhoto photo: NYTPhoto!, atIndex photoIndex: UInt) {
+        println("Did Navigate To Photo: \(photo) identifier: \(photoIndex)")
+    }
+    
+    func photosViewController(photosViewController: NYTPhotosViewController!, actionCompletedWithActivityType activityType: String!) {
+        println("Action Completed With Activity Type: \(activityType)")
+    }
+    
+    func photosViewControllerDidDismiss(photosViewController: NYTPhotosViewController!) {
+        println("Did dismiss Photo Viewer: \(photosViewController)")
+    }
+
+    
+    
     
 }

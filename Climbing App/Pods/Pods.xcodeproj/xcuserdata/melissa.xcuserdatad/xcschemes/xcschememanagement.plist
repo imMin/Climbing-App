@@ -6,53 +6,63 @@
 	<dict>
 		<key>Pods-AFNetworking.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Bolts.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-NYTPhotoViewer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Parse.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-TGCameraViewController.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0A27F6A2CE72F7A877DFFEAA</key>
+		<key>83E51769A78BE6CC962FC326</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5D73FD8BB3C521316D504D85</key>
+		<key>A3A9F3897ECBC96DE2C11109</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>904EFDB356A330CAE46833ED</key>
+		<key>AA7027DD3E394D3B4131A278</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C3F6D975C435A50D54C84711</key>
+		<key>AC9A4ABC6A225253627EF649</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FF9535AB091173CA6A9A8630</key>
+		<key>E556491C4F5A959248D63FE0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F9036A75754F1FD4717CA3E9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

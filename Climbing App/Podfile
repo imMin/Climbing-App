@@ -4,3 +4,4 @@
 pod 'TGCameraViewController'
 pod 'AFNetworking'
 pod 'Parse'
+pod 'NYTPhotoViewer'
