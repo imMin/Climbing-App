@@ -1,3 +1,5 @@
+
+
 //
 //  TabBarViewController.swift
 //  Climbing App
@@ -227,9 +229,28 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 		return transition
 	}
     
-	@IBAction func didPressFiveButton(sender: AnyObject) {
+	@IBAction func didPressButton(sender: AnyObject) {
         handleAddButtonTap()
         transitionOut()
-		performSegueWithIdentifier("fiveButtonSegue", sender: self)
+		if (sender as! NSObject == fiveButton){
+			performSegueWithIdentifier("fiveButtonSegue", sender: self)
+		}
+		else if (sender as! NSObject == vButton){
+			performSegueWithIdentifier("vButtonSegue", sender: self)
+		}
 	}
+	
+	override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+		var destinationViewController = segue.destinationViewController as! UINavigationController
+		
+		var topViewController = destinationViewController.topViewController as! AddDetailViewController
+		
+		if (sender as! NSObject == fiveButton){
+			topViewController.isFiveButton = true
+		}
+		else if (sender as! NSObject == vButton){
+			topViewController.isFiveButton = false
+		}
+	}
+
 }
