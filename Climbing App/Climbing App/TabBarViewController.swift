@@ -230,27 +230,32 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 	}
     
 	@IBAction func didPressButton(sender: AnyObject) {
-        handleAddButtonTap()
-        transitionOut()
-		if (sender as! NSObject == fiveButton){
-			performSegueWithIdentifier("fiveButtonSegue", sender: self)
-		}
-		else if (sender as! NSObject == vButton){
-			performSegueWithIdentifier("vButtonSegue", sender: self)
-		}
+		
+		handleAddButtonTap()
+		
+		transitionOut()
+		
+//		if (sender as! NSObject == fiveButton){
+//			performSegueWithIdentifier("fiveButtonSegue", sender: self)
+//		}
+//		else if (sender as! NSObject == vButton){
+//			performSegueWithIdentifier("vButtonSegue", sender: self)
+//		}
 	}
 	
 	override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
 		var destinationViewController = segue.destinationViewController as! UINavigationController
 		
 		var topViewController = destinationViewController.topViewController as! AddDetailViewController
-		
+		print(sender as! NSObject)
 		if (sender as! NSObject == fiveButton){
 			topViewController.isFiveButton = true
 		}
 		else if (sender as! NSObject == vButton){
 			topViewController.isFiveButton = false
 		}
+		
+//		print(topViewController.isFiveButton)
 	}
 
 }
