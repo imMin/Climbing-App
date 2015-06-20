@@ -89,6 +89,8 @@ class SelectRouteViewController: UIViewController, UITableViewDataSource, UITabl
 		
 		var regionNameLabel = UILabel(frame:CGRect(x: 10, y: 0, width: 300, height: 40))
 		regionNameLabel.text = regions[section]
+		regionNameLabel.font = UIFont(name: "VarelaRound", size: 16)
+
 		
 		headerView.addSubview(regionNameLabel)
 		return headerView

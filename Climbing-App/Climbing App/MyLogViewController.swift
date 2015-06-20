@@ -117,9 +117,10 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
 		var headerView = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 30))
 		headerView.backgroundColor = UIColor(white: 0.2, alpha: 0.5)
 		
-		var label = UILabel(frame: CGRect(x: 10, y: 0, width: 300, height: 30))
+		var label = UILabel(frame: CGRect(x: 10, y: 5, width: 300, height: 30))
 		label.text = dates[section]
 //		label.text = "June 14, 2015"
+		label.font = UIFont(name: "VarelaRound", size: 16)
 		headerView.addSubview(label)
 		
 		return headerView
