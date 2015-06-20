@@ -50,6 +50,9 @@
 		A14649C01B32A42900DFF014 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A14649BF1B32A42900DFF014 /* CoreMedia.framework */; };
 		A14649C21B32A43100DFF014 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A14649C11B32A43100DFF014 /* QuartzCore.framework */; };
 		A14649C41B32A43B00DFF014 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A14649C31B32A43B00DFF014 /* ImageIO.framework */; };
+		A1464A2F1B340A7300DFF014 /* PhotosProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1464A2E1B340A7300DFF014 /* PhotosProvider.swift */; };
+		A1464A311B340AA200DFF014 /* ExamplePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1464A301B340AA200DFF014 /* ExamplePhoto.swift */; };
+		A1C4B54F1B34EAF00067E8E5 /* AddPhotoViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C4B54E1B34EAF00067E8E5 /* AddPhotoViewControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +114,9 @@
 		A14649BF1B32A42900DFF014 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		A14649C11B32A43100DFF014 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A14649C31B32A43B00DFF014 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		A1464A2E1B340A7300DFF014 /* PhotosProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosProvider.swift; sourceTree = "<group>"; };
+		A1464A301B340AA200DFF014 /* ExamplePhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplePhoto.swift; sourceTree = "<group>"; };
+		A1C4B54E1B34EAF00067E8E5 /* AddPhotoViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoViewControllerDelegate.swift; sourceTree = "<group>"; };
 		BEB2311AF90DE04A18F8AF95 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F1F0E6F419874C7D294D1121 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -185,11 +191,14 @@
 				A146495C1B3262AD00DFF014 /* Climbing_App-Bridging-Header.h */,
 				6F74C3F21B29FA5D00C0FD85 /* ViewController.swift */,
 				6F74C3F41B29FA5D00C0FD85 /* Main.storyboard */,
+				A1C4B54E1B34EAF00067E8E5 /* AddPhotoViewControllerDelegate.swift */,
 				6F9637581B325AE3002EDB49 /* AddPhotoViewController.swift */,
 				6F4D65241B315059009F9600 /* RouteDetailViewController.swift */,
 				6F4D65261B315D3E009F9600 /* SelectRouteViewController.swift */,
 				6F1F9DCD1B2EBDE900E284BE /* BrowseRegionViewController.swift */,
 				6F1F9DCB1B2EB65E00E284BE /* AddDetailViewController.swift */,
+				A1464A2E1B340A7300DFF014 /* PhotosProvider.swift */,
+				A1464A301B340AA200DFF014 /* ExamplePhoto.swift */,
 				A119B2A31B301F55001A0370 /* Common.swift */,
 				6F1F9DC91B2EAB3B00E284BE /* addTransition.swift */,
 				6F1F9DC71B2E97F500E284BE /* ClimbCell.swift */,
@@ -414,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F4D65271B315D3E009F9600 /* SelectRouteViewController.swift in Sources */,
+				A1C4B54F1B34EAF00067E8E5 /* AddPhotoViewControllerDelegate.swift in Sources */,
 				6F1F9DCE1B2EBDE900E284BE /* BrowseRegionViewController.swift in Sources */,
 				6F4D65291B316342009F9600 /* SelectRouteCell.swift in Sources */,
 				6F1F9DC61B2E8DE100E284BE /* CragDetailViewController.swift in Sources */,
@@ -422,6 +432,7 @@
 				6F74C4111B2ABAF900C0FD85 /* TabBarViewController.swift in Sources */,
 				6F74C41D1B2D5F8A00C0FD85 /* LogCell.swift in Sources */,
 				6F74C4191B2AC16A00C0FD85 /* SavedViewController.swift in Sources */,
+				A1464A2F1B340A7300DFF014 /* PhotosProvider.swift in Sources */,
 				A119B2A41B301F55001A0370 /* Common.swift in Sources */,
 				6F1F9DCA1B2EAB3B00E284BE /* addTransition.swift in Sources */,
 				6F74C4171B2ABFE900C0FD85 /* AddViewController.swift in Sources */,
@@ -431,6 +442,7 @@
 				6F1F9DD21B2EC06900E284BE /* RegionCell.swift in Sources */,
 				6F1F9DC41B2E76E700E284BE /* LogDetailViewController.swift in Sources */,
 				6F9637591B325AE3002EDB49 /* AddPhotoViewController.swift in Sources */,
+				A1464A311B340AA200DFF014 /* ExamplePhoto.swift in Sources */,
 				6F1F9DCC1B2EB65E00E284BE /* AddDetailViewController.swift in Sources */,
 				6F1F9DC21B2E4C3200E284BE /* BrowseCragCell.swift in Sources */,
 				6F4D65251B315059009F9600 /* RouteDetailViewController.swift in Sources */,

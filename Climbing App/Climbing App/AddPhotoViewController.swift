@@ -15,6 +15,8 @@ class AddPhotoViewController: UIViewController, TGCameraDelegate, UINavigationCo
     var navController: TGCameraNavigationController!
     var triggerOpen: Bool = true
     
+    var delegate: AddPhotoViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -61,7 +63,10 @@ class AddPhotoViewController: UIViewController, TGCameraDelegate, UINavigationCo
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        self.dismissViewControllerAnimated(false, completion: nil)
         self.dismissViewControllerAnimated(true, completion: nil)
+//        self.delegate!.addPhotoViewControllerDidCancel(self)
+
     }
     
     func cameraDidSavePhotoAtPath(assetURL: NSURL!) {
@@ -70,7 +75,11 @@ class AddPhotoViewController: UIViewController, TGCameraDelegate, UINavigationCo
     }
     
     func cameraDidCancel() {
+        self.dismissViewControllerAnimated(false, completion: nil)
         self.dismissViewControllerAnimated(true, completion: nil)
+
+//        self.delegate!.addPhotoViewControllerDidCancel(self)
+        
     }
 
     func cameraDidTakePhoto(image: UIImage!) {
@@ -83,9 +92,19 @@ class AddPhotoViewController: UIViewController, TGCameraDelegate, UINavigationCo
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func didPressSubmit(sender: AnyObject) {
+
+//        self.delegate!.addViewControllerDidFinish(self)
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     @IBAction func didPressCancel(sender: AnyObject) {
         println("did Press Cancel")
         dismissViewControllerAnimated(true, completion: nil)
+        
+//        self.delegate!.addPhotoViewControllerDidCancel(self)
+
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
