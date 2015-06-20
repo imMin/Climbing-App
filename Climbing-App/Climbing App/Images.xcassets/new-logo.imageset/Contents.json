@@ -3,11 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "custom_pin.png"
+      "filename" : "new-logo.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "new-logo@2x.png"
     },
     {
       "idiom" : "universal",

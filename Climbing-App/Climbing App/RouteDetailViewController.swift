@@ -38,8 +38,8 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 		routeNameLabel.text = routeName
 		levelLabel.text = level
 		typeLabel.text = type
-		distanceLabel.text = distance
-		climbLabel.text = climb
+//		distanceLabel.text = distance
+//		climbLabel.text = climb
         
         let buttonImage = UIImage(named: PrimaryImageName)
         imageButton?.setBackgroundImage(buttonImage, forState: .Normal)
