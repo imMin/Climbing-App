@@ -10,10 +10,11 @@ import UIKit
 
 class SelectRouteCell: UITableViewCell {
 	
-	@IBOutlet weak var routeNameLabel: UILabel!
+	@IBOutlet weak var cragNameLabel: UILabel!
 	
-	@IBOutlet weak var levelLabel: UILabel!
+	@IBOutlet weak var climbNumberLabel: UILabel!
 
+	@IBOutlet weak var cragDistanceLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

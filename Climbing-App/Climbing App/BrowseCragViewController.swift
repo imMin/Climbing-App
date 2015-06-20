@@ -51,6 +51,9 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 		region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(39.3761, -104.8535), MKCoordinateSpanMake(0.01, 0.01))
 		region = cragMapView.regionThatFits(region)
 		cragMapView.setRegion(region, animated: false)
+		
+		addPin()
+		
 
     }
 
@@ -60,15 +63,6 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
     }
     
 
-//	func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-//		let location = locations.last as! CLLocation
-//		
-//		let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-//		let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-//		
-//		self.cragMapView.setRegion(region, animated: true)
-//	}
-	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return 4
 	}
@@ -114,6 +108,36 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 		var newRegion = MKCoordinateRegion(center: cragMapView.userLocation.coordinate, span: MKCoordinateSpanMake(spanX, spanY))
 		cragMapView.setRegion(newRegion, animated: true)
 
+	}
+	
+	func addPin() {
+		let annotation = MKPointAnnotation()
+		var locationCoordinate = CLLocationCoordinate2DMake(39.3761, -104.8535)
+		annotation.coordinate = locationCoordinate
+		cragMapView.addAnnotation(annotation)
+	}
+	
+	func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
+		UIAlertView(title: "tapped Annotation!", message: view.annotation.title, delegate: nil, cancelButtonTitle: "OK").show()
+	}
+	
+	
+	func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+		
+		let reuseID = "myAnnotationView"
+		var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseID)
+		if (annotationView == nil) {
+			annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseID)
+		}
+		else {
+			annotationView.annotation = annotation
+		}
+		
+		annotationView.image = UIImage(named: "custom_pin")
+		annotationView.canShowCallout = true;
+
+		
+		return annotationView
 	}
 
 }

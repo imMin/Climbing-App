@@ -100,6 +100,7 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
+	
 		if (isFiveButton == true){
 			vScaleTouchableView.hidden = true
 		}
@@ -185,23 +186,52 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate {
 
         let currentPageNumber = Int(round(scrollView.contentOffset.x / 100))
 
-		if (previousPageNumber != currentPageNumber && currentPageNumber < levelLabels.count && currentPageNumber >= 0) {
-			let label = levelLabels[currentPageNumber]
-            let vLabel = vLevelLabels[currentPageNumber]
-            
-			label.transform = CGAffineTransformScale(label.transform, 1.2, 1.2)
-            vLabel.transform = CGAffineTransformScale(vLabel.transform, 1.2, 1.2)
-            
-			levelLabels[currentPageNumber].alpha = 1
-			vLevelLabels[currentPageNumber].alpha = 1
-            
-			levelLabels[previousPageNumber].transform = CGAffineTransformIdentity
-			levelLabels[previousPageNumber].alpha = 0.44
-			vLevelLabels[previousPageNumber].transform = CGAffineTransformIdentity
-            vLevelLabels[previousPageNumber].alpha = 0.44
-            
-			previousPageNumber = currentPageNumber
+//		if (previousPageNumber != currentPageNumber && currentPageNumber < levelLabels.count && currentPageNumber >= 0) {
+//			let label = levelLabels[currentPageNumber]
+//            let vLabel = vLevelLabels[currentPageNumber]
+//            
+//			label.transform = CGAffineTransformScale(label.transform, 1.2, 1.2)
+//            vLabel.transform = CGAffineTransformScale(vLabel.transform, 1.2, 1.2)
+//            
+//			levelLabels[currentPageNumber].alpha = 1
+//			vLevelLabels[currentPageNumber].alpha = 1
+//            
+//			levelLabels[previousPageNumber].transform = CGAffineTransformIdentity
+//			levelLabels[previousPageNumber].alpha = 0.44
+//			vLevelLabels[previousPageNumber].transform = CGAffineTransformIdentity
+//            vLevelLabels[previousPageNumber].alpha = 0.44
+//            
+//			previousPageNumber = currentPageNumber
+//		}
+		
+		if (isFiveButton == true){
+			if (previousPageNumber != currentPageNumber && currentPageNumber < levelLabels.count && currentPageNumber >= 0) {
+				let label = levelLabels[currentPageNumber]
+				
+				label.transform = CGAffineTransformScale(label.transform, 1.2, 1.2)
+				
+				levelLabels[currentPageNumber].alpha = 1
+				levelLabels[previousPageNumber].transform = CGAffineTransformIdentity
+				levelLabels[previousPageNumber].alpha = 0.44
+				previousPageNumber = currentPageNumber
+			}
 		}
+		
+		else if (isFiveButton == false){
+			if (previousPageNumber != currentPageNumber && currentPageNumber < vLevelLabels.count && currentPageNumber >= 0) {
+				let vLabel = vLevelLabels[currentPageNumber]
+				
+				vLabel.transform = CGAffineTransformScale(vLabel.transform, 1.2, 1.2)
+				vLevelLabels[currentPageNumber].alpha = 1
+
+				vLevelLabels[previousPageNumber].transform = CGAffineTransformIdentity
+				vLevelLabels[previousPageNumber].alpha = 0.44
+				
+				previousPageNumber = currentPageNumber
+			}
+		}
+		
+		
 	}
 	
 	func scrollViewWillBeginDragging(scrollView: UIScrollView) {
@@ -256,4 +286,11 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate {
 		}
 	
 	}
+	
+	@IBAction func didPressAddLocation(sender: AnyObject) {
+		
+//		AddDetailViewController.transitionStyle = UIModalTransitionStyle.CoverVertical
+//		self.presentViewController(SelectRouteViewController, animated: true, completion: nil)
+	}
+	
 }
