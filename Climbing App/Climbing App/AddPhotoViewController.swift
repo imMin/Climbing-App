@@ -63,8 +63,8 @@ class AddPhotoViewController: UIViewController, TGCameraDelegate, UINavigationCo
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        self.dismissViewControllerAnimated(false, completion: nil)
         self.dismissViewControllerAnimated(true, completion: nil)
-        
 //        self.delegate!.addPhotoViewControllerDidCancel(self)
 
     }
@@ -75,11 +75,11 @@ class AddPhotoViewController: UIViewController, TGCameraDelegate, UINavigationCo
     }
     
     func cameraDidCancel() {
+        self.dismissViewControllerAnimated(false, completion: nil)
         self.dismissViewControllerAnimated(true, completion: nil)
-        
+
 //        self.delegate!.addPhotoViewControllerDidCancel(self)
         
-        //ideally we'd like to cancel both steps and go back, not cancel twice
     }
 
     func cameraDidTakePhoto(image: UIImage!) {
