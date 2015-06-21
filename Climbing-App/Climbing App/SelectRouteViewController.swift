@@ -10,6 +10,8 @@ import UIKit
 import MapKit
 import CoreLocation
 
+let didSaveNewLog = "did you just save a new log?"
+
 class SelectRouteViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate, MKMapViewDelegate {
 	
 	@IBOutlet weak var selectMapView: MKMapView!
@@ -131,6 +133,8 @@ class SelectRouteViewController: UIViewController, UITableViewDataSource, UITabl
 	
 	@IBAction func didPressSaveButton(sender: AnyObject) {
 		dismissViewControllerAnimated(true, completion: nil)
+		
+		NSNotificationCenter.defaultCenter().postNotificationName(didSaveNewLog, object: self)
 	}
 	
 	

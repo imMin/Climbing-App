@@ -26,7 +26,8 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate {
 	var context: CGContextRef!
 	var typeButtons: [UIButton]!
 	var styleButtons: [UIButton]!
-	var isFiveButton = true 
+	var isFiveButton = true
+	var selectRouteViewController: UIViewController!
 	
 //	var typeSegBackgroundImage: UIImage!
 	@IBOutlet weak var leadButton: UIButton!
@@ -91,6 +92,7 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var V15Label: UILabel!
     @IBOutlet weak var V16Label: UILabel!
     
+	@IBOutlet weak var locationContentView: UIView!
     
     
 	var levels = ["5.6", "5.7", "5.8", "5.9", "5.10a", "5.10b", "5.10c", "5.10d", "5.11a", "5.11b", "5.11c", "5.11d", "5.12a", "5.12b", "5.12c", "5.12d", "5.13a", "5.13b", "5.13c", "5.13d", "5.14a", "5.14b", "5.14c", "5.14d"]
@@ -100,7 +102,7 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-	
+		//decide which labels to show
 		if (isFiveButton == true){
 			vScaleTouchableView.hidden = true
 		}
@@ -109,7 +111,7 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate {
 		}
 		
 		routeNameLabel.text = routeName
-		
+		//set scrollview content size
 //		levelLabel.text = level
 		levelScrollView.contentSize = CGSizeMake(CGFloat(levels.count) * 100, 80.0)
 		levelScrollView.clipsToBounds = false
@@ -142,6 +144,12 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate {
 		typeButtons[1].selected = true
 		styleButtons[1].selected = true
 
+		//load route list into content container view
+		var storyboard = UIStoryboard(name: "Main", bundle: nil)
+		selectRouteViewController = storyboard.instantiateViewControllerWithIdentifier("SelectRouteViewController") as! UIViewController
+		
+		locationContentView.hidden = true
+		
     }
 	
 	override func viewWillAppear(animated: Bool) {
@@ -291,6 +299,19 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate {
 		
 //		AddDetailViewController.transitionStyle = UIModalTransitionStyle.CoverVertical
 //		self.presentViewController(SelectRouteViewController, animated: true, completion: nil)
+		//load select route VC into routeContentView
+		self.locationContentView.hidden = false
+		loadContentView(selectRouteViewController)
+		print("loaded!")
+		
 	}
+	
+	func loadContentView(ViewController: UIViewController){
+		addChildViewController(ViewController)
+		ViewController.view.frame = locationContentView.bounds
+		locationContentView.addSubview(ViewController.view)
+		ViewController.didMoveToParentViewController(self)
+	}
+	
 	
 }

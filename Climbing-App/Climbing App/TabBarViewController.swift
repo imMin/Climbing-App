@@ -83,6 +83,8 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 		loadContentView(myLogViewController)
 		myLogButton.selected = true
         myLogLabel.textColor = selectedColor
+		
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "didSaveLogBounceAnimationOnNotification", name: didSaveNewLog, object: nil)
         
 	}
 
@@ -112,8 +114,8 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 				selectedViewController = viewControllers[i]
 				selectedButton.selected = true
                 selectedLabel.textColor = selectedColor
-                playBounceAnimation(selectedButton)
-                
+//                playBounceAnimation(selectedButton)
+				
 				for view in contentView.subviews{
 					view.removeFromSuperview()
 				}
@@ -138,15 +140,18 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 	
     
     func playBounceAnimation(icon : UIButton) {
-        
+
         let bounceAnimation = CAKeyframeAnimation(keyPath: "transform.scale")
         bounceAnimation.values = [1.0 ,1.4, 0.9, 1.15, 0.95, 1.02, 1.0]
-        bounceAnimation.duration = 0.7
+        bounceAnimation.duration = 1.2
         bounceAnimation.calculationMode = kCAAnimationCubic
         
 //      Commenting out the bounce on the icons for now.
-//        icon.layer.addAnimation(bounceAnimation, forKey: "bounceAnimation")
-        
+        icon.layer.addAnimation(bounceAnimation, forKey: "bounceAnimation")
+//		icon.image.backgroundColor = UIColor.redColor()
+//		delay(1.3, { () -> () in
+//			icon.backgroundColor = UIColor.grayColor()
+//		})
     }
 	
 	@IBAction func didPressAddButton(sender: AnyObject) {
@@ -256,6 +261,11 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 		}
 		
 //		print(topViewController.isFiveButton)
+	}
+	
+	func didSaveLogBounceAnimationOnNotification(){
+		playBounceAnimation(myLogButton)
+
 	}
 
 }
