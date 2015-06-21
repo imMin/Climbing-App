@@ -112,6 +112,35 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 //		}
 	}
 
+	func addPin() {
+		let annotation = MKPointAnnotation()
+//		var castleRockCoordinate = CLLocationCoordinate2DMake(39.3761, -104.8535)
+		var yosemiteCoordinate = CLLocationCoordinate2DMake(37.865101, -119.538329)
+//		annotation.coordinate = castleRockCoordinate
+		annotation.coordinate = yosemiteCoordinate
+		regionMapView.addAnnotation(annotation)
+	}
+
+	
+	func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+		
+		let reuseID = "myAnnotationView"
+		var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseID)
+		if (annotationView == nil) {
+			annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseID)
+		}
+		else {
+			annotationView.annotation = annotation
+		}
+		
+		annotationView.image = UIImage(named: "custom_pin")
+		annotationView.canShowCallout = true;
+		
+		
+		return annotationView
+	}
+
+	
 }
 
 
