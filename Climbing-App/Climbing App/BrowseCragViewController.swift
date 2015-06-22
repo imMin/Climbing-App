@@ -146,7 +146,7 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
                 }
             })
             
-
+ 
         }
         
         return cell

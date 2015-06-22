@@ -21,6 +21,9 @@ class CragDetailViewController: UIViewController, UITableViewDataSource, UITable
 	var climbLevels = ["5.9", "5.10a", "5.12b", "5.11a", "5.10c"]
 	var climbTypes = ["Sport", "Top rope", "Sport", "Top rope", "Sports"]
 	
+    var routes: [PFObject] = [PFObject]()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 		
@@ -30,8 +33,40 @@ class CragDetailViewController: UIViewController, UITableViewDataSource, UITable
 		self.cragNameLabel.text = cragName
 
         // Do any additional setup after loading the view.
+        
+        fetchRoutes()
     }
 
+
+    func fetchRoutes() {
+        var query = PFQuery(className: "Route")
+        query.orderByAscending("createdAt")
+
+        query.findObjectsInBackgroundWithBlock { (objects:[AnyObject]?, error:NSError?) -> Void in
+            self.routes = objects as! [PFObject]
+            self.climbTableView.reloadData()
+
+            if error == nil {
+                // The find succeeded.
+                println("Successfully retrieved \(objects!.count) crags.")
+                // Do something with the found objects
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        println(object.objectId)
+                    }
+                }
+            } else {
+                // Log details of the failure
+                println("Error: \(error!) \(error!.userInfo!)")
+            }
+
+        }
+        delay(2) {println("routes.count = \(self.routes.count)")}
+
+
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -43,7 +78,7 @@ class CragDetailViewController: UIViewController, UITableViewDataSource, UITable
 	
 	//table view funcations
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return climbNames.count
+		return routes.count
 	}
 	
 //	func tableView(tableView: UITableView, sectionForSectionIndexTitle title: String, atIndex index: Int) -> Int {
@@ -57,8 +92,15 @@ class CragDetailViewController: UIViewController, UITableViewDataSource, UITable
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		var cell = climbTableView.dequeueReusableCellWithIdentifier("ClimbCell") as! ClimbCell
 		
-		cell.climbNameLabel.text = climbNames[indexPath.row]
-		cell.climbTypeLabel.text = climbTypes[indexPath.row]
+        var route = routes[indexPath.row]
+        cell.climbNameLabel.text = route["name"] as? String
+        cell.climbLevelLabel.text = route["grade"] as? String
+        
+        //TODO: climbType
+        
+//		cell.climbNameLabel.text = climbNames[indexPath.row]
+//		cell.climbTypeLabel.text = climbTypes[indexPath.row]
+        
 		
 		return cell
 	}
@@ -72,9 +114,9 @@ class CragDetailViewController: UIViewController, UITableViewDataSource, UITable
 			let indexPath : NSIndexPath = self.climbTableView.indexPathForSelectedRow()!
 			
 			// your new view controller should have property that will store passed value
-			viewController.routeName = climbNames[indexPath.row]
+			viewController.routeName = routes[indexPath.row]["name"] as! String
 			viewController.distance = cragDistance
-			viewController.level = climbLevels[indexPath.row]
+			viewController.level = routes[indexPath.row]["grade"] as! String
 		}
 	}
 
