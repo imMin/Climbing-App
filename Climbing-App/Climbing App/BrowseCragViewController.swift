@@ -153,22 +153,22 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 
 	}
     
-    func addAllPins() {
-        
-        //not working yet
-        for index in 0...self.crags.count {
-            var crag = self.crags[index]
-            var cragGeoPoint: PFGeoPoint = PFGeoPoint()
-            cragGeoPoint = crag["location"] as! PFGeoPoint
-            var cragLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: cragGeoPoint.latitude, longitude: cragGeoPoint.longitude)
-            
-            var annotation = MKPointAnnotation()
-            annotation.coordinate = cragLocation
-            println("\(cragGeoPoint)")
-            //                self.cragMapView.addAnnotation(annotation)
-
-        }
-    }
+//    func addCragPins() {
+//        
+//        //not working yet
+//        for index in 0...self.crags.count {
+//            var crag = self.crags[index]
+//            var cragGeoPoint: PFGeoPoint = PFGeoPoint()
+//            cragGeoPoint = crag["location"] as! PFGeoPoint
+//            var cragLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: cragGeoPoint.latitude, longitude: cragGeoPoint.longitude)
+//            
+//            var annotation = MKPointAnnotation()
+//            annotation.coordinate = cragLocation
+//            println("\(cragGeoPoint)")
+//            //self.cragMapView.addAnnotation(annotation)
+//
+//        }
+//    }
 
 	
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -180,7 +180,11 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 			let indexPath : NSIndexPath = self.cragTableView.indexPathForSelectedRow()!
 			
 			// your new view controller should have property that will store passed value
-			viewController.cragName = cragNames[indexPath.row]
+            
+            //passing actual clicked crag name
+            viewController.cragName = crags[indexPath.row]["name"] as! String
+            
+            //placeholder values below
 			viewController.cragDistance = cragDistances[indexPath.row]
 			viewController.climbNumber = climbNumbers[indexPath.row]
 		}
