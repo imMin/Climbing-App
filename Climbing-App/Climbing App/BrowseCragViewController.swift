@@ -81,7 +81,7 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
         println("fetched crags")
         
         var query = PFQuery(className: "Crag")
-        query.orderByAscending("countRoute")
+        query.orderByAscending("createdAt")
         query.findObjectsInBackgroundWithBlock { (objects:[AnyObject]?, error:NSError?) -> Void in
             self.crags = objects as! [PFObject]
             self.cragTableView.reloadData()
@@ -119,18 +119,19 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 
 	
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = self.cragTableView.dequeueReusableCellWithIdentifier("BrowseCragCell") as! BrowseCragCell
+        var cell: BrowseCragCell!
+        cell = self.cragTableView.dequeueReusableCellWithIdentifier("BrowseCragCell") as! BrowseCragCell
+
         
         delay(1) {
             
-
             var crag = self.crags[indexPath.row]
             cell.cragNameLabel.text = crag["name"] as? String
             
-            //this isn't working
-//            cell.climbNumberLabel.text = crag["countRoute"] as? String
+            var routeCount: Int = crag["countRoute"] as! Int
+            cell.climbNumberLabel.text = String(routeCount) + " routes"
             
-//            delay(3) {
+//            //maps the annotated points
 //                var cragGeoPoint: PFGeoPoint = PFGeoPoint()
 //                cragGeoPoint = crag["location"] as! PFGeoPoint
 //                var cragLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: cragGeoPoint.latitude, longitude: cragGeoPoint.longitude)
@@ -138,19 +139,13 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 //                var annotation = MKPointAnnotation()
 //                annotation.coordinate = cragLocation
 //                self.cragMapView.addAnnotation(annotation)
-//                
-//            }
-
             
             cell.cragDistanceLabel.text = self.cragDistances[indexPath.row]
-            cell.climbNumberLabel.text = self.climbNumbers[indexPath.row]
-            
-            
 
         }
         
         return cell
-        
+
 	}
 
 	
