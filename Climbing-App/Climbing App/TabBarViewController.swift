@@ -201,7 +201,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 			self.fiveButton.center = self.fiveButtonFinalPosition
             self.vButton.center = self.vButtonFinalPosition
             self.addClimbLabel.center = self.addClimbLabelFinalPosition
-			self.backgroundView.alpha = 0.5
+			self.backgroundView.alpha = 0.7
 			}, completion: nil)
         
         flyoutOpen = true

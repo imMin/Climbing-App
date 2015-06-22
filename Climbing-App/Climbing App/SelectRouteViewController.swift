@@ -10,7 +10,6 @@ import UIKit
 import MapKit
 import CoreLocation
 
-let didSaveNewLog = "did you just save a new log?"
 
 class SelectRouteViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate, MKMapViewDelegate {
 	
@@ -126,16 +125,6 @@ class SelectRouteViewController: UIViewController, UITableViewDataSource, UITabl
 //		selectMapView.setRegion(newRegion, animated: true)
 //		
 //	}
-
-	@IBAction func didPressCancelButton(sender: AnyObject) {
-		dismissViewControllerAnimated(true, completion: nil)
-	}
-	
-	@IBAction func didPressSaveButton(sender: AnyObject) {
-		dismissViewControllerAnimated(true, completion: nil)
-		
-		NSNotificationCenter.defaultCenter().postNotificationName(didSaveNewLog, object: self)
-	}
 	
 	
 }
