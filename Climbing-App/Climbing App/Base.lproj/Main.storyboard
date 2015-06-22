@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q8d-4P-2ah">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -108,61 +108,116 @@
             <string>VarelaRound</string>
             <string>VarelaRound</string>
             <string>VarelaRound</string>
+            <string>VarelaRound</string>
+            <string>VarelaRound</string>
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Tour View Controller-->
         <scene sceneID="Eui-DO-pEb">
             <objects>
-                <viewController id="q8d-4P-2ah" sceneMemberID="viewController">
+                <viewController id="q8d-4P-2ah" customClass="TourViewController" customModule="Climbing_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SXs-pe-bNc"/>
                         <viewControllerLayoutGuide type="bottom" id="gUn-oR-fFT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ef8-Qn-5XS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1600" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="background-screen" translatesAutoresizingMaskIntoConstraints="NO" id="V7U-dw-Uch">
-                                <rect key="frame" x="-1" y="0.0" width="321" height="568"/>
-                                <animations/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="cream-topo" translatesAutoresizingMaskIntoConstraints="NO" id="XT8-gz-ygR">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlA-EV-TmD">
-                                <rect key="frame" x="37" y="444" width="112" height="41"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
-                                <state key="normal" title="Sign up" backgroundImage="login-button">
-                                    <color key="titleColor" red="0.94117647058823528" green="0.34901960784313724" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="pqZ-PT-dqK" kind="modal" id="noh-Bf-9jD"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRA-mi-SK7">
-                                <rect key="frame" x="170" y="444" width="112" height="41"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
-                                <state key="normal" title="Log in" backgroundImage="login-button">
-                                    <color key="titleColor" red="0.94117647058823528" green="0.34901960784313724" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="EwO-ue-x4m" kind="modal" id="a0V-b8-c9b"/>
-                                </connections>
-                            </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="cream-topo" translatesAutoresizingMaskIntoConstraints="NO" id="rXj-tE-sU9">
+                                <rect key="frame" x="320" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="cream-topo" translatesAutoresizingMaskIntoConstraints="NO" id="556-fB-vnt">
+                                <rect key="frame" x="640" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="cream-topo" translatesAutoresizingMaskIntoConstraints="NO" id="Ki6-1X-dyX">
+                                <rect key="frame" x="960" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="cream-topo" translatesAutoresizingMaskIntoConstraints="NO" id="ScP-BI-6dg">
+                                <rect key="frame" x="1280" y="0.0" width="320" height="568"/>
+                            </imageView>
                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="3Ts-pS-x8s">
                                 <rect key="frame" x="127" y="511" width="67" height="37"/>
                                 <animations/>
                             </pageControl>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="new-logo" translatesAutoresizingMaskIntoConstraints="NO" id="oD5-vF-vLq">
-                                <rect key="frame" x="132" y="202" width="56" height="83"/>
-                                <animations/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bU4-cM-elP">
+                                <rect key="frame" x="0.0" y="28" width="320" height="386"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="new-logo-purple" translatesAutoresizingMaskIntoConstraints="NO" id="EEs-Hz-zu2">
+                                        <rect key="frame" x="137" y="171" width="56" height="83"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Tour-Illustration-2" translatesAutoresizingMaskIntoConstraints="NO" id="D4d-J3-l1a">
+                                        <rect key="frame" x="702" y="64" width="197" height="211"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Tour-Illustration-3" translatesAutoresizingMaskIntoConstraints="NO" id="eoH-jT-Vur">
+                                        <rect key="frame" x="999" y="64" width="246" height="254"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="tour-illustration-4" translatesAutoresizingMaskIntoConstraints="NO" id="het-Ze-BnF">
+                                        <rect key="frame" x="1344" y="85" width="256" height="245"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your digital guidebook to top climbs in the Bay Area" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4S-aF-LiN">
+                                        <rect key="frame" x="370" y="297" width="235" height="75"/>
+                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="16"/>
+                                        <color key="textColor" red="0.34509803921568627" green="0.28627450980392155" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Access detailed route information, online and off" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7IK-dI-9Bx">
+                                        <rect key="frame" x="683" y="297" width="234" height="75"/>
+                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="16"/>
+                                        <color key="textColor" red="0.34509803919999998" green="0.28627450980000002" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Track your ascents and indoor training progress " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baJ-vl-tzI">
+                                        <rect key="frame" x="1005" y="297" width="235" height="75"/>
+                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="16"/>
+                                        <color key="textColor" red="0.34509803919999998" green="0.28627450980000002" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Share beta and photos with other climbers" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1op-HJ-vmV">
+                                        <rect key="frame" x="1337" y="297" width="205" height="75"/>
+                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="16"/>
+                                        <color key="textColor" red="0.34509803919999998" green="0.28627450980000002" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="tour-illustration-1" translatesAutoresizingMaskIntoConstraints="NO" id="9PH-Dg-CEr">
+                                        <rect key="frame" x="370" y="57" width="270" height="329"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="buttons-and-dots" translatesAutoresizingMaskIntoConstraints="NO" id="keE-pk-wt9">
+                                <rect key="frame" x="31" y="460" width="259" height="80"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbd-Wq-8w2">
+                                <rect key="frame" x="31" y="460" width="120" height="41"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="pqZ-PT-dqK" kind="modal" id="huT-kZ-q90"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZb-5H-fsl">
+                                <rect key="frame" x="170" y="460" width="120" height="41"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="EwO-ue-x4m" kind="modal" id="8bi-dt-zJQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.93333333333333335" green="0.28627450980392155" blue="0.35294117647058826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1600" height="568"/>
+                    <connections>
+                        <outlet property="scrollView" destination="bU4-cM-elP" id="6cv-wV-d8I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iqr-oq-AiM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -180,6 +235,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="cream-topo" translatesAutoresizingMaskIntoConstraints="NO" id="Bee-vX-d5r">
+                                <rect key="frame" x="0.0" y="0.0" width="321" height="568"/>
+                                <animations/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nrf-5w-Q0m">
                                 <rect key="frame" x="31" y="144" width="258" height="30"/>
                                 <animations/>
@@ -216,13 +275,9 @@
                                     <segue destination="vXZ-lx-hvc" kind="modal" modalTransitionStyle="crossDissolve" id="3wB-sR-zTp"/>
                                 </connections>
                             </button>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="background-screen" translatesAutoresizingMaskIntoConstraints="NO" id="Bee-vX-d5r">
-                                <rect key="frame" x="0.0" y="0.0" width="321" height="568"/>
-                                <animations/>
-                            </imageView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.93333333333333335" green="0.28627450980392155" blue="0.3529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vf4-Kv-Tum" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -241,6 +296,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="cream-topo" translatesAutoresizingMaskIntoConstraints="NO" id="j9V-I6-vQv">
+                                <rect key="frame" x="-1" y="0.0" width="321" height="568"/>
+                                <animations/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ogn-aH-y9D">
                                 <rect key="frame" x="30" y="64" width="258" height="30"/>
                                 <animations/>
@@ -289,10 +348,6 @@
                                     <segue destination="vXZ-lx-hvc" kind="modal" modalTransitionStyle="crossDissolve" id="MEP-RC-xzw"/>
                                 </connections>
                             </button>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="background-screen" translatesAutoresizingMaskIntoConstraints="NO" id="j9V-I6-vQv">
-                                <rect key="frame" x="-1" y="0.0" width="321" height="568"/>
-                                <animations/>
-                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.93333333330000001" green="0.28627450980000002" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2212,17 +2267,20 @@
     <resources>
         <image name="5 scale" width="84" height="84"/>
         <image name="IndianRock" width="288" height="238"/>
+        <image name="Tour-Illustration-2" width="197" height="211"/>
+        <image name="Tour-Illustration-3" width="246" height="254"/>
         <image name="V scale" width="84" height="84"/>
         <image name="add_tab" width="102" height="102"/>
         <image name="adddetailline" width="294" height="1"/>
         <image name="arrow_back_red" width="44" height="44"/>
         <image name="arrow_back_white" width="44" height="44"/>
-        <image name="background-screen" width="321" height="568"/>
         <image name="big_btn_bg" width="84" height="31"/>
         <image name="black-back-button" width="36" height="36"/>
+        <image name="buttons-and-dots" width="259" height="80"/>
         <image name="castle-rock-pic" width="135" height="135"/>
         <image name="climbing_photos" width="320" height="1253"/>
         <image name="close_red" width="44" height="44"/>
+        <image name="cream-topo" width="320" height="568"/>
         <image name="dumb-photo-icon" width="41" height="33"/>
         <image name="forum_tab" width="26" height="26"/>
         <image name="forum_tab_selected-1" width="26" height="26"/>
@@ -2232,7 +2290,7 @@
         <image name="login-button" width="226" height="82"/>
         <image name="mylog2_tab" width="26" height="26"/>
         <image name="mylog2_tab_selected-1" width="26" height="26"/>
-        <image name="new-logo" width="56" height="83"/>
+        <image name="new-logo-purple" width="56" height="83"/>
         <image name="prof-pic" width="60" height="60"/>
         <image name="prof-pic-small" width="31" height="30"/>
         <image name="saved_tab" width="26" height="26"/>
@@ -2240,6 +2298,8 @@
         <image name="search_tab" width="26" height="26"/>
         <image name="search_tab_selected-1" width="26" height="26"/>
         <image name="small_btn_bg" width="58" height="31"/>
+        <image name="tour-illustration-1" width="270" height="329"/>
+        <image name="tour-illustration-4" width="256" height="245"/>
         <image name="vicious-circles-background" width="321" height="231"/>
         <image name="white-topo-background" width="320" height="568"/>
     </resources>

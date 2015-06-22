@@ -39,6 +39,8 @@
 		<string>SF-UI-Display-Ultralight.otf</string>
 		<string>VarelaRound-Regular.otf</string>
 	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
