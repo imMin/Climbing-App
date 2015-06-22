@@ -10,16 +10,23 @@ import UIKit
 import MapKit
 import CoreLocation
 
+protocol SelectRouteViewControllerDelegate{
+	func selectRoute(controller: SelectRouteViewController, text: String)
+}
 
 class SelectRouteViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate, MKMapViewDelegate {
 	
 	@IBOutlet weak var selectMapView: MKMapView!
 	@IBOutlet weak var selectTableView: UITableView!
 	
+	@IBOutlet weak var contentView: UIView!
+	
+	var delegate: SelectRouteViewControllerDelegate? = nil
 	var region: String!
 	var manager:CLLocationManager!
 	var myLocations:[CLLocation] = []
 	var location: CLLocation!
+	var cragName: String!
 	
 	var cragNames = ["routeName1", "routeName2", "routeName3", "routeName4", "routeName5"]
 //	var routeLevels = ["5.9", "5.10a", "5.11a", "5.12b", "5.10c", "5.9", "5.10a", "5.11a", "5.12b", "5.10c"]
@@ -56,6 +63,10 @@ class SelectRouteViewController: UIViewController, UITableViewDataSource, UITabl
 		
 	}
 	
+	override func viewWillAppear(animated: Bool) {
+		self.contentView.frame.origin.y = 0
+	}
+//
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
@@ -101,30 +112,20 @@ class SelectRouteViewController: UIViewController, UITableViewDataSource, UITabl
 		return 40
 	}
 	
-//	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//		if (segue.identifier == "selectRouteSegue") {
-//			
-//			// initialize new view controller and cast it as your view controller
-//			var viewController = segue.destinationViewController as! AddDetailViewController
-//			
-//			let indexPath : NSIndexPath = self.selectTableView.indexPathForSelectedRow()!
-//			
-//			// your new view controller should have property that will store passed value
-//			viewController.routeName = routeNames[indexPath.row]
-//			viewController.level = routeLevels[indexPath.row]
-//		}
-//	}
-	
-//	func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]) {
-//		//		location = "\(locations[0])"
-//		myLocations.append(locations[0] as! CLLocation)
-//		
-//		let spanX = 0.01
-//		let spanY = 0.01
-//		var newRegion = MKCoordinateRegion(center: selectMapView.userLocation.coordinate, span: MKCoordinateSpanMake(spanX, spanY))
-//		selectMapView.setRegion(newRegion, animated: true)
-//		
-//	}
-	
-	
+	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+		cragName = cragNames[indexPath.row]
+//		println(cragName)
+		if(delegate != nil){
+			delegate?.selectRoute(self, text: cragName)
+		}
+		
+//		self.view.removeFromSuperview()
+//
+		UIView.animateWithDuration(0.3, delay: 0.3, options: .CurveEaseOut, animations: { () -> Void in
+			self.contentView.frame.origin.y = 490
+		}) { (Bool) -> Void in
+			self.view.removeFromSuperview()
+		}
+	}
+
 }

@@ -11,7 +11,7 @@ import UIKit
 let didSaveNewLog = "did you just save a new log?"
 
 
-class AddDetailViewController: UIViewController, UIScrollViewDelegate {
+class AddDetailViewController: UIViewController, UIScrollViewDelegate, SelectRouteViewControllerDelegate {
 
 	
 	var routeName: String!
@@ -32,6 +32,7 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate {
 	var isFiveButton = true
 	var selectRouteViewController: UIViewController!
 	
+	@IBOutlet weak var addLocationButton: UIButton!
 //	var typeSegBackgroundImage: UIImage!
 	@IBOutlet weak var leadButton: UIButton!
 	@IBOutlet weak var topRopeButton: UIButton!
@@ -312,6 +313,8 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate {
 //		self.presentViewController(SelectRouteViewController, animated: true, completion: nil)
 		//load select route VC into routeContentView
 		self.locationContentView.hidden = false
+		var selectRouteCastViewController = selectRouteViewController as! SelectRouteViewController
+		selectRouteCastViewController.delegate = self
 		loadContentView(selectRouteViewController)
 //		print("loaded!")
 		UIView.animateWithDuration(0.5, delay: 0, options:.CurveEaseIn, animations: { () -> Void in
@@ -327,5 +330,10 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate {
 		ViewController.didMoveToParentViewController(self)
 	}
 	
+	func selectRoute(controller: SelectRouteViewController, text: String) {
+		addLocationButton.setTitle(text, forState: UIControlState.Normal)
+//		self.selectRouteViewController.removeFromParentViewController()
+		locationContentView.hidden = true
+	}
 	
 }
