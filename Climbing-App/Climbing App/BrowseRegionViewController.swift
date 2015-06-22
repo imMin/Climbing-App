@@ -83,13 +83,15 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 		cell.distanceLabel.text = distances[indexPath.row]
         
         cell.layer.cornerRadius = 4
+        UIColor(red: 234/255, green: 235/255, blue: 234/255, alpha: 1)
+        cell.layer.borderColor = UIColor(red: 234/255, green: 235/255, blue: 234/255, alpha: 1).CGColor
+        cell.layer.borderWidth = 1
         cell.layer.shadowColor = UIColor.blackColor().CGColor
-        cell.layer.shadowOffset = CGSizeMake(0, 3)
+        cell.layer.shadowOffset = CGSizeMake(1, 3)
         cell.layer.shadowOpacity = 0.5
         
         return cell
-        
-        //ed: 225/255, green: 225/255, blue: 225/255, alpha: 1
+    
         
 	}
 	
