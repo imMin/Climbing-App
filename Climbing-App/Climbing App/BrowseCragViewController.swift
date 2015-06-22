@@ -57,9 +57,7 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 		region = cragMapView.regionThatFits(region)
 		cragMapView.setRegion(region, animated: false)
 		
-        
         fetchCrags()
-//        //refresh from data source
 //        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "fetchCrags", userInfo: nil, repeats: true)
         
         //create an instance of CLLocationManager and Request Authorization
@@ -72,7 +70,7 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
                 currentLocation = locManager.location
         }
         
-		addPin()
+		addCurrentLocationPin()
 		
     }
     
@@ -113,8 +111,7 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
     
 
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        delay(2) {return self.crags.count}
-        return 23
+        return self.crags.count
 	}
 
 	
@@ -123,7 +120,7 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
         cell = self.cragTableView.dequeueReusableCellWithIdentifier("BrowseCragCell") as! BrowseCragCell
 
         
-        delay(1) {
+        delay(0) {
             
             var crag = self.crags[indexPath.row]
             cell.cragNameLabel.text = crag["name"] as? String
@@ -131,22 +128,47 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
             var routeCount: Int = crag["countRoute"] as! Int
             cell.climbNumberLabel.text = String(routeCount) + " routes"
             
-//            //maps the annotated points
-//                var cragGeoPoint: PFGeoPoint = PFGeoPoint()
-//                cragGeoPoint = crag["location"] as! PFGeoPoint
-//                var cragLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: cragGeoPoint.latitude, longitude: cragGeoPoint.longitude)
-//                
-//                var annotation = MKPointAnnotation()
-//                annotation.coordinate = cragLocation
-//                self.cragMapView.addAnnotation(annotation)
+            var cragGeoPoint: PFGeoPoint = PFGeoPoint()
+            cragGeoPoint = crag["location"] as! PFGeoPoint
             
-            cell.cragDistanceLabel.text = self.cragDistances[indexPath.row]
+            var distance: Double!
+            
+            PFGeoPoint.geoPointForCurrentLocationInBackground({ (geoPoint:PFGeoPoint?, error:NSError?) -> Void in
+                if error == nil {
+                    //do something with new geopoint
+                    println("current geoPoint = \(geoPoint)")
+                    println("crag geoPoint = \(cragGeoPoint)")
+
+                    distance = geoPoint?.distanceInMilesTo(cragGeoPoint)
+                    println("distance between geoPoints = \(distance)")
+                    cell.cragDistanceLabel.text = "\(round(distance)) miles"
+
+                }
+            })
+            
 
         }
         
         return cell
 
 	}
+    
+    func addAllPins() {
+        
+        //not working yet
+        for index in 0...self.crags.count {
+            var crag = self.crags[index]
+            var cragGeoPoint: PFGeoPoint = PFGeoPoint()
+            cragGeoPoint = crag["location"] as! PFGeoPoint
+            var cragLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: cragGeoPoint.latitude, longitude: cragGeoPoint.longitude)
+            
+            var annotation = MKPointAnnotation()
+            annotation.coordinate = cragLocation
+            println("\(cragGeoPoint)")
+            //                self.cragMapView.addAnnotation(annotation)
+
+        }
+    }
 
 	
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -180,7 +202,7 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 
 	}
 	
-	func addPin() {
+	func addCurrentLocationPin() {
 		let annotation = MKPointAnnotation()
 		var locationCoordinate = CLLocationCoordinate2DMake(39.3761, -104.8535)
 		annotation.coordinate = locationCoordinate
@@ -188,7 +210,7 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 	}
 	
 	func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
-		UIAlertView(title: "tapped Annotation!", message: view.annotation.title, delegate: nil, cancelButtonTitle: "OK").show()
+//		UIAlertView(title: "tapped Annotation!", message: view.annotation.title, delegate: nil, cancelButtonTitle: "OK").show()
 	}
 	
 	
