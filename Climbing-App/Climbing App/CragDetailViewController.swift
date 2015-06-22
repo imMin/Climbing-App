@@ -61,8 +61,6 @@ class CragDetailViewController: UIViewController, UITableViewDataSource, UITable
             }
 
         }
-        delay(2) {println("routes.count = \(self.routes.count)")}
-
 
     }
     
@@ -95,12 +93,17 @@ class CragDetailViewController: UIViewController, UITableViewDataSource, UITable
         var route = routes[indexPath.row]
         cell.climbNameLabel.text = route["name"] as? String
         cell.climbLevelLabel.text = route["grade"] as? String
+                
+        var isTopRope = route["isTopRope"] as? Bool
+        var isSport = route["isSport"] as? Bool
+        var isTrad = route["isTrad"] as? Bool
         
-        //TODO: climbType
+        var climbTypes: String!
+        if isTopRope == true && isSport == true {climbTypes = "Top rope, Sport"}
+        else if isTopRope == true && isTrad == true {climbTypes = "Top rope, Trad"}
+        else if isSport == true && isTrad == true {climbTypes = "Sport, Trad"}
         
-//		cell.climbNameLabel.text = climbNames[indexPath.row]
-//		cell.climbTypeLabel.text = climbTypes[indexPath.row]
-        
+        cell.climbTypeLabel.text = climbTypes
 		
 		return cell
 	}
