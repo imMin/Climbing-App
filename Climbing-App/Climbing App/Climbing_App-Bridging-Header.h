@@ -25,4 +25,6 @@
 #import <NYTPhotoViewer/NYTPhotosOverlayView.h>
 #import <NYTPhotoViewer/NYTPhotoTransitionAnimator.h>
 
+#import <QuartzCore/QuartzCore.h>
+
 #endif

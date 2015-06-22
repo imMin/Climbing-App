@@ -13,10 +13,10 @@ import CoreLocation
 class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, CLLocationManagerDelegate, MKMapViewDelegate
 {
 
-	var regions = ["Castle Rock North", "Castle Rock South", "Yosemite Valley", "Yosemite Fall", "El Capitain", "Mt Diablo"]
+	var regions = ["Castle Rock", "Yosemite", "Mickey's Beach", "Mt Diablo"]
 	
-	var distances = ["5 mi", "24 mi", "135 mi", "200 mi", "234 mi", "300 mi"]
-	var climbNumbers = ["32 routes", "37 routes", "200 routes", "232 routes", "323 routes", "30 routes"]
+	var distances = ["5 mi", "135 mi", "15 mi", "20 mi"]
+	var climbNumbers = ["32 routes", "37 routes", "200 routes", "232 routes"]
 	var manager:CLLocationManager!
 	var myLocations:[CLLocation] = []
 	var location: CLLocation!
@@ -24,10 +24,15 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 	@IBOutlet weak var regionCollectionView: UICollectionView!
 	
 	@IBOutlet weak var regionMapView: MKMapView!
-	
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 		
+//        regionContainer.layer.cornerRadius = 4
+//        regionContainer.layer.borderColor = UIColor(rgba: "#ffcc00").CGColor 
+        
+        
 		regionCollectionView.delegate = self
 		regionCollectionView.dataSource = self
 
@@ -50,7 +55,8 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 		regionMapView.setRegion(region, animated: false)
 		
 //		regionMapView.setCenterCoordinate(CLLocationCoordinate2DMake(, ), animated: true)
-		
+    
+        
 	}
 
     override func didReceiveMemoryWarning() {
@@ -75,7 +81,16 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 		cell.regionNameLabel.text = regions[indexPath.row]
 		cell.climbNumberLabel.text = climbNumbers[indexPath.row]
 		cell.distanceLabel.text = distances[indexPath.row]
-		return cell
+        
+        cell.layer.cornerRadius = 4
+        cell.layer.shadowColor = UIColor.blackColor().CGColor
+        cell.layer.shadowOffset = CGSizeMake(0, 3)
+        cell.layer.shadowOpacity = 0.5
+        
+        return cell
+        
+        //ed: 225/255, green: 225/255, blue: 225/255, alpha: 1
+        
 	}
 	
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
