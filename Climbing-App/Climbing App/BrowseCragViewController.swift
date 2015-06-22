@@ -22,11 +22,16 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 	
 	var cragNames = ["Lyme Disease Rock", "Indian Rock", "Waterfall Cliffs", "Billy Goat Rock", "cragName5", "cragName6", "cragName7", "cragName8", "cragName9", "cragName10"]
 	
-	var cragDistances = ["0.3mi", "0.5mi", "0.7mi", "1.5mi", "1.8mi", "2.1mi", "14mi", "15mi", "18mi", "22mi"]
+	var cragDistances = ["0.3mi", "0.5mi", "0.7mi", "1.5mi", "1.8mi", "2.1mi", "14mi", "15mi", "18mi", "22mi", "0.3mi", "0.5mi", "0.7mi", "1.5mi", "1.8mi", "2.1mi", "14mi", "15mi", "18mi", "22mi", "0.3mi", "0.5mi", "0.7mi"]
 	
-	var climbNumbers = ["3 routes", "5 routes", "4 routes", "5 routes", "7 routes", "2 routes", "3 routes", "4 routes", "3 routes", "2 routes"]
+	var climbNumbers = ["3 routes", "5 routes", "4 routes", "5 routes", "7 routes", "2 routes", "3 routes", "4 routes", "3 routes", "2 routes", "3 routes", "5 routes", "4 routes", "5 routes", "7 routes", "2 routes", "3 routes", "4 routes", "3 routes", "2 routes", "3 routes", "5 routes", "4 routes"]
 	
 	var regions = ["Castle Rock"]
+    
+    var crags: [PFObject] = [PFObject]()
+    var currentLocation: CLLocation!
+    var locManager: CLLocationManager!
+
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,9 +57,53 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 		region = cragMapView.regionThatFits(region)
 		cragMapView.setRegion(region, animated: false)
 		
+        
+        fetchCrags()
+//        //refresh from data source
+//        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "fetchCrags", userInfo: nil, repeats: true)
+        
+        //create an instance of CLLocationManager and Request Authorization
+        locManager = CLLocationManager()
+        locManager.requestWhenInUseAuthorization()
+        
+        //check if user allows authorization
+        if( CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedWhenInUse ||
+            CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedAlways){
+                currentLocation = locManager.location
+        }
+        
 		addPin()
 		
+    }
+    
 
+    func fetchCrags() {
+        println("fetched crags")
+        
+        var query = PFQuery(className: "Crag")
+        query.orderByAscending("countRoute")
+        query.findObjectsInBackgroundWithBlock { (objects:[AnyObject]?, error:NSError?) -> Void in
+            self.crags = objects as! [PFObject]
+            self.cragTableView.reloadData()
+            
+            if error == nil {
+                // The find succeeded.
+                println("Successfully retrieved \(objects!.count) crags.")
+                // Do something with the found objects
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        println(object.objectId)
+                    }
+                }
+            } else {
+                // Log details of the failure
+                println("Error: \(error!) \(error!.userInfo!)")
+            }
+
+        }
+        
+        delay(2) {println("crags.count = \(self.crags.count)")}
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,18 +113,44 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
     
 
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 4
+//        delay(2) {return self.crags.count}
+        return 23
 	}
 
 	
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		var cell = cragTableView.dequeueReusableCellWithIdentifier("BrowseCragCell") as! BrowseCragCell
-		
-		cell.cragNameLabel.text = cragNames[indexPath.row]
-		cell.cragDistanceLabel.text = cragDistances[indexPath.row]
-		cell.climbNumberLabel.text = climbNumbers[indexPath.row]
-		
-		return cell
+        var cell = self.cragTableView.dequeueReusableCellWithIdentifier("BrowseCragCell") as! BrowseCragCell
+        
+        delay(1) {
+            
+
+            var crag = self.crags[indexPath.row]
+            cell.cragNameLabel.text = crag["name"] as? String
+            
+            //this isn't working
+//            cell.climbNumberLabel.text = crag["countRoute"] as? String
+            
+//            delay(3) {
+//                var cragGeoPoint: PFGeoPoint = PFGeoPoint()
+//                cragGeoPoint = crag["location"] as! PFGeoPoint
+//                var cragLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: cragGeoPoint.latitude, longitude: cragGeoPoint.longitude)
+//                
+//                var annotation = MKPointAnnotation()
+//                annotation.coordinate = cragLocation
+//                self.cragMapView.addAnnotation(annotation)
+//                
+//            }
+
+            
+            cell.cragDistanceLabel.text = self.cragDistances[indexPath.row]
+            cell.climbNumberLabel.text = self.climbNumbers[indexPath.row]
+            
+            
+
+        }
+        
+        return cell
+        
 	}
 
 	
