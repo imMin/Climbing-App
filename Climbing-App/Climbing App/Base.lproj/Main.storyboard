@@ -52,8 +52,6 @@
             <string>SFUIDisplay-Regular</string>
             <string>SFUIDisplay-Regular</string>
             <string>SFUIDisplay-Regular</string>
-            <string>SFUIDisplay-Regular</string>
-            <string>SFUIDisplay-Regular</string>
         </mutableArray>
         <mutableArray key="VarelaRound-Regular.otf">
             <string>VarelaRound</string>
@@ -747,7 +745,7 @@
                                 </prototypes>
                             </tableView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DFy-X6-fHM">
-                                <rect key="frame" x="0.0" y="55" width="320" height="181"/>
+                                <rect key="frame" x="0.0" y="55" width="320" height="180"/>
                                 <animations/>
                             </mapView>
                         </subviews>
@@ -796,7 +794,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="h9a-1c-SvX">
-                                <rect key="frame" x="0.0" y="55" width="320" height="181"/>
+                                <rect key="frame" x="0.0" y="55" width="320" height="180"/>
                                 <animations/>
                             </mapView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Knj-d4-dkY">
