@@ -10,8 +10,7 @@ import UIKit
 
 class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-	@IBOutlet weak var scrollView: UIScrollView!
-	@IBOutlet weak var graphView: UIView!
+//	@IBOutlet weak var scrollView: UIScrollView!
 	@IBOutlet weak var logTableView: UITableView!
 	
 //	var logs = [
@@ -51,9 +50,7 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
 		
 		logTableView.delegate = self
 		logTableView.dataSource = self
-		
-		// Scroll view size
-		scrollView.contentSize = CGSizeMake(320, graphView.frame.height + logTableView.frame.height)
+		logTableView.estimatedRowHeight = 69;
 	
 	}
 
@@ -115,12 +112,12 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
 	
 	func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 		var headerView = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 30))
-		headerView.backgroundColor = UIColor(white: 0.2, alpha: 0.5)
+		headerView.backgroundColor = UIColor(white: 0.95, alpha: 0.8)
 		
-		var label = UILabel(frame: CGRect(x: 10, y: 5, width: 300, height: 30))
+		var label = UILabel(frame: CGRect(x: 20, y: 5, width: 300, height: 30))
 		label.text = dates[section]
 //		label.text = "June 14, 2015"
-		label.font = UIFont(name: "VarelaRound", size: 16)
+		label.font = UIFont(name: "VarelaRound", size: 12)
 		headerView.addSubview(label)
 		
 		return headerView
