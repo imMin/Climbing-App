@@ -302,7 +302,10 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate {
 		//load select route VC into routeContentView
 		self.locationContentView.hidden = false
 		loadContentView(selectRouteViewController)
-		print("loaded!")
+//		print("loaded!")
+		UIView.animateWithDuration(0.3, delay: 0, options: nil, animations: { () -> Void in
+			self.locationContentView.frame = CGRect(x: 0, y: 0, width: 320, height: 568)
+		}, completion: nil)
 		
 	}
 	
