@@ -8,6 +8,9 @@
 
 import UIKit
 
+let didSaveNewLog = "did you just save a new log?"
+
+
 class AddDetailViewController: UIViewController, UIScrollViewDelegate {
 
 	
@@ -148,6 +151,7 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate {
 		var storyboard = UIStoryboard(name: "Main", bundle: nil)
 		selectRouteViewController = storyboard.instantiateViewControllerWithIdentifier("SelectRouteViewController") as! UIViewController
 		
+		locationContentView.frame.origin.y = 490
 		locationContentView.hidden = true
 		
     }
@@ -166,6 +170,13 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate {
 		dismissViewControllerAnimated(true, completion: nil)
 	}
 	
+	
+	@IBAction func didPressSaveButton(sender: AnyObject) {
+		dismissViewControllerAnimated(true, completion: nil)
+		
+		NSNotificationCenter.defaultCenter().postNotificationName(didSaveNewLog, object: self)
+	}
+
 	
 	func setScale(){
 		previousPageNumber = pageNumber
@@ -303,8 +314,8 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate {
 		self.locationContentView.hidden = false
 		loadContentView(selectRouteViewController)
 //		print("loaded!")
-		UIView.animateWithDuration(0.3, delay: 0, options: nil, animations: { () -> Void in
-			self.locationContentView.frame = CGRect(x: 0, y: 0, width: 320, height: 568)
+		UIView.animateWithDuration(0.5, delay: 0, options:.CurveEaseIn, animations: { () -> Void in
+			self.locationContentView.frame.origin.y = 0
 		}, completion: nil)
 		
 	}
