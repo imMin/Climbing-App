@@ -57,14 +57,8 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
         println(profileView.frame.height)
         println(logTableView.contentSize.height)
         contentScrollView.contentSize = CGSizeMake(320, profileView.frame.height + logTableView.frame.height)
-        
-        println(contentScrollView.contentOffset.y)
-        if(contentScrollView.contentOffset.y > -236){
-            self.logTableView.scrollEnabled = false
-        }
-//        else if (contentScrollView.contentOffset.y = 236){
-//            self.logTableView.scrollEnabled = true
-//        }
+        contentScrollView.delegate = self
+        self.logTableView.scrollEnabled = false
 	}
 
     override func didReceiveMemoryWarning() {
@@ -140,7 +134,32 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
 		return 40
 	}
 	
-	
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        if(scrollView == self.contentScrollView){
+            var contentSrollViewOffset = scrollView.contentOffset.y
+            println(contentSrollViewOffset)
+            if (contentSrollViewOffset > 181){
+                self.logTableView.scrollEnabled = true
+            }
+            else if(contentSrollViewOffset < 170) {
+                self.logTableView.scrollEnabled = false
+            }
+        }
+//        if (logTableView.frame.origin.y < 60){
+//            self.logTableView.scrollEnabled = true
+//        }
+//        else {
+//            self.logTableView.scrollEnabled = false
+//        }
+//        println(contentScrollView.contentOffset.y)
+//        if(contentScrollView.contentOffset.y > 181){
+//            self.logTableView.scrollEnabled = true
+//        }
+//        if (contentScrollView.contentOffset.y <= 181){
+//            self.logTableView.scrollEnabled = false
+//        }
+    }
+    
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		if (segue.identifier == "logDetailSegue") {
 			
