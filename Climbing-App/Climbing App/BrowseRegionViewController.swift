@@ -91,9 +91,10 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
         UIColor(red: 234/255, green: 235/255, blue: 234/255, alpha: 1)
         cell.layer.borderColor = UIColor(red: 234/255, green: 235/255, blue: 234/255, alpha: 1).CGColor
         cell.layer.borderWidth = 1
-        cell.layer.shadowColor = UIColor.blackColor().CGColor
-        cell.layer.shadowOffset = CGSizeMake(1, 3)
-        cell.layer.shadowOpacity = 0.5
+        cell.regionCellContent.layer.shadowColor = UIColor.blackColor().CGColor
+        cell.regionCellContent.layer.shadowOffset = CGSizeMake(1, 3)
+        cell.regionCellContent.layer.shadowOpacity = 0.5
+        cell.layer.backgroundColor = UIColor.clearColor().CGColor
         
         return cell
     

@@ -14,6 +14,7 @@ class RegionCell: UICollectionViewCell {
 	@IBOutlet weak var climbNumberLabel: UILabel!
 	@IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var regionView: UIImageView!
+    @IBOutlet weak var regionCellContent: UIView!
 	
 	
 }

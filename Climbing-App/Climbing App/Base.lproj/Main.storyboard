@@ -875,39 +875,46 @@
                                             <rect key="frame" x="0.0" y="0.0" width="130" height="185"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ST-E1-bYJ">
-                                                    <rect key="frame" x="167" y="18" width="131" height="21"/>
-                                                    <animations/>
-                                                    <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
-                                                    <color key="textColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="castlerock-region-image" translatesAutoresizingMaskIntoConstraints="NO" id="Qx0-ev-U5x">
-                                                    <rect key="frame" x="-1" y="0.0" width="132" height="130"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Region" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Akg-8M-Y4F">
-                                                    <rect key="frame" x="10" y="136" width="110" height="21"/>
-                                                    <animations/>
-                                                    <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No of climbs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rce-mc-IVz">
-                                                    <rect key="frame" x="10" y="155" width="110" height="23"/>
-                                                    <animations/>
-                                                    <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
-                                                    <color key="textColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PPp-Hg-Jvw" userLabel="RegionCellContent">
+                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="182"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ST-E1-bYJ">
+                                                            <rect key="frame" x="167" y="18" width="131" height="21"/>
+                                                            <animations/>
+                                                            <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
+                                                            <color key="textColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="castlerock-region-image" translatesAutoresizingMaskIntoConstraints="NO" id="Qx0-ev-U5x">
+                                                            <rect key="frame" x="-1" y="0.0" width="132" height="130"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Region" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Akg-8M-Y4F">
+                                                            <rect key="frame" x="10" y="136" width="110" height="21"/>
+                                                            <animations/>
+                                                            <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No of climbs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rce-mc-IVz">
+                                                            <rect key="frame" x="10" y="155" width="110" height="23"/>
+                                                            <animations/>
+                                                            <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
+                                                            <color key="textColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
                                             </subviews>
                                             <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <animations/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="climbNumberLabel" destination="rce-mc-IVz" id="jst-v2-I0r"/>
                                             <outlet property="distanceLabel" destination="4ST-E1-bYJ" id="3WG-AL-7ln"/>
+                                            <outlet property="regionCellContent" destination="PPp-Hg-Jvw" id="P36-8C-kyG"/>
                                             <outlet property="regionNameLabel" destination="Akg-8M-Y4F" id="oZR-tj-Pla"/>
                                             <outlet property="regionView" destination="Qx0-ev-U5x" id="u18-su-vn6"/>
                                             <segue destination="3up-dT-Ho2" kind="push" identifier="regionDetailSeguo" id="OYs-Vr-ZW0"/>
