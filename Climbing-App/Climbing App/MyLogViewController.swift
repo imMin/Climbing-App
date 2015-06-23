@@ -141,7 +141,7 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
             if (contentSrollViewOffset > 181){
                 self.logTableView.scrollEnabled = true
             }
-            else if(contentSrollViewOffset < 170) {
+            else if(contentSrollViewOffset < 181) {
                 self.logTableView.scrollEnabled = false
             }
         }
