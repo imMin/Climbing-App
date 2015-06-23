@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelegate {
+class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelegate, AddPhotoViewControllerDelegate {
 	
 	var routeName: String!
 	var level: String!
@@ -48,9 +48,9 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
         scrollView.contentSize = CGSizeMake(320, 1475)
         climbingPhotosView.frame.origin.y = 213
         
-        if hasNewPhoto == true {
-            addNewPhoto()
-        }
+//        if hasNewPhoto == true {
+//            addNewPhoto()
+//        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,10 +71,18 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 	}
 
     @IBAction func didPressAddPhoto(sender: AnyObject) {
-
         performSegueWithIdentifier("addPhotoSegue", sender: nil)
         
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "addPhotoSegue" {
+            let vc = segue.destinationViewController as! AddPhotoViewController
+//            vc.photoView.image = newPhoto
+            vc.delegate = self
+        }
+    }
+    
     func noCamera(){
         let alertVC = UIAlertController(title: "No Camera", message: "Sorry, this device has no camera", preferredStyle: .Alert)
         let okAction = UIAlertAction(title: "OK", style:.Default, handler: nil)
@@ -178,7 +186,11 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
         println("Did dismiss Photo Viewer: \(photosViewController)")
     }
 
-    
+    func passImage(controller: AddPhotoViewController, image: UIImage) {
+        newPhoto = image
+        imageButton.setImage(newPhoto, forState: UIControlState.Normal)
+        addNewPhoto()
+    }
     
     
 }
