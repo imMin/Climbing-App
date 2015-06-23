@@ -12,6 +12,8 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
 
 //	@IBOutlet weak var scrollView: UIScrollView!
 	@IBOutlet weak var logTableView: UITableView!
+    @IBOutlet weak var contentScrollView: UIScrollView!
+    @IBOutlet weak var profileView: UIView!
 	
 //	var logs = [
 //	["level": "5.10a", "location": "Castle Rock", "date": "June 14"],
@@ -35,6 +37,7 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
 //	["level": "V5", "location": "Castle Rock", "date": "June 14"],
 //	["level": "V4", "location": "Castle Rock", "date": "June 14"],
 //	]
+    
 	
 	var levels = ["5.10a", "5.10b", "5.11a", "V3", "V4", "5.10d", "5.10c", "5.11a", "V4", "V3", "5.9", "5.10a", "5.10c", "5.10d", "5.10b", "5.12a", "5.10c", "V5", "V4", "5.9"]
 	
@@ -51,7 +54,17 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
 		logTableView.delegate = self
 		logTableView.dataSource = self
 		logTableView.estimatedRowHeight = 69;
-	
+        println(profileView.frame.height)
+        println(logTableView.contentSize.height)
+        contentScrollView.contentSize = CGSizeMake(320, profileView.frame.height + logTableView.frame.height)
+        
+        println(contentScrollView.contentOffset.y)
+        if(contentScrollView.contentOffset.y > -236){
+            self.logTableView.scrollEnabled = false
+        }
+//        else if (contentScrollView.contentOffset.y = 236){
+//            self.logTableView.scrollEnabled = true
+//        }
 	}
 
     override func didReceiveMemoryWarning() {
