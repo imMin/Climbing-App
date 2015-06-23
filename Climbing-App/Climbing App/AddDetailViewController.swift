@@ -50,6 +50,7 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate, SelectRou
 	@IBOutlet weak var typeSegmentedControl: UISegmentedControl!
 	@IBOutlet weak var vScaleTouchableView: UIView!
 	
+	@IBOutlet weak var typeView: UIView!
 	
 	@IBOutlet weak var five6Label: UILabel!
 	@IBOutlet weak var five7Label: UILabel!
@@ -108,19 +109,22 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate, SelectRou
 		
 		//decide which labels to show
 		if (isFiveButton == true){
+			typeView.hidden = false
 			vScaleTouchableView.hidden = true
 		}
 		else if (isFiveButton == false){
 			touchableView.hidden = true
+			typeView.hidden = true
+			
 		}
 		
 		routeNameLabel.text = routeName
 		//set scrollview content size
 //		levelLabel.text = level
-		levelScrollView.contentSize = CGSizeMake(CGFloat(levels.count) * 100, 80.0)
+		levelScrollView.contentSize = CGSizeMake(CGFloat(levels.count) * 100, 44.0)
 		levelScrollView.clipsToBounds = false
     
-        vLeveLScrollView.contentSize = CGSizeMake(CGFloat(vLevels.count) * 100, 80.0)
+        vLeveLScrollView.contentSize = CGSizeMake(CGFloat(vLevels.count) * 100, 44.0)
 		vLeveLScrollView.clipsToBounds = false
 
 		
@@ -187,7 +191,7 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate, SelectRou
 			}
 		}
 		
-		levelLabels[selectedLevel].transform = CGAffineTransformScale(levelLabels[selectedLevel].transform, 1.2, 1.2)
+		levelLabels[selectedLevel].transform = CGAffineTransformScale(levelLabels[selectedLevel].transform, 1.3, 1.3)
 	}
     
     func setVScale(){
@@ -198,7 +202,7 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate, SelectRou
             }
         }
 
-        vLevelLabels[selectedLevel].transform = CGAffineTransformScale(vLevelLabels[selectedLevel].transform, 1.2, 1.2)
+        vLevelLabels[selectedLevel].transform = CGAffineTransformScale(vLevelLabels[selectedLevel].transform, 1.3, 1.3)
     }
     
 	
@@ -228,7 +232,7 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate, SelectRou
 			if (previousPageNumber != currentPageNumber && currentPageNumber < levelLabels.count && currentPageNumber >= 0) {
 				let label = levelLabels[currentPageNumber]
 				
-				label.transform = CGAffineTransformScale(label.transform, 1.2, 1.2)
+				label.transform = CGAffineTransformScale(label.transform, 1.3, 1.3)
 				
 				levelLabels[currentPageNumber].alpha = 1
 				levelLabels[previousPageNumber].transform = CGAffineTransformIdentity
@@ -241,7 +245,7 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate, SelectRou
 			if (previousPageNumber != currentPageNumber && currentPageNumber < vLevelLabels.count && currentPageNumber >= 0) {
 				let vLabel = vLevelLabels[currentPageNumber]
 				
-				vLabel.transform = CGAffineTransformScale(vLabel.transform, 1.2, 1.2)
+				vLabel.transform = CGAffineTransformScale(vLabel.transform, 1.3, 1.3)
 				vLevelLabels[currentPageNumber].alpha = 1
 
 				vLevelLabels[previousPageNumber].transform = CGAffineTransformIdentity
@@ -308,16 +312,14 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate, SelectRou
 	}
 	
 	@IBAction func didPressAddLocation(sender: AnyObject) {
-		
-//		AddDetailViewController.transitionStyle = UIModalTransitionStyle.CoverVertical
-//		self.presentViewController(SelectRouteViewController, animated: true, completion: nil)
+		self.locationContentView.frame.origin.y = 490
 		//load select route VC into routeContentView
 		self.locationContentView.hidden = false
 		var selectRouteCastViewController = selectRouteViewController as! SelectRouteViewController
 		selectRouteCastViewController.delegate = self
-		loadContentView(selectRouteViewController)
+		loadContentView(selectRouteCastViewController)
 //		print("loaded!")
-		UIView.animateWithDuration(0.5, delay: 0, options:.CurveEaseIn, animations: { () -> Void in
+		UIView.animateWithDuration(0.3, delay: 0, options:.CurveEaseIn, animations: { () -> Void in
 			self.locationContentView.frame.origin.y = 0
 		}, completion: nil)
 		

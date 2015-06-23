@@ -63,9 +63,9 @@ class SelectRouteViewController: UIViewController, UITableViewDataSource, UITabl
 		
 	}
 	
-	override func viewWillAppear(animated: Bool) {
-		self.contentView.frame.origin.y = 0
-	}
+//	override func viewWillAppear(animated: Bool) {
+//		self.contentView.frame.origin.y = 0
+//	}
 //
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
@@ -113,19 +113,23 @@ class SelectRouteViewController: UIViewController, UITableViewDataSource, UITabl
 	}
 	
 	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-		cragName = cragNames[indexPath.row]
-//		println(cragName)
-		if(delegate != nil){
-			delegate?.selectRoute(self, text: cragName)
+		print(self.contentView.frame.origin.y)
+
+		UIView.animateWithDuration(0.3, delay: 0.3, options: .CurveEaseOut, animations: {
+			self.contentView.frame.origin.y = 490
+			}) { (Bool) -> Void in
+				self.contentView.frame.origin.y = 0
+				self.cragName = self.cragNames[indexPath.row]
+				if(self.delegate != nil){
+					self.delegate?.selectRoute(self, text: self.cragName)
+				}
+				self.view.removeFromSuperview()
 		}
+		
 		
 //		self.view.removeFromSuperview()
 //
-		UIView.animateWithDuration(0.3, delay: 0.3, options: .CurveEaseOut, animations: { () -> Void in
-			self.contentView.frame.origin.y = 490
-		}) { (Bool) -> Void in
-			self.view.removeFromSuperview()
-		}
+
 	}
 
 }
