@@ -1005,7 +1005,7 @@
                                 <animations/>
                                 <color key="backgroundColor" red="0.14117647058823529" green="0.12549019607843137" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="btE-oQ-ZoR">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="YES" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="btE-oQ-ZoR">
                                 <rect key="frame" x="0.0" y="307" width="320" height="211"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
