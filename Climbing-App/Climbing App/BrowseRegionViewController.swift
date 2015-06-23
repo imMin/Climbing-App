@@ -13,10 +13,14 @@ import CoreLocation
 class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, CLLocationManagerDelegate, MKMapViewDelegate
 {
 
-	var regions = ["Castle Rock", "Yosemite", "Mickey's Beach", "Mt Diablo"]
+	var regions = ["Castle Rock", "Mickey's Beach", "Yosemite", "Mt. Diablo", "Mt. St. Helena"]
 	
-	var distances = ["5 mi", "135 mi", "15 mi", "20 mi"]
-	var climbNumbers = ["32 routes", "37 routes", "200 routes", "232 routes"]
+	var distances = ["5 mi", "135 mi", "15 mi", "20 mi", "20 mi"]
+    
+	var climbNumbers = ["32 routes", "37 routes", "200 routes", "232 routes", "117 routes"]
+    
+    var regionImages = ["castlerock-region-image", "mickeys-region-image", "mtdiablo-region-image", "yosemite-region-image", "mtsthelena-region-image"]
+    
 	var manager:CLLocationManager!
 	var myLocations:[CLLocation] = []
 	var location: CLLocation!
@@ -28,9 +32,7 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-		
-//        regionContainer.layer.cornerRadius = 4
-//        regionContainer.layer.borderColor = UIColor(rgba: "#ffcc00").CGColor 
+
         
         
 		regionCollectionView.delegate = self
@@ -69,7 +71,6 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 	}
 	
 	
-	
 	func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		return regions.count
 	}
@@ -78,10 +79,14 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 		let cell = regionCollectionView.dequeueReusableCellWithReuseIdentifier("RegionCell",
 		forIndexPath: indexPath) as! RegionCell
 		
+        //Content of cell
 		cell.regionNameLabel.text = regions[indexPath.row]
 		cell.climbNumberLabel.text = climbNumbers[indexPath.row]
 		cell.distanceLabel.text = distances[indexPath.row]
+        cell.regionView.image = UIImage(named: "\(regionImages[indexPath.row])")
         
+        
+        //Visual style of cell
         cell.layer.cornerRadius = 4
         UIColor(red: 234/255, green: 235/255, blue: 234/255, alpha: 1)
         cell.layer.borderColor = UIColor(red: 234/255, green: 235/255, blue: 234/255, alpha: 1).CGColor
@@ -97,14 +102,9 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 	
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		if (segue.identifier == "regionDetailSegue"){
-		
-		// initialize new view controller and cast it as your view controller
+
 		var viewController = segue.destinationViewController as! BrowseCragViewController
 		
-//		let indexPath : NSIndexPath = self.regionCollectionView.indexPathsForSelectedItems()
-//		
-//		// your new view controller should have property that will store passed value
-//		viewController.region = regions[indexPath.row]
 	}
 	}
 	

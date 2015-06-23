@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q8d-4P-2ah">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q8d-4P-2ah">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -877,8 +877,8 @@
                                                     <color key="textColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="castle-rock-pic" translatesAutoresizingMaskIntoConstraints="NO" id="tQm-be-Xhq">
-                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="castlerock-region-image" translatesAutoresizingMaskIntoConstraints="NO" id="Qx0-ev-U5x">
+                                                    <rect key="frame" x="-1" y="0.0" width="132" height="130"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Region" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Akg-8M-Y4F">
                                                     <rect key="frame" x="10" y="136" width="110" height="21"/>
@@ -904,6 +904,7 @@
                                             <outlet property="climbNumberLabel" destination="rce-mc-IVz" id="jst-v2-I0r"/>
                                             <outlet property="distanceLabel" destination="4ST-E1-bYJ" id="3WG-AL-7ln"/>
                                             <outlet property="regionNameLabel" destination="Akg-8M-Y4F" id="oZR-tj-Pla"/>
+                                            <outlet property="regionView" destination="Qx0-ev-U5x" id="u18-su-vn6"/>
                                             <segue destination="3up-dT-Ho2" kind="push" identifier="regionDetailSeguo" id="OYs-Vr-ZW0"/>
                                         </connections>
                                     </collectionViewCell>
@@ -2309,7 +2310,7 @@
         <image name="big_btn_bg" width="85" height="28"/>
         <image name="black-back-button" width="36" height="36"/>
         <image name="buttons-and-dots" width="259" height="80"/>
-        <image name="castle-rock-pic" width="135" height="135"/>
+        <image name="castlerock-region-image" width="135" height="135"/>
         <image name="climbing_photos" width="320" height="1253"/>
         <image name="close_red" width="44" height="44"/>
         <image name="cream-topo" width="320" height="568"/>
