@@ -52,9 +52,10 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
     
     let redColor = UIColor(red: 242/255, green: 89/255, blue: 64/255, alpha: 1.0)
     let selectedColor = UIColor.darkGrayColor()
-
     let grayColor = UIColor(red: 175/255, green: 175/255, blue: 175/255, alpha: 1.0)
-    
+	
+	var newlyCreatedIconImageView : UIImageView!
+
     var blackView: UIView?
 
     
@@ -140,9 +141,9 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 	
     func playBounceAnimation(icon : UIButton) {
 		
-		let originImage = UIImage(named: "mylog2_tab")
+		let originImage = UIImage(named: "mylog2_tab_selected")
 		let tintedImage = originImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
-		icon.setImage(tintedImage, forState: .Normal)
+		icon.setImage(tintedImage, forState: .Selected)
 		icon.tintColor = UIColor.redColor()
 
         let bounceAnimation = CAKeyframeAnimation(keyPath: "transform.scale")
@@ -152,12 +153,24 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 		
 //      Commenting out the bounce on the icons for now.
         icon.layer.addAnimation(bounceAnimation, forKey: "bounceAnimation")
-		
-//		let originImage = UIImage(named: ")
 
-//		delay(1.3, { () -> () in
-//			icon.setImage(originImage, forState: .Normal)
-//		})
+		//Create a new copy of the image
+		var image = UIImage(named: "mylog2_tab_selected")
+		newlyCreatedIconImageView = UIImageView(image: image)
+		icon.addSubview(newlyCreatedIconImageView)
+		newlyCreatedIconImageView.frame = icon.imageView!.frame
+		
+		delay(1.1, { () -> () in
+			icon.tintColor = UIColor.grayColor()
+			icon.imageView!.alpha = 0
+			UIView.animateWithDuration(0.2, animations: { () -> Void in
+				self.newlyCreatedIconImageView.alpha = 0
+				icon.imageView!.alpha = 100
+			}, completion: { (Bool) -> Void in
+				self.newlyCreatedIconImageView.removeFromSuperview()
+			})
+			
+		})
     }
 	
 	@IBAction func didPressAddButton(sender: AnyObject) {
