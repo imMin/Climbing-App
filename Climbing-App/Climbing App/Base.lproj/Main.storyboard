@@ -110,6 +110,7 @@
             <string>VarelaRound</string>
             <string>VarelaRound</string>
             <string>VarelaRound</string>
+            <string>VarelaRound</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -1223,27 +1224,21 @@
                                     <constraint firstAttribute="bottom" secondItem="OYN-Jy-une" secondAttribute="bottom" constant="50" id="uOd-TC-E2T"/>
                                 </constraints>
                             </scrollView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYj-p5-B3A">
-                                <rect key="frame" x="-1" y="480" width="321" height="44"/>
+                            <view alpha="0.95000000000000007" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYj-p5-B3A">
+                                <rect key="frame" x="0.0" y="467" width="320" height="54"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comment" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B4v-Zd-DFF">
-                                        <rect key="frame" x="57" y="8" width="188" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add comment" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B4v-Zd-DFF">
+                                        <rect key="frame" x="60" y="7" width="238" height="30"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fn-QH-KWd">
-                                        <rect key="frame" x="253" y="8" width="54" height="30"/>
-                                        <animations/>
-                                        <state key="normal" title="Submit">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0m-UD-iq6">
-                                        <rect key="frame" x="8" y="7" width="41" height="33"/>
+                                        <rect key="frame" x="14" y="3" width="38" height="38"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="15"/>
-                                        <state key="normal" backgroundImage="dumb-photo-icon">
+                                        <state key="normal" backgroundImage="camera_icon_red">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -1253,7 +1248,7 @@
                                     </button>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.89411764705882357" green="0.89411764705882357" blue="0.89411764705882357" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <animations/>
@@ -2340,11 +2335,11 @@
         <image name="black-back-button" width="36" height="36"/>
         <image name="boulder-button" width="70" height="70"/>
         <image name="buttons-and-dots" width="259" height="80"/>
+        <image name="camera_icon_red" width="180" height="180"/>
         <image name="castlerock-region-image" width="135" height="135"/>
         <image name="climbing_photos" width="320" height="1253"/>
         <image name="close_red" width="44" height="44"/>
         <image name="cream-topo" width="320" height="568"/>
-        <image name="dumb-photo-icon" width="41" height="33"/>
         <image name="forum_tab" width="26" height="26"/>
         <image name="forum_tab_selected-1" width="26" height="26"/>
         <image name="gradientleft" width="110" height="204"/>
