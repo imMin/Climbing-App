@@ -140,37 +140,40 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 	}
 	
     func playBounceAnimation(icon : UIButton) {
-		
-		let originImage = UIImage(named: "mylog2_tab_selected")
-		let tintedImage = originImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
-		icon.setImage(tintedImage, forState: .Selected)
-		icon.tintColor = UIColor.redColor()
-
-        let bounceAnimation = CAKeyframeAnimation(keyPath: "transform.scale")
-        bounceAnimation.values = [1.0 ,1.4, 0.9, 1.15, 0.95, 1.02, 1.0]
-        bounceAnimation.duration = 1.2
-        bounceAnimation.calculationMode = kCAAnimationCubic
-		
-//      Commenting out the bounce on the icons for now.
-        icon.layer.addAnimation(bounceAnimation, forKey: "bounceAnimation")
-
-		//Create a new copy of the image
-		var image = UIImage(named: "mylog2_tab_selected")
-		newlyCreatedIconImageView = UIImageView(image: image)
-		icon.addSubview(newlyCreatedIconImageView)
-		newlyCreatedIconImageView.frame = icon.imageView!.frame
-		
-		delay(1.1, { () -> () in
-			icon.tintColor = UIColor.grayColor()
-			icon.imageView!.alpha = 0
-			UIView.animateWithDuration(0.2, animations: { () -> Void in
-				self.newlyCreatedIconImageView.alpha = 0
-				icon.imageView!.alpha = 100
-			}, completion: { (Bool) -> Void in
-				self.newlyCreatedIconImageView.removeFromSuperview()
-			})
+		delay(0.4, { () -> () in
+			let originImage = UIImage(named: "mylog2_tab_selected")
+			let tintedImage = originImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+			icon.setImage(tintedImage, forState: .Selected)
+			icon.tintColor = UIColor.redColor()
 			
+			let bounceAnimation = CAKeyframeAnimation(keyPath: "transform.scale")
+			bounceAnimation.values = [1.0 ,1.4, 0.9, 1.15, 0.95, 1.02, 1.0]
+			bounceAnimation.duration = 1.2
+			bounceAnimation.calculationMode = kCAAnimationCubic
+			
+			//      Commenting out the bounce on the icons for now.
+			icon.layer.addAnimation(bounceAnimation, forKey: "bounceAnimation")
+			
+			//Create a new copy of the image
+			var image = UIImage(named: "mylog2_tab_selected")
+			self.newlyCreatedIconImageView = UIImageView(image: image)
+			icon.addSubview(self.newlyCreatedIconImageView)
+			self.newlyCreatedIconImageView.frame = icon.imageView!.frame
+			
+			delay(1.1, { () -> () in
+				icon.tintColor = UIColor.grayColor()
+				icon.imageView!.alpha = 0
+				UIView.animateWithDuration(0.2, animations: { () -> Void in
+					self.newlyCreatedIconImageView.alpha = 0
+					icon.imageView!.alpha = 100
+					}, completion: { (Bool) -> Void in
+						self.newlyCreatedIconImageView.removeFromSuperview()
+				})
+				
+			})
+
 		})
+		
     }
 	
 	@IBAction func didPressAddButton(sender: AnyObject) {
