@@ -20,7 +20,6 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - BLKFlexibleHeightBar (1.0.2)
   - Bolts/Tasks (1.2.0)
   - NYTPhotoViewer (0.1.2)
   - Parse (1.7.4):
@@ -29,14 +28,12 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
-  - BLKFlexibleHeightBar
   - NYTPhotoViewer
   - Parse
   - TGCameraViewController
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
-  BLKFlexibleHeightBar: b27572a69633d8e33f1f2bbc486b04d8e86f742d
   Bolts: d176cb1e0012175589e389a9db49b85e27787576
   NYTPhotoViewer: 874a57dd833238b52ab2e8d1c827356c763626c3
   Parse: 6ca512c6e860b66739c95151b2f76ac4712b7842
