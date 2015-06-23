@@ -138,19 +138,25 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 		ViewController.didMoveToParentViewController(self)
 	}
 	
-    
     func playBounceAnimation(icon : UIButton) {
+		
+		let originImage = UIImage(named: "mylog2_tab")
+		let tintedImage = originImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+		icon.setImage(tintedImage, forState: .Normal)
+		icon.tintColor = UIColor.redColor()
 
         let bounceAnimation = CAKeyframeAnimation(keyPath: "transform.scale")
         bounceAnimation.values = [1.0 ,1.4, 0.9, 1.15, 0.95, 1.02, 1.0]
         bounceAnimation.duration = 1.2
         bounceAnimation.calculationMode = kCAAnimationCubic
-        
+		
 //      Commenting out the bounce on the icons for now.
         icon.layer.addAnimation(bounceAnimation, forKey: "bounceAnimation")
-//		icon.image.backgroundColor = UIColor.redColor()
+		
+//		let originImage = UIImage(named: ")
+
 //		delay(1.3, { () -> () in
-//			icon.backgroundColor = UIColor.grayColor()
+//			icon.setImage(originImage, forState: .Normal)
 //		})
     }
 	
