@@ -45,7 +45,7 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
         imageButton?.setBackgroundImage(buttonImage, forState: .Normal)
 
         // Do any additional setup after loading the view.
-        scrollView.contentSize = CGSizeMake(320, 1475)
+//        scrollView.contentSize = CGSizeMake(320, 1475)
         climbingPhotosView.frame.origin.y = 213
         
 //        if hasNewPhoto == true {
@@ -59,7 +59,7 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
     }
     
     func addNewPhoto() {
-        scrollView.contentSize = CGSizeMake(320, 1648)
+//        scrollView.contentSize = CGSizeMake(320, 1648)
         UIView.animateWithDuration(0.7, animations: { () -> Void in
             self.climbingPhotosView.frame.origin.y += self.imageButton.frame.height
         })
