@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol AddPhotoViewControllerDelegate {
+    func passImage(controller: AddPhotoViewController, image: UIImage)
+}
+
+
 class AddPhotoViewController: UIViewController, TGCameraDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet weak var photoView: UIImageView!
@@ -15,7 +20,7 @@ class AddPhotoViewController: UIViewController, TGCameraDelegate, UINavigationCo
     var navController: TGCameraNavigationController!
     var triggerOpen: Bool = true
     
-    var delegate: AddPhotoViewControllerDelegate?
+    var delegate: AddPhotoViewControllerDelegate? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,6 +89,9 @@ class AddPhotoViewController: UIViewController, TGCameraDelegate, UINavigationCo
 
     func cameraDidTakePhoto(image: UIImage!) {
         photoView.image = image
+        if (delegate != nil) {
+            delegate?.passImage(self, image: image)
+        }
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -107,13 +115,13 @@ class AddPhotoViewController: UIViewController, TGCameraDelegate, UINavigationCo
 
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        println("calling prepareForSegue")
-        var viewController = segue.destinationViewController as! RouteDetailViewController
-        
-        viewController.hasNewPhoto = true
-        viewController.newPhoto = photoView.image
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        println("calling prepareForSegue")
+//        var viewController = segue.destinationViewController as! RouteDetailViewController
+//        
+//        viewController.hasNewPhoto = true
+//        viewController.newPhoto = photoView.image
+//    }
 
     /*
     // MARK: - Navigation
