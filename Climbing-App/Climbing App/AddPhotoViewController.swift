@@ -15,7 +15,7 @@ class AddPhotoViewController: UIViewController, TGCameraDelegate, UINavigationCo
     var navController: TGCameraNavigationController!
     var triggerOpen: Bool = true
     
-    var delegate: AddPhotoViewControllerDelegate?
+//    var delegate: AddPhotoViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()

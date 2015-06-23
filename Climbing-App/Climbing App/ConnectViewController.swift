@@ -14,8 +14,9 @@ class ConnectViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        connectTableView.rowHeight = UITableViewAutomaticDimension
+        connectTableView.estimatedRowHeight = 126
         
     }
     
@@ -35,7 +36,9 @@ class ConnectViewController: UIViewController, UITableViewDataSource, UITableVie
         let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as! PostCell
         cell.titleLabel.text = Post.posts[indexPath.row].title
         cell.authorLabel.text = Post.posts[indexPath.row].author
+        cell.profpicView.image = UIImage(named: Post.posts[indexPath.row].photo!)
         return cell
+        
     }
     
 
@@ -52,6 +55,8 @@ class ConnectViewController: UIViewController, UITableViewDataSource, UITableVie
 }
 
 class Post {
+    
+    
     var author: String?
     var title: String?
     var photo: String?
@@ -60,28 +65,33 @@ class Post {
         var _posts = [Post]()
         
         let postOne = Post()
-        postOne.title = "I'm such a macho guy"
-        postOne.author = "Justin Aschenbener"
+        postOne.title = "Best outdoor crags for beginners"
+        postOne.author = "ahonnold"
+        postOne.photo = "prof-honnold-small"
         _posts.append(postOne)
         
         let post2 = Post()
-        post2.title = "I'm a pansy"
-        post2.author = "Jeremy Cox"
+        post2.title = "Women: Do you wear women’s climbing shoes?"
+        post2.author = "sashadg"
+        post2.photo = "prof-sasha-small"
         _posts.append(post2)
         
         let post3 = Post()
-        post3.title = "Xcode can suck it"
-        post3.author = "Marissa Washington"
+        post3.title = "Going to Bishop… who's in?"
+        post3.author = "puccio"
+        post3.photo = "prof-puccio-small"
         _posts.append(post3)
         
         let post4 = Post()
-        post4.title = "I have no idea"
-        post4.author = "Molly Jones"
+        post4.title = "Deep-water solo in Thailand"
+        post4.author = "cragman"
+        post4.photo = "prof-puccio-small"
         _posts.append(post4)
         
         let post5 = Post()
-        post5.title = "Documentation documentation documentation"
-        post5.author = "MC Happer"
+        post5.title = "Best bouldering in Bay Area?"
+        post5.author = "cscharma"
+        post5.photo = "prof-puccio-small"
         _posts.append(post5)
         
         return _posts
@@ -90,6 +100,7 @@ class Post {
 
 class PostCell: UITableViewCell {
     
+    @IBOutlet weak var profpicView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     
