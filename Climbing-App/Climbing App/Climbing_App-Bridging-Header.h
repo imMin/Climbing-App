@@ -25,7 +25,9 @@
 #import <NYTPhotoViewer/NYTPhotosOverlayView.h>
 #import <NYTPhotoViewer/NYTPhotoTransitionAnimator.h>
 
-#import "BLKFlexibleHeightBar.h"
+//#import "BLKFlexibleHeightBar.h"
+//#import "BLKDelegateSplitter.h"
+//#import <Foundation/Foundation.h>
 
 #import <QuartzCore/QuartzCore.h>
 
