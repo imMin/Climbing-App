@@ -105,10 +105,10 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 
         }
         
-
-        println("crags.count = \(self.crags.count)")
-        self.addCragPins()
- 
+        delay(2) {
+            println("crags.count = \(self.crags.count)")
+            self.addCragPins()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -237,7 +237,10 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 	}
     
     func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
-
+        var coordRegion : MKCoordinateRegion
+        coordRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake(37.2306, -122.0957), MKCoordinateSpanMake(1.0, 1.0))
+        coordRegion = cragMapView.regionThatFits(coordRegion)
+        cragMapView.setRegion(coordRegion, animated: false)
 
     }
 	

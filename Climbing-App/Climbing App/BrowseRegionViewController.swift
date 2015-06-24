@@ -234,6 +234,14 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 		annotation.coordinate = locationCoordinate
 		regionMapView.addAnnotation(annotation)
 	}
+    
+    func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
+        var coordRegion : MKCoordinateRegion
+        coordRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake(37.2306, -122.0957), MKCoordinateSpanMake(5.0, 5.0))
+        coordRegion = regionMapView.regionThatFits(coordRegion)
+        regionMapView.setRegion(coordRegion, animated: false)
+        
+    }
 	
 //	func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
 //		if annotation.isKindOfClass(MKUserLocation) {
