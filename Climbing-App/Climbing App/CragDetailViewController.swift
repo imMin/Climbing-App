@@ -29,6 +29,7 @@ class CragDetailViewController: UIViewController, UITableViewDataSource, UITable
 		
 		climbTableView.delegate = self
 		climbTableView.dataSource = self
+		climbTableView.backgroundColor = UIColor.blackColor()
 		
 		self.cragNameLabel.text = cragName
 
