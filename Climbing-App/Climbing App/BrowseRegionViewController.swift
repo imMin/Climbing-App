@@ -111,7 +111,7 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 		regionMapView.showsUserLocation = true
 		
 		var region : MKCoordinateRegion
-		region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(39.3761, -104.8535), MKCoordinateSpanMake(0.4, 0.4))
+		region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(37.2306, -122.0957), MKCoordinateSpanMake(0.4, 0.4))
 		region = regionMapView.regionThatFits(region)
 		regionMapView.setRegion(region, animated: false)
 		
@@ -251,7 +251,7 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 	
 	func addCurrentLocationPin() {
 		let annotation = MKPointAnnotation()
-		var locationCoordinate = CLLocationCoordinate2DMake(39.3761, -104.8535)
+		var locationCoordinate = CLLocationCoordinate2DMake(37.2306, -122.0957)
 		annotation.coordinate = locationCoordinate
 		regionMapView.addAnnotation(annotation)
 	}

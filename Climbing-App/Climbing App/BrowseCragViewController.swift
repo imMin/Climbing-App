@@ -58,7 +58,7 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 		cragMapView.showsUserLocation = true
 		
 		var coordRegion : MKCoordinateRegion
-		coordRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake(39.3761, -104.8535), MKCoordinateSpanMake(10, 10))
+		coordRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake(37.2306, -122.0957), MKCoordinateSpanMake(0.4, 0.4))
 		coordRegion = cragMapView.regionThatFits(coordRegion)
 		cragMapView.setRegion(coordRegion, animated: false)
 		
@@ -215,7 +215,7 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 	
 	func addCurrentLocationPin() {
 		let annotation = MKPointAnnotation()
-		var locationCoordinate = CLLocationCoordinate2DMake(39.3761, -104.8535)
+		var locationCoordinate = CLLocationCoordinate2DMake(37.2306, -122.0957)
 		annotation.coordinate = locationCoordinate
 		cragMapView.addAnnotation(annotation)
 	}

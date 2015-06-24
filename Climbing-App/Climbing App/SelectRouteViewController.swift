@@ -60,7 +60,7 @@ class SelectRouteViewController: UIViewController, UITableViewDataSource, UITabl
 		selectMapView.showsUserLocation = true
 		
 		var region : MKCoordinateRegion
-		region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(39.3761, -104.8535), MKCoordinateSpanMake(0.01, 0.01))
+		region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(37.2306, -122.0957), MKCoordinateSpanMake(0.4, 0.4))
 		region = selectMapView.regionThatFits(region)
 		selectMapView.setRegion(region, animated: false)
 		
@@ -210,7 +210,7 @@ class SelectRouteViewController: UIViewController, UITableViewDataSource, UITabl
 	
 	func addCurrentLocationPin() {
 		let annotation = MKPointAnnotation()
-		var locationCoordinate = CLLocationCoordinate2DMake(39.3761, -104.8535)
+		var locationCoordinate = CLLocationCoordinate2DMake(37.2306, -122.0957)
 		annotation.coordinate = locationCoordinate
 		selectMapView.addAnnotation(annotation)
 	}
