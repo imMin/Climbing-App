@@ -10,10 +10,33 @@ import UIKit
 import MapKit
 import CoreLocation
 
+class Region {
+    var name: String?
+    var distanceString: String?
+    var countString: String?
+    var imageName: String?
+    
+    static func getAllRegions() -> [Region] {
+        var allRegions = [Region]()
+        
+        var castleRock = Region()
+        castleRock.name = "Castle Rock"
+        castleRock.distanceString = "5 mi"
+        castleRock.countString = "32 routes"
+        castleRock.imageName = "castlerock-region-image"
+        
+        allRegions.append(castleRock)
+        
+        return allRegions
+    }
+}
+
 class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, CLLocationManagerDelegate, MKMapViewDelegate
 {
 
-	var regions = ["Castle Rock", "Mickey's Beach", "Yosemite", "Mt. Diablo", "Mt. St. Helena"]
+//	var regions = ["Castle Rock", "Mickey's Beach", "Yosemite", "Mt. Diablo", "Mt. St. Helena"]
+    
+    var regions = Region.getAllRegions()
 	
 	var distances = ["5 mi", "135 mi", "15 mi", "20 mi", "20 mi"]
     
@@ -80,11 +103,18 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 		forIndexPath: indexPath) as! RegionCell
 		
         //Content of cell
-		cell.regionNameLabel.text = regions[indexPath.row]
-		cell.climbNumberLabel.text = climbNumbers[indexPath.row]
-		cell.distanceLabel.text = distances[indexPath.row]
-        cell.regionView.image = UIImage(named: "\(regionImages[indexPath.row])")
+//		cell.regionNameLabel.text = regions[indexPath.row]
+//		cell.climbNumberLabel.text = climbNumbers[indexPath.row]
+//		cell.distanceLabel.text = distances[indexPath.row]
+//        cell.regionView.image = UIImage(named: "\(regionImages[indexPath.row])")
         
+        var cellRegion = regions[indexPath.row]
+        
+        cell.region = cellRegion
+        cell.regionNameLabel.text = cellRegion.name
+        cell.climbNumberLabel.text = cellRegion.countString
+        cell.distanceLabel.text = cellRegion.distanceString
+        cell.regionView.image = UIImage(named: cellRegion.imageName!)
         
         //Visual style of cell
         cell.layer.cornerRadius = 4
@@ -105,6 +135,7 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 		if (segue.identifier == "regionDetailSegue"){
 
 		var viewController = segue.destinationViewController as! BrowseCragViewController
+        viewController.region = (sender as! RegionCell).region
 		
 	}
 	}

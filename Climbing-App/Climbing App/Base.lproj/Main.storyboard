@@ -859,6 +859,9 @@
                                         <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="didPressSaveButton:" destination="3up-dT-Ho2" eventType="touchUpInside" id="6xL-px-uHm"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
