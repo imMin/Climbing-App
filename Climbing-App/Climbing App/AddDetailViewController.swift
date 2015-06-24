@@ -238,7 +238,7 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate, SelectRou
 			if (previousPageNumber != currentPageNumber && currentPageNumber < levelLabels.count && currentPageNumber >= 0) {
 				let label = levelLabels[currentPageNumber]
 				
-				label.transform = CGAffineTransformScale(label.transform, 1.3, 1.3)
+				label.transform = CGAffineTransformScale(label.transform, 1.35, 1.35)
 				
 				levelLabels[currentPageNumber].alpha = 1
 				levelLabels[previousPageNumber].transform = CGAffineTransformIdentity
