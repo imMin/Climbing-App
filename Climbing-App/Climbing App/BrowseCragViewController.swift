@@ -105,9 +105,10 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 
         }
         
+
         println("crags.count = \(self.crags.count)")
-        addCragPins()
-        
+        self.addCragPins()
+ 
     }
 
     override func didReceiveMemoryWarning() {
@@ -156,8 +157,18 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 	}
     
     func addCragPins() {
+//        var annotations: [MKPointAnnotation!]
+//        var coordinates: [CLLocationCoordinate2D!]
+//        
+//        coordinates = [CLLocationCoordinate2DMake(37.2306, -122.0957),CLLocationCoordinate2DMake(37.865101, -119.538329),CLLocationCoordinate2DMake(36.778261, -119.417932),CLLocationCoordinate2DMake(37.881591, -121.914153),CLLocationCoordinate2DMake(38.669351, -122.633319)]
+//        
+//        for index in 0..<coordinates.count{
+//            let annotation = MKPointAnnotation()
+//            annotation.coordinate = coordinates[index]
+//            //			annotations.append(annotation)
+//            cragMapView.addAnnotation(annotation)
         
-        //TODO: not working yet
+        //TODO: not working always yet
         for index in 0..<self.crags.count {
             var crag = self.crags[index]
             var cragGeoPoint: PFGeoPoint = PFGeoPoint()
@@ -165,6 +176,7 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
             var cragLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: cragGeoPoint.latitude, longitude: cragGeoPoint.longitude)
             
             var annotation = MKPointAnnotation()
+            annotation.title = crag["name"] as! String
             annotation.coordinate = cragLocation
             println("\(cragGeoPoint)")
             
@@ -206,8 +218,8 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 		//		location = "\(locations[0])"
 		myLocations.append(locations[0] as! CLLocation)
 		
-		let spanX = 5.0
-		let spanY = 5.0
+		let spanX = 1.0
+		let spanY = 1.0
 		var newRegion = MKCoordinateRegion(center: cragMapView.userLocation.coordinate, span: MKCoordinateSpanMake(spanX, spanY))
 		cragMapView.setRegion(newRegion, animated: true)
 
@@ -223,24 +235,29 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 	func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
 //		UIAlertView(title: "tapped Annotation!", message: view.annotation.title, delegate: nil, cancelButtonTitle: "OK").show()
 	}
-	
-	
-	func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
-		
-		let reuseID = "myAnnotationView"
-		var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseID)
-		if (annotationView == nil) {
-			annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseID)
-		}
-		else {
-			annotationView.annotation = annotation
-		}
-		
-		annotationView.image = UIImage(named: "custom_pin")
-		annotationView.canShowCallout = true;
+    
+    func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
 
-		
-		return annotationView
-	}
+
+    }
+	
+	
+//	func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+//		
+//		let reuseID = "myAnnotationView"
+//		var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseID)
+//		if (annotationView == nil) {
+//			annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseID)
+//		}
+//		else {
+//			annotationView.annotation = annotation
+//		}
+//		
+////		annotationView.image = UIImage(named: "custom_pin")
+//		annotationView.canShowCallout = true;
+//
+//		
+//		return annotationView
+//	}
 
 }

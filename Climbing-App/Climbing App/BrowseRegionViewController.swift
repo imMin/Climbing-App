@@ -224,6 +224,17 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 	}
 
 	
+	func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
+		//		UIAlertView(title: "tapped Annotation!", message: view.annotation.title, delegate: nil, cancelButtonTitle: "OK").show()
+	}
+	
+	func addCurrentLocationPin() {
+		let annotation = MKPointAnnotation()
+		var locationCoordinate = CLLocationCoordinate2DMake(37.2306, -122.0957)
+		annotation.coordinate = locationCoordinate
+		regionMapView.addAnnotation(annotation)
+	}
+	
 //	func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
 //		if annotation.isKindOfClass(MKUserLocation) {
 //			return nil
@@ -244,38 +255,6 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 //		
 //		return annotationView
 //	}
-	
-	func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
-		//		UIAlertView(title: "tapped Annotation!", message: view.annotation.title, delegate: nil, cancelButtonTitle: "OK").show()
-	}
-	
-	func addCurrentLocationPin() {
-		let annotation = MKPointAnnotation()
-		var locationCoordinate = CLLocationCoordinate2DMake(37.2306, -122.0957)
-		annotation.coordinate = locationCoordinate
-		regionMapView.addAnnotation(annotation)
-	}
-	
-	func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
-		if annotation.isKindOfClass(MKUserLocation) {
-			return nil
-		}
-		
-		let reuseID = "myAnnotationView"
-		var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseID)
-		if (annotationView == nil) {
-			annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseID)
-		}
-		else {
-			annotationView.annotation = annotation
-		}
-		
-		annotationView.image = UIImage(named: "custom_pin")
-		annotationView.canShowCallout = true;
-		
-		
-		return annotationView
-	}
 
 //	
 //	func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
