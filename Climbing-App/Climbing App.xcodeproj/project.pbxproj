@@ -42,6 +42,8 @@
 		6F74C41D1B2D5F8A00C0FD85 /* LogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F74C41C1B2D5F8A00C0FD85 /* LogCell.swift */; };
 		6F8B0DD91B2D839E0014BF02 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F8B0DD81B2D839E0014BF02 /* MapKit.framework */; };
 		6F9637591B325AE3002EDB49 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9637581B325AE3002EDB49 /* AddPhotoViewController.swift */; };
+		88456C5F1B3A61C6004FF5C3 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88456C5E1B3A61C6004FF5C3 /* SignupViewController.swift */; };
+		88456C611B3A6272004FF5C3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88456C601B3A6272004FF5C3 /* LoginViewController.swift */; };
 		884A16081B380EC80033B1AA /* TourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884A16071B380EC80033B1AA /* TourViewController.swift */; };
 		8898B2931B33EA54007F07A7 /* VarelaRound-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8898B2921B33EA54007F07A7 /* VarelaRound-Regular.otf */; };
 		A119B2A41B301F55001A0370 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = A119B2A31B301F55001A0370 /* Common.swift */; };
@@ -106,6 +108,8 @@
 		6F74C41C1B2D5F8A00C0FD85 /* LogCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogCell.swift; sourceTree = "<group>"; };
 		6F8B0DD81B2D839E0014BF02 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		6F9637581B325AE3002EDB49 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
+		88456C5E1B3A61C6004FF5C3 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		88456C601B3A6272004FF5C3 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		884A16071B380EC80033B1AA /* TourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourViewController.swift; sourceTree = "<group>"; };
 		8898B2921B33EA54007F07A7 /* VarelaRound-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VarelaRound-Regular.otf"; sourceTree = "<group>"; };
 		A119B2A31B301F55001A0370 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -191,6 +195,8 @@
 				A146495C1B3262AD00DFF014 /* Climbing_App-Bridging-Header.h */,
 				6F74C3F21B29FA5D00C0FD85 /* ViewController.swift */,
 				6F74C3F41B29FA5D00C0FD85 /* Main.storyboard */,
+				88456C601B3A6272004FF5C3 /* LoginViewController.swift */,
+				88456C5E1B3A61C6004FF5C3 /* SignupViewController.swift */,
 				884A16071B380EC80033B1AA /* TourViewController.swift */,
 				6F9637581B325AE3002EDB49 /* AddPhotoViewController.swift */,
 				6F4D65241B315059009F9600 /* RouteDetailViewController.swift */,
@@ -423,6 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88456C611B3A6272004FF5C3 /* LoginViewController.swift in Sources */,
 				6F4D65271B315D3E009F9600 /* SelectRouteViewController.swift in Sources */,
 				6F1F9DCE1B2EBDE900E284BE /* BrowseRegionViewController.swift in Sources */,
 				6F4D65291B316342009F9600 /* SelectRouteCell.swift in Sources */,
@@ -445,6 +452,7 @@
 				A1464A311B340AA200DFF014 /* ExamplePhoto.swift in Sources */,
 				6F1F9DCC1B2EB65E00E284BE /* AddDetailViewController.swift in Sources */,
 				6F1F9DC21B2E4C3200E284BE /* BrowseCragCell.swift in Sources */,
+				88456C5F1B3A61C6004FF5C3 /* SignupViewController.swift in Sources */,
 				6F4D65251B315059009F9600 /* RouteDetailViewController.swift in Sources */,
 				884A16081B380EC80033B1AA /* TourViewController.swift in Sources */,
 				6F74C41B1B2AC17500C0FD85 /* ConnectViewController.swift in Sources */,
