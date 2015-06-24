@@ -65,7 +65,7 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
     func addNewPhoto() {
 //        scrollView.contentSize = CGSizeMake(320, 1648)
         UIView.animateWithDuration(0.7, animations: { () -> Void in
-            self.climbingPhotosView.frame.origin.y += self.imageButton.frame.height
+            self.climbingPhotosView.frame.origin.y += self.imageButton.frame.height + 10
         })
     }
 
@@ -192,7 +192,7 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 
     func passImage(controller: AddPhotoViewController, image: UIImage) {
         newPhoto = image
-        imageButton.setImage(newPhoto, forState: UIControlState.Normal)
+        imageButton.setBackgroundImage(newPhoto, forState: UIControlState.Normal)
         addNewPhoto()
     }
     

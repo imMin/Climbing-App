@@ -63,6 +63,12 @@ class AddPhotoViewController: UIViewController, TGCameraDelegate, UINavigationCo
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         photoView.image = TGAlbum.imageWithMediaInfo(info)
+        
+        if (delegate != nil) {
+            println("passing image to delegate")
+            delegate?.passImage(self, image: TGAlbum.imageWithMediaInfo(info))
+        }
+
         self.dismissViewControllerAnimated(true, completion: nil)
 
     }
@@ -96,7 +102,12 @@ class AddPhotoViewController: UIViewController, TGCameraDelegate, UINavigationCo
     }
     
     func cameraDidSelectAlbumPhoto(image: UIImage!) {
+        println("did select album photo")
         photoView.image = image
+        if (delegate != nil) {
+            println("passing image to delegate")
+            delegate?.passImage(self, image: image)
+        }
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
