@@ -113,7 +113,8 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
 		
 		cell.levelLabel.text = levels[indexPath.row]
 		cell.locationLabel.text = locations[indexPath.row]
-		
+		cell.accessoryType = UITableViewCellAccessoryType.None
+        
 		return cell
 	}
 	
