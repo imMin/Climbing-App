@@ -2511,8 +2511,12 @@
                                         <rect key="frame" x="0.0" y="44" width="320" height="156"/>
                                         <animations/>
                                     </mapView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uuz-T1-a4v">
+                                        <rect key="frame" x="0.0" y="190" width="320" height="11"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ehP-9Q-arx" userLabel="selectTableView">
-                                        <rect key="frame" x="0.0" y="200" width="320" height="600"/>
+                                        <rect key="frame" x="0.0" y="201" width="320" height="600"/>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
