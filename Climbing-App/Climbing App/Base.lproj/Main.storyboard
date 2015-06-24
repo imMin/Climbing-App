@@ -116,10 +116,6 @@
             <string>VarelaRound</string>
             <string>VarelaRound</string>
             <string>VarelaRound</string>
-            <string>VarelaRound</string>
-            <string>VarelaRound</string>
-            <string>VarelaRound</string>
-            <string>VarelaRound</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -1324,39 +1320,11 @@
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tiL-Cr-x3P">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="231"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vicious Circles" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXM-S9-18V">
-                                                <rect key="frame" x="141" y="71" width="137" height="20"/>
-                                                <animations/>
-                                                <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="17"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5.9" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EmP-h4-AgY">
-                                                <rect key="frame" x="198" y="42" width="80" height="21"/>
-                                                <animations/>
-                                                <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="20"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dit-rl-95h">
-                                                <rect key="frame" x="198" y="144" width="80" height="31"/>
-                                                <animations/>
-                                                <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="15"/>
-                                                <state key="normal" title="Log it">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sport, Top rope" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1a-cN-XnW">
-                                                <rect key="frame" x="128" y="105" width="150" height="22"/>
-                                                <animations/>
-                                                <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
-                                                <color key="textColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="vicious-circles-background" translatesAutoresizingMaskIntoConstraints="NO" id="4k8-g8-3pG">
-                                                <rect key="frame" x="0.0" y="0.0" width="321" height="231"/>
-                                                <animations/>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="vicious-circles-background-1" translatesAutoresizingMaskIntoConstraints="NO" id="S2e-9S-k4h">
+                                                <rect key="frame" x="201" y="0.0" width="119" height="218"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="vicious-circles-stuff" translatesAutoresizingMaskIntoConstraints="NO" id="l5p-eu-SrI">
+                                                <rect key="frame" x="25" y="58" width="149" height="102"/>
                                             </imageView>
                                         </subviews>
                                         <animations/>
@@ -1456,11 +1424,8 @@
                         <outlet property="commentBar" destination="yYj-p5-B3A" id="2uC-5Q-OAa"/>
                         <outlet property="commentField" destination="B4v-Zd-DFF" id="tXt-BO-um1"/>
                         <outlet property="imageButton" destination="y1g-fP-edr" id="ihk-QD-NK0"/>
-                        <outlet property="levelLabel" destination="EmP-h4-AgY" id="xIj-nn-oig"/>
                         <outlet property="routeLabel" destination="rGD-PT-Wkb" id="unS-5F-Pfg"/>
-                        <outlet property="routeNameLabel" destination="IXM-S9-18V" id="2hH-IJ-gX4"/>
                         <outlet property="scrollView" destination="e2T-Vg-f8l" id="sY2-2p-dkD"/>
-                        <outlet property="typeLabel" destination="Z1a-cN-XnW" id="dqp-6C-Huz"/>
                         <outlet property="videoView" destination="4KO-8u-XEh" id="moJ-rP-LiO"/>
                         <segue destination="IBf-kN-IVv" kind="modal" identifier="addPhotoSegue" modalTransitionStyle="crossDissolve" id="LhI-0p-KLR"/>
                     </connections>
@@ -2671,7 +2636,8 @@
         <image name="small_red_btn_bg" width="53" height="28"/>
         <image name="tour-illustration-1" width="270" height="329"/>
         <image name="tour-illustration-4" width="256" height="245"/>
-        <image name="vicious-circles-background" width="321" height="231"/>
+        <image name="vicious-circles-background-1" width="119" height="218"/>
+        <image name="vicious-circles-stuff" width="149" height="102"/>
         <image name="white-back-arrow" width="10" height="15"/>
         <image name="white-map-pin" width="10" height="14"/>
         <image name="white-topo-background" width="320" height="568"/>
