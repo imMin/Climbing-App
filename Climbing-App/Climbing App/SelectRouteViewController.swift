@@ -28,14 +28,17 @@ class SelectRouteViewController: UIViewController, UITableViewDataSource, UITabl
 	var location: CLLocation!
 	var cragName: String!
 	
-	var cragNames = ["routeName1", "routeName2", "routeName3", "routeName4", "routeName5"]
-//	var routeLevels = ["5.9", "5.10a", "5.11a", "5.12b", "5.10c", "5.9", "5.10a", "5.11a", "5.12b", "5.10c"]
-//	
-	var cragDistances = ["0.3mi", "0.5mi", "0.7mi", "1.5mi", "2.0mi"]
+	var cragNames = ["Lyme Disease Rock", "Indian Rock", "Waterfall Cliffs", "Billy Goat Rock", "cragName5", "cragName6", "cragName7", "cragName8", "cragName9", "cragName10"]
 	
-	var climbNumbers = ["3 routes", "5 routes", "4 routes", "5 routes", "4 routes"]
+	var cragDistances = ["0.3mi", "0.5mi", "0.7mi", "1.5mi", "1.8mi", "2.1mi", "14mi", "15mi", "18mi", "22mi", "0.3mi", "0.5mi", "0.7mi", "1.5mi", "1.8mi", "2.1mi", "14mi", "15mi", "18mi", "22mi", "0.3mi", "0.5mi", "0.7mi"]
 	
-	var regions = ["Region one", "Region two", "Region three"]
+	var climbNumbers = ["3 routes", "5 routes", "4 routes", "5 routes", "7 routes", "2 routes", "3 routes", "4 routes", "3 routes", "2 routes", "3 routes", "5 routes", "4 routes", "5 routes", "7 routes", "2 routes", "3 routes", "4 routes", "3 routes", "2 routes", "3 routes", "5 routes", "4 routes"]
+	
+	var regions = ["Castle Rock"]
+	
+	var crags: [PFObject] = [PFObject]()
+	var currentLocation: CLLocation!
+	var locManager: CLLocationManager!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -61,6 +64,49 @@ class SelectRouteViewController: UIViewController, UITableViewDataSource, UITabl
 		region = selectMapView.regionThatFits(region)
 		selectMapView.setRegion(region, animated: false)
 		
+		fetchCrags()
+		//        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "fetchCrags", userInfo: nil, repeats: true)
+		
+		//create an instance of CLLocationManager and Request Authorization
+		locManager = CLLocationManager()
+		locManager.requestWhenInUseAuthorization()
+		
+		//check if user allows authorization
+		if( CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedWhenInUse ||
+			CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedAlways){
+				currentLocation = locManager.location
+		}
+		
+		addCurrentLocationPin()
+		
+	}
+	
+	
+	func fetchCrags() {
+		println("fetched crags")
+		
+		var query = PFQuery(className: "Crag")
+		query.orderByAscending("createdAt")
+		query.findObjectsInBackgroundWithBlock { (objects:[AnyObject]?, error:NSError?) -> Void in
+			self.crags = objects as! [PFObject]
+			self.selectTableView.reloadData()
+			
+			if error == nil {
+				// The find succeeded.
+				println("Successfully retrieved \(objects!.count) crags.")
+				// Do something with the found objects
+				if let objects = objects as? [PFObject] {
+					for object in objects {
+						println(object.objectId)
+					}
+				}
+			} else {
+				// Log details of the failure
+				println("Error: \(error!) \(error!.userInfo!)")
+			}
+			
+		}
+		
 	}
 	
 //	override func viewWillAppear(animated: Bool) {
@@ -74,7 +120,7 @@ class SelectRouteViewController: UIViewController, UITableViewDataSource, UITabl
 	
 	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return cragNames.count
+		return self.crags.count
 	}
 	
 	func tableView(tableView: UITableView, sectionForSectionIndexTitle title: String, atIndex index: Int) -> Int {
@@ -88,29 +134,110 @@ class SelectRouteViewController: UIViewController, UITableViewDataSource, UITabl
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		var cell = selectTableView.dequeueReusableCellWithIdentifier("SelectRouteCell") as! SelectRouteCell
 		
-		cell.cragNameLabel.text = cragNames[indexPath.row]
-		cell.climbNumberLabel.text = climbNumbers[indexPath.row]
-		cell.cragDistanceLabel.text = cragDistances[indexPath.row]
+		var crag = self.crags[indexPath.row]
+
+		cell.cragNameLabel.text = crag["name"] as? String
+		
+		var routeCount: Int = crag["countRoute"] as! Int
+		cell.climbNumberLabel.text = String(routeCount) + " routes"
+		
+		var cragGeoPoint: PFGeoPoint = PFGeoPoint()
+		cragGeoPoint = crag["location"] as! PFGeoPoint
+		
+		var distance: Double!
+
+		
+		PFGeoPoint.geoPointForCurrentLocationInBackground({ (geoPoint:PFGeoPoint?, error:NSError?) -> Void in
+			if error == nil {
+				//do something with new geopoint
+				println("current geoPoint = \(geoPoint)")
+				println("crag geoPoint = \(cragGeoPoint)")
+				
+				distance = geoPoint?.distanceInMilesTo(cragGeoPoint)
+				println("distance between geoPoints = \(distance)")
+				cell.cragDistanceLabel.text = "\(round(distance)) miles"
+			}
+		})
 		
 		return cell
 	}
 	
-	func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-		var headerView = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 80))
-		headerView.backgroundColor = UIColor(white: 0.2, alpha: 0.5)
+//	func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//		var headerView = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 80))
+//		headerView.backgroundColor = UIColor(white: 0.2, alpha: 0.5)
+//		
+//		var regionNameLabel = UILabel(frame:CGRect(x: 10, y: 0, width: 300, height: 40))
+//		regionNameLabel.text = regions[section]
+//		regionNameLabel.font = UIFont(name: "VarelaRound", size: 16)
+//
+//		
+//		headerView.addSubview(regionNameLabel)
+//		return headerView
+//	}
+//	
+//	func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//		return 40
+//	}
+	
+	func addCragPins() {
 		
-		var regionNameLabel = UILabel(frame:CGRect(x: 10, y: 0, width: 300, height: 40))
-		regionNameLabel.text = regions[section]
-		regionNameLabel.font = UIFont(name: "VarelaRound", size: 16)
-
-		
-		headerView.addSubview(regionNameLabel)
-		return headerView
+		//TODO: not working yet
+		for index in 0...self.crags.count-1 {
+			var crag = self.crags[index]
+			var cragGeoPoint: PFGeoPoint = PFGeoPoint()
+			cragGeoPoint = crag["location"] as! PFGeoPoint
+			var cragLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: cragGeoPoint.latitude, longitude: cragGeoPoint.longitude)
+			
+			var annotation = MKPointAnnotation()
+			annotation.coordinate = cragLocation
+			println("\(cragGeoPoint)")
+			
+			self.selectMapView.addAnnotation(annotation)
+			
+		}
 	}
 	
-	func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-		return 40
+	func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]) {
+		//		location = "\(locations[0])"
+		myLocations.append(locations[0] as! CLLocation)
+		
+		let spanX = 0.01
+		let spanY = 0.01
+		var newRegion = MKCoordinateRegion(center: selectMapView.userLocation.coordinate, span: MKCoordinateSpanMake(spanX, spanY))
+		selectMapView.setRegion(newRegion, animated: true)
+		
 	}
+	
+	func addCurrentLocationPin() {
+		let annotation = MKPointAnnotation()
+		var locationCoordinate = CLLocationCoordinate2DMake(39.3761, -104.8535)
+		annotation.coordinate = locationCoordinate
+		selectMapView.addAnnotation(annotation)
+	}
+	
+	func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
+		//		UIAlertView(title: "tapped Annotation!", message: view.annotation.title, delegate: nil, cancelButtonTitle: "OK").show()
+	}
+	
+	
+	func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+		
+		let reuseID = "myAnnotationView"
+		var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseID)
+		if (annotationView == nil) {
+			annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseID)
+		}
+		else {
+			annotationView.annotation = annotation
+		}
+		
+		annotationView.image = UIImage(named: "custom_pin")
+		annotationView.canShowCallout = true;
+		
+		
+		return annotationView
+	}
+
 	
 	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 		print(self.contentView.frame.origin.y)
@@ -119,7 +246,8 @@ class SelectRouteViewController: UIViewController, UITableViewDataSource, UITabl
 			self.contentView.frame.origin.y = 490
 			}) { (Bool) -> Void in
 				self.contentView.frame.origin.y = 0
-				self.cragName = self.cragNames[indexPath.row]
+				
+				self.cragName = self.crags[indexPath.row]["name"] as? String
 				if(self.delegate != nil){
 					self.delegate?.selectRoute(self, text: self.cragName)
 				}

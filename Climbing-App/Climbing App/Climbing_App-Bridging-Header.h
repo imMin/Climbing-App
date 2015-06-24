@@ -13,6 +13,7 @@
 #import "TGCameraViewController.h"
 #import "TGCamera.h"
 #import "TGCameraColor.h"
+#import "YTPlayerView.h"
 
 #import <NYTPhotoViewer/NYTPhoto.h>
 #import <NYTPhotoViewer/NYTPhotosViewController.h>
