@@ -1410,7 +1410,7 @@
                                 </subviews>
                                 <animations/>
                             </scrollView>
-                            <view alpha="0.90000000000000002" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYj-p5-B3A">
+                            <view alpha="0.90000000000000002" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYj-p5-B3A">
                                 <rect key="frame" x="0.0" y="514" width="320" height="54"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add comment" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B4v-Zd-DFF">

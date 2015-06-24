@@ -179,16 +179,28 @@ class SelectRouteViewController: UIViewController, UITableViewDataSource, UITabl
 //		return 40
 //	}
 	
+	
 	func addCragPins() {
+		//        var annotations: [MKPointAnnotation!]
+		//        var coordinates: [CLLocationCoordinate2D!]
+		//
+		//        coordinates = [CLLocationCoordinate2DMake(37.2306, -122.0957),CLLocationCoordinate2DMake(37.865101, -119.538329),CLLocationCoordinate2DMake(36.778261, -119.417932),CLLocationCoordinate2DMake(37.881591, -121.914153),CLLocationCoordinate2DMake(38.669351, -122.633319)]
+		//
+		//        for index in 0..<coordinates.count{
+		//            let annotation = MKPointAnnotation()
+		//            annotation.coordinate = coordinates[index]
+		//            //			annotations.append(annotation)
+		//            cragMapView.addAnnotation(annotation)
 		
-		//TODO: not working yet
-		for index in 0...self.crags.count-1 {
+		//TODO: not working always yet
+		for index in 0..<self.crags.count {
 			var crag = self.crags[index]
 			var cragGeoPoint: PFGeoPoint = PFGeoPoint()
 			cragGeoPoint = crag["location"] as! PFGeoPoint
 			var cragLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: cragGeoPoint.latitude, longitude: cragGeoPoint.longitude)
 			
 			var annotation = MKPointAnnotation()
+			annotation.title = crag["name"] as! String
 			annotation.coordinate = cragLocation
 			println("\(cragGeoPoint)")
 			
@@ -197,12 +209,14 @@ class SelectRouteViewController: UIViewController, UITableViewDataSource, UITabl
 		}
 	}
 	
+
+	
 	func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]) {
 		//		location = "\(locations[0])"
 		myLocations.append(locations[0] as! CLLocation)
 		
-		let spanX = 0.01
-		let spanY = 0.01
+		let spanX = 1.1
+		let spanY = 1.1
 		var newRegion = MKCoordinateRegion(center: selectMapView.userLocation.coordinate, span: MKCoordinateSpanMake(spanX, spanY))
 		selectMapView.setRegion(newRegion, animated: true)
 		
