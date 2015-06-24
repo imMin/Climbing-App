@@ -8,9 +8,10 @@
 
 import UIKit
 
-class TourViewController: UIViewController {
+class TourViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var pageControl: UIPageControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,5 +36,16 @@ class TourViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: - UIScrollViewDelegate methods
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        
+        let pageWidth = scrollView.frame.size.width;
+        let fractionalPage = scrollView.contentOffset.x / pageWidth;
+        let currentPage = Int(round(fractionalPage));
+ 
+        pageControl.currentPage = currentPage
+        
+    }
 
 }

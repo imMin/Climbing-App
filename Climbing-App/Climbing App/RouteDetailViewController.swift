@@ -31,7 +31,7 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
     @IBOutlet weak var scrollView: UIScrollView!
     var hasNewPhoto: Bool = false
     var newPhoto: UIImage!
-	    
+    var newPhotoCaption: String!
     @IBOutlet weak var imageButton: UIButton!
     let photos = PhotosProvider().photos
     
@@ -85,6 +85,9 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 //            self.climbingPhotosView.frame.origin.y += photoHeight
 			self.scrollView.contentOffset = self.imageButton.frame.origin
         })
+        
+        //TODO: add new photo to carousel
+
 		
     }
 
@@ -160,42 +163,42 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
         return false
     }
     
-    func photosViewController(photosViewController: NYTPhotosViewController!, referenceViewForPhoto photo: NYTPhoto!) -> UIView! {
-        if photo as? ExamplePhoto == photos[NoReferenceViewPhotoIndex] {
-            /** Swift 1.2
-            *  if photo as! ExamplePhoto == photos[PhotosProvider.NoReferenceViewPhotoIndex]
-            */
-            return nil
-        }
-        return imageButton
-    }
+//    func photosViewController(photosViewController: NYTPhotosViewController!, referenceViewForPhoto photo: NYTPhoto!) -> UIView! {
+//        if photo as? ExamplePhoto == photos[NoReferenceViewPhotoIndex] {
+//            /** Swift 1.2
+//            *  if photo as! ExamplePhoto == photos[PhotosProvider.NoReferenceViewPhotoIndex]
+//            */
+//            return nil
+//        }
+//        return imageButton
+//    }
+//    
+//    func photosViewController(photosViewController: NYTPhotosViewController!, loadingViewForPhoto photo: NYTPhoto!) -> UIView! {
+//        if photo as! ExamplePhoto == photos[CustomEverythingPhotoIndex] {
+//            /** Swift 1.2
+//            *  if photo as! ExamplePhoto == photos[PhotosProvider.CustomEverythingPhotoIndex]
+//            */
+//            var label = UILabel()
+//            label.text = "Custom Loading..."
+//            label.textColor = UIColor.greenColor()
+//            return label
+//        }
+//        return nil
+//    }
     
-    func photosViewController(photosViewController: NYTPhotosViewController!, loadingViewForPhoto photo: NYTPhoto!) -> UIView! {
-        if photo as! ExamplePhoto == photos[CustomEverythingPhotoIndex] {
-            /** Swift 1.2
-            *  if photo as! ExamplePhoto == photos[PhotosProvider.CustomEverythingPhotoIndex]
-            */
-            var label = UILabel()
-            label.text = "Custom Loading..."
-            label.textColor = UIColor.greenColor()
-            return label
-        }
-        return nil
-    }
-    
-    func photosViewController(photosViewController: NYTPhotosViewController!, captionViewForPhoto photo: NYTPhoto!) -> UIView! {
-        if photo as! ExamplePhoto == photos[CustomEverythingPhotoIndex] {
-            /** Swift 1.2
-            *  if photo as! ExamplePhoto == photos[PhotosProvider.CustomEverythingPhotoIndex]
-            */
-            var label = UILabel()
-            label.text = "Custom Caption View"
-            label.textColor = UIColor.whiteColor()
-            label.backgroundColor = UIColor.redColor()
-            return label
-        }
-        return nil
-    }
+//    func photosViewController(photosViewController: NYTPhotosViewController!, captionViewForPhoto photo: NYTPhoto!) -> UIView! {
+//        if photo as! ExamplePhoto == photos[CustomEverythingPhotoIndex] {
+//            /** Swift 1.2
+//            *  if photo as! ExamplePhoto == photos[PhotosProvider.CustomEverythingPhotoIndex]
+//            */
+//            var label = UILabel()
+//            label.text = "Custom Caption View"
+//            label.textColor = UIColor.whiteColor()
+//            label.backgroundColor = UIColor.redColor()
+//            return label
+//        }
+//        return nil
+//    }
     
     func photosViewController(photosViewController: NYTPhotosViewController!, didNavigateToPhoto photo: NYTPhoto!, atIndex photoIndex: UInt) {
         println("Did Navigate To Photo: \(photo) identifier: \(photoIndex)")
@@ -209,8 +212,9 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
         println("Did dismiss Photo Viewer: \(photosViewController)")
     }
 
-    func passImage(controller: AddPhotoViewController, image: UIImage) {
+    func passImage(controller: AddPhotoViewController, image: UIImage, string: String) {
         newPhoto = image
+        newPhotoCaption = string
         imageButton.setBackgroundImage(newPhoto, forState: UIControlState.Normal)
         addNewPhoto()
     }
