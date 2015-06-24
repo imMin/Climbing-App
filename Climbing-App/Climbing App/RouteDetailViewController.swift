@@ -243,4 +243,11 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 	@IBAction func onTap(sender: AnyObject) {
 		commentField.endEditing(true)
 	}
+	
+	@IBAction func didPressSaveButton(sender: AnyObject) {
+		
+		NSNotificationCenter.defaultCenter().postNotificationName(didSaveNewRegion, object: self)
+		
+	}
+
 }

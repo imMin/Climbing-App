@@ -123,5 +123,10 @@ class CragDetailViewController: UIViewController, UITableViewDataSource, UITable
 			viewController.level = routes[indexPath.row]["grade"] as! String
 		}
 	}
+	@IBAction func didPressSaveButton(sender: AnyObject) {
+		
+		NSNotificationCenter.defaultCenter().postNotificationName(didSaveNewRegion, object: self)
+
+	}
 
 }
