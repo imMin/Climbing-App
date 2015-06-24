@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q8d-4P-2ah">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q8d-4P-2ah">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -271,7 +271,7 @@
                                 <animations/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IYw-bq-h6D">
-                                <rect key="frame" x="31" y="134" width="258" height="2"/>
+                                <rect key="frame" x="31" y="134" width="258" height="1"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.88796164769999997" green="0.88796164769999997" blue="0.88796164769999997" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -308,19 +308,19 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OIb-o6-iQl">
                                 <rect key="frame" x="31" y="101" width="258" height="30"/>
                                 <animations/>
-                                <color key="textColor" red="0.29803922772407532" green="0.29803922772407532" blue="0.29803922772407532" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.29803921568627451" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fOT-oZ-3ae">
-                                <rect key="frame" x="31" y="188" width="258" height="2"/>
+                                <rect key="frame" x="31" y="188" width="258" height="1"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.88796164769999997" green="0.88796164769999997" blue="0.88796164769999997" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i0l-dm-qaF">
                                 <rect key="frame" x="31" y="156" width="258" height="30"/>
                                 <animations/>
-                                <color key="textColor" red="0.29803922772407532" green="0.29803922772407532" blue="0.29803922772407532" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.29803921568627451" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
@@ -402,36 +402,36 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ogn-aH-y9D">
                                 <rect key="frame" x="30" y="101" width="258" height="30"/>
                                 <animations/>
-                                <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zCo-Nc-bxh">
                                 <rect key="frame" x="30" y="156" width="258" height="30"/>
                                 <animations/>
-                                <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.29803921568627451" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password Again" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a2K-cR-VMX">
                                 <rect key="frame" x="30" y="212" width="258" height="30"/>
                                 <animations/>
-                                <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="neJ-83-e3N">
-                                <rect key="frame" x="30" y="134" width="258" height="2"/>
+                                <rect key="frame" x="30" y="134" width="258" height="1"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.88796164772727271" green="0.88796164772727271" blue="0.88796164772727271" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cSu-9d-ru6">
-                                <rect key="frame" x="30" y="244" width="258" height="2"/>
+                                <rect key="frame" x="30" y="244" width="258" height="1"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.88796164772727271" green="0.88796164772727271" blue="0.88796164772727271" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kYj-1d-q0X">
-                                <rect key="frame" x="30" y="188" width="258" height="2"/>
+                                <rect key="frame" x="30" y="188" width="258" height="1"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.88796164772727271" green="0.88796164772727271" blue="0.88796164772727271" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -1410,7 +1410,7 @@
                                 </subviews>
                                 <animations/>
                             </scrollView>
-                            <view alpha="0.90000000000000002" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYj-p5-B3A">
+                            <view alpha="0.90000000000000002" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYj-p5-B3A">
                                 <rect key="frame" x="0.0" y="514" width="320" height="54"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add comment" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B4v-Zd-DFF">
@@ -1894,7 +1894,7 @@
                                 <animations/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Log" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4R-SO-PbY">
-                                <rect key="frame" x="130" y="18" width="63" height="17"/>
+                                <rect key="frame" x="130" y="27" width="63" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -2023,7 +2023,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8S-LK-AeJ">
-                                <rect key="frame" x="100" y="495" width="143" height="60"/>
+                                <rect key="frame" x="98" y="495" width="143" height="60"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
                                 <state key="normal" title="Add a location">
@@ -2034,7 +2034,7 @@
                                 </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="white-map-pin" translatesAutoresizingMaskIntoConstraints="NO" id="P8g-ms-XCG">
-                                <rect key="frame" x="84" y="510" width="20" height="28"/>
+                                <rect key="frame" x="98" y="510" width="20" height="28"/>
                                 <animations/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mIp-g1-NV1" userLabel="locationContentView">
@@ -2043,7 +2043,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9V-4c-66l">
-                                <rect key="frame" x="0.0" y="0.0" width="87" height="53"/>
+                                <rect key="frame" x="0.0" y="11" width="87" height="53"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
                                 <state key="normal" title="Cancel">
@@ -2055,7 +2055,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJv-vf-rKt">
-                                <rect key="frame" x="248" y="0.0" width="72" height="53"/>
+                                <rect key="frame" x="248" y="11" width="72" height="53"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
                                 <state key="normal" title="Save">
@@ -2684,6 +2684,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="68z-PZ-Ywo"/>
-        <segue reference="JdO-A1-KsS"/>
+        <segue reference="lPW-ya-pHM"/>
     </inferredMetricsTieBreakers>
 </document>
