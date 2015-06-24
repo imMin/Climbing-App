@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E730CC9F23A24B2AB9CB1F0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A698EF0F3B9F716CA986E7D /* libPods.a */; };
 		6F1F9DC21B2E4C3200E284BE /* BrowseCragCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1F9DC11B2E4C3200E284BE /* BrowseCragCell.swift */; };
 		6F1F9DC41B2E76E700E284BE /* LogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1F9DC31B2E76E700E284BE /* LogDetailViewController.swift */; };
 		6F1F9DC61B2E8DE100E284BE /* CragDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1F9DC51B2E8DE100E284BE /* CragDetailViewController.swift */; };
@@ -53,6 +52,7 @@
 		A14649C41B32A43B00DFF014 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A14649C31B32A43B00DFF014 /* ImageIO.framework */; };
 		A1464A2F1B340A7300DFF014 /* PhotosProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1464A2E1B340A7300DFF014 /* PhotosProvider.swift */; };
 		A1464A311B340AA200DFF014 /* ExamplePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1464A301B340AA200DFF014 /* ExamplePhoto.swift */; };
+		EA4EFC4E55834245059540B7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47AAC82F33D8685F05942328 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4A698EF0F3B9F716CA986E7D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		47AAC82F33D8685F05942328 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F1F9DC11B2E4C3200E284BE /* BrowseCragCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseCragCell.swift; sourceTree = "<group>"; };
 		6F1F9DC31B2E76E700E284BE /* LogDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailViewController.swift; sourceTree = "<group>"; };
 		6F1F9DC51B2E8DE100E284BE /* CragDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CragDetailViewController.swift; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 				A14649BE1B32759000DFF014 /* CoreLocation.framework in Frameworks */,
 				A146495E1B32633A00DFF014 /* AVFoundation.framework in Frameworks */,
 				6F8B0DD91B2D839E0014BF02 /* MapKit.framework in Frameworks */,
-				1E730CC9F23A24B2AB9CB1F0 /* libPods.a in Frameworks */,
+				EA4EFC4E55834245059540B7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +272,7 @@
 				A146495D1B32633A00DFF014 /* AVFoundation.framework */,
 				6F8B0DD81B2D839E0014BF02 /* MapKit.framework */,
 				A14649BD1B32759000DFF014 /* CoreLocation.framework */,
-				4A698EF0F3B9F716CA986E7D /* libPods.a */,
+				47AAC82F33D8685F05942328 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

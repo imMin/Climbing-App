@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelegate, AddPhotoViewControllerDelegate {
 	
 	var routeName: String!
@@ -23,6 +24,7 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 	@IBOutlet weak var typeLabel: UILabel!
 	@IBOutlet weak var distanceLabel: UILabel!
 	@IBOutlet weak var climbLabel: UILabel!
+	@IBOutlet weak var videoView: YTPlayerView!
 	
     @IBOutlet weak var scrollView: UIScrollView!
     var hasNewPhoto: Bool = false
@@ -51,6 +53,8 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 //        if hasNewPhoto == true {
 //            addNewPhoto()
 //        }
+		
+		videoView.loadWithVideoId("KZ8UsvygtNE", playerVars: ["playsinline" : 1, "modestbranding" : 0, "showinfo" : 0, "controls" : 0])
     }
 
     override func didReceiveMemoryWarning() {
