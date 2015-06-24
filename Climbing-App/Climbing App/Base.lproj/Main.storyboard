@@ -1718,7 +1718,7 @@
                                         <animations/>
                                     </imageView>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FU8-pH-ogM">
-                                        <rect key="frame" x="245" y="30" width="32" height="17"/>
+                                        <rect key="frame" x="235" y="25" width="52" height="28"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1734,7 +1734,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMI-xx-9Z9">
-                                        <rect key="frame" x="132" y="30" width="68" height="17"/>
+                                        <rect key="frame" x="124" y="25" width="84" height="28"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1750,7 +1750,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNs-cR-vKP">
-                                        <rect key="frame" x="44" y="30" width="35" height="17"/>
+                                        <rect key="frame" x="35" y="25" width="52" height="28"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1769,7 +1769,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGU-5E-2mb">
-                                <rect key="frame" x="34" y="445" width="63" height="17"/>
+                                <rect key="frame" x="24" y="439" width="84" height="28"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1785,7 +1785,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fb6-ah-9Je">
-                                <rect key="frame" x="143" y="445" width="38" height="17"/>
+                                <rect key="frame" x="136" y="439" width="52" height="28"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1801,7 +1801,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tc7-ZB-Umo">
-                                <rect key="frame" x="229" y="445" width="66" height="17"/>
+                                <rect key="frame" x="220" y="439" width="84" height="28"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1828,7 +1828,7 @@
                                 </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="white-map-pin" translatesAutoresizingMaskIntoConstraints="NO" id="P8g-ms-XCG">
-                                <rect key="frame" x="104" y="510" width="20" height="28"/>
+                                <rect key="frame" x="84" y="510" width="20" height="28"/>
                                 <animations/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="adddetailline" translatesAutoresizingMaskIntoConstraints="NO" id="UU6-CO-ycT">
