@@ -192,7 +192,7 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 	}
     
     @IBAction func didPressSaveButton(sender: AnyObject) {
-        
+        Region.savedRegions.append(region)
     }
 	
 	func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]) {

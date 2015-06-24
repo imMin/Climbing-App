@@ -113,6 +113,9 @@
             <string>VarelaRound</string>
             <string>VarelaRound</string>
             <string>VarelaRound</string>
+            <string>VarelaRound</string>
+            <string>VarelaRound</string>
+            <string>VarelaRound</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -2122,11 +2125,72 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dTl-7o-oBN">
+                                <rect key="frame" x="0.0" y="64" width="320" height="283"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="3BN-L5-uwM">
+                                    <size key="itemSize" width="130" height="185"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RegionCell" id="HlE-bT-hgt" customClass="RegionCell" customModule="Climbing_App" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="20" width="130" height="185"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="130" height="185"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JGd-n4-kcL" userLabel="RegionCellContent">
+                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="182"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdy-gq-jDH">
+                                                            <rect key="frame" x="167" y="18" width="131" height="21"/>
+                                                            <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
+                                                            <color key="textColor" red="0.59215686270000001" green="0.59215686270000001" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="castlerock-region-image" translatesAutoresizingMaskIntoConstraints="NO" id="hBO-dh-g9T">
+                                                            <rect key="frame" x="-1" y="0.0" width="132" height="130"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Region" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3O-bH-GvE">
+                                                            <rect key="frame" x="10" y="136" width="110" height="21"/>
+                                                            <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No of climbs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSd-HM-5LJ">
+                                                            <rect key="frame" x="10" y="155" width="110" height="23"/>
+                                                            <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
+                                                            <color key="textColor" red="0.59215686270000001" green="0.59215686270000001" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="climbNumberLabel" destination="eSd-HM-5LJ" id="Qa7-aL-lY1"/>
+                                            <outlet property="distanceLabel" destination="Zdy-gq-jDH" id="AmR-Oz-xWj"/>
+                                            <outlet property="regionCellContent" destination="JGd-n4-kcL" id="hkp-bi-MWD"/>
+                                            <outlet property="regionNameLabel" destination="Q3O-bH-GvE" id="oqT-vl-Mie"/>
+                                            <outlet property="regionView" destination="hBO-dh-g9T" id="koZ-UL-EuZ"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="tNx-ri-37k"/>
+                    <connections>
+                        <outlet property="regionCollectionView" destination="dTl-7o-oBN" id="MAb-pX-JWY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vze-8U-tfO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

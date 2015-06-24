@@ -16,7 +16,7 @@ class Region {
     var countString: String?
     var imageName: String?
     
-    static func getAllRegions() -> [Region] {
+    static var allRegions: [Region] {
         var allRegions = [Region]()
         
         var castleRock = Region()
@@ -25,9 +25,43 @@ class Region {
         castleRock.countString = "32 routes"
         castleRock.imageName = "castlerock-region-image"
         
+        var mBeach = Region()
+        mBeach.name = "Mickey's Beach"
+        mBeach.distanceString = "135 mi"
+        mBeach.countString = "37 routes"
+        mBeach.imageName = "mickeys-region-image"
+        
+        var yose = Region()
+        yose.name = "Yosemite"
+        yose.distanceString = "15 mi"
+        yose.countString = "200 routes"
+        yose.imageName = "yosemite-region-image"
+        
+        var mDiablo = Region()
+        mDiablo.name = "Mt. Diablo"
+        mDiablo.distanceString = "20 mi"
+        mDiablo.countString = "232 routes"
+        mDiablo.imageName = "mtdiablo-region-image"
+        
+        var mSH = Region()
+        mSH.name = "Mt. St. Helena"
+        mSH.distanceString = "20 mi"
+        mSH.countString = "117 routes"
+        mSH.imageName = "mtsthelena-region-image"
+        
         allRegions.append(castleRock)
+        allRegions.append(mBeach)
+        allRegions.append(yose)
+        allRegions.append(mDiablo)
+        allRegions.append(mSH)
         
         return allRegions
+    }
+    
+    static var savedRegions = [Region]() {
+        didSet {
+            println("saved a fucking crag")
+        }
     }
 }
 
@@ -36,7 +70,7 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 
 //	var regions = ["Castle Rock", "Mickey's Beach", "Yosemite", "Mt. Diablo", "Mt. St. Helena"]
     
-    var regions = Region.getAllRegions()
+    var regions = Region.allRegions
 	
 	var distances = ["5 mi", "135 mi", "15 mi", "20 mi", "20 mi"]
     
@@ -132,12 +166,10 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 	}
 	
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-		if (segue.identifier == "regionDetailSegue"){
 
 		var viewController = segue.destinationViewController as! BrowseCragViewController
         viewController.region = (sender as! RegionCell).region
 		
-	}
 	}
 	
 	func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]) {
