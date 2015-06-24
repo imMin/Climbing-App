@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q8d-4P-2ah">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A204h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q8d-4P-2ah">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="SF-UI-Display-Regular.otf">
@@ -124,8 +125,8 @@
             <objects>
                 <viewController id="q8d-4P-2ah" customClass="TourViewController" customModule="Climbing_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="kkh-no-YMV"/>
-                        <viewControllerLayoutGuide type="bottom" id="JwX-Zv-uGe"/>
+                        <viewControllerLayoutGuide type="top" id="7og-vf-E4W"/>
+                        <viewControllerLayoutGuide type="bottom" id="ynp-bu-shY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ef8-Qn-5XS">
                         <rect key="frame" x="0.0" y="0.0" width="1600" height="568"/>
@@ -254,8 +255,8 @@
             <objects>
                 <viewController id="EwO-ue-x4m" customClass="LoginViewController" customModule="Climbing_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="iPn-dd-01Q"/>
-                        <viewControllerLayoutGuide type="bottom" id="rJy-lj-Wo0"/>
+                        <viewControllerLayoutGuide type="top" id="NVx-cr-v9f"/>
+                        <viewControllerLayoutGuide type="bottom" id="F73-Q7-JCd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Wov-yI-JzA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -343,8 +344,8 @@
             <objects>
                 <viewController id="pqZ-PT-dqK" customClass="SignupViewController" customModule="Climbing_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Q3m-Zy-6In"/>
-                        <viewControllerLayoutGuide type="bottom" id="gmn-uM-jjw"/>
+                        <viewControllerLayoutGuide type="top" id="sad-E6-8K5"/>
+                        <viewControllerLayoutGuide type="bottom" id="tho-V1-mDz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ICQ-CG-LC1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -444,8 +445,8 @@
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="TabBarViewController" customModule="Climbing_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ENI-ty-btD"/>
-                        <viewControllerLayoutGuide type="bottom" id="dtY-qi-NBr"/>
+                        <viewControllerLayoutGuide type="top" id="ngv-TP-Zqv"/>
+                        <viewControllerLayoutGuide type="bottom" id="kIz-BW-DPN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -630,8 +631,8 @@
             <objects>
                 <viewController id="hid-PL-OK2" customClass="MyLogViewController" customModule="Climbing_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3X0-n0-2nE"/>
-                        <viewControllerLayoutGuide type="bottom" id="uUr-Y5-GHw"/>
+                        <viewControllerLayoutGuide type="top" id="j3S-In-Lp0"/>
+                        <viewControllerLayoutGuide type="bottom" id="3qy-bE-cjz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="o7K-tj-tSg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -755,8 +756,8 @@
             <objects>
                 <viewController id="26y-GU-BdN" customClass="LogDetailViewController" customModule="Climbing_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cXi-qC-VQC"/>
-                        <viewControllerLayoutGuide type="bottom" id="wde-2m-Phs"/>
+                        <viewControllerLayoutGuide type="top" id="Jq8-N2-jCY"/>
+                        <viewControllerLayoutGuide type="bottom" id="yP8-Po-Oag"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="T0h-wZ-BD0" userLabel="Navigation Bar">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -812,8 +813,8 @@
             <objects>
                 <viewController id="3up-dT-Ho2" customClass="BrowseCragViewController" customModule="Climbing_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="yp3-c6-ZHe"/>
-                        <viewControllerLayoutGuide type="bottom" id="TfV-dA-eos"/>
+                        <viewControllerLayoutGuide type="top" id="Zrz-uv-eWR"/>
+                        <viewControllerLayoutGuide type="bottom" id="rKD-2v-3Lz"/>
                     </layoutGuides>
                     <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="rxh-i4-hZa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -940,8 +941,8 @@
             <objects>
                 <viewController id="x9H-dP-oFV" customClass="BrowseRegionViewController" customModule="Climbing_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="egw-Tp-uNP"/>
-                        <viewControllerLayoutGuide type="bottom" id="SFp-wZ-C8P"/>
+                        <viewControllerLayoutGuide type="top" id="J2I-Io-0Gy"/>
+                        <viewControllerLayoutGuide type="bottom" id="N8S-4c-POJ"/>
                     </layoutGuides>
                     <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="bvd-Cp-eQy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -1062,8 +1063,8 @@
             <objects>
                 <viewController id="V9H-bE-N6C" customClass="CragDetailViewController" customModule="Climbing_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="GFx-zl-yRe"/>
-                        <viewControllerLayoutGuide type="bottom" id="Q2e-he-CwY"/>
+                        <viewControllerLayoutGuide type="top" id="fJH-dR-U9j"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Uw-JW-RcW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Gzo-Jb-zzs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -1235,11 +1236,11 @@
             <objects>
                 <viewController id="9fa-Sk-Kgo" customClass="RouteDetailViewController" customModule="Climbing_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ett-ft-7sh"/>
-                        <viewControllerLayoutGuide type="bottom" id="tb3-XP-RGy"/>
+                        <viewControllerLayoutGuide type="top" id="kIl-1T-V3I"/>
+                        <viewControllerLayoutGuide type="bottom" id="1gF-NK-rcM"/>
                     </layoutGuides>
                     <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="6Wq-ex-veS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1840"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y00-53-uk1">
@@ -1383,7 +1384,7 @@
                                 </subviews>
                                 <animations/>
                             </scrollView>
-                            <view alpha="0.95000000000000007" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYj-p5-B3A">
+                            <view alpha="0.90000000000000002" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYj-p5-B3A">
                                 <rect key="frame" x="0.0" y="467" width="320" height="54"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add comment" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B4v-Zd-DFF">
@@ -1411,12 +1412,16 @@
                             </view>
                         </subviews>
                         <animations/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="yYj-p5-B3A" secondAttribute="bottom" id="DIs-Yt-8KJ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BOx-zc-9fV"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="1840"/>
+                    <size key="freeformSize" width="320" height="568"/>
                     <connections>
+                        <outlet property="bottomConstraint" destination="DIs-Yt-8KJ" id="A6F-Py-iwe"/>
                         <outlet property="climbingPhotosView" destination="Ey9-m1-7OC" id="Jsf-oV-zA3"/>
                         <outlet property="commentBar" destination="yYj-p5-B3A" id="2uC-5Q-OAa"/>
                         <outlet property="imageButton" destination="y1g-fP-edr" id="ihk-QD-NK0"/>
@@ -1437,8 +1442,8 @@
             <objects>
                 <viewController id="IBf-kN-IVv" customClass="AddPhotoViewController" customModule="Climbing_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jBn-CV-9pC"/>
-                        <viewControllerLayoutGuide type="bottom" id="B8d-nf-D86"/>
+                        <viewControllerLayoutGuide type="top" id="59g-Fz-93y"/>
+                        <viewControllerLayoutGuide type="bottom" id="txy-Qe-dwW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cWY-gK-mn1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -1495,8 +1500,8 @@
             <objects>
                 <viewController id="lg4-tz-jwk" customClass="AddDetailViewController" customModule="Climbing_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="CuV-sM-gu5"/>
-                        <viewControllerLayoutGuide type="bottom" id="nog-SB-IcM"/>
+                        <viewControllerLayoutGuide type="top" id="q3P-yf-tiD"/>
+                        <viewControllerLayoutGuide type="bottom" id="gNI-BB-fC3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rl2-6w-17k">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -1974,6 +1979,7 @@
                                         <animations/>
                                     </imageView>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8S-LK-AeJ">
@@ -2095,8 +2101,8 @@
             <objects>
                 <viewController id="F50-fL-Nxx" customClass="SavedViewController" customModule="Climbing_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fqU-2f-bEr"/>
-                        <viewControllerLayoutGuide type="bottom" id="uVo-2G-ZdF"/>
+                        <viewControllerLayoutGuide type="top" id="eUY-5H-aAT"/>
+                        <viewControllerLayoutGuide type="bottom" id="FeP-0s-BVv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JpK-Ay-MI0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -2201,8 +2207,8 @@
             <objects>
                 <viewController id="2J7-jt-tbD" customClass="ConnectViewController" customModule="Climbing_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="dcv-11-9vM"/>
-                        <viewControllerLayoutGuide type="bottom" id="4Cc-C0-FUy"/>
+                        <viewControllerLayoutGuide type="top" id="MDa-iE-Nhd"/>
+                        <viewControllerLayoutGuide type="bottom" id="hrW-AW-9Wg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Xke-PN-hj3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -2239,41 +2245,51 @@
                                 <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="PostCell" rowHeight="138" id="Y24-Dk-us9" customClass="PostCell" customModule="Climbing_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="138"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y24-Dk-us9" id="uRR-5r-10A">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="137"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="PostCell" rowHeight="138" id="Wnp-eA-Udk" customClass="PostCell" customModule="Climbing_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="215" width="320" height="138"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wnp-eA-Udk" id="ex3-fc-xO2">
+                                            <rect key="frame" x="0.0" y="0.0" width="333" height="132"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" fixedFrame="YES" text="Open call for bouldering league" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZS9-iQ-8W5">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Open call for bouldering league" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBR-Cc-VOH">
                                                     <rect key="frame" x="18" y="23" width="284" height="56"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="20"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Puccio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQE-a2-g5D">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puccio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9Z-pj-fyN">
                                                     <rect key="frame" x="58" y="95" width="42" height="16"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prof-puccio-small" translatesAutoresizingMaskIntoConstraints="NO" id="xle-GI-UgT">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prof-puccio-small" translatesAutoresizingMaskIntoConstraints="NO" id="y2a-Na-sr5">
                                                     <rect key="frame" x="18" y="89" width="30" height="30"/>
                                                     <animations/>
                                                 </imageView>
                                             </subviews>
                                             <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="eBR-Cc-VOH" firstAttribute="top" secondItem="ex3-fc-xO2" secondAttribute="topMargin" constant="15" id="2gN-UP-Ud9"/>
+                                                <constraint firstItem="eBR-Cc-VOH" firstAttribute="bottom" secondItem="y2a-Na-sr5" secondAttribute="bottom" constant="-40" id="7D2-gn-qGI"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="y2a-Na-sr5" secondAttribute="bottom" constant="10" id="ANt-UO-1GQ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="eBR-Cc-VOH" secondAttribute="trailing" constant="10" id="ITv-q3-MbV"/>
+                                                <constraint firstItem="eBR-Cc-VOH" firstAttribute="leading" secondItem="ex3-fc-xO2" secondAttribute="leadingMargin" constant="10" id="UaA-28-9a4"/>
+                                                <constraint firstItem="eBR-Cc-VOH" firstAttribute="leading" secondItem="G9Z-pj-fyN" secondAttribute="leading" constant="-40" id="X7Q-Ky-gsd"/>
+                                                <constraint firstItem="eBR-Cc-VOH" firstAttribute="leading" secondItem="y2a-Na-sr5" secondAttribute="leading" id="mly-DN-ZGX"/>
+                                                <constraint firstItem="G9Z-pj-fyN" firstAttribute="top" secondItem="eBR-Cc-VOH" secondAttribute="bottom" constant="16" id="pqT-cI-F7Z"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <outlet property="authorLabel" destination="eQE-a2-g5D" id="f7n-RS-gGK"/>
-                                            <outlet property="profpicView" destination="xle-GI-UgT" id="jjl-No-o3L"/>
-                                            <outlet property="titleLabel" destination="ZS9-iQ-8W5" id="awt-L3-Lsc"/>
+                                            <outlet property="authorLabel" destination="G9Z-pj-fyN" id="MMM-uq-VIY"/>
+                                            <outlet property="profpicView" destination="y2a-Na-sr5" id="TOP-Cg-Iho"/>
+                                            <outlet property="titleLabel" destination="eBR-Cc-VOH" id="lkj-eg-dV0"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -2321,8 +2337,8 @@
             <objects>
                 <viewController storyboardIdentifier="AddViewController" id="uKY-8z-3kN" customClass="AddViewController" customModule="Climbing_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ZNB-r4-T7l"/>
-                        <viewControllerLayoutGuide type="bottom" id="G4m-06-Q3B"/>
+                        <viewControllerLayoutGuide type="top" id="nxw-mS-qBq"/>
+                        <viewControllerLayoutGuide type="bottom" id="jBB-RW-3fV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IA9-kV-ilt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -2437,8 +2453,8 @@
             <objects>
                 <viewController storyboardIdentifier="SelectRouteViewController" id="969-ln-uwS" customClass="SelectRouteViewController" customModule="Climbing_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6pY-gP-joB"/>
-                        <viewControllerLayoutGuide type="bottom" id="4iU-kH-X66"/>
+                        <viewControllerLayoutGuide type="top" id="FnS-Rd-zo3"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Bc-qV-eZn"/>
                     </layoutGuides>
                     <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="2w7-ez-xWO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>

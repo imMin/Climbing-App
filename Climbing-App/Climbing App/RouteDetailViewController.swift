@@ -26,6 +26,7 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 	@IBOutlet weak var climbLabel: UILabel!
 	@IBOutlet weak var videoView: YTPlayerView!
 	@IBOutlet weak var commentBar: UIView!
+	@IBOutlet weak var bottomConstraint: NSLayoutConstraint!
 	
     @IBOutlet weak var scrollView: UIScrollView!
     var hasNewPhoto: Bool = false
@@ -53,7 +54,7 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 		scrollView.frame.size = CGSizeMake(320, 568)
 		
         // Do any additional setup after loading the view.
-        scrollView.contentSize = CGSizeMake(320, 2185)
+        scrollView.contentSize = CGSizeMake(320, 3450)
 		scrollView.delegate = self
 		
 		
@@ -77,7 +78,7 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 		
 		self.imageButton.frame.origin = videoView.frame.origin
 		
-		scrollView.contentSize = CGSizeMake(scrollView.contentSize.width, scrollView.contentSize.height + photoHeight)
+//		scrollView.contentSize = CGSizeMake(scrollView.contentSize.width, scrollView.contentSize.height + photoHeight)
 		
         UIView.animateWithDuration(0.7, animations: { () -> Void in
 			self.videoView.frame.origin.y += photoHeight
@@ -220,19 +221,18 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 	
 	
 	func keyboardWillShow(sender: NSNotification) {
-		let height = CGFloat(170.0)
+		var info = sender.userInfo!
+		var keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
 		
-		commentBar.frame.origin.y -= height
-		self.view.frame.size.height -= height
-		scrollView.frame.size.height -= height
+		UIView.animateWithDuration(0.5, animations: { () -> Void in
+			self.bottomConstraint.constant = keyboardFrame.size.height - 60
+		})
 	}
 	
 	func keyboardWillHide(sender: NSNotification) {
-		let height = CGFloat(170.0)
-		
-		commentBar.frame.origin.y = 467
-		self.view.frame.size.height += height
-		scrollView.frame.size.height += height
+		UIView.animateWithDuration(0.5, animations: { () -> Void in
+			self.bottomConstraint.constant = 0
+		})
 	}
     
 }
