@@ -201,8 +201,11 @@
                                     </imageView>
                                 </subviews>
                                 <animations/>
+                                <connections>
+                                    <outlet property="delegate" destination="q8d-4P-2ah" id="zcG-FM-R2c"/>
+                                </connections>
                             </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="3Ts-pS-x8s">
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="3Ts-pS-x8s">
                                 <rect key="frame" x="127" y="428" width="67" height="37"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -235,6 +238,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1600" height="568"/>
                     <connections>
+                        <outlet property="pageControl" destination="3Ts-pS-x8s" id="sCM-1p-iDI"/>
                         <outlet property="scrollView" destination="bU4-cM-elP" id="6cv-wV-d8I"/>
                     </connections>
                 </viewController>
