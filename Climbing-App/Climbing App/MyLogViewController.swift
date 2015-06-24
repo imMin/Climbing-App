@@ -39,11 +39,11 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
 //	]
     
 	
-	var levels = ["5.10a", "5.10b", "5.11a", "V3", "V4", "5.10d", "5.10c", "5.11a", "V4", "V3", "5.11b", "5.10a", "5.11c", "5.11d", "5.11b", "5.12a", "5.10c", "V5", "V4", "5.11c"]
+	var levels = ["5.12c", "5.12a", "5.11a", "V3", "V4", "V5", "V5", "5.11a", "5.11c", "5.11a", "5.10d", "V3", "V2", "V3", "5.10d", "5.10c", "5.10c", "V2", "V2", "5.10a"]
 	
-	var locations = ["Mission Cliff", "Planet Granite SF", "Mission Cliff", "Planet Granite SF", "Yosemite", "Planet Granite SF", "Mission Cliff", "Planet Granite SF", "Planet Granite SF", "Mission Cliff", "Planet Granite SF", "Planet Granite SF", "Mission Cliff", "Planet Granite SF", "Mt Diablo", "Mission Cliff", "Granite Planet SF", "Castle Rock", "Yosemite", "Mt Diablo", "Mission Cliff"]
+	var locations = ["Mission Cliffs", "Mission Cliffs", "Mission Cliffs", "Planet Granite SF", "Planet Granite SF", "Planet Granite SF", "Planet Granite SF", "Mission Cliffs", "Mission Cliffs", "Mission Cliffs", "Mission Cliffs", "Dogpatch Boulders", "Dogpatch Boulders", "Dogpatch Boulders", "Mickey's Beach", "Mickey's Beach", "Mickey's Beach", "Mickey's Beach", "Mickey's Beach", "Mickey's Beach", "Ironworks"]
 	
-	var types = ["Top Rope", "Lead", "Top Rope", "Trad", "Top Rope", "Top Rope", "Lead", "Top Rope", "Trad", "Top Rope","Top Rope", "Lead", "Top Rope", "Trad", "Top Rope","Top Rope", "Lead", "Top Rope", "Trad", "Top Rope","Top Rope"]
+	var types = ["Top Rope", "Top Rope", "Lead", "", "", "", "", "Lead", "", "Top Rope","Lead", "Lead", "Lead", "", "","", "", "Top Rope", "Trad", "Top Rope","Top Rope"]
 	
 	var styles = ["On-sight", "Flash", "Flash", "Redpoint", "On-sight", "On-sight", "Flash", "Flash", "Redpoint", "On-sight", "On-sight", "Flash", "Flash", "Redpoint", "On-sight", "On-sight", "Flash", "Flash", "Redpoint", "On-sight", "On-sight"]
 	
