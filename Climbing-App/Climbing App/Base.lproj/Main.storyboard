@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q8d-4P-2ah">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q8d-4P-2ah">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -1404,7 +1404,7 @@
                                 </subviews>
                                 <animations/>
                             </scrollView>
-                            <view alpha="0.90000000000000002" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYj-p5-B3A">
+                            <view alpha="0.90000000000000002" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYj-p5-B3A">
                                 <rect key="frame" x="0.0" y="514" width="320" height="54"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add comment" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B4v-Zd-DFF">
@@ -1906,7 +1906,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <state key="selected" backgroundImage="small_btn_bg">
+                                        <state key="selected" backgroundImage="small_red_btn_bg">
                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -1922,7 +1922,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <state key="selected" backgroundImage="big_btn_bg">
+                                        <state key="selected" backgroundImage="big_red_btn_bg">
                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -1938,7 +1938,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <state key="selected" backgroundImage="small_btn_bg">
+                                        <state key="selected" backgroundImage="small_red_btn_bg">
                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -1969,7 +1969,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <state key="selected" backgroundImage="big_btn_bg">
+                                        <state key="selected" backgroundImage="big_red_btn_bg">
                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -1985,7 +1985,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <state key="selected" backgroundImage="small_btn_bg">
+                                        <state key="selected" backgroundImage="small_red_btn_bg">
                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -2001,7 +2001,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <state key="selected" backgroundImage="big_btn_bg">
+                                        <state key="selected" backgroundImage="big_red_btn_bg">
                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -2627,7 +2627,7 @@
         <image name="add_tab" width="102" height="102"/>
         <image name="adddetailline" width="294" height="1"/>
         <image name="arrow_back_red" width="44" height="44"/>
-        <image name="big_btn_bg" width="85" height="28"/>
+        <image name="big_red_btn_bg" width="85" height="28"/>
         <image name="black-back-button" width="36" height="36"/>
         <image name="boulder-button" width="70" height="70"/>
         <image name="camera_icon_red" width="180" height="180"/>
@@ -2652,7 +2652,7 @@
         <image name="search_tab" width="26" height="26"/>
         <image name="search_tab_selected-1" width="26" height="26"/>
         <image name="signup-button" width="122" height="41"/>
-        <image name="small_btn_bg" width="53" height="28"/>
+        <image name="small_red_btn_bg" width="53" height="28"/>
         <image name="tour-illustration-1" width="270" height="329"/>
         <image name="tour-illustration-4" width="256" height="245"/>
         <image name="vicious-circles-background" width="321" height="231"/>
