@@ -5,3 +5,4 @@ pod 'TGCameraViewController'
 pod 'AFNetworking'
 pod 'Parse'
 pod 'NYTPhotoViewer'
+pod "youtube-ios-player-helper", "~> 0.1.3"
