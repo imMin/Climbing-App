@@ -14,6 +14,7 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 	
 	@IBOutlet weak var cragMapView: MKMapView!
 	@IBOutlet weak var cragTableView: UITableView!
+    @IBOutlet weak var regionNameLabel: UILabel!
 	
 	var region: Region!
 	var manager:CLLocationManager!
@@ -35,6 +36,8 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        regionNameLabel.text = region.name
 		
 		cragTableView.delegate = self
 		cragTableView.dataSource = self
@@ -52,10 +55,10 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 		cragMapView.showsPointsOfInterest = false
 		cragMapView.showsUserLocation = true
 		
-		var region : MKCoordinateRegion
-		region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(39.3761, -104.8535), MKCoordinateSpanMake(0.01, 0.01))
-		region = cragMapView.regionThatFits(region)
-		cragMapView.setRegion(region, animated: false)
+		var coordRegion : MKCoordinateRegion
+		coordRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake(39.3761, -104.8535), MKCoordinateSpanMake(0.01, 0.01))
+		coordRegion = cragMapView.regionThatFits(coordRegion)
+		cragMapView.setRegion(coordRegion, animated: false)
 		
         fetchCrags()
 //        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "fetchCrags", userInfo: nil, repeats: true)

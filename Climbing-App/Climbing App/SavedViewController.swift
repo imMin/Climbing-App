@@ -59,7 +59,7 @@ class SavedViewController: UIViewController, UICollectionViewDataSource, UIColle
         cell.layer.borderWidth = 1
         cell.regionCellContent.layer.shadowColor = UIColor.blackColor().CGColor
         cell.regionCellContent.layer.shadowOffset = CGSizeMake(1, 3)
-        cell.regionCellContent.layer.shadowOpacity = 0.5
+        cell.regionCellContent.layer.shadowOpacity = 0.1
         cell.layer.backgroundColor = UIColor.clearColor().CGColor
         
         return cell
