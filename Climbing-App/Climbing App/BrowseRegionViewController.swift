@@ -129,8 +129,10 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 		addPin()
 		
 //		regionMapView.setCenterCoordinate(CLLocationCoordinate2DMake(, ), animated: true)
-    
-        
+		
+//		regionCollectionView.allowsSelection = false
+		
+		
 	}
 
     override func didReceiveMemoryWarning() {
@@ -174,7 +176,9 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
         cell.regionCellContent.layer.shadowOffset = CGSizeMake(1, 3)
         cell.regionCellContent.layer.shadowOpacity = 0.1
         cell.layer.backgroundColor = UIColor.clearColor().CGColor
-        
+		
+
+		
         return cell
     
         

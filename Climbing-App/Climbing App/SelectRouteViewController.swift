@@ -104,7 +104,11 @@ class SelectRouteViewController: UIViewController, UITableViewDataSource, UITabl
 				// Log details of the failure
 				println("Error: \(error!) \(error!.userInfo!)")
 			}
-			
+		}
+		
+		delay(2) {
+			println("crags.count = \(self.crags.count)")
+			self.addCragPins()
 		}
 		
 	}
@@ -233,24 +237,32 @@ class SelectRouteViewController: UIViewController, UITableViewDataSource, UITabl
 		//		UIAlertView(title: "tapped Annotation!", message: view.annotation.title, delegate: nil, cancelButtonTitle: "OK").show()
 	}
 	
-	
-	func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+	func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
+		var coordRegion : MKCoordinateRegion
+		coordRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake(37.2306, -122.0957), MKCoordinateSpanMake(1.1, 1.1))
+		coordRegion = selectMapView.regionThatFits(coordRegion)
+		selectMapView.setRegion(coordRegion, animated: false)
 		
-		let reuseID = "myAnnotationView"
-		var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseID)
-		if (annotationView == nil) {
-			annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseID)
-		}
-		else {
-			annotationView.annotation = annotation
-		}
-		
-		annotationView.image = UIImage(named: "custom_pin")
-		annotationView.canShowCallout = true;
-		
-		
-		return annotationView
 	}
+	
+	
+//	func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+//		
+//		let reuseID = "myAnnotationView"
+//		var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseID)
+//		if (annotationView == nil) {
+//			annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseID)
+//		}
+//		else {
+//			annotationView.annotation = annotation
+//		}
+//		
+//		annotationView.image = UIImage(named: "custom_pin")
+//		annotationView.canShowCallout = true;
+//		
+//		
+//		return annotationView
+//	}
 
 	
 	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

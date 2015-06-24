@@ -37,6 +37,8 @@ class ConnectViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.titleLabel.text = Post.posts[indexPath.row].title
         cell.authorLabel.text = Post.posts[indexPath.row].author
         cell.profpicView.image = UIImage(named: Post.posts[indexPath.row].photo!)
+		cell.selectionStyle = UITableViewCellSelectionStyle.None
+
         return cell
         
     }

@@ -76,7 +76,7 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
         }
         
 		addCurrentLocationPin()
-		
+
     }
     
 
@@ -146,6 +146,7 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
                 distance = geoPoint?.distanceInMilesTo(cragGeoPoint)
                 println("distance between geoPoints = \(distance)")
                 cell.cragDistanceLabel.text = "\(round(distance)) miles"
+				cell.selectionStyle = UITableViewCellSelectionStyle.None
 
             }
         })
@@ -218,8 +219,8 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 		//		location = "\(locations[0])"
 		myLocations.append(locations[0] as! CLLocation)
 		
-		let spanX = 1.0
-		let spanY = 1.0
+		let spanX = 1.1
+		let spanY = 1.1
 		var newRegion = MKCoordinateRegion(center: cragMapView.userLocation.coordinate, span: MKCoordinateSpanMake(spanX, spanY))
 		cragMapView.setRegion(newRegion, animated: true)
 
@@ -238,7 +239,7 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
     
     func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
         var coordRegion : MKCoordinateRegion
-        coordRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake(37.2306, -122.0957), MKCoordinateSpanMake(1.0, 1.0))
+        coordRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake(37.2306, -122.0957), MKCoordinateSpanMake(1.1, 1.1))
         coordRegion = cragMapView.regionThatFits(coordRegion)
         cragMapView.setRegion(coordRegion, animated: false)
 
