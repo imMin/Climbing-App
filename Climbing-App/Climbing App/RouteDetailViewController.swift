@@ -9,7 +9,7 @@
 import UIKit
 
 
-class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelegate, AddPhotoViewControllerDelegate {
+class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelegate, AddPhotoViewControllerDelegate, UIScrollViewDelegate {
 	
 	var routeName: String!
 	var level: String!
@@ -46,15 +46,21 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
         let buttonImage = UIImage(named: PrimaryImageName)
         imageButton?.setBackgroundImage(buttonImage, forState: .Normal)
 
+		
+		self.view.frame.size = CGSizeMake(320, 568)
+		
+		scrollView.frame.size = CGSizeMake(320, 568)
+		
         // Do any additional setup after loading the view.
-//        scrollView.contentSize = CGSizeMake(320, 1475)
-        climbingPhotosView.frame.origin.y = 213
-        
+        scrollView.contentSize = CGSizeMake(320, 2185)
+		scrollView.delegate = self
+		
+		
 //        if hasNewPhoto == true {
 //            addNewPhoto()
 //        }
 		
-		videoView.loadWithVideoId("KZ8UsvygtNE", playerVars: ["playsinline" : 1, "modestbranding" : 0, "showinfo" : 0, "controls" : 0])
+		videoView.loadWithVideoId("KZ8UsvygtNE", playerVars: ["playsinline" : 1, "modestbranding" : 0, "showinfo" : 0, "controls" : 1, "fs" : 1, "autohide" : 1])
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,10 +69,18 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
     }
     
     func addNewPhoto() {
-//        scrollView.contentSize = CGSizeMake(320, 1648)
+		let photoHeight = self.imageButton.frame.height + 10
+		
+		self.imageButton.frame.origin = videoView.frame.origin
+		
+		scrollView.contentSize = CGSizeMake(scrollView.contentSize.width, scrollView.contentSize.height + photoHeight)
+		
         UIView.animateWithDuration(0.7, animations: { () -> Void in
-            self.climbingPhotosView.frame.origin.y += self.imageButton.frame.height + 10
+			self.videoView.frame.origin.y += photoHeight
+//            self.climbingPhotosView.frame.origin.y += photoHeight
+			self.scrollView.contentOffset = self.imageButton.frame.origin
         })
+		
     }
 
 	@IBAction func didPressBackButton(sender: AnyObject) {
