@@ -25,6 +25,7 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 	@IBOutlet weak var distanceLabel: UILabel!
 	@IBOutlet weak var climbLabel: UILabel!
 	@IBOutlet weak var videoView: YTPlayerView!
+	@IBOutlet weak var commentBar: UIView!
 	
     @IBOutlet weak var scrollView: UIScrollView!
     var hasNewPhoto: Bool = false
@@ -61,6 +62,9 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 //        }
 		
 		videoView.loadWithVideoId("KZ8UsvygtNE", playerVars: ["playsinline" : 1, "modestbranding" : 0, "showinfo" : 0, "controls" : 1, "fs" : 1, "autohide" : 1])
+		
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
     }
 
     override func didReceiveMemoryWarning() {
@@ -213,6 +217,22 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
         imageButton.setBackgroundImage(newPhoto, forState: UIControlState.Normal)
         addNewPhoto()
     }
-    
+	
+	
+	func keyboardWillShow(sender: NSNotification) {
+		let height = CGFloat(170.0)
+		
+		commentBar.frame.origin.y -= height
+		self.view.frame.size.height -= height
+		scrollView.frame.size.height -= height
+	}
+	
+	func keyboardWillHide(sender: NSNotification) {
+		let height = CGFloat(170.0)
+		
+		commentBar.frame.origin.y = 467
+		self.view.frame.size.height += height
+		scrollView.frame.size.height += height
+	}
     
 }
