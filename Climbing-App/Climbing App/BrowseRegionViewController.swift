@@ -86,7 +86,9 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 	
 	@IBOutlet weak var regionMapView: MKMapView!
     
-    
+	var currentLocation: CLLocation!
+	var locManager: CLLocationManager!
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -112,6 +114,19 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 		region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(39.3761, -104.8535), MKCoordinateSpanMake(0.4, 0.4))
 		region = regionMapView.regionThatFits(region)
 		regionMapView.setRegion(region, animated: false)
+		
+		//create an instance of CLLocationManager and Request Authorization
+		locManager = CLLocationManager()
+		locManager.requestWhenInUseAuthorization()
+		
+		//check if user allows authorization
+		if( CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedWhenInUse ||
+			CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedAlways){
+				currentLocation = locManager.location
+		}
+
+		
+		addPin()
 		
 //		regionMapView.setCenterCoordinate(CLLocationCoordinate2DMake(, ), animated: true)
     
@@ -176,8 +191,8 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 //		location = "\(locations[0])"
 		myLocations.append(locations[0] as! CLLocation)
 		
-		let spanX = 0.4
-		let spanY = 0.4
+		let spanX = 5.0
+		let spanY = 5.0
 		var newRegion = MKCoordinateRegion(center: regionMapView.userLocation.coordinate, span: MKCoordinateSpanMake(spanX, spanY))
 		regionMapView.setRegion(newRegion, animated: true)
 		
@@ -193,17 +208,58 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 //		}
 	}
 
+	
 	func addPin() {
-		let annotation = MKPointAnnotation()
-//		var castleRockCoordinate = CLLocationCoordinate2DMake(39.3761, -104.8535)
-		var yosemiteCoordinate = CLLocationCoordinate2DMake(37.865101, -119.538329)
-//		annotation.coordinate = castleRockCoordinate
-		annotation.coordinate = yosemiteCoordinate
-		regionMapView.addAnnotation(annotation)
+		var annotations: [MKPointAnnotation!]
+		var coordinates: [CLLocationCoordinate2D!]
+		
+		coordinates = [CLLocationCoordinate2DMake(37.2306, -122.0957),CLLocationCoordinate2DMake(37.865101, -119.538329),CLLocationCoordinate2DMake(36.778261, -119.417932),CLLocationCoordinate2DMake(37.881591, -121.914153),CLLocationCoordinate2DMake(38.669351, -122.633319)]
+		
+		for (var i = 0; i < 5; i++){
+			let annotation = MKPointAnnotation()
+			annotation.coordinate = coordinates[i]
+			//			annotations.append(annotation)
+			regionMapView.addAnnotation(annotation)
+		}
 	}
 
 	
+//	func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+//		if annotation.isKindOfClass(MKUserLocation) {
+//			return nil
+//		}
+//		
+//		let reuseID = "myAnnotationView"
+//		var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseID)
+//		if (annotationView == nil) {
+//			annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseID)
+//		}
+//		else {
+//			annotationView.annotation = annotation
+//		}
+//		
+//		annotationView.image = UIImage(named: "custom_pin")
+//		annotationView.canShowCallout = true;
+//		
+//		
+//		return annotationView
+//	}
+	
+	func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
+		//		UIAlertView(title: "tapped Annotation!", message: view.annotation.title, delegate: nil, cancelButtonTitle: "OK").show()
+	}
+	
+	func addCurrentLocationPin() {
+		let annotation = MKPointAnnotation()
+		var locationCoordinate = CLLocationCoordinate2DMake(39.3761, -104.8535)
+		annotation.coordinate = locationCoordinate
+		regionMapView.addAnnotation(annotation)
+	}
+	
 	func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+		if annotation.isKindOfClass(MKUserLocation) {
+			return nil
+		}
 		
 		let reuseID = "myAnnotationView"
 		var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseID)
@@ -221,6 +277,11 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 		return annotationView
 	}
 
+//	
+//	func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
+//		//		UIAlertView(title: "tapped Annotation!", message: view.annotation.title, delegate: nil, cancelButtonTitle: "OK").show()
+//	}
+	
 	
 }
 

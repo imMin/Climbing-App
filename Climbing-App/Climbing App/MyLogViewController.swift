@@ -39,9 +39,13 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
 //	]
     
 	
-	var levels = ["5.10a", "5.10b", "5.11a", "V3", "V4", "5.10d", "5.10c", "5.11a", "V4", "V3", "5.9", "5.10a", "5.10c", "5.10d", "5.10b", "5.12a", "5.10c", "V5", "V4", "5.9"]
+	var levels = ["5.10a", "5.10b", "5.11a", "V3", "V4", "5.10d", "5.10c", "5.11a", "V4", "V3", "5.11b", "5.10a", "5.11c", "5.11d", "5.11b", "5.12a", "5.10c", "V5", "V4", "5.11c"]
 	
-	var locations = ["Castle Rock", "Castle Rock", "Castle Rock", "Yosemite", "Yosemite", "Yosemite", "Yosemite", "Mt Diablo", "Mt Diablo", "Mt Diablo", "Mt Diablo", "Castle Rock", "Castle Rock", "Yosemite", "Mt Diablo", "Mission Cliff", "Granite Planet San Francisco", "Castle Rock", "Yosemite", "Mt Diablo", "Mission Cliff"]
+	var locations = ["Mission Cliff", "Planet Granite SF", "Mission Cliff", "Planet Granite SF", "Yosemite", "Planet Granite SF", "Mission Cliff", "Planet Granite SF", "Planet Granite SF", "Mission Cliff", "Planet Granite SF", "Planet Granite SF", "Mission Cliff", "Planet Granite SF", "Mt Diablo", "Mission Cliff", "Granite Planet SF", "Castle Rock", "Yosemite", "Mt Diablo", "Mission Cliff"]
+	
+	var types = ["Top Rope", "Lead", "Top Rope", "Trad", "Top Rope", "Top Rope", "Lead", "Top Rope", "Trad", "Top Rope","Top Rope", "Lead", "Top Rope", "Trad", "Top Rope","Top Rope", "Lead", "Top Rope", "Trad", "Top Rope","Top Rope"]
+	
+	var styles = ["On-sight", "Flash", "Flash", "Redpoint", "On-sight", "On-sight", "Flash", "Flash", "Redpoint", "On-sight", "On-sight", "Flash", "Flash", "Redpoint", "On-sight", "On-sight", "Flash", "Flash", "Redpoint", "On-sight", "On-sight"]
 	
 //	var dates = ["June 14, 2015", "June 14, 2015", "June 12, 2015", "June 12, 2015", "May 15, 2015", "May 15, 2015", "May 15, 2015", "May 3, 2015", "May 3, 2015", "Apr 2, 2015", "Apr 2, 2015", "Apr 2, 2015", "Apr 2, 2015", "Mar 30, 2015", "Mar 30, 2015", "Mar 30, 2015", "Mar 19, 2015", "Mar 19, 2015", "Mar 19, 2015"]
 	
@@ -113,6 +117,8 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
 		
 		cell.levelLabel.text = levels[indexPath.row]
 		cell.locationLabel.text = locations[indexPath.row]
+		cell.typeLabel.text = types[indexPath.row]
+		cell.styleLabel.text = styles[indexPath.row]
 		cell.accessoryType = UITableViewCellAccessoryType.None
         
 		return cell
@@ -161,18 +167,18 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
 //        }
     }
     
-	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-		if (segue.identifier == "logDetailSegue") {
-			
-			// initialize new view controller and cast it as your view controller
-			var viewController = segue.destinationViewController as! LogDetailViewController
-			
-			let indexPath : NSIndexPath = self.logTableView.indexPathForSelectedRow()!
-			
-			// your new view controller should have property that will store passed value
-			viewController.level = levels[indexPath.row]
-			viewController.location = locations[indexPath.row]
-		}
-	}
-	
+//	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//		if (segue.identifier == "logDetailSegue") {
+//			
+//			// initialize new view controller and cast it as your view controller
+//			var viewController = segue.destinationViewController as! LogDetailViewController
+//			
+//			let indexPath : NSIndexPath = self.logTableView.indexPathForSelectedRow()!
+//			
+//			// your new view controller should have property that will store passed value
+//			viewController.level = levels[indexPath.row]
+//			viewController.location = locations[indexPath.row]
+//		}
+//	}
+//	
 }

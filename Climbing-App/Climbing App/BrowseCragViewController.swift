@@ -10,6 +10,8 @@ import UIKit
 import MapKit
 import CoreLocation
 
+let didSaveNewRegion = "did you just save a new region?"
+
 class BrowseCragViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate, MKMapViewDelegate {
 	
 	@IBOutlet weak var cragMapView: MKMapView!
@@ -197,6 +199,7 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
     
     @IBAction func didPressSaveButton(sender: AnyObject) {
         Region.savedRegions.append(region)
+		NSNotificationCenter.defaultCenter().postNotificationName(didSaveNewRegion, object: self)
     }
 	
 	func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]) {

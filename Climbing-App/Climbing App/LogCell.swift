@@ -12,6 +12,8 @@ class LogCell: UITableViewCell {
 
 	@IBOutlet weak var levelLabel: UILabel!
 	@IBOutlet weak var locationLabel: UILabel!
+	@IBOutlet weak var styleLabel: UILabel!
+	@IBOutlet weak var typeLabel: UILabel!
 	
     override func awakeFromNib() {
         super.awakeFromNib()

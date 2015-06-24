@@ -86,7 +86,9 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
         myLogLabel.textColor = selectedColor
 		
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: "didSaveLogBounceAnimationOnNotification", name: didSaveNewLog, object: nil)
-        
+		
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "didSaveRegionBounceAnimationOnNotification", name: didSaveNewRegion, object: nil)
+		
 	}
 
 
@@ -141,7 +143,13 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 	
     func playBounceAnimation(icon : UIButton) {
 		delay(0.4, { () -> () in
-			let originImage = UIImage(named: "mylog2_tab_selected")
+			var originImage = icon.imageForState(.Selected)
+			if (icon == self.myLogButton){
+				originImage = UIImage(named: "mylog2_tab_selected")
+			}
+			else if (icon == self.savedButton){
+				originImage = UIImage(named: "saved_tab_selected")
+			}
 			let tintedImage = originImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
 			icon.setImage(tintedImage, forState: .Selected)
 			icon.tintColor = UIColor.redColor()
@@ -155,7 +163,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 			icon.layer.addAnimation(bounceAnimation, forKey: "bounceAnimation")
 			
 			//Create a new copy of the image
-			var image = UIImage(named: "mylog2_tab_selected")
+			var image = originImage
 			self.newlyCreatedIconImageView = UIImageView(image: image)
 			icon.addSubview(self.newlyCreatedIconImageView)
 			self.newlyCreatedIconImageView.frame = icon.imageView!.frame
@@ -288,6 +296,11 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 	func didSaveLogBounceAnimationOnNotification(){
 		playBounceAnimation(myLogButton)
 
+	}
+	
+	func didSaveRegionBounceAnimationOnNotification(){
+		playBounceAnimation(savedButton)
+		
 	}
 
 }
