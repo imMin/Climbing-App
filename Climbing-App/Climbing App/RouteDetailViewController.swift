@@ -19,6 +19,7 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 	
     let picker = UIImagePickerController()
 	
+    @IBOutlet weak var routeLabel: UILabel!
 	@IBOutlet weak var routeNameLabel: UILabel!
 	@IBOutlet weak var levelLabel: UILabel!
 	@IBOutlet weak var typeLabel: UILabel!
@@ -39,7 +40,7 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-		routeNameLabel.text = routeName
+		routeLabel.text = routeName
 		levelLabel.text = level
 		typeLabel.text = type
 //		distanceLabel.text = distance

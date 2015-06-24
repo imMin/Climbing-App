@@ -56,7 +56,7 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 		cragMapView.showsUserLocation = true
 		
 		var coordRegion : MKCoordinateRegion
-		coordRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake(39.3761, -104.8535), MKCoordinateSpanMake(0.01, 0.01))
+		coordRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake(39.3761, -104.8535), MKCoordinateSpanMake(10, 10))
 		coordRegion = cragMapView.regionThatFits(coordRegion)
 		cragMapView.setRegion(coordRegion, animated: false)
 		
@@ -104,6 +104,7 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
         }
         
         println("crags.count = \(self.crags.count)")
+        addCragPins()
         
     }
 
@@ -155,7 +156,7 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
     func addCragPins() {
         
         //TODO: not working yet
-        for index in 0...self.crags.count-1 {
+        for index in 0..<self.crags.count {
             var crag = self.crags[index]
             var cragGeoPoint: PFGeoPoint = PFGeoPoint()
             cragGeoPoint = crag["location"] as! PFGeoPoint
@@ -202,8 +203,8 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 		//		location = "\(locations[0])"
 		myLocations.append(locations[0] as! CLLocation)
 		
-		let spanX = 0.01
-		let spanY = 0.01
+		let spanX = 5.0
+		let spanY = 5.0
 		var newRegion = MKCoordinateRegion(center: cragMapView.userLocation.coordinate, span: MKCoordinateSpanMake(spanX, spanY))
 		cragMapView.setRegion(newRegion, animated: true)
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q8d-4P-2ah">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q8d-4P-2ah">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -1427,6 +1427,7 @@
                         <outlet property="commentBar" destination="yYj-p5-B3A" id="2uC-5Q-OAa"/>
                         <outlet property="imageButton" destination="y1g-fP-edr" id="ihk-QD-NK0"/>
                         <outlet property="levelLabel" destination="EmP-h4-AgY" id="xIj-nn-oig"/>
+                        <outlet property="routeLabel" destination="rGD-PT-Wkb" id="unS-5F-Pfg"/>
                         <outlet property="routeNameLabel" destination="IXM-S9-18V" id="2hH-IJ-gX4"/>
                         <outlet property="scrollView" destination="e2T-Vg-f8l" id="sY2-2p-dkD"/>
                         <outlet property="typeLabel" destination="Z1a-cN-XnW" id="dqp-6C-Huz"/>
