@@ -28,6 +28,7 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 	@IBOutlet weak var videoView: YTPlayerView!
 	@IBOutlet weak var commentBar: UIView!
 	@IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+	@IBOutlet weak var commentField: UITextField!
 	
     @IBOutlet weak var scrollView: UIScrollView!
     var hasNewPhoto: Bool = false
@@ -67,6 +68,8 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 		
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
+		
+		commentField.addTarget(commentField, action: "resignFirstResponder", forControlEvents: UIControlEvents.EditingDidEndOnExit)
     }
 
     override func didReceiveMemoryWarning() {
@@ -232,8 +235,12 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 	
 	func keyboardWillHide(sender: NSNotification) {
 		UIView.animateWithDuration(0.5, animations: { () -> Void in
-			self.bottomConstraint.constant = 0
+			self.bottomConstraint.constant = -8
 		})
 	}
+	
     
+	@IBAction func onTap(sender: AnyObject) {
+		commentField.endEditing(true)
+	}
 }
