@@ -20,11 +20,11 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
     let picker = UIImagePickerController()
 	
     @IBOutlet weak var routeLabel: UILabel!
-	@IBOutlet weak var routeNameLabel: UILabel!
-	@IBOutlet weak var levelLabel: UILabel!
-	@IBOutlet weak var typeLabel: UILabel!
-	@IBOutlet weak var distanceLabel: UILabel!
-	@IBOutlet weak var climbLabel: UILabel!
+//	@IBOutlet weak var routeNameLabel: UILabel!
+//	@IBOutlet weak var levelLabel: UILabel!
+//	@IBOutlet weak var typeLabel: UILabel!
+//	@IBOutlet weak var distanceLabel: UILabel!
+//	@IBOutlet weak var climbLabel: UILabel!
 	@IBOutlet weak var videoView: YTPlayerView!
 	@IBOutlet weak var commentBar: UIView!
 	@IBOutlet weak var bottomConstraint: NSLayoutConstraint!
@@ -42,8 +42,8 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
     override func viewDidLoad() {
         super.viewDidLoad()
 		routeLabel.text = routeName
-		levelLabel.text = level
-		typeLabel.text = type
+//		levelLabel.text = level
+//		typeLabel.text = type
 //		distanceLabel.text = distance
 //		climbLabel.text = climb
         
@@ -51,9 +51,9 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
         imageButton?.setBackgroundImage(buttonImage, forState: .Normal)
 
 		
-		self.view.frame.size = CGSizeMake(320, 568)
+		self.view.frame.size = CGSizeMake(320, 508)
 		
-		scrollView.frame.size = CGSizeMake(320, 568)
+		scrollView.frame.size = CGSizeMake(320, 508)
 		
         // Do any additional setup after loading the view.
         scrollView.contentSize = CGSizeMake(320, 3450)
@@ -227,6 +227,9 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 	func keyboardWillShow(sender: NSNotification) {
 		var info = sender.userInfo!
 		var keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+//		let duration = sender.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! Double
+//		let curve = sender.userInfo![UIKeyboardAnimationCurveUserInfoKey] as! UInt
+
 		
 		UIView.animateWithDuration(0.5, animations: { () -> Void in
 			self.bottomConstraint.constant = keyboardFrame.size.height - 60
@@ -235,7 +238,7 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 	
 	func keyboardWillHide(sender: NSNotification) {
 		UIView.animateWithDuration(0.5, animations: { () -> Void in
-			self.bottomConstraint.constant = -8
+			self.bottomConstraint.constant = 0
 		})
 	}
 	

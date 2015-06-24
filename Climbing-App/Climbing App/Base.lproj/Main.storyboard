@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q8d-4P-2ah">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A204h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q8d-4P-2ah">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -200,6 +200,7 @@
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="big-logo-purple" translatesAutoresizingMaskIntoConstraints="NO" id="VK8-IP-kYy">
                                         <rect key="frame" x="111" y="169" width="99" height="133"/>
+                                        <animations/>
                                     </imageView>
                                 </subviews>
                                 <animations/>
@@ -1322,9 +1323,11 @@
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="vicious-circles-background-1" translatesAutoresizingMaskIntoConstraints="NO" id="S2e-9S-k4h">
                                                 <rect key="frame" x="201" y="0.0" width="119" height="218"/>
+                                                <animations/>
                                             </imageView>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="vicious-circles-stuff" translatesAutoresizingMaskIntoConstraints="NO" id="l5p-eu-SrI">
                                                 <rect key="frame" x="25" y="58" width="149" height="102"/>
+                                                <animations/>
                                             </imageView>
                                         </subviews>
                                         <animations/>
@@ -1378,7 +1381,7 @@
                                 </subviews>
                                 <animations/>
                             </scrollView>
-                            <view alpha="0.90000000000000002" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYj-p5-B3A">
+                            <view alpha="0.90000000000000002" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYj-p5-B3A">
                                 <rect key="frame" x="0.0" y="514" width="320" height="54"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add comment" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B4v-Zd-DFF">
@@ -1408,7 +1411,7 @@
                         <animations/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="yYj-p5-B3A" secondAttribute="bottom" constant="-8" id="X6h-9T-oj5"/>
+                            <constraint firstAttribute="bottom" secondItem="yYj-p5-B3A" secondAttribute="bottom" id="X6h-9T-oj5"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="tat-AB-3Qx" appends="YES" id="JrX-e9-YMg"/>
@@ -2248,6 +2251,7 @@
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+Post" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCC-Ae-unE">
                                         <rect key="frame" x="266" y="28" width="46" height="21"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
                                         <color key="textColor" red="0.34901960784313724" green="0.23137254901960785" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -2319,6 +2323,7 @@
                             </tableView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="dummy-search" translatesAutoresizingMaskIntoConstraints="NO" id="c1S-09-En3">
                                 <rect key="frame" x="18" y="68" width="284" height="30"/>
+                                <animations/>
                             </imageView>
                         </subviews>
                         <animations/>
@@ -2491,6 +2496,7 @@
                                     </mapView>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uuz-T1-a4v">
                                         <rect key="frame" x="0.0" y="190" width="320" height="11"/>
+                                        <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ehP-9Q-arx" userLabel="selectTableView">
