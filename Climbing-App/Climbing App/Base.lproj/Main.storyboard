@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q8d-4P-2ah">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q8d-4P-2ah">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="VarelaRound-Regular.otf">
+            <string>VarelaRound</string>
             <string>VarelaRound</string>
             <string>VarelaRound</string>
             <string>VarelaRound</string>
@@ -157,10 +158,6 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bU4-cM-elP">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="442"/>
                                 <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="new-logo-purple" translatesAutoresizingMaskIntoConstraints="NO" id="EEs-Hz-zu2">
-                                        <rect key="frame" x="137" y="199" width="56" height="83"/>
-                                        <animations/>
-                                    </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Tour-Illustration-2" translatesAutoresizingMaskIntoConstraints="NO" id="D4d-J3-l1a">
                                         <rect key="frame" x="702" y="92" width="197" height="211"/>
                                         <animations/>
@@ -204,6 +201,9 @@
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="tour-illustration-1" translatesAutoresizingMaskIntoConstraints="NO" id="9PH-Dg-CEr">
                                         <rect key="frame" x="370" y="85" width="270" height="329"/>
                                         <animations/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="big-logo-purple" translatesAutoresizingMaskIntoConstraints="NO" id="VK8-IP-kYy">
+                                        <rect key="frame" x="111" y="169" width="99" height="133"/>
                                     </imageView>
                                 </subviews>
                                 <animations/>
@@ -653,7 +653,7 @@
                                         <rect key="frame" x="0.0" y="55" width="320" height="181"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alex Honnold" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UR3-vu-tNa">
-                                                <rect key="frame" x="59" y="104" width="203" height="21"/>
+                                                <rect key="frame" x="59" y="102" width="203" height="21"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="22"/>
                                                 <color key="textColor" red="0.07313368055555558" green="0.07313368055555558" blue="0.07313368055555558" alpha="1" colorSpace="calibratedRGB"/>
@@ -667,7 +667,7 @@
                                                 <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </label>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="prof-pic" translatesAutoresizingMaskIntoConstraints="NO" id="7ml-sr-uiz">
-                                                <rect key="frame" x="130" y="33" width="60" height="60"/>
+                                                <rect key="frame" x="130" y="31" width="60" height="60"/>
                                                 <animations/>
                                             </imageView>
                                         </subviews>
@@ -2281,12 +2281,18 @@
                                         <animations/>
                                         <color key="backgroundColor" red="0.89411764709999997" green="0.89411764709999997" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+Post" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCC-Ae-unE">
+                                        <rect key="frame" x="266" y="28" width="46" height="21"/>
+                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
+                                        <color key="textColor" red="0.34901960784313724" green="0.23137254901960785" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="126" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="HYM-kD-cwr">
-                                <rect key="frame" x="0.0" y="56" width="320" height="463"/>
+                                <rect key="frame" x="0.0" y="100" width="320" height="418"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="0.88001544547803479" green="0.88001544547803479" blue="0.88001544547803479" alpha="1" colorSpace="calibratedRGB"/>
@@ -2346,6 +2352,9 @@
                                     <outlet property="delegate" destination="2J7-jt-tbD" id="zQR-oh-c3S"/>
                                 </connections>
                             </tableView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="dummy-search" translatesAutoresizingMaskIntoConstraints="NO" id="c1S-09-En3">
+                                <rect key="frame" x="18" y="68" width="284" height="30"/>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -2633,6 +2642,7 @@
         <image name="add_tab" width="102" height="102"/>
         <image name="adddetailline" width="294" height="1"/>
         <image name="arrow_back_red" width="44" height="44"/>
+        <image name="big-logo-purple" width="99" height="133"/>
         <image name="big_red_btn_bg" width="85" height="28"/>
         <image name="black-back-button" width="36" height="36"/>
         <image name="boulder-button" width="70" height="70"/>
@@ -2640,6 +2650,7 @@
         <image name="castlerock-region-image" width="135" height="135"/>
         <image name="climbing_photos" width="320" height="1253"/>
         <image name="cream-topo" width="320" height="568"/>
+        <image name="dummy-search" width="284" height="30"/>
         <image name="forum_tab" width="26" height="26"/>
         <image name="forum_tab_selected-1" width="26" height="26"/>
         <image name="gradientleft" width="110" height="204"/>
@@ -2647,7 +2658,6 @@
         <image name="login-button" width="122" height="41"/>
         <image name="mylog2_tab" width="26" height="26"/>
         <image name="mylog2_tab_selected-1" width="26" height="26"/>
-        <image name="new-logo-purple" width="56" height="83"/>
         <image name="prof-pic" width="60" height="60"/>
         <image name="prof-pic-small" width="31" height="30"/>
         <image name="prof-puccio-small" width="30" height="30"/>
