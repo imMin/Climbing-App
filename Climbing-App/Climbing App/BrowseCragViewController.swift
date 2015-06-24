@@ -15,7 +15,7 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 	@IBOutlet weak var cragMapView: MKMapView!
 	@IBOutlet weak var cragTableView: UITableView!
 	
-	var region: String!
+	var region: Region!
 	var manager:CLLocationManager!
 	var myLocations:[CLLocation] = []
 	var location: CLLocation!
@@ -190,7 +190,10 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 	@IBAction func didPressBackButton(sender: AnyObject) {
 		navigationController?.popViewControllerAnimated(true)
 	}
-	
+    
+    @IBAction func didPressSaveButton(sender: AnyObject) {
+        
+    }
 	
 	func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]) {
 		//		location = "\(locations[0])"
