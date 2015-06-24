@@ -1516,6 +1516,7 @@
                     <size key="freeformSize" width="320" height="1840"/>
                     <connections>
                         <outlet property="climbingPhotosView" destination="Ey9-m1-7OC" id="Jsf-oV-zA3"/>
+                        <outlet property="commentBar" destination="yYj-p5-B3A" id="2uC-5Q-OAa"/>
                         <outlet property="imageButton" destination="y1g-fP-edr" id="ihk-QD-NK0"/>
                         <outlet property="levelLabel" destination="EmP-h4-AgY" id="xIj-nn-oig"/>
                         <outlet property="routeNameLabel" destination="IXM-S9-18V" id="2hH-IJ-gX4"/>
@@ -2002,14 +2003,8 @@
                                 <rect key="frame" x="0.0" y="340" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="adddetailline" id="luC-9x-UAn">
-                                        <rect key="frame" x="15" y="340" width="294" height="1"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <animations/>
-                                    </imageView>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FU8-pH-ogM">
-                                        <rect key="frame" x="245" y="30" width="32" height="17"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FU8-pH-ogM">
+                                        <rect key="frame" x="235" y="25" width="52" height="28"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -2058,62 +2053,77 @@
                                             <action selector="didSelectType:" destination="lg4-tz-jwk" eventType="touchUpInside" id="2AN-r0-V3j"/>
                                         </connections>
                                     </button>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="adddetailline" translatesAutoresizingMaskIntoConstraints="NO" id="luC-9x-UAn">
+                                        <rect key="frame" x="15" y="0.0" width="294" height="1"/>
+                                        <animations/>
+                                    </imageView>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zGU-5E-2mb">
-                                <rect key="frame" x="34" y="445" width="63" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="On-sight">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="selected" backgroundImage="big_btn_bg">
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="didSelectStyle:" destination="lg4-tz-jwk" eventType="touchUpInside" id="8RK-tG-5ms"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Fb6-ah-9Je">
-                                <rect key="frame" x="143" y="445" width="38" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Flash">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="selected" backgroundImage="small_btn_bg">
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="didSelectStyle:" destination="lg4-tz-jwk" eventType="touchUpInside" id="BZM-zH-snH"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tc7-ZB-Umo">
-                                <rect key="frame" x="229" y="445" width="66" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Redpoint">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="selected" backgroundImage="big_btn_bg">
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="didSelectStyle:" destination="lg4-tz-jwk" eventType="touchUpInside" id="J3K-Mq-sgk"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="z8S-LK-AeJ">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oGm-NS-UtO" userLabel="climbstyle">
+                                <rect key="frame" x="0.0" y="410" width="320" height="90"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="adddetailline" translatesAutoresizingMaskIntoConstraints="NO" id="UU6-CO-ycT">
+                                        <rect key="frame" x="13" y="4" width="294" height="1"/>
+                                        <animations/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGU-5E-2mb">
+                                        <rect key="frame" x="24" y="29" width="84" height="28"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="On-sight">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" backgroundImage="big_btn_bg">
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didSelectStyle:" destination="lg4-tz-jwk" eventType="touchUpInside" id="8RK-tG-5ms"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fb6-ah-9Je">
+                                        <rect key="frame" x="136" y="29" width="52" height="28"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Flash">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" backgroundImage="small_btn_bg">
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didSelectStyle:" destination="lg4-tz-jwk" eventType="touchUpInside" id="BZM-zH-snH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tc7-ZB-Umo">
+                                        <rect key="frame" x="220" y="29" width="84" height="28"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Redpoint">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" backgroundImage="big_btn_bg">
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didSelectStyle:" destination="lg4-tz-jwk" eventType="touchUpInside" id="J3K-Mq-sgk"/>
+                                        </connections>
+                                    </button>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="adddetailline" translatesAutoresizingMaskIntoConstraints="NO" id="9qF-2s-c9G">
+                                        <rect key="frame" x="13" y="80" width="294" height="1"/>
+                                        <animations/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8S-LK-AeJ">
                                 <rect key="frame" x="100" y="495" width="143" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
@@ -2127,16 +2137,6 @@
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="white-map-pin" id="P8g-ms-XCG">
                                 <rect key="frame" x="104" y="510" width="20" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="adddetailline" id="UU6-CO-ycT">
-                                <rect key="frame" x="15" y="414" width="294" height="1"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="adddetailline" id="9qF-2s-c9G">
-                                <rect key="frame" x="15" y="490" width="294" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                             </imageView>
@@ -2228,6 +2228,7 @@
                         <outlet property="onSightButton" destination="zGU-5E-2mb" id="o9j-0b-Y7U"/>
                         <outlet property="redPointButton" destination="tc7-ZB-Umo" id="DiY-gk-FvG"/>
                         <outlet property="routeNameLabel" destination="ZbL-a1-rmR" id="Py8-Mx-TiN"/>
+                        <outlet property="styleView" destination="oGm-NS-UtO" id="VWr-aF-FPP"/>
                         <outlet property="topRopeButton" destination="qMI-xx-9Z9" id="zDm-aM-ySF"/>
                         <outlet property="touchableView" destination="XzE-ug-php" id="1tu-FY-Uzd"/>
                         <outlet property="tradButton" destination="FU8-pH-ogM" id="d9q-1V-NaM"/>

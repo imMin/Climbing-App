@@ -31,6 +31,7 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate, SelectRou
 	var styleButtons: [UIButton]!
 	var isFiveButton = true
 	var selectRouteViewController: UIViewController!
+	var styleViewOriginY : CGFloat!
 	
 	@IBOutlet weak var addLocationButton: UIButton!
 //	var typeSegBackgroundImage: UIImage!
@@ -51,7 +52,7 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate, SelectRou
 	@IBOutlet weak var vScaleTouchableView: UIView!
 	
 	@IBOutlet weak var typeView: UIView!
-	
+	@IBOutlet weak var styleView: UIView!
 	@IBOutlet weak var five6Label: UILabel!
 	@IBOutlet weak var five7Label: UILabel!
 	@IBOutlet weak var five8Label: UILabel!
@@ -107,15 +108,20 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate, SelectRou
     override func viewDidLoad() {
         super.viewDidLoad()
 		
+		styleViewOriginY = styleView.frame.origin.y
+		
 		//decide which labels to show
 		if (isFiveButton == true){
 			typeView.hidden = false
+			styleView.frame.origin.y = styleViewOriginY
 			vScaleTouchableView.hidden = true
 		}
 		else if (isFiveButton == false){
 			touchableView.hidden = true
 			typeView.hidden = true
+//			styleView.frame.origin = CGPoint(x: 0, y: CGFloat(styleViewOriginY - 75))
 			
+			styleView.frame = CGRectMake(0, 300, 300, 100)
 		}
 		
 		routeNameLabel.text = routeName
