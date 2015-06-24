@@ -300,6 +300,7 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate, SelectRou
 			}
 			else{
 				typeButtons[i].selected = true
+				playBounceAnimation(typeButtons[i])
 			}
 		}
 		
@@ -312,10 +313,24 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate, SelectRou
 			}
 			else {
 				styleButtons[i].selected = true
+				playBounceAnimation(styleButtons[i])
 			}
 		}
 	
 	}
+	
+	func playBounceAnimation(icon : UIButton) {
+			let bounceAnimation = CAKeyframeAnimation(keyPath: "transform.scale")
+			bounceAnimation.values = [1.0 ,1.1, 0.9, 1.15, 0.95, 1.02, 1.0]
+			bounceAnimation.duration = 0.8
+			bounceAnimation.calculationMode = kCAAnimationCubic
+			
+			//      Commenting out the bounce on the icons for now.
+			icon.layer.addAnimation(bounceAnimation, forKey: "bounceAnimation")
+		
+	}
+
+	
 	
 	@IBAction func didPressAddLocation(sender: AnyObject) {
 		self.locationContentView.frame.origin.y = 490
