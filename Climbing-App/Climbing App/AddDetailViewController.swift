@@ -321,10 +321,11 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate, SelectRou
 	
 	func playBounceAnimation(icon : UIButton) {
 			let bounceAnimation = CAKeyframeAnimation(keyPath: "transform.scale")
-			bounceAnimation.values = [1.0, 1.2, 1]
-			bounceAnimation.duration = 0.2
+			bounceAnimation.values = [1.0 ,1.2, 1.0]
+			bounceAnimation.duration = 0.3
 			bounceAnimation.calculationMode = kCAAnimationCubic
-
+			
+			//      Commenting out the bounce on the icons for now.
 			icon.layer.addAnimation(bounceAnimation, forKey: "bounceAnimation")
 		
 	}
