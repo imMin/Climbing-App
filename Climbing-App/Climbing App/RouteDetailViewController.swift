@@ -76,9 +76,12 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidLoad()
 		
-		delay(0.2) {
+		delay(0.1) {
 			self.bottomConstraint.constant = 0
 		}
+		UIView.animateWithDuration(0.2, animations: { () -> Void in
+			self.commentBar.alpha = 0.9
+		})
 	}
 
     override func didReceiveMemoryWarning() {
