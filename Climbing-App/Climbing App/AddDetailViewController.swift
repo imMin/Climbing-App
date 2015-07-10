@@ -107,6 +107,11 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate, SelectRou
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+
+		//set addLocation value to routeName if coming from a route view
+		if(routeName != nil) && (routeName == "Castle Rock"){
+			addLocationButton.setTitle(routeName, forState: UIControlState.Normal)
+		}
 		
 		styleViewOriginY = styleView.frame.origin.y
 		
@@ -135,10 +140,18 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate, SelectRou
 
 		
 //		selectedLevel = find(levels, level)
-        selectedLevel = 4
+//        selectedLevel = 4
 		pageNumber = 4
-		self.changePage(4, animated: false)
-        self.ChangeVPage(4, animated: false)
+		
+		if((selectedLevel == nil) || (selectedLevel != 6)){
+			selectedLevel = 4
+			self.changePage(4, animated: false)
+			self.ChangeVPage(4, animated: false)
+		}
+		else if(selectedLevel == 6){
+//			selectedLevel = 6
+			self.changePage(6, animated: false)
+		}
 		
 		
 		levelLabels = [five6Label, five7Label, five8Label, five9Label, five10aLabel, five10bLabel, five10cLabel, five10dLabel, five11aLabel, five11bLabel, five11cLabel, five11dLabel, five12aLabel, five12bLabel, five12cLabel, five12dLabel, five13aLabel, five13bLabel, five13cLabel, five13dLabel, five14aLabel, five14bLabel, five14cLabel, five14dLabel]
@@ -168,9 +181,18 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate, SelectRou
     }
 	
 	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
 		setScale()
         setVScale()
+//		println(routeName)
+//		addLocationButton.setTitle(routeName, forState: UIControlState.Normal)
 	}
+//	
+//	override func viewDidAppear(animated: Bool) {
+//		super.viewWillAppear(animated)
+//		println(routeName)
+//		addLocationButton.setTitle(routeName, forState: UIControlState.Normal)
+//	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

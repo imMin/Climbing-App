@@ -1293,8 +1293,8 @@
                                 <animations/>
                                 <color key="backgroundColor" red="0.14117647058823529" green="0.12549019607843137" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNL-MF-Wse">
-                                <rect key="frame" x="273" y="27" width="37" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Log" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNL-MF-Wse">
+                                <rect key="frame" x="255" y="27" width="60" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1308,9 +1308,10 @@
                                 </state>
                                 <connections>
                                     <action selector="didPressSaveButton:" destination="9fa-Sk-Kgo" eventType="touchUpInside" id="QBN-3h-0PM"/>
+                                    <segue destination="dcC-jB-vzP" kind="modal" identifier="logRouteSegue" id="eXO-8O-Wy8"/>
                                 </connections>
                             </button>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="save-icon" translatesAutoresizingMaskIntoConstraints="NO" id="oIc-QX-cm9">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="center" fixedFrame="YES" image="save-icon" translatesAutoresizingMaskIntoConstraints="NO" id="oIc-QX-cm9">
                                 <rect key="frame" x="260" y="31" width="7" height="13"/>
                                 <animations/>
                             </imageView>
@@ -1378,8 +1379,8 @@
                                 </subviews>
                                 <animations/>
                             </scrollView>
-                            <view alpha="0.0" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYj-p5-B3A">
-                                <rect key="frame" x="0.0" y="504" width="320" height="54"/>
+                            <view alpha="0.0" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYj-p5-B3A">
+                                <rect key="frame" x="0.0" y="454" width="320" height="54"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add comment" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B4v-Zd-DFF">
                                         <rect key="frame" x="60" y="7" width="238" height="30"/>
@@ -1408,7 +1409,7 @@
                         <animations/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="yYj-p5-B3A" secondAttribute="bottom" constant="8" id="X6h-9T-oj5"/>
+                            <constraint firstAttribute="bottom" secondItem="yYj-p5-B3A" secondAttribute="bottom" constant="20" id="X6h-9T-oj5"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="tat-AB-3Qx" appends="YES" id="JrX-e9-YMg"/>
@@ -1437,7 +1438,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1812" y="3539"/>
+            <point key="canvasLocation" x="1812" y="2987"/>
         </scene>
         <!--Add Photo View Controller-->
         <scene sceneID="p9G-7x-uJv">
@@ -1498,7 +1499,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hpX-8L-hWs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2250" y="3409"/>
+            <point key="canvasLocation" x="2282" y="2987"/>
         </scene>
         <!--Add Detail View Controller-->
         <scene sceneID="6k2-ep-sWr">
@@ -2648,7 +2649,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="68z-PZ-Ywo"/>
+        <segue reference="eXO-8O-Wy8"/>
         <segue reference="lPW-ya-pHM"/>
     </inferredMetricsTieBreakers>
 </document>

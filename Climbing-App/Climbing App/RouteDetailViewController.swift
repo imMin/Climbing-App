@@ -46,7 +46,9 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 //		typeLabel.text = type
 //		distanceLabel.text = distance
 //		climbLabel.text = climb
-        
+		
+
+		
         let buttonImage = UIImage(named: PrimaryImageName)
         imageButton?.setBackgroundImage(buttonImage, forState: .Normal)
 
@@ -123,8 +125,17 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 //            vc.photoView.image = newPhoto
             vc.delegate = self
         }
+		
+		if segue.identifier == "logRouteSegue" {
+			let navController = segue.destinationViewController as! UINavigationController
+			let logVC = navController.topViewController as! AddDetailViewController
+			logVC.routeName = "Castle Rock"
+			logVC.selectedLevel = 6
+		}
     }
-    
+	
+
+	
     func noCamera(){
         let alertVC = UIAlertController(title: "No Camera", message: "Sorry, this device has no camera", preferredStyle: .Alert)
         let okAction = UIAlertAction(title: "OK", style:.Default, handler: nil)
@@ -265,4 +276,6 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 		
 	}
 
+
+	
 }
