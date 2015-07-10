@@ -176,6 +176,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 					icon.imageView!.alpha = 100
 					}, completion: { (Bool) -> Void in
 						self.newlyCreatedIconImageView.removeFromSuperview()
+						icon.setImage(icon.imageForState(.Normal), forState: .Normal)
 				})
 				
 			})

@@ -51,9 +51,10 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
         imageButton?.setBackgroundImage(buttonImage, forState: .Normal)
 
 		
-		self.view.frame.size = CGSizeMake(320, 508)
+		self.view.frame.size = CGSizeMake(320, 408)
 		
-		scrollView.frame.size = CGSizeMake(320, 508)
+		scrollView.frame.size = CGSizeMake(320, 408)
+		
 		
         // Do any additional setup after loading the view.
         scrollView.contentSize = CGSizeMake(320, 3450)
@@ -71,6 +72,14 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 		
 		commentField.addTarget(commentField, action: "resignFirstResponder", forControlEvents: UIControlEvents.EditingDidEndOnExit)
     }
+	
+	override func viewDidAppear(animated: Bool) {
+		super.viewDidLoad()
+		
+		delay(0.2) {
+			self.bottomConstraint.constant = 0
+		}
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -87,7 +96,7 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
         UIView.animateWithDuration(0.7, animations: { () -> Void in
 			self.videoView.frame.origin.y += photoHeight
 //            self.climbingPhotosView.frame.origin.y += photoHeight
-			self.scrollView.contentOffset = self.imageButton.frame.origin
+			self.scrollView.contentOffset = CGPointMake(0, self.imageButton.frame.origin.y)
         })
         
         //TODO: add new photo to carousel
