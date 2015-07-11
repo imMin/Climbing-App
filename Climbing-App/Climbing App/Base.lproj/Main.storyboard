@@ -858,7 +858,7 @@
                                         <animations/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuD-AI-Xsl">
-                                        <rect key="frame" x="278" y="27" width="37" height="21"/>
+                                        <rect key="frame" x="278" y="27" width="40" height="21"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -937,6 +937,10 @@
                                 <rect key="frame" x="0.0" y="55" width="320" height="180"/>
                                 <animations/>
                             </mapView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pLr-ez-V0V" userLabel="progressView">
+                                <rect key="frame" x="0.0" y="54" width="1" height="4"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.31764705879999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -945,7 +949,10 @@
                     <connections>
                         <outlet property="cragMapView" destination="DFy-X6-fHM" id="dmk-VF-yo5"/>
                         <outlet property="cragTableView" destination="A1C-fF-Yod" id="Lns-LX-dpl"/>
+                        <outlet property="progressView" destination="pLr-ez-V0V" id="Xbq-5j-8Ih"/>
                         <outlet property="regionNameLabel" destination="Ywx-WY-NWS" id="sjT-q9-jl9"/>
+                        <outlet property="saveIcon" destination="tfM-Z5-Rae" id="upu-wt-Ekc"/>
+                        <outlet property="saveLabel" destination="yuD-AI-Xsl" id="U2v-aR-GCZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zma-OO-q8w" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1379,7 +1386,7 @@
                                 </subviews>
                                 <animations/>
                             </scrollView>
-                            <view alpha="0.0" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYj-p5-B3A">
+                            <view alpha="0.0" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYj-p5-B3A">
                                 <rect key="frame" x="0.0" y="479" width="320" height="54"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add comment" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B4v-Zd-DFF">

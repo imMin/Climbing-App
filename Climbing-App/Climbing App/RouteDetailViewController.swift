@@ -84,6 +84,8 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 		UIView.animateWithDuration(0.2, animations: { () -> Void in
 			self.commentBar.alpha = 0.9
 		})
+		
+		videoView.playVideo()
 	}
 
     override func didReceiveMemoryWarning() {

@@ -17,6 +17,9 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 	@IBOutlet weak var cragMapView: MKMapView!
 	@IBOutlet weak var cragTableView: UITableView!
     @IBOutlet weak var regionNameLabel: UILabel!
+	@IBOutlet weak var progressView: UIView!
+	@IBOutlet weak var saveLabel: UILabel!
+	@IBOutlet weak var saveIcon: UIImageView!
 	
 	var region: Region!
 	var manager:CLLocationManager!
@@ -38,7 +41,8 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+		
+		progressView.alpha = 0 
         regionNameLabel.text = region.name
 		
 		cragTableView.delegate = self
@@ -212,7 +216,30 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
     
     @IBAction func didPressSaveButton(sender: AnyObject) {
         Region.savedRegions.append(region)
-		NSNotificationCenter.defaultCenter().postNotificationName(didSaveNewRegion, object: self)
+//		NSNotificationCenter.defaultCenter().postNotificationName(didSaveNewRegion, object: self)
+		progressView.alpha = 1
+		
+		UIView.animateWithDuration(2, delay: 0.0, options: .CurveEaseOut, animations: { () -> Void in
+			self.progressView.frame.size.width = CGFloat(320)
+		}) { (Bool) -> Void in
+			UIView.animateWithDuration(0.1, animations: { () -> Void in
+				self.progressView.alpha = 0
+			}, completion: { (Bool) -> Void in
+				self.progressView.frame.size.width = 1
+				self.saveLabel.frame.origin.x = 273
+				self.saveLabel.text = "Saved"
+				self.saveIcon.alpha = 0
+				NSNotificationCenter.defaultCenter().postNotificationName(didSaveNewRegion, object: self)
+			})
+		}
+		
+		
+//		UIView.animateWithDuration(2, animations: { () -> Void in
+//			self.progressView.frame.size.width = CGFloat(320)
+//		}) { (Bool) -> Void in
+//			NSNotificationCenter.defaultCenter().postNotificationName(didSaveNewRegion, object: self)
+//
+//		}
     }
 	
 	func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]) {
