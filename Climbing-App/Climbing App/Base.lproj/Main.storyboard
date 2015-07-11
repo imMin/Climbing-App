@@ -1379,8 +1379,8 @@
                                 </subviews>
                                 <animations/>
                             </scrollView>
-                            <view alpha="0.0" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYj-p5-B3A">
-                                <rect key="frame" x="0.0" y="454" width="320" height="54"/>
+                            <view alpha="0.0" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYj-p5-B3A">
+                                <rect key="frame" x="0.0" y="479" width="320" height="54"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add comment" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B4v-Zd-DFF">
                                         <rect key="frame" x="60" y="7" width="238" height="30"/>
@@ -1409,7 +1409,7 @@
                         <animations/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="yYj-p5-B3A" secondAttribute="bottom" constant="20" id="X6h-9T-oj5"/>
+                            <constraint firstAttribute="bottom" secondItem="yYj-p5-B3A" secondAttribute="bottom" constant="60" id="tnt-Sm-OhU"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="tat-AB-3Qx" appends="YES" id="JrX-e9-YMg"/>
@@ -1420,7 +1420,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
-                        <outlet property="bottomConstraint" destination="X6h-9T-oj5" id="n2n-fI-PNQ"/>
+                        <outlet property="bottomConstraint" destination="tnt-Sm-OhU" id="mmv-kh-KXE"/>
                         <outlet property="climbingPhotosView" destination="Ey9-m1-7OC" id="Jsf-oV-zA3"/>
                         <outlet property="commentBar" destination="yYj-p5-B3A" id="2uC-5Q-OAa"/>
                         <outlet property="commentField" destination="B4v-Zd-DFF" id="tXt-BO-um1"/>
