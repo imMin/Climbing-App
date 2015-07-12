@@ -16,6 +16,6 @@ class RegionCell: UICollectionViewCell {
     @IBOutlet weak var regionView: UIImageView!
     @IBOutlet weak var regionCellContent: UIView!
 	
-	
+ 	
     var region: Region?
 }
