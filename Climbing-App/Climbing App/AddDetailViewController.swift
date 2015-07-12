@@ -15,6 +15,7 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate, SelectRou
 
 	
 	var routeName: String!
+	var savedLevel : String!
 	var selectedLevel : Int!
 	var level: String!
 	var levelLabels:[UILabel]!
@@ -32,6 +33,8 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate, SelectRou
 	var isFiveButton = true
 	var selectRouteViewController: UIViewController!
 	var styleViewOriginY : CGFloat!
+	var logs: [PFObject]! = []
+	
 	
 	@IBOutlet weak var addLocationButton: UIButton!
 //	var typeSegBackgroundImage: UIImage!
@@ -205,6 +208,52 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate, SelectRou
 	
 	
 	@IBAction func didPressSaveButton(sender: AnyObject) {
+		var log = PFObject(className: "Log")
+		
+//		log["level"] = selectedLevel
+		if (isFiveButton == true){
+			log["level"] = levelLabels[selectedLevel].text
+			
+			for (var i = 0; i < typeButtons.count; i++){
+				if (typeButtons[i].selected == true) {
+					var selectedType = typeButtons[i].titleLabel!.text
+					log["type"] = selectedType
+				}
+			}
+		}
+		else {
+			log["level"] = vLevelLabels[selectedLevel].text
+		}
+	
+		
+		for (var i = 0; i < styleButtons.count; i++){
+			if (styleButtons[i].selected == true){
+				var selectedStyle = styleButtons[i].titleLabel!.text
+				log["style"] = selectedStyle
+			}
+		}
+		
+		log["location"] = addLocationButton.titleLabel!.text
+		log["date"] = String()
+		
+		
+		
+		log.saveInBackgroundWithBlock { (success:Bool, error: NSError?) -> Void in
+			println("saved log!")
+		}
+		
+		
+//		for (var i = 0; i < typeButtons.count; i++){
+//			if sender.tag != i{
+//				typeButtons[i].selected = false
+//			}
+//			else{
+//				typeButtons[i].selected = true
+//				playBounceAnimation(typeButtons[i])
+//			}
+//		}
+		
+		
 		dismissViewControllerAnimated(true, completion: nil)
 		
 		NSNotificationCenter.defaultCenter().postNotificationName(didSaveNewLog, object: self)
@@ -237,6 +286,8 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate, SelectRou
 	func scrollViewDidScroll(scrollView: UIScrollView) {
 
         let currentPageNumber = Int(round(scrollView.contentOffset.x / 100))
+		
+		selectedLevel = currentPageNumber
 
 //		if (previousPageNumber != currentPageNumber && currentPageNumber < levelLabels.count && currentPageNumber >= 0) {
 //			let label = levelLabels[currentPageNumber]
