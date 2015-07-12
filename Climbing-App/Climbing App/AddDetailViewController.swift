@@ -220,21 +220,33 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate, SelectRou
 					log["type"] = selectedType
 				}
 			}
+			
+			
+			for (var i = 0; i < styleButtons.count; i++){
+				if (styleButtons[i].selected == true){
+					var selectedStyle = styleButtons[i].titleLabel!.text
+					log["style"] = selectedStyle
+				}
+			}
+			
 		}
 		else {
 			log["level"] = vLevelLabels[selectedLevel].text
+			
+			for (var i = 0; i < typeButtons.count; i++){
+				if (typeButtons[i].selected == true) {
+					var selectedType = typeButtons[i].titleLabel!.text
+					log["type"] = selectedType
+				}
+			}
+			
+			log["style"] = "N/A"
 		}
 	
-		
-		for (var i = 0; i < styleButtons.count; i++){
-			if (styleButtons[i].selected == true){
-				var selectedStyle = styleButtons[i].titleLabel!.text
-				log["style"] = selectedStyle
-			}
-		}
+
 		
 		log["location"] = addLocationButton.titleLabel!.text
-		log["date"] = String()
+		log["date"] = NSDate()
 		
 		
 		
