@@ -13,10 +13,25 @@ class TourViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
+    @IBOutlet weak var videoView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        var filePath = NSBundle.mainBundle().pathForResource("climber", ofType: "gif")
+        var gif = NSData(contentsOfFile: filePath!)
+        
+        var webViewBG = UIWebView(frame: self.view.frame)
+        webViewBG.loadData(gif, MIMEType: "image/gif", textEncodingName: nil, baseURL: nil)
+        webViewBG.userInteractionEnabled = false;
+        videoView.addSubview(webViewBG)
+        
+        var filter = UIView()
+        filter.frame = self.view.frame
+        filter.backgroundColor = UIColor.blackColor()
+        filter.alpha = 0.25
+        videoView.addSubview(filter)
         
         scrollView.contentSize = CGSize(width: 1600, height: 386)
     }

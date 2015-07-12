@@ -54,6 +54,7 @@
 		A14649C41B32A43B00DFF014 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A14649C31B32A43B00DFF014 /* ImageIO.framework */; };
 		A1464A2F1B340A7300DFF014 /* PhotosProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1464A2E1B340A7300DFF014 /* PhotosProvider.swift */; };
 		A1464A311B340AA200DFF014 /* ExamplePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1464A301B340AA200DFF014 /* ExamplePhoto.swift */; };
+		A1DC97891B5203C700A41817 /* climber.gif in Resources */ = {isa = PBXBuildFile; fileRef = A1DC97881B5203C700A41817 /* climber.gif */; };
 		EA4EFC4E55834245059540B7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47AAC82F33D8685F05942328 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +122,7 @@
 		A14649C31B32A43B00DFF014 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		A1464A2E1B340A7300DFF014 /* PhotosProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosProvider.swift; sourceTree = "<group>"; };
 		A1464A301B340AA200DFF014 /* ExamplePhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplePhoto.swift; sourceTree = "<group>"; };
+		A1DC97881B5203C700A41817 /* climber.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = climber.gif; sourceTree = "<group>"; };
 		BEB2311AF90DE04A18F8AF95 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F1F0E6F419874C7D294D1121 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -218,6 +220,7 @@
 				6F74C4141B2ABFDB00C0FD85 /* BrowseCragViewController.swift */,
 				6F4D65281B316342009F9600 /* SelectRouteCell.swift */,
 				6F74C4121B2ABFCA00C0FD85 /* MyLogViewController.swift */,
+				A1DC97871B5203A200A41817 /* Images */,
 				6F74C4101B2ABAF900C0FD85 /* TabBarViewController.swift */,
 				6F74C3F71B29FA5D00C0FD85 /* Images.xcassets */,
 				6F74C3F91B29FA5D00C0FD85 /* LaunchScreen.xib */,
@@ -267,6 +270,14 @@
 				BEB2311AF90DE04A18F8AF95 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A1DC97871B5203A200A41817 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A1DC97881B5203C700A41817 /* climber.gif */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		BC20C5E3B76E6373D30D80E1 /* Frameworks */ = {
@@ -369,6 +380,7 @@
 				6F74C3F61B29FA5D00C0FD85 /* Main.storyboard in Resources */,
 				6F63CAE01B33DA37000F0BF4 /* SF-UI-Display-Heavy.otf in Resources */,
 				6F63CAE41B33DA37000F0BF4 /* SF-UI-Display-Semibold.otf in Resources */,
+				A1DC97891B5203C700A41817 /* climber.gif in Resources */,
 				6F63CAE31B33DA37000F0BF4 /* SF-UI-Display-Regular.otf in Resources */,
 				6F63CAE11B33DA37000F0BF4 /* SF-UI-Display-Light.otf in Resources */,
 				6F63CADF1B33DA37000F0BF4 /* SF-UI-Display-Bold.otf in Resources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q8d-4P-2ah">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q8d-4P-2ah">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -152,8 +152,12 @@
                                 <animations/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bU4-cM-elP">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="442"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Rs-MY-joq">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Tour-Illustration-2" translatesAutoresizingMaskIntoConstraints="NO" id="D4d-J3-l1a">
                                         <rect key="frame" x="702" y="92" width="197" height="211"/>
                                         <animations/>
@@ -198,8 +202,11 @@
                                         <rect key="frame" x="370" y="85" width="270" height="329"/>
                                         <animations/>
                                     </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="big-logo-purple" translatesAutoresizingMaskIntoConstraints="NO" id="VK8-IP-kYy">
+                                    <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="big-logo-purple" translatesAutoresizingMaskIntoConstraints="NO" id="VK8-IP-kYy">
                                         <rect key="frame" x="111" y="169" width="99" height="133"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="big-logo-white" translatesAutoresizingMaskIntoConstraints="NO" id="z1M-Qt-mOr">
+                                        <rect key="frame" x="87" y="141" width="147" height="190"/>
                                     </imageView>
                                 </subviews>
                                 <animations/>
@@ -244,6 +251,7 @@
                     <connections>
                         <outlet property="pageControl" destination="3Ts-pS-x8s" id="sCM-1p-iDI"/>
                         <outlet property="scrollView" destination="bU4-cM-elP" id="6cv-wV-d8I"/>
+                        <outlet property="videoView" destination="8Rs-MY-joq" id="jEF-CT-D16"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iqr-oq-AiM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1386,7 +1394,7 @@
                                 </subviews>
                                 <animations/>
                             </scrollView>
-                            <view alpha="0.0" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYj-p5-B3A">
+                            <view alpha="0.0" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYj-p5-B3A">
                                 <rect key="frame" x="0.0" y="479" width="320" height="54"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add comment" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B4v-Zd-DFF">
@@ -2615,6 +2623,7 @@
         <image name="adddetailline" width="294" height="1"/>
         <image name="arrow_back_red" width="44" height="44"/>
         <image name="big-logo-purple" width="99" height="133"/>
+        <image name="big-logo-white" width="147" height="190"/>
         <image name="big_red_btn_bg" width="85" height="28"/>
         <image name="black-back-button" width="36" height="36"/>
         <image name="boulder-button" width="70" height="70"/>
