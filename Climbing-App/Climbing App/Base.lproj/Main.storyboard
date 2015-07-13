@@ -236,8 +236,8 @@
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="pageIndicatorTintColor" red="0.79064078282828287" green="0.79064078282828287" blue="0.79064078282828287" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
-                                <color key="currentPageIndicatorTintColor" red="0.70671057261866299" green="0.6479462935080067" blue="0.7704979482323232" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="pageIndicatorTintColor" red="0.79064078282828287" green="0.79064078282828287" blue="0.79064078282828287" alpha="0.41000000000000003" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.70883107907324494" green="0.73334044581580171" blue="0.7704979482323232" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOu-C0-916">
                                 <rect key="frame" x="26" y="492" width="122" height="41"/>
