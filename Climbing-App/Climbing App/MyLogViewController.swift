@@ -29,6 +29,7 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
 	var lastScrollY: CGFloat = 0
 	var firstTime = true
 	
+	let redColor = UIColor(red: 242/255, green: 89/255, blue: 64/255, alpha: 1.0)
 	
     override func viewDidLoad() {
         super.viewDidLoad()

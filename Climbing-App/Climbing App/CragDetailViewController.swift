@@ -31,7 +31,21 @@ class CragDetailViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		savedIcon.alpha = 0
+		guideUnsaved()
+		
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "guideSaved", name: didSaveNewLog, object: nil)
+		
+//		if (saved == false){
+//			saveIcon.alpha = 1
+//			savedIcon.alpha = 0
+//			saveLabel.text = "SAVE GUIDE"
+//		}
+//		else if (saved == true){
+//			saveIcon.alpha = 0
+//			savedIcon.alpha = 1
+//			saveLabel.text = "SAVED"
+//		}
+		
 		progressView.alpha = 0
 		climbTableView.delegate = self
 		climbTableView.dataSource = self
@@ -143,13 +157,28 @@ class CragDetailViewController: UIViewController, UITableViewDataSource, UITable
 					}, completion: { (Bool) -> Void in
 						self.progressView.frame.size.width = 1
 //						self.saveLabel.frame.origin.x = 273
-						self.saveLabel.text = "SAVED"
-						self.saveIcon.alpha = 0
-						self.savedIcon.alpha = 1
+						self.guideSaved()
 						NSNotificationCenter.defaultCenter().postNotificationName(didSaveNewRegion, object: self)
 				})
 		}
 		
+//		var defaults = NSUserDefaults.standardUserDefaults()
+//		defaults.setBool("true", forKey: "Saved")
+//		
+		
+//		saved = true
+	}
+	
+	func guideSaved(){
+		self.saveLabel.text = "SAVED"
+		self.saveIcon.alpha = 0
+		self.savedIcon.alpha = 1
+	}
+	
+	func guideUnsaved(){
+		self.saveLabel.text = "SAVE GUIDE"
+		self.saveIcon.alpha = 1
+		self.savedIcon.alpha = 0
 	}
 
 }

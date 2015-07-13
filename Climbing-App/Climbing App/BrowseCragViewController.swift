@@ -29,6 +29,7 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 	var manager:CLLocationManager!
 	var myLocations:[CLLocation] = []
 	var location: CLLocation!
+	var saved = false
 	
 	var cragNames = ["Lyme Disease Rock", "Indian Rock", "Waterfall Cliffs", "Billy Goat Rock", "cragName5", "cragName6", "cragName7", "cragName8", "cragName9", "cragName10"]
 	
@@ -46,8 +47,10 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		savedIcon.alpha = 0
+		guideUnsaved()
 		
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "guideSaved", name: didSaveNewLog, object: nil)
+
 		progressView.alpha = 0 
         regionNameLabel.text = region.name
 		
@@ -232,13 +235,12 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 				self.progressView.alpha = 0
 			}, completion: { (Bool) -> Void in
 				self.progressView.frame.size.width = 1
-//				self.saveLabel.frame.origin.x = 273
-				self.saveLabel.text = "SAVED"
-				self.saveIcon.alpha = 0
-				self.savedIcon.alpha = 1
+				self.guideSaved()
 				NSNotificationCenter.defaultCenter().postNotificationName(didSaveNewRegion, object: self)
 			})
 		}
+		
+		saved = true
 		
     }
 	
@@ -272,6 +274,17 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 
     }
 	
+	func guideSaved(){
+		self.saveLabel.text = "SAVED"
+		self.saveIcon.alpha = 0
+		self.savedIcon.alpha = 1
+	}
+	
+	func guideUnsaved(){
+		self.saveLabel.text = "SAVE GUIDE"
+		self.saveIcon.alpha = 1
+		self.savedIcon.alpha = 0
+	}
 	
 //	func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
 //		
