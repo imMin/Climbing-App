@@ -10,116 +10,120 @@ import UIKit
 
 
 class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelegate, AddPhotoViewControllerDelegate, UIScrollViewDelegate {
-	
-	var routeName: String!
-	var level: String!
-	var type: String!
-	var distance: String!
-	var climb: String!
-	
+    
+    var routeName: String!
+    var level: String!
+    var type: String!
+    var distance: String!
+    var climb: String!
+    
     let picker = UIImagePickerController()
-	
+    
     @IBOutlet weak var routeLabel: UILabel!
-//	@IBOutlet weak var routeNameLabel: UILabel!
-//	@IBOutlet weak var levelLabel: UILabel!
-//	@IBOutlet weak var typeLabel: UILabel!
-//	@IBOutlet weak var distanceLabel: UILabel!
-//	@IBOutlet weak var climbLabel: UILabel!
-	@IBOutlet weak var videoView: YTPlayerView!
-	@IBOutlet weak var commentBar: UIView!
-	@IBOutlet weak var bottomConstraint: NSLayoutConstraint!
-	@IBOutlet weak var commentField: UITextField!
-	
-    @IBOutlet weak var scrollView: UIScrollView!
+    //	@IBOutlet weak var routeNameLabel: UILabel!
+    //	@IBOutlet weak var levelLabel: UILabel!
+    //	@IBOutlet weak var typeLabel: UILabel!
+    //	@IBOutlet weak var distanceLabel: UILabel!
+    //	@IBOutlet weak var climbLabel: UILabel!
+
+    @IBOutlet weak var commentBar: UIView!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var videoView: YTPlayerView!
+    
+    @IBOutlet weak var commentField: UITextField!
     var hasNewPhoto: Bool = false
     var newPhoto: UIImage!
     var newPhotoCaption: String!
-    @IBOutlet weak var imageButton: UIButton!
     let photos = PhotosProvider().photos
     
-    @IBOutlet weak var climbingPhotosView: UIImageView!
-    @IBOutlet weak var photosScrollView: UIScrollView!
+    @IBOutlet weak var imageButton: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var photosScrollView: UIScrollView!
+    @IBOutlet weak var climbingPhotosView: UIImageView!
+    @IBOutlet weak var otherCommentsView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-		routeLabel.text = routeName
-//		levelLabel.text = level
-//		typeLabel.text = type
-//		distanceLabel.text = distance
-//		climbLabel.text = climb
-		
-
-		
+        routeLabel.text = routeName
+        //		levelLabel.text = level
+        //		typeLabel.text = type
+        //		distanceLabel.text = distance
+        //		climbLabel.text = climb
+        
         let buttonImage = UIImage(named: PrimaryImageName)
         imageButton?.setBackgroundImage(buttonImage, forState: .Normal)
-
-		
-//		self.view.frame.size = CGSizeMake(320, 408)
-		
-//		scrollView.frame.size = CGSizeMake(320, 408)
-		
-		
+        
+        
+        //		self.view.frame.size = CGSizeMake(320, 408)
+        
+        //		scrollView.frame.size = CGSizeMake(320, 408)
+        
+        
         // Do any additional setup after loading the view.
-        scrollView.contentSize = CGSizeMake(320, 4450)
-		scrollView.delegate = self
-		
-		
+        scrollView.contentSize = CGSizeMake(320, 3450)
+        scrollView.delegate = self
+        
+        
         photosScrollView.contentSize = CGSizeMake(630, 120)
         photosScrollView.delegate = self
         
-//        if hasNewPhoto == true {
-//            addNewPhoto()
-//        }
-		
-		videoView.loadWithVideoId("KZ8UsvygtNE", playerVars: ["playsinline" : 1, "modestbranding" : 0, "showinfo" : 0, "controls" : 1, "fs" : 1, "autohide" : 1])
-		
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
-		
-		commentField.addTarget(commentField, action: "resignFirstResponder", forControlEvents: UIControlEvents.EditingDidEndOnExit)
+        //        if hasNewPhoto == true {
+        //            addNewPhoto()
+        //        }
+        
+        videoView.loadWithVideoId("KZ8UsvygtNE", playerVars: ["playsinline" : 1, "modestbranding" : 0, "showinfo" : 0, "controls" : 1, "fs" : 1, "autohide" : 1])
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
+        
+        commentField.addTarget(commentField, action: "resignFirstResponder", forControlEvents: UIControlEvents.EditingDidEndOnExit)
     }
-	
-	override func viewDidAppear(animated: Bool) {
-		super.viewDidLoad()
-		
-//		delay(0.1) {
-//			self.bottomConstraint.constant = 0
-//		}
-		UIView.animateWithDuration(0.2, animations: { () -> Void in
-			self.commentBar.alpha = 0.9
-		})
-		
-//		videoView.playVideo()
-	}
-
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidLoad()
+        
+        //		delay(0.1) {
+        //			self.bottomConstraint.constant = 0
+        //		}
+        UIView.animateWithDuration(0.2, animations: { () -> Void in
+            self.commentBar.alpha = 0.9
+        })
+        
+        //		videoView.playVideo()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func addNewPhoto() {
-		let photoHeight = self.imageButton.frame.height + 10
-		
-		self.imageButton.frame.origin = videoView.frame.origin
-		
-//		scrollView.contentSize = CGSizeMake(scrollView.contentSize.width, scrollView.contentSize.height + photoHeight)
-		
+        //		let photoHeight = self.imageButton.frame.height + 10
+        
+        //		self.imageButton.frame.origin = videoView.frame.origin
+        
+        //		scrollView.contentSize = CGSizeMake(scrollView.contentSize.width, scrollView.contentSize.height + photoHeight)
+        
+        
+        
         UIView.animateWithDuration(0.7, animations: { () -> Void in
-			self.videoView.frame.origin.y += photoHeight
-//            self.climbingPhotosView.frame.origin.y += photoHeight
-			self.scrollView.contentOffset = CGPointMake(0, self.imageButton.frame.origin.y)
+            self.otherCommentsView.frame.origin.y += 285
+            
+            //            self.videoView.frame.origin.y += photoHeight
+            //            self.climbingPhotosView.frame.origin.y += photoHeight
+            self.scrollView.contentOffset = CGPointMake(0, self.imageButton.frame.origin.y)
         })
         
         //TODO: add new photo to carousel
-
-		
+        
+        
     }
-
-	@IBAction func didPressBackButton(sender: AnyObject) {
-		navigationController?.popViewControllerAnimated(true)
-		
-	}
-
+    
+    @IBAction func didPressBackButton(sender: AnyObject) {
+        navigationController?.popViewControllerAnimated(true)
+        
+    }
+    
     @IBAction func didPressAddPhoto(sender: AnyObject) {
         performSegueWithIdentifier("addPhotoSegue", sender: nil)
         
@@ -128,20 +132,20 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "addPhotoSegue" {
             let vc = segue.destinationViewController as! AddPhotoViewController
-//            vc.photoView.image = newPhoto
+            //            vc.photoView.image = newPhoto
             vc.delegate = self
         }
-		
-		if segue.identifier == "logRouteSegue" {
-			let navController = segue.destinationViewController as! UINavigationController
-			let logVC = navController.topViewController as! AddDetailViewController
-			logVC.routeName = "Castle Rock"
-			logVC.selectedLevel = 6
-		}
+        
+        if segue.identifier == "logRouteSegue" {
+            let navController = segue.destinationViewController as! UINavigationController
+            let logVC = navController.topViewController as! AddDetailViewController
+            logVC.routeName = "Castle Rock"
+            logVC.selectedLevel = 6
+        }
     }
-	
-
-	
+    
+    
+    
     func noCamera(){
         let alertVC = UIAlertController(title: "No Camera", message: "Sorry, this device has no camera", preferredStyle: .Alert)
         let okAction = UIAlertAction(title: "OK", style:.Default, handler: nil)
@@ -155,7 +159,7 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
         presentViewController(photosViewController, animated: true, completion: nil)
         
         updateImagesOnPhotosViewController(photosViewController, afterDelayWithPhotos: photos)
-
+        
     }
     
     func updateImagesOnPhotosViewController(photosViewController: NYTPhotosViewController, afterDelayWithPhotos: [ExamplePhoto]) {
@@ -196,42 +200,42 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
         return false
     }
     
-//    func photosViewController(photosViewController: NYTPhotosViewController!, referenceViewForPhoto photo: NYTPhoto!) -> UIView! {
-//        if photo as? ExamplePhoto == photos[NoReferenceViewPhotoIndex] {
-//            /** Swift 1.2
-//            *  if photo as! ExamplePhoto == photos[PhotosProvider.NoReferenceViewPhotoIndex]
-//            */
-//            return nil
-//        }
-//        return imageButton
-//    }
-//    
-//    func photosViewController(photosViewController: NYTPhotosViewController!, loadingViewForPhoto photo: NYTPhoto!) -> UIView! {
-//        if photo as! ExamplePhoto == photos[CustomEverythingPhotoIndex] {
-//            /** Swift 1.2
-//            *  if photo as! ExamplePhoto == photos[PhotosProvider.CustomEverythingPhotoIndex]
-//            */
-//            var label = UILabel()
-//            label.text = "Custom Loading..."
-//            label.textColor = UIColor.greenColor()
-//            return label
-//        }
-//        return nil
-//    }
+    //    func photosViewController(photosViewController: NYTPhotosViewController!, referenceViewForPhoto photo: NYTPhoto!) -> UIView! {
+    //        if photo as? ExamplePhoto == photos[NoReferenceViewPhotoIndex] {
+    //            /** Swift 1.2
+    //            *  if photo as! ExamplePhoto == photos[PhotosProvider.NoReferenceViewPhotoIndex]
+    //            */
+    //            return nil
+    //        }
+    //        return imageButton
+    //    }
+    //
+    //    func photosViewController(photosViewController: NYTPhotosViewController!, loadingViewForPhoto photo: NYTPhoto!) -> UIView! {
+    //        if photo as! ExamplePhoto == photos[CustomEverythingPhotoIndex] {
+    //            /** Swift 1.2
+    //            *  if photo as! ExamplePhoto == photos[PhotosProvider.CustomEverythingPhotoIndex]
+    //            */
+    //            var label = UILabel()
+    //            label.text = "Custom Loading..."
+    //            label.textColor = UIColor.greenColor()
+    //            return label
+    //        }
+    //        return nil
+    //    }
     
-//    func photosViewController(photosViewController: NYTPhotosViewController!, captionViewForPhoto photo: NYTPhoto!) -> UIView! {
-//        if photo as! ExamplePhoto == photos[CustomEverythingPhotoIndex] {
-//            /** Swift 1.2
-//            *  if photo as! ExamplePhoto == photos[PhotosProvider.CustomEverythingPhotoIndex]
-//            */
-//            var label = UILabel()
-//            label.text = "Custom Caption View"
-//            label.textColor = UIColor.whiteColor()
-//            label.backgroundColor = UIColor.redColor()
-//            return label
-//        }
-//        return nil
-//    }
+    //    func photosViewController(photosViewController: NYTPhotosViewController!, captionViewForPhoto photo: NYTPhoto!) -> UIView! {
+    //        if photo as! ExamplePhoto == photos[CustomEverythingPhotoIndex] {
+    //            /** Swift 1.2
+    //            *  if photo as! ExamplePhoto == photos[PhotosProvider.CustomEverythingPhotoIndex]
+    //            */
+    //            var label = UILabel()
+    //            label.text = "Custom Caption View"
+    //            label.textColor = UIColor.whiteColor()
+    //            label.backgroundColor = UIColor.redColor()
+    //            return label
+    //        }
+    //        return nil
+    //    }
     
     func photosViewController(photosViewController: NYTPhotosViewController!, didNavigateToPhoto photo: NYTPhoto!, atIndex photoIndex: UInt) {
         println("Did Navigate To Photo: \(photo) identifier: \(photoIndex)")
@@ -244,52 +248,44 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
     func photosViewControllerDidDismiss(photosViewController: NYTPhotosViewController!) {
         println("Did dismiss Photo Viewer: \(photosViewController)")
     }
-
+    
     func passImage(controller: AddPhotoViewController, image: UIImage, string: String) {
         newPhoto = image
         newPhotoCaption = string
         imageButton.setBackgroundImage(newPhoto, forState: UIControlState.Normal)
         addNewPhoto()
     }
-	
-	
-	func keyboardWillShow(sender: NSNotification) {
-		var info = sender.userInfo!
-		var keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
-//		let duration = sender.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! Double
-//		let curve = sender.userInfo![UIKeyboardAnimationCurveUserInfoKey] as! UInt
-
-		
-		UIView.animateWithDuration(0.5, animations: { () -> Void in
-			self.bottomConstraint.constant = keyboardFrame.size.height - 60
-		})
-	}
-	
-	func keyboardWillHide(sender: NSNotification) {
-		UIView.animateWithDuration(0.5, animations: { () -> Void in
-			self.bottomConstraint.constant = 0
-		})
-	}
-	
     
-	@IBAction func onTap(sender: AnyObject) {
-		commentField.endEditing(true)
-	}
-	
-	@IBAction func didPressSaveButton(sender: AnyObject) {
-		
-		NSNotificationCenter.defaultCenter().postNotificationName(didSaveNewRegion, object: self)
-		
-	}
-
-	func scrollViewDidScroll(scrollView: UIScrollView) {
-		
-		if scrollView.contentOffset.y > 400 && scrollView.contentOffset.y < 900 {
-			videoView.playVideo()
-		}
-		else {
-			videoView.stopVideo()
-		}
-	}
-	
+    
+    func keyboardWillShow(sender: NSNotification) {
+        var info = sender.userInfo!
+        var keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        //		let duration = sender.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! Double
+        //		let curve = sender.userInfo![UIKeyboardAnimationCurveUserInfoKey] as! UInt
+        
+        
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+            self.bottomConstraint.constant = keyboardFrame.size.height - 60
+        })
+    }
+    
+    func keyboardWillHide(sender: NSNotification) {
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+            self.bottomConstraint.constant = 0
+        })
+    }
+    
+    
+    @IBAction func onTap(sender: AnyObject) {
+        commentField.endEditing(true)
+    }
+    
+    @IBAction func didPressSaveButton(sender: AnyObject) {
+        
+        NSNotificationCenter.defaultCenter().postNotificationName(didSaveNewRegion, object: self)
+        
+    }
+    
+    
+    
 }

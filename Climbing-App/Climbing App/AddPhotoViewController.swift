@@ -20,6 +20,7 @@ class AddPhotoViewController: UIViewController, TGCameraDelegate, UINavigationCo
     var navController: TGCameraNavigationController!
     var triggerOpen: Bool = true
     
+    @IBOutlet weak var captionTextField: UITextField!
     var delegate: AddPhotoViewControllerDelegate? = nil
     
     override func viewDidLoad() {

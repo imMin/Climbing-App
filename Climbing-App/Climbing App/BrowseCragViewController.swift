@@ -17,6 +17,7 @@ let kDidSaveCrag = "kDidSaveCrag"
 
 class BrowseCragViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate, MKMapViewDelegate {
 	
+    @IBOutlet weak var mapContainer: UIView!
 	@IBOutlet weak var cragMapView: MKMapView!
 	@IBOutlet weak var cragTableView: UITableView!
     @IBOutlet weak var regionNameLabel: UILabel!
@@ -28,7 +29,7 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet weak var regionView: UIImageView!
 	@IBOutlet weak var topBar: UIView!
 	
-	
+    var mapOriginalFrame: CGRect!
     var image: UIImage!
 	var region: Region!
 	var manager:CLLocationManager!
@@ -100,7 +101,8 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 			guideSaved()
 			
 		}
-		
+        
+        mapContainer.alpha = 0
     }
     
 
@@ -210,7 +212,19 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
 
+    @IBAction func onTapDirections(sender: AnyObject) {
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+            self.mapContainer.alpha = 1
+        })
+    }
 	
+    @IBAction func onCloseMap(sender: AnyObject) {
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+            self.mapContainer.alpha = 0
+        })
+    }
+    
+    
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		if (segue.identifier == "cragDetailSegue") {
 			
