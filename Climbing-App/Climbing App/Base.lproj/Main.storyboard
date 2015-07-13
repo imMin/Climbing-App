@@ -682,6 +682,10 @@
                                             <rect key="frame" x="130" y="31" width="60" height="60"/>
                                             <animations/>
                                         </imageView>
+                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUU-I6-FIY">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </scrollView>
                                     </subviews>
                                     <animations/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -779,6 +783,7 @@
                     <navigationItem key="navigationItem" id="Ifk-CA-RtQ"/>
                     <connections>
                         <outlet property="avatar" destination="7ml-sr-uiz" id="1aG-tz-9S3"/>
+                        <outlet property="graphView" destination="bUU-I6-FIY" id="zUG-sk-8zh"/>
                         <outlet property="logTableView" destination="LHl-D1-l46" id="6hK-vM-Cpn"/>
                         <outlet property="navTitle" destination="Ua8-DO-Mjy" id="YmQ-Ay-hnU"/>
                         <outlet property="profileView" destination="RIm-HE-dHC" id="i4Z-5k-isD"/>

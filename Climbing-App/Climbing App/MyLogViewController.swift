@@ -15,6 +15,7 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
 	@IBOutlet weak var avatar: UIImageView!
 	@IBOutlet weak var tinyHeader: UIView!
 	@IBOutlet weak var navTitle: UILabel!
+	@IBOutlet weak var graphView: UIScrollView!
 	
 	var dates: [String] = ["date"]
 	var climbInDates: [Int] = []
@@ -23,8 +24,10 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
 	var types: [String] = []
 	var styles: [String] = []
 	var logs: [PFObject]! = []
+	var graphLevels: [Int]! = []
 	
-	var lastScrollY: CGFloat!
+	var lastScrollY: CGFloat = 0
+	var firstTime = true
 	
 	
     override func viewDidLoad() {
@@ -37,8 +40,10 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
 		println(self.logTableView.contentSize.height)
 		
 		fetchData()
+		drawGraph()
 		
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: "insertData", name: didSaveNewLog, object: nil)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "drawGraph", name: didSaveNewLog, object: nil)
 	}
 
     override func didReceiveMemoryWarning() {
@@ -85,6 +90,7 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
 			self.locations.append(self.logs[i]["location"] as! String)
 			self.types.append(self.logs[i]["type"] as! String)
 			self.styles.append(self.logs[i]["style"] as! String)
+			self.graphLevels.append(self.logs[i]["graphLevel"] as! Int)
 		}
 		
 		self.climbInDates.append(count)
@@ -95,12 +101,58 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
 		
 		logTableView.reloadData()
 		
+		
+		self.logTableView.setContentOffset(CGPointZero, animated:true)
 		var newIndexPath = NSIndexPath(forRow: 0, inSection: 0)
-		self.logTableView.selectRowAtIndexPath(newIndexPath, animated: false, scrollPosition: UITableViewScrollPosition.Top)
+		self.logTableView.selectRowAtIndexPath(newIndexPath, animated: false, scrollPosition: UITableViewScrollPosition.None)
 		
 		delay(0.5, { () -> () in
 			self.logTableView.deselectRowAtIndexPath(newIndexPath, animated: true)
 		})
+	}
+	
+	func drawGraph() {
+		
+		var graphLevelsReversed = graphLevels.reverse()
+		
+		if (logs.count > 14) {
+			graphView.contentSize = CGSizeMake(CGFloat(20 + logs.count * 20), CGFloat(180))
+		}
+		else {
+			graphView.contentSize = CGSizeMake(CGFloat(320), CGFloat(200))
+		}
+		
+//		graphView.contentOffset.x = graphView.contentSize.width - 320
+		
+//		graphView.sc(CGRectMake(graphViewvisible, graphView.contentSize.width, 320, 200), animated: false)
+		
+		
+		for (var i = 0; i < logs.count; i++) {
+			let graphRect = CGRectMake(CGFloat(20+i*20), CGFloat(160 - graphLevelsReversed[i]*7), CGFloat(4), CGFloat(graphLevelsReversed[i]*7))
+			let logGraph = UIView(frame: graphRect)
+			logGraph.backgroundColor = UIColor.redColor()
+			logGraph.layer.cornerRadius = 2
+			graphView.addSubview(logGraph)
+			
+			if i == logs.count-1 && !firstTime {
+				logGraph.frame.size.height = 0
+				logGraph.frame.origin.y = 160
+				
+				
+				UIView.animateWithDuration(0.5, animations: { () -> Void in
+					logGraph.frame.size.height = graphRect.size.height
+					logGraph.frame.origin.y = graphRect.origin.y
+				}, completion: { (complete) -> Void in
+					delay(0.1, { () -> () in
+						
+					})
+				})
+			}
+		}
+		
+		graphView.setContentOffset(CGPoint(x:(graphView.contentSize.width - 320), y:0), animated: false)
+		
+		firstTime = false
 	}
 	
 	

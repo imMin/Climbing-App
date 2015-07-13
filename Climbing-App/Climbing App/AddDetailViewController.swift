@@ -210,6 +210,8 @@ class AddDetailViewController: UIViewController, UIScrollViewDelegate, SelectRou
 	@IBAction func didPressSaveButton(sender: AnyObject) {
 		var log = PFObject(className: "Log")
 		
+		log["graphLevel"] = selectedLevel
+		
 //		log["level"] = selectedLevel
 		if (isFiveButton == true){
 			log["level"] = levelLabels[selectedLevel].text
