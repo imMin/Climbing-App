@@ -1407,7 +1407,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="didPressSaveButton:" destination="9fa-Sk-Kgo" eventType="touchUpInside" id="bpi-HV-L0y"/>
-                                                    <segue destination="dcC-jB-vzP" kind="modal" id="TJc-tJ-nwA"/>
+                                                    <segue destination="dcC-jB-vzP" kind="modal" identifier="logRouteSegue" id="TJc-tJ-nwA"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log this climb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhI-zi-FXw">
