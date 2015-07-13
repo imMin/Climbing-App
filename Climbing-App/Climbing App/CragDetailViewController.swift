@@ -16,6 +16,10 @@ class CragDetailViewController: UIViewController, UITableViewDataSource, UITable
 	
 	@IBOutlet weak var cragNameLabel: UILabel!
 	@IBOutlet weak var climbTableView: UITableView!
+	@IBOutlet weak var progressView: UIView!
+	@IBOutlet weak var saveLabel: UILabel!
+	@IBOutlet weak var saveIcon: UIImageView!
+	@IBOutlet weak var savedIcon: UIImageView!
 	
 	var climbNames = ["Vicious Circles", "Blowing Bubbles", "Epic Confrontation", "Ouch Pouch", "C** Slot"]
 	var climbLevels = ["5.9", "5.10a", "5.12b", "5.11a", "5.10c"]
@@ -27,6 +31,8 @@ class CragDetailViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
 		
+
+		progressView.alpha = 0
 		climbTableView.delegate = self
 		climbTableView.dataSource = self
 		climbTableView.backgroundColor = UIColor.blackColor()
@@ -126,7 +132,23 @@ class CragDetailViewController: UIViewController, UITableViewDataSource, UITable
 	@IBAction func didPressSaveButton(sender: AnyObject) {
 		
 		NSNotificationCenter.defaultCenter().postNotificationName(didSaveNewRegion, object: self)
-
+		
+		progressView.alpha = 1
+		
+		UIView.animateWithDuration(2, delay: 0.0, options: .CurveEaseOut, animations: { () -> Void in
+			self.progressView.frame.size.width = CGFloat(320)
+			}) { (Bool) -> Void in
+				UIView.animateWithDuration(0.1, animations: { () -> Void in
+					self.progressView.alpha = 0
+					}, completion: { (Bool) -> Void in
+						self.progressView.frame.size.width = 1
+//						self.saveLabel.frame.origin.x = 273
+						self.saveLabel.text = "SAVED"
+//						self.saveIcon.alpha = 0
+						NSNotificationCenter.defaultCenter().postNotificationName(didSaveNewRegion, object: self)
+				})
+		}
+		
 	}
 
 }
