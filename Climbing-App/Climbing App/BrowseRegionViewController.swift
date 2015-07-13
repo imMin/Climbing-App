@@ -82,6 +82,8 @@ class Region {
 class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, CLLocationManagerDelegate, MKMapViewDelegate
 {
     
+    @IBOutlet weak var mapContainer: UIView!
+    
     var regions = Region.allRegions
     
 	var manager:CLLocationManager!
@@ -98,7 +100,7 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        mapContainer.alpha = 0
         
 		regionCollectionView.delegate = self
 		regionCollectionView.dataSource = self
@@ -145,6 +147,22 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    @IBAction func onTapMap(sender: AnyObject) {
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+            self.mapContainer.alpha = 1
+        })
+    }
+    
+    
+    @IBAction func onTapClose(sender: AnyObject) {
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+            self.mapContainer.alpha = 0
+        })
+    }
+    
+    
     
 	func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
 		return 1
