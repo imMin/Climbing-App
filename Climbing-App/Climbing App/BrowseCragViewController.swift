@@ -29,6 +29,10 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet weak var regionView: UIImageView!
 	@IBOutlet weak var topBar: UIView!
 	
+    @IBOutlet weak var regionDescription: UIView!
+    
+    
+    var descriptionX: CGFloat!
     var mapOriginalFrame: CGRect!
     var image: UIImage!
 	var region: Region!
@@ -48,10 +52,15 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
     var crags: [PFObject] = [PFObject]()
     var currentLocation: CLLocation!
     var locManager: CLLocationManager!
+    
+    var mapCenterY: CGFloat!
 
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        descriptionX = regionDescription.center.x
+//        regionDescription.alpha = 0
 		
 		guideUnsaved()
 		
@@ -75,6 +84,7 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 		cragMapView.mapType = MKMapType.Hybrid
 		cragMapView.showsPointsOfInterest = false
 		cragMapView.showsUserLocation = true
+        
 		
 		var coordRegion : MKCoordinateRegion
 		coordRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake(37.2306, -122.0957), MKCoordinateSpanMake(0.4, 0.4))
@@ -102,6 +112,11 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 			
 		}
         
+        mapCenterY = cragMapView.center.y
+        
+        //Visual stuff for crag map
+        cragMapView.center.y = -300
+        cragMapView.layer.cornerRadius = 3
         mapContainer.alpha = 0
     }
     
@@ -211,9 +226,21 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 
         }
     }
-
+    
+//    override func viewDidAppear(animated: Bool) {
+//        regionDescription.center.x = 500
+//        regionDescription.alpha = 0
+//        UIView.animateWithDuration(0.5, animations: { () -> Void in
+//            self.regionDescription.alpha = 1
+//            self.regionDescription.center.x = self.descriptionX
+//        })
+//    }
+    
+    
+    //ANIMATIONS
     @IBAction func onTapDirections(sender: AnyObject) {
         UIView.animateWithDuration(0.5, animations: { () -> Void in
+            self.cragMapView.center.y = self.mapCenterY
             self.mapContainer.alpha = 1
         })
     }
@@ -313,7 +340,7 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 	}
 	
 	func guideUnsaved(){
-		self.saveLabel.text = "Save Guide"
+		self.saveLabel.text = "Save"
 		self.saveIcon.alpha = 1
 		self.savedIcon.alpha = 0
 	}
