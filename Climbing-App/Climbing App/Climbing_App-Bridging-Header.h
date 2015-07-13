@@ -14,6 +14,9 @@
 #import "TGCamera.h"
 #import "TGCameraColor.h"
 #import "YTPlayerView.h"
+#import "LocationPickerView.h"
+#import "UIImage+Icons.h"
+
 
 #import <NYTPhotoViewer/NYTPhoto.h>
 #import <NYTPhotoViewer/NYTPhotosViewController.h>

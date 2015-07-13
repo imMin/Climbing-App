@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q8d-4P-2ah">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A216g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q8d-4P-2ah">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -935,6 +935,7 @@
                                         </view>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNo-Ar-r4r">
                                             <rect key="frame" x="286" y="24" width="24" height="24"/>
+                                            <animations/>
                                             <state key="normal" image="map-corner-icon">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
@@ -1025,6 +1026,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nV-fO-48y">
                                         <rect key="frame" x="286" y="24" width="24" height="24"/>
+                                        <animations/>
                                         <state key="normal" image="map-corner-icon">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -1051,6 +1053,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrK-Wx-VLv">
                                         <rect key="frame" x="289" y="25" width="19" height="22"/>
+                                        <animations/>
                                         <state key="normal" image="x-out-white">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -1063,6 +1066,7 @@
                                         <animations/>
                                     </mapView>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
@@ -1121,6 +1125,7 @@
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIy-KM-Ayo">
                                         <rect key="frame" x="255" y="25" width="57" height="24"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="12"/>
                                         <state key="normal" title="Map" image="map-corner-icon">
                                             <color key="titleColor" red="0.10196078431372549" green="0.094117647058823528" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1134,7 +1139,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Knj-d4-dkY">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Knj-d4-dkY">
                                 <rect key="frame" x="0.0" y="56" width="320" height="463"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1220,6 +1225,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tta-S4-XwL">
                                         <rect key="frame" x="302" y="26" width="31" height="22"/>
+                                        <animations/>
                                         <state key="normal" image="x-out-white">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -1232,6 +1238,7 @@
                                         <animations/>
                                     </mapView>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
@@ -1243,6 +1250,7 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapContainer" destination="Y8G-RK-EKf" id="kqb-wW-rM1"/>
+                        <outlet property="navBar" destination="cNp-j5-Ier" id="BeF-q8-UCS"/>
                         <outlet property="regionCollectionView" destination="Knj-d4-dkY" id="A2c-wk-vUU"/>
                         <outlet property="regionMapView" destination="h9a-1c-SvX" id="BoN-X6-qQG"/>
                     </connections>
@@ -1552,53 +1560,63 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6b-lg-Wpc">
                                                                 <rect key="frame" x="10" y="66" width="300" height="300"/>
+                                                                <animations/>
                                                                 <state key="normal">
                                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                             </button>
                                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="prof-pic-small" translatesAutoresizingMaskIntoConstraints="NO" id="uRF-aN-Wvc">
                                                                 <rect key="frame" x="20" y="4" width="32" height="31"/>
+                                                                <animations/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alex Honnold" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="by5-ho-dLE">
                                                                 <rect key="frame" x="62" y="4" width="103" height="21"/>
+                                                                <animations/>
                                                                 <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
                                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Broken bolt here." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4s-Yk-sV0">
                                                                 <rect key="frame" x="20" y="30" width="281" height="45"/>
+                                                                <animations/>
                                                                 <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
                                                                 <color key="textColor" red="0.59215686270000001" green="0.59215686270000001" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Today" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Htr-kM-6Aq">
                                                                 <rect key="frame" x="62" y="20" width="239" height="20"/>
+                                                                <animations/>
                                                                 <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="10"/>
                                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
+                                                        <animations/>
                                                     </view>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nCW-kV-wsB" userLabel="Other comments">
                                                         <rect key="frame" x="0.0" y="-4" width="361" height="1854"/>
                                                         <subviews>
                                                             <imageView autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="climbing_photos" translatesAutoresizingMaskIntoConstraints="NO" id="hk3-b5-0Fx">
                                                                 <rect key="frame" x="20" y="581" width="320" height="1253"/>
+                                                                <animations/>
                                                             </imageView>
                                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="619-To-x6E">
                                                                 <rect key="frame" x="20" y="9" width="321" height="132"/>
                                                                 <subviews>
                                                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="prof-sasha-small" translatesAutoresizingMaskIntoConstraints="NO" id="Fk0-70-qrc">
                                                                         <rect key="frame" x="20" y="4" width="32" height="31"/>
+                                                                        <animations/>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sasha Wilder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wg-Mv-0GJ">
                                                                         <rect key="frame" x="62" y="4" width="103" height="21"/>
+                                                                        <animations/>
                                                                         <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
                                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lh-67-EWi">
                                                                         <rect key="frame" x="20" y="30" width="281" height="104"/>
+                                                                        <animations/>
                                                                         <string key="text">Cool route. The difficulty of the crux depends a lot on how tall you are. I can see someone tall(er than me) having no problem with hitting the second bolt. I had a bit more trouble.</string>
                                                                         <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
                                                                         <color key="textColor" red="0.59215686270000001" green="0.59215686270000001" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1606,15 +1624,18 @@
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4 months ago" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A70-l3-ycg">
                                                                         <rect key="frame" x="62" y="20" width="239" height="20"/>
+                                                                        <animations/>
                                                                         <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="10"/>
                                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
+                                                                <animations/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             </view>
                                                             <view autoresizesSubviews="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Px8-Vo-b9g" userLabel="videoView" customClass="YTPlayerView">
                                                                 <rect key="frame" x="30" y="276" width="300" height="162"/>
+                                                                <animations/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             </view>
                                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ILK-xg-Rq1">
@@ -1622,15 +1643,18 @@
                                                                 <subviews>
                                                                     <imageView opaque="NO" clipsSubviews="YES" contentMode="center" fixedFrame="YES" image="prof-puccio-small" translatesAutoresizingMaskIntoConstraints="NO" id="ubY-Al-4l7">
                                                                         <rect key="frame" x="20" y="21" width="32" height="31"/>
+                                                                        <animations/>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alexandrea Puccio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdJ-Tz-4Q8">
                                                                         <rect key="frame" x="62" y="20" width="124" height="21"/>
+                                                                        <animations/>
                                                                         <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
                                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTl-hO-VK4">
                                                                         <rect key="frame" x="20" y="46" width="281" height="104"/>
+                                                                        <animations/>
                                                                         <string key="text">From the South Summit: Do not rap, but rather climb back down the ridgetop for 100' and traverse past on easy ledges on the East side of the South Summit. Trying to rap often results in snagged ropes.</string>
                                                                         <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
                                                                         <color key="textColor" red="0.59215686270000001" green="0.59215686270000001" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1638,11 +1662,13 @@
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5 months ago" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkV-1A-Shq">
                                                                         <rect key="frame" x="62" y="36" width="239" height="20"/>
+                                                                        <animations/>
                                                                         <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="10"/>
                                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
+                                                                <animations/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             </view>
                                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pdO-lK-57t">
@@ -1650,15 +1676,18 @@
                                                                 <subviews>
                                                                     <imageView opaque="NO" clipsSubviews="YES" contentMode="center" fixedFrame="YES" image="prof-sasha-small" translatesAutoresizingMaskIntoConstraints="NO" id="C9K-bZ-WfN">
                                                                         <rect key="frame" x="20" y="21" width="32" height="31"/>
+                                                                        <animations/>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sasha Wilder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUx-WS-KhM">
                                                                         <rect key="frame" x="62" y="20" width="124" height="21"/>
+                                                                        <animations/>
                                                                         <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
                                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Lk-xM-xrn">
                                                                         <rect key="frame" x="20" y="46" width="281" height="104"/>
+                                                                        <animations/>
                                                                         <string key="text">Our setup was a 60m 8mm half/twin folded in half. 5 cams (fingers to hands), 8 stoppers, 8 slings and we were pretty happy with that set up, not sure I'd take anything more than that again.</string>
                                                                         <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
                                                                         <color key="textColor" red="0.59215686270000001" green="0.59215686270000001" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1666,31 +1695,38 @@
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5 months ago" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmw-AB-d0T">
                                                                         <rect key="frame" x="62" y="36" width="239" height="20"/>
+                                                                        <animations/>
                                                                         <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="10"/>
                                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
+                                                                <animations/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             </view>
                                                         </subviews>
+                                                        <animations/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </view>
                                                 </subviews>
+                                                <animations/>
                                             </view>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vE-3j-YkX">
                                                 <rect key="frame" x="6" y="6" width="320" height="120"/>
                                                 <subviews>
                                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="climbing photos horz" translatesAutoresizingMaskIntoConstraints="NO" id="6SO-Ki-ixn">
                                                         <rect key="frame" x="0.0" y="0.0" width="624" height="120"/>
+                                                        <animations/>
                                                         <gestureRecognizers/>
                                                         <connections>
                                                             <outletCollection property="gestureRecognizers" destination="aRJ-5s-1X6" appends="YES" id="ley-aQ-HRe"/>
                                                         </connections>
                                                     </imageView>
                                                 </subviews>
+                                                <animations/>
                                             </scrollView>
                                         </subviews>
+                                        <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
@@ -1809,6 +1845,7 @@
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Write a caption..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wwX-4F-5tB">
                                 <rect key="frame" x="18" y="408" width="286" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>

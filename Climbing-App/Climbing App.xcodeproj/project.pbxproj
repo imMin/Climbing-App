@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3EA5EB621B53C34400DCAFCE /* alex.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3EA5EB611B53C34400DCAFCE /* alex.mp4 */; };
+		3EC93EDA1B5463D100B36053 /* LocationPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC93ED71B5463D100B36053 /* LocationPickerView.m */; };
+		3EC93EDB1B5463D100B36053 /* UIImage+Icons.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC93ED91B5463D100B36053 /* UIImage+Icons.m */; };
 		6F0CB27F1B5335750094FF72 /* alexclimber.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6F0CB27E1B5335740094FF72 /* alexclimber.gif */; };
 		6F1F9DC21B2E4C3200E284BE /* BrowseCragCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1F9DC11B2E4C3200E284BE /* BrowseCragCell.swift */; };
 		6F1F9DC41B2E76E700E284BE /* LogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1F9DC31B2E76E700E284BE /* LogDetailViewController.swift */; };
@@ -72,6 +74,10 @@
 
 /* Begin PBXFileReference section */
 		3EA5EB611B53C34400DCAFCE /* alex.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = alex.mp4; sourceTree = "<group>"; };
+		3EC93ED61B5463D100B36053 /* LocationPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationPickerView.h; path = LocationPickerView/LocationPickerView.h; sourceTree = "<group>"; };
+		3EC93ED71B5463D100B36053 /* LocationPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationPickerView.m; path = LocationPickerView/LocationPickerView.m; sourceTree = "<group>"; };
+		3EC93ED81B5463D100B36053 /* UIImage+Icons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Icons.h"; path = "LocationPickerView/UIImage+Icons.h"; sourceTree = "<group>"; };
+		3EC93ED91B5463D100B36053 /* UIImage+Icons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Icons.m"; path = "LocationPickerView/UIImage+Icons.m"; sourceTree = "<group>"; };
 		47AAC82F33D8685F05942328 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F0CB27E1B5335740094FF72 /* alexclimber.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = alexclimber.gif; sourceTree = "<group>"; };
 		6F1F9DC11B2E4C3200E284BE /* BrowseCragCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseCragCell.swift; sourceTree = "<group>"; };
@@ -156,6 +162,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3EC93ED51B5463C000B36053 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				3EC93ED61B5463D100B36053 /* LocationPickerView.h */,
+				3EC93ED71B5463D100B36053 /* LocationPickerView.m */,
+				3EC93ED81B5463D100B36053 /* UIImage+Icons.h */,
+				3EC93ED91B5463D100B36053 /* UIImage+Icons.m */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
 		6F63CAD41B33DA21000F0BF4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +213,7 @@
 		6F74C3ED1B29FA5D00C0FD85 /* Climbing App */ = {
 			isa = PBXGroup;
 			children = (
+				3EC93ED51B5463C000B36053 /* Map */,
 				6F74C3F01B29FA5D00C0FD85 /* AppDelegate.swift */,
 				6F1F9DD11B2EC06900E284BE /* RegionCell.swift */,
 				A146495C1B3262AD00DFF014 /* Climbing_App-Bridging-Header.h */,
@@ -450,6 +468,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88456C611B3A6272004FF5C3 /* LoginViewController.swift in Sources */,
+				3EC93EDA1B5463D100B36053 /* LocationPickerView.m in Sources */,
 				6F4D65271B315D3E009F9600 /* SelectRouteViewController.swift in Sources */,
 				6F1F9DCE1B2EBDE900E284BE /* BrowseRegionViewController.swift in Sources */,
 				6F4D65291B316342009F9600 /* SelectRouteCell.swift in Sources */,
@@ -475,6 +494,7 @@
 				88456C5F1B3A61C6004FF5C3 /* SignupViewController.swift in Sources */,
 				6F4D65251B315059009F9600 /* RouteDetailViewController.swift in Sources */,
 				884A16081B380EC80033B1AA /* TourViewController.swift in Sources */,
+				3EC93EDB1B5463D100B36053 /* UIImage+Icons.m in Sources */,
 				6F74C41B1B2AC17500C0FD85 /* ConnectViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

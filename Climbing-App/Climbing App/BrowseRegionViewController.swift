@@ -79,16 +79,20 @@ class Region {
     }
 }
 
-class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, CLLocationManagerDelegate, MKMapViewDelegate
+class BrowseRegionViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, LocationPickerViewDelegate, UITableViewDataSource, UITableViewDelegate
 {
     
     @IBOutlet weak var mapContainer: UIView!
+	@IBOutlet weak var navBar: UIView!
     
     var regions = Region.allRegions
     
 	var manager:CLLocationManager!
 	var myLocations:[CLLocation] = []
 	var location: CLLocation!
+	
+	var locationPickerView: LocationPickerView!
+	
 	
 	@IBOutlet weak var regionCollectionView: UICollectionView!
 	
@@ -104,7 +108,7 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
         
         regionCollectionView.delegate = self
 		regionCollectionView.dataSource = self
-        
+		
         regionMapView.layer.cornerRadius = 3
         
 		//Set up Location Manager
@@ -142,6 +146,30 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 		
 //		regionCollectionView.allowsSelection = false
 		
+		
+		
+		
+		// Map
+		
+		self.locationPickerView = LocationPickerView(frame: CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y+56, self.view.bounds.size.width, self.view.bounds.size.height))
+		self.locationPickerView.tableViewDataSource = self
+		self.locationPickerView.tableViewDelegate = self
+		
+		// Optional parameters
+		self.locationPickerView.delegate = self
+		self.locationPickerView.shouldAutoCenterOnUserLocation = true
+		self.locationPickerView.shouldCreateHideMapButton = true
+		self.locationPickerView.pullToExpandMapEnabled = true
+		self.locationPickerView.defaultMapHeight = 60.0;           // larger than normal
+		self.locationPickerView.parallaxScrollFactor = 0.3;         // little slower than normal.
+		
+		// Optional setup
+//		self.locationPickerView.mapViewDidLoadBlock = {(locationPicker: LocationPickerView) in
+//			locationPicker.mapView.mapType = MKMapTypeStandard
+//			locationPicker.mapView.userTrackingMode = MKUserTrackingModeFollow
+//		}
+		
+		self.view.insertSubview(self.locationPickerView, belowSubview: self.navBar)
 		
 	}
 
@@ -287,6 +315,21 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 //		//		UIAlertView(title: "tapped Annotation!", message: view.annotation.title, delegate: nil, cancelButtonTitle: "OK").show()
 //	}
 	
+	
+	
+	
+	
+	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return 0
+	}
+	
+	
+	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+		var cell: BrowseCragCell!
+		
+		return cell
+		
+	}
 	
 }
 
