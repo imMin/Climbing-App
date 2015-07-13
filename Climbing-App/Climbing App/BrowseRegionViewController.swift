@@ -276,7 +276,7 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 		
 //		annotationView.image = UIImage(named: "custom_pin")
 //		annotationView.canShowCallout = true;
-		(annotationView as! MKPinAnnotationView).pinColor = MKPinAnnotationColor.Green
+		(annotationView as! MKPinAnnotationView).pinColor = MKPinAnnotationColor.Red
 		
 		
 		return annotationView
