@@ -133,6 +133,7 @@
             <string>VarelaRound</string>
             <string>VarelaRound</string>
             <string>VarelaRound</string>
+            <string>VarelaRound</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -1057,8 +1058,8 @@
                                         <animations/>
                                     </mapView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrK-Wx-VLv">
-                                        <rect key="frame" x="13" y="27" width="19" height="22"/>
-                                        <state key="normal" image="white-back-arrow">
+                                        <rect key="frame" x="290" y="22" width="19" height="22"/>
+                                        <state key="normal" image="x-out-white">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -1066,7 +1067,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
                         <animations/>
@@ -1113,7 +1114,7 @@
                                         <rect key="frame" x="84" y="27" width="154" height="21"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
-                                        <color key="textColor" red="0.1019607843" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.10196078431372549" green="0.094117647058823528" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HH9-4m-HFK">
@@ -1121,9 +1122,11 @@
                                         <animations/>
                                         <color key="backgroundColor" red="0.89411764709999997" green="0.89411764709999997" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIy-KM-Ayo">
-                                        <rect key="frame" x="274" y="23" width="31" height="30"/>
-                                        <state key="normal" title="map">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIy-KM-Ayo">
+                                        <rect key="frame" x="255" y="25" width="57" height="24"/>
+                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="12"/>
+                                        <state key="normal" title="Map" image="map-corner-icon">
+                                            <color key="titleColor" red="0.10196078431372549" green="0.094117647058823528" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -1222,9 +1225,9 @@
                                         <rect key="frame" x="20" y="138" width="320" height="180"/>
                                         <animations/>
                                     </mapView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tta-S4-XwL">
-                                        <rect key="frame" x="290" y="22" width="37" height="30"/>
-                                        <state key="normal" title="close">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tta-S4-XwL">
+                                        <rect key="frame" x="302" y="26" width="31" height="22"/>
+                                        <state key="normal" image="x-out-white">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -2953,6 +2956,7 @@
         <image name="gradientright" width="100" height="204"/>
         <image name="hero-overlay" width="314" height="134"/>
         <image name="login-button" width="122" height="41"/>
+        <image name="map-corner-icon" width="24" height="24"/>
         <image name="mylog2_tab" width="26" height="26"/>
         <image name="mylog2_tab_selected-1" width="26" height="26"/>
         <image name="prof-pic" width="60" height="60"/>
@@ -2975,6 +2979,7 @@
         <image name="white-back-arrow" width="10" height="15"/>
         <image name="white-map-pin" width="10" height="14"/>
         <image name="white-topo-background" width="320" height="568"/>
+        <image name="x-out-white" width="14" height="14"/>
         <image name="x_red" width="36" height="36"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
