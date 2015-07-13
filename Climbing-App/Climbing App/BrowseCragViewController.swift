@@ -29,6 +29,10 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet weak var regionView: UIImageView!
 	@IBOutlet weak var topBar: UIView!
 	
+    @IBOutlet weak var regionDescription: UIView!
+    
+    
+    var descriptionX: CGFloat!
     var mapOriginalFrame: CGRect!
     var image: UIImage!
 	var region: Region!
@@ -54,6 +58,9 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        descriptionX = regionDescription.center.x
+//        regionDescription.alpha = 0
 		
 		guideUnsaved()
 		
@@ -219,6 +226,15 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 
         }
     }
+    
+//    override func viewDidAppear(animated: Bool) {
+//        regionDescription.center.x = 500
+//        regionDescription.alpha = 0
+//        UIView.animateWithDuration(0.5, animations: { () -> Void in
+//            self.regionDescription.alpha = 1
+//            self.regionDescription.center.x = self.descriptionX
+//        })
+//    }
     
     
     //ANIMATIONS

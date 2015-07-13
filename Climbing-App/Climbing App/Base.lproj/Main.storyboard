@@ -907,27 +907,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                                             <animations/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="37.2306 ° N  -122.0957 ° E" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWb-8H-mfk">
-                                            <rect key="frame" x="17" y="260" width="209" height="22"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
-                                            <color key="textColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
-                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Castle Rock" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ywx-WY-NWS">
-                                            <rect key="frame" x="17" y="234" width="200" height="21"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="20"/>
-                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Saratoga, CA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqd-Ve-r6i">
-                                            <rect key="frame" x="17" y="278" width="209" height="22"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
-                                            <color key="textColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
-                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </label>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pLr-ez-V0V" userLabel="progressView">
                                             <rect key="frame" x="0.0" y="318" width="1" height="2"/>
                                             <animations/>
@@ -967,6 +946,33 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mkL-td-4TP">
+                                            <rect key="frame" x="-3" y="214" width="249" height="106"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="37.2306 ° N  -122.0957 ° E" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWb-8H-mfk">
+                                                    <rect key="frame" x="20" y="46" width="209" height="22"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Castle Rock" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ywx-WY-NWS">
+                                                    <rect key="frame" x="20" y="20" width="200" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="20"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Saratoga, CA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqd-Ve-r6i">
+                                                    <rect key="frame" x="20" y="64" width="209" height="22"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
                                     </subviews>
                                     <animations/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1076,6 +1082,7 @@
                         <outlet property="cragTableView" destination="A1C-fF-Yod" id="Lns-LX-dpl"/>
                         <outlet property="mapContainer" destination="mK1-38-eXR" id="0QP-3M-gYI"/>
                         <outlet property="progressView" destination="pLr-ez-V0V" id="Xbq-5j-8Ih"/>
+                        <outlet property="regionDescription" destination="mkL-td-4TP" id="caW-yJ-TcT"/>
                         <outlet property="regionNameLabel" destination="Ywx-WY-NWS" id="sjT-q9-jl9"/>
                         <outlet property="regionView" destination="M1D-51-wYc" id="JK9-mO-lfJ"/>
                         <outlet property="saveIcon" destination="c27-qC-TKO" id="Sic-Qx-va3"/>
