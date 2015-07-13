@@ -31,7 +31,7 @@ class CragDetailViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-
+		savedIcon.alpha = 0
 		progressView.alpha = 0
 		climbTableView.delegate = self
 		climbTableView.dataSource = self
@@ -144,7 +144,8 @@ class CragDetailViewController: UIViewController, UITableViewDataSource, UITable
 						self.progressView.frame.size.width = 1
 //						self.saveLabel.frame.origin.x = 273
 						self.saveLabel.text = "SAVED"
-//						self.saveIcon.alpha = 0
+						self.saveIcon.alpha = 0
+						self.savedIcon.alpha = 1
 						NSNotificationCenter.defaultCenter().postNotificationName(didSaveNewRegion, object: self)
 				})
 		}

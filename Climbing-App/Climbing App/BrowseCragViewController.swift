@@ -46,6 +46,8 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
 		
+		savedIcon.alpha = 0
+		
 		progressView.alpha = 0 
         regionNameLabel.text = region.name
 		
@@ -232,7 +234,8 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 				self.progressView.frame.size.width = 1
 //				self.saveLabel.frame.origin.x = 273
 				self.saveLabel.text = "SAVED"
-//				self.saveIcon.alpha = 0
+				self.saveIcon.alpha = 0
+				self.savedIcon.alpha = 1
 				NSNotificationCenter.defaultCenter().postNotificationName(didSaveNewRegion, object: self)
 			})
 		}
