@@ -2332,7 +2332,7 @@
                                                             <color key="textColor" red="0.59215686270000001" green="0.59215686270000001" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="castlerock-region-image" translatesAutoresizingMaskIntoConstraints="NO" id="hBO-dh-g9T">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="castle-rock-hero" translatesAutoresizingMaskIntoConstraints="NO" id="hBO-dh-g9T">
                                                             <rect key="frame" x="-1" y="0.0" width="132" height="130"/>
                                                             <animations/>
                                                         </imageView>
@@ -2783,7 +2783,6 @@
         <image name="boulder-button" width="70" height="70"/>
         <image name="camera_icon_red" width="180" height="180"/>
         <image name="castle-rock-hero" width="480" height="320"/>
-        <image name="castlerock-region-image" width="135" height="135"/>
         <image name="climbing photos horz" width="1049" height="202"/>
         <image name="climbing_photos" width="320" height="1253"/>
         <image name="cream-topo" width="320" height="568"/>
