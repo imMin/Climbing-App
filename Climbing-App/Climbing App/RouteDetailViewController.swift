@@ -38,6 +38,7 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
     let photos = PhotosProvider().photos
     
     @IBOutlet weak var climbingPhotosView: UIImageView!
+    @IBOutlet weak var photosScrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +64,9 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 		scrollView.delegate = self
 		
 		
+        photosScrollView.contentSize = CGSizeMake(630, 120)
+        photosScrollView.delegate = self
+        
 //        if hasNewPhoto == true {
 //            addNewPhoto()
 //        }
@@ -78,9 +82,9 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidLoad()
 		
-		delay(0.1) {
-			self.bottomConstraint.constant = 0
-		}
+//		delay(0.1) {
+//			self.bottomConstraint.constant = 0
+//		}
 		UIView.animateWithDuration(0.2, animations: { () -> Void in
 			self.commentBar.alpha = 0.9
 		})
