@@ -108,7 +108,7 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
         
         
         UIView.animateWithDuration(0.7, animations: { () -> Void in
-            self.otherCommentsView.frame.origin.y += 383
+            self.otherCommentsView.frame.origin.y += 363
             
             //            self.videoView.frame.origin.y += photoHeight
             //            self.climbingPhotosView.frame.origin.y += photoHeight
