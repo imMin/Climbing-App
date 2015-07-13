@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q8d-4P-2ah">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q8d-4P-2ah">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="VarelaRound-Regular.otf">
+            <string>VarelaRound</string>
+            <string>VarelaRound</string>
+            <string>VarelaRound</string>
+            <string>VarelaRound</string>
             <string>VarelaRound</string>
             <string>VarelaRound</string>
             <string>VarelaRound</string>
@@ -1478,7 +1482,6 @@
                                 </state>
                                 <connections>
                                     <action selector="didPressSaveButton:" destination="9fa-Sk-Kgo" eventType="touchUpInside" id="QBN-3h-0PM"/>
-                                    <segue destination="dcC-jB-vzP" kind="modal" identifier="logRouteSegue" id="eXO-8O-Wy8"/>
                                 </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="center" fixedFrame="YES" image="save-icon" translatesAutoresizingMaskIntoConstraints="NO" id="oIc-QX-cm9">
@@ -1521,140 +1524,153 @@
                                         <animations/>
                                         <color key="backgroundColor" red="0.14117647058823529" green="0.12549019607843137" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <view autoresizesSubviews="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gEt-Ip-lei">
-                                        <rect key="frame" x="0.0" y="231" width="360" height="2211"/>
+                                    <view autoresizesSubviews="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pv6-JN-m0W">
+                                        <rect key="frame" x="0.0" y="116" width="320" height="2211"/>
                                         <subviews>
-                                            <view autoresizesSubviews="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4KO-8u-XEh" userLabel="videoView" customClass="YTPlayerView">
-                                                <rect key="frame" x="20" y="411" width="280" height="162"/>
-                                                <animations/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3v8-tt-6Bq" userLabel="Comment feed">
+                                                <rect key="frame" x="-20" y="135" width="361" height="1855"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xyy-jT-gW0" userLabel="alexCommentCopy">
+                                                        <rect key="frame" x="20" y="4" width="321" height="315"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6b-lg-Wpc">
+                                                                <rect key="frame" x="10" y="70" width="300" height="202"/>
+                                                                <state key="normal">
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                            </button>
+                                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="prof-pic-small" translatesAutoresizingMaskIntoConstraints="NO" id="uRF-aN-Wvc">
+                                                                <rect key="frame" x="20" y="4" width="32" height="31"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alex Honnold" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="by5-ho-dLE">
+                                                                <rect key="frame" x="62" y="4" width="103" height="21"/>
+                                                                <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Broken bolt here." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4s-Yk-sV0">
+                                                                <rect key="frame" x="20" y="30" width="281" height="45"/>
+                                                                <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
+                                                                <color key="textColor" red="0.59215686270000001" green="0.59215686270000001" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Today" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Htr-kM-6Aq">
+                                                                <rect key="frame" x="62" y="20" width="239" height="20"/>
+                                                                <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="10"/>
+                                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nCW-kV-wsB" userLabel="Other comments">
+                                                        <rect key="frame" x="0.0" y="-4" width="361" height="1854"/>
+                                                        <subviews>
+                                                            <imageView autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="climbing_photos" translatesAutoresizingMaskIntoConstraints="NO" id="hk3-b5-0Fx">
+                                                                <rect key="frame" x="20" y="581" width="320" height="1253"/>
+                                                            </imageView>
+                                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="619-To-x6E">
+                                                                <rect key="frame" x="20" y="9" width="321" height="132"/>
+                                                                <subviews>
+                                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="prof-pic-small" translatesAutoresizingMaskIntoConstraints="NO" id="Fk0-70-qrc">
+                                                                        <rect key="frame" x="20" y="4" width="32" height="31"/>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alex Honnold" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wg-Mv-0GJ">
+                                                                        <rect key="frame" x="62" y="4" width="103" height="21"/>
+                                                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
+                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lh-67-EWi">
+                                                                        <rect key="frame" x="20" y="30" width="281" height="104"/>
+                                                                        <string key="text">Cool route. The difficulty of the crux depends a lot on how tall you are. I can see someone tall(er than me) having no problem with hitting the second bolt. I had a bit more trouble.</string>
+                                                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
+                                                                        <color key="textColor" red="0.59215686270000001" green="0.59215686270000001" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4 months ago" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A70-l3-ycg">
+                                                                        <rect key="frame" x="62" y="20" width="239" height="20"/>
+                                                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="10"/>
+                                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </view>
+                                                            <view autoresizesSubviews="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Px8-Vo-b9g" userLabel="videoView" customClass="YTPlayerView">
+                                                                <rect key="frame" x="30" y="276" width="300" height="162"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ILK-xg-Rq1">
+                                                                <rect key="frame" x="20" y="130" width="321" height="144"/>
+                                                                <subviews>
+                                                                    <imageView opaque="NO" clipsSubviews="YES" contentMode="center" fixedFrame="YES" image="prof-puccio-small" translatesAutoresizingMaskIntoConstraints="NO" id="ubY-Al-4l7">
+                                                                        <rect key="frame" x="20" y="21" width="32" height="31"/>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alexandrea Puccio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdJ-Tz-4Q8">
+                                                                        <rect key="frame" x="62" y="20" width="124" height="21"/>
+                                                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
+                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTl-hO-VK4">
+                                                                        <rect key="frame" x="20" y="46" width="281" height="104"/>
+                                                                        <string key="text">From the South Summit: Do not rap, but rather climb back down the ridgetop for 100' and traverse past on easy ledges on the East side of the South Summit. Trying to rap often results in snagged ropes.</string>
+                                                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
+                                                                        <color key="textColor" red="0.59215686270000001" green="0.59215686270000001" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5 months ago" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkV-1A-Shq">
+                                                                        <rect key="frame" x="62" y="36" width="239" height="20"/>
+                                                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="10"/>
+                                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pdO-lK-57t">
+                                                                <rect key="frame" x="20" y="440" width="321" height="145"/>
+                                                                <subviews>
+                                                                    <imageView opaque="NO" clipsSubviews="YES" contentMode="center" fixedFrame="YES" image="prof-sasha-small" translatesAutoresizingMaskIntoConstraints="NO" id="C9K-bZ-WfN">
+                                                                        <rect key="frame" x="20" y="21" width="32" height="31"/>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sasha Wilder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUx-WS-KhM">
+                                                                        <rect key="frame" x="62" y="20" width="124" height="21"/>
+                                                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
+                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Lk-xM-xrn">
+                                                                        <rect key="frame" x="20" y="46" width="281" height="104"/>
+                                                                        <string key="text">Our setup was a 60m 8mm half/twin folded in half. 5 cams (fingers to hands), 8 stoppers, 8 slings and we were pretty happy with that set up, not sure I'd take anything more than that again.</string>
+                                                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
+                                                                        <color key="textColor" red="0.59215686270000001" green="0.59215686270000001" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5 months ago" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmw-AB-d0T">
+                                                                        <rect key="frame" x="62" y="36" width="239" height="20"/>
+                                                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="10"/>
+                                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </view>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                </subviews>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1g-fP-edr">
-                                                <rect key="frame" x="10" y="726" width="300" height="196"/>
-                                                <animations/>
-                                                <state key="normal">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="didTapImageButton:" destination="9fa-Sk-Kgo" eventType="touchUpInside" id="mPX-OH-hRX"/>
-                                                </connections>
-                                            </button>
-                                            <imageView autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="climbing_photos" translatesAutoresizingMaskIntoConstraints="NO" id="Ey9-m1-7OC">
-                                                <rect key="frame" x="0.0" y="920" width="320" height="1253"/>
-                                                <animations/>
-                                            </imageView>
-                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPl-Rb-iA4">
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vE-3j-YkX">
                                                 <rect key="frame" x="6" y="6" width="320" height="120"/>
                                                 <subviews>
-                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="climbing photos horz" translatesAutoresizingMaskIntoConstraints="NO" id="myT-oJ-XQu">
+                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="climbing photos horz" translatesAutoresizingMaskIntoConstraints="NO" id="6SO-Ki-ixn">
                                                         <rect key="frame" x="0.0" y="0.0" width="624" height="120"/>
-                                                        <animations/>
                                                         <gestureRecognizers/>
-                                                        <connections>
-                                                            <outletCollection property="gestureRecognizers" destination="Zk6-zK-r0B" appends="YES" id="KrJ-TO-UdU"/>
-                                                        </connections>
                                                     </imageView>
                                                 </subviews>
-                                                <animations/>
                                             </scrollView>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pa3-OW-CAR">
-                                                <rect key="frame" x="0.0" y="128" width="321" height="185"/>
-                                                <subviews>
-                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="prof-pic-small" translatesAutoresizingMaskIntoConstraints="NO" id="KSg-lG-zc3">
-                                                        <rect key="frame" x="20" y="20" width="32" height="31"/>
-                                                        <animations/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alex Honnold" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFW-VY-OYb">
-                                                        <rect key="frame" x="62" y="20" width="103" height="21"/>
-                                                        <animations/>
-                                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
-                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1y-Qh-r4A">
-                                                        <rect key="frame" x="20" y="46" width="281" height="104"/>
-                                                        <animations/>
-                                                        <string key="text">Cool route. The difficulty of the crux depends a lot on how tall you are. I can see someone tall(er than me) having no problem with hitting the second bolt. I had a bit more trouble.</string>
-                                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
-                                                        <color key="textColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4 months ago" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGq-sZ-hAG">
-                                                        <rect key="frame" x="62" y="36" width="239" height="20"/>
-                                                        <animations/>
-                                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="10"/>
-                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <animations/>
-                                            </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="In8-tR-gnh">
-                                                <rect key="frame" x="0.0" y="265" width="321" height="185"/>
-                                                <subviews>
-                                                    <imageView opaque="NO" clipsSubviews="YES" contentMode="center" fixedFrame="YES" image="prof-puccio-small" translatesAutoresizingMaskIntoConstraints="NO" id="V0v-NO-HhR">
-                                                        <rect key="frame" x="20" y="21" width="32" height="31"/>
-                                                        <animations/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alexandrea Puccio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHR-CU-nCF">
-                                                        <rect key="frame" x="62" y="20" width="124" height="21"/>
-                                                        <animations/>
-                                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
-                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhI-8g-gji">
-                                                        <rect key="frame" x="20" y="46" width="281" height="104"/>
-                                                        <animations/>
-                                                        <string key="text">From the South Summit: Do not rap, but rather climb back down the ridgetop for 100' and traverse past on easy ledges on the East side of the South Summit. Trying to rap often results in snagged ropes.</string>
-                                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
-                                                        <color key="textColor" red="0.59215686270000001" green="0.59215686270000001" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5 months ago" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9a8-2Z-F8j">
-                                                        <rect key="frame" x="62" y="36" width="239" height="20"/>
-                                                        <animations/>
-                                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="10"/>
-                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <animations/>
-                                            </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OF1-PE-tr5">
-                                                <rect key="frame" x="0.0" y="575" width="321" height="185"/>
-                                                <subviews>
-                                                    <imageView opaque="NO" clipsSubviews="YES" contentMode="center" fixedFrame="YES" image="prof-sasha-small" translatesAutoresizingMaskIntoConstraints="NO" id="oWO-y3-rm2">
-                                                        <rect key="frame" x="20" y="21" width="32" height="31"/>
-                                                        <animations/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sasha Wilder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DG6-dN-vuU">
-                                                        <rect key="frame" x="62" y="20" width="124" height="21"/>
-                                                        <animations/>
-                                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
-                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vwn-1d-MgW">
-                                                        <rect key="frame" x="20" y="46" width="281" height="104"/>
-                                                        <animations/>
-                                                        <string key="text">Our setup was a 60m 8mm half/twin folded in half. 5 cams (fingers to hands), 8 stoppers, 8 slings and we were pretty happy with that set up, not sure I'd take anything more than that again.</string>
-                                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
-                                                        <color key="textColor" red="0.59215686270000001" green="0.59215686270000001" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5 months ago" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MlR-Sq-ohn">
-                                                        <rect key="frame" x="62" y="36" width="239" height="20"/>
-                                                        <animations/>
-                                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="10"/>
-                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <animations/>
-                                            </view>
                                         </subviews>
-                                        <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
@@ -1698,14 +1714,15 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="2500"/>
                     <connections>
-                        <outlet property="climbingPhotosView" destination="Ey9-m1-7OC" id="Jsf-oV-zA3"/>
+                        <outlet property="climbingPhotosView" destination="hk3-b5-0Fx" id="XQY-0F-sa8"/>
                         <outlet property="commentBar" destination="yYj-p5-B3A" id="2uC-5Q-OAa"/>
-                        <outlet property="commentField" destination="B4v-Zd-DFF" id="tXt-BO-um1"/>
-                        <outlet property="imageButton" destination="y1g-fP-edr" id="ihk-QD-NK0"/>
-                        <outlet property="photosScrollView" destination="sPl-Rb-iA4" id="TEf-9x-oc4"/>
+                        <outlet property="commentField" destination="B4v-Zd-DFF" id="VIV-Lx-Nzn"/>
+                        <outlet property="imageButton" destination="f6b-lg-Wpc" id="Hvk-ij-k28"/>
+                        <outlet property="otherCommentsView" destination="nCW-kV-wsB" id="3v3-se-dUw"/>
+                        <outlet property="photosScrollView" destination="7vE-3j-YkX" id="5Ff-Tz-e7D"/>
                         <outlet property="routeLabel" destination="rGD-PT-Wkb" id="unS-5F-Pfg"/>
-                        <outlet property="scrollView" destination="e2T-Vg-f8l" id="sY2-2p-dkD"/>
-                        <outlet property="videoView" destination="4KO-8u-XEh" id="moJ-rP-LiO"/>
+                        <outlet property="scrollView" destination="e2T-Vg-f8l" id="sX8-g8-dWx"/>
+                        <outlet property="videoView" destination="Px8-Vo-b9g" id="hNk-tV-ne4"/>
                         <segue destination="IBf-kN-IVv" kind="modal" identifier="addPhotoSegue" modalTransitionStyle="crossDissolve" id="LhI-0p-KLR"/>
                     </connections>
                 </viewController>
@@ -1761,7 +1778,7 @@
                                 <rect key="frame" x="-5" y="66" width="325" height="325"/>
                                 <animations/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Write a caption..." translatesAutoresizingMaskIntoConstraints="NO" id="AWG-h1-cLe" userLabel="caption">
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Write a caption..." translatesAutoresizingMaskIntoConstraints="NO" id="AWG-h1-cLe" userLabel="caption">
                                 <rect key="frame" x="16" y="406" width="288" height="69"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1769,6 +1786,11 @@
                                 <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Write a caption..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wwX-4F-5tB">
+                                <rect key="frame" x="18" y="408" width="286" height="30"/>
+                                <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1776,6 +1798,7 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="captionTextField" destination="wwX-4F-5tB" id="ioO-vl-3pP"/>
                         <outlet property="captionTextView" destination="AWG-h1-cLe" id="9Hx-di-mJW"/>
                         <outlet property="photoView" destination="TTc-aM-BAP" id="arR-4f-phf"/>
                     </connections>
@@ -2943,7 +2966,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="eXO-8O-Wy8"/>
+        <segue reference="TJc-tJ-nwA"/>
         <segue reference="JdO-A1-KsS"/>
     </inferredMetricsTieBreakers>
 </document>
