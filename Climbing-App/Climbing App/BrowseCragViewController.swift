@@ -229,9 +229,9 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 				self.progressView.alpha = 0
 			}, completion: { (Bool) -> Void in
 				self.progressView.frame.size.width = 1
-				self.saveLabel.frame.origin.x = 273
-				self.saveLabel.text = "Saved"
-				self.saveIcon.alpha = 0
+//				self.saveLabel.frame.origin.x = 273
+//				self.saveLabel.text = "Saved"
+//				self.saveIcon.alpha = 0
 				NSNotificationCenter.defaultCenter().postNotificationName(didSaveNewRegion, object: self)
 			})
 		}

@@ -127,7 +127,6 @@
             <string>VarelaRound</string>
             <string>VarelaRound</string>
             <string>VarelaRound</string>
-            <string>VarelaRound</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -572,7 +571,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add climb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLG-Rd-tgH">
                                         <rect key="frame" x="0.0" y="390" width="320" height="36"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="21"/>
+                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -880,6 +879,9 @@
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="big-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="rYE-jh-79y">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                                     </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="save-button" translatesAutoresizingMaskIntoConstraints="NO" id="BP5-rg-lem">
+                                        <rect key="frame" x="195" y="283" width="91" height="12"/>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSh-Ym-1bC">
                                         <rect key="frame" x="0.0" y="15" width="44" height="44"/>
                                         <animations/>
@@ -890,15 +892,8 @@
                                             <action selector="didPressBackButton:" destination="3up-dT-Ho2" eventType="touchUpInside" id="Rc6-0j-dXr"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuD-AI-Xsl">
-                                        <rect key="frame" x="272" y="281" width="40" height="21"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rf-6f-FW5">
-                                        <rect key="frame" x="240" y="254" width="80" height="66"/>
+                                        <rect key="frame" x="183" y="268" width="137" height="52"/>
                                         <animations/>
                                         <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -908,36 +903,34 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Castle Rock" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ywx-WY-NWS">
-                                        <rect key="frame" x="60" y="101" width="200" height="21"/>
+                                        <rect key="frame" x="60" y="77" width="200" height="21"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="37.2306 ° N  -122.0957 ° E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWb-8H-mfk">
-                                        <rect key="frame" x="56" y="125" width="209" height="22"/>
+                                        <rect key="frame" x="56" y="101" width="209" height="22"/>
                                         <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Saratoga, CA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqd-Ve-r6i">
-                                        <rect key="frame" x="56" y="145" width="209" height="22"/>
+                                        <rect key="frame" x="56" y="121" width="209" height="22"/>
                                         <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </label>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="save-icon" translatesAutoresizingMaskIntoConstraints="NO" id="tfM-Z5-Rae">
-                                        <rect key="frame" x="259" y="285" width="7" height="13"/>
-                                        <animations/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="772-do-wSx">
-                                        <rect key="frame" x="25" y="175" width="270" height="91"/>
-                                        <string key="text">Surrounding Castle Rock State Park is one of the larger climbing regions in the area, hosting a variety of sport, trad, bouldering and top rope problems… Read More</string>
-                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="32" y="159" width="257" height="91"/>
+                                        <string key="text">Surrounding Castle Rock State Park is one of the larger climbing regions in the area, hosting a variety of sport, trad, bouldering and top rope problems.</string>
+                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.70000000000000007" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="directions-button" translatesAutoresizingMaskIntoConstraints="NO" id="uAt-4H-knX">
+                                        <rect key="frame" x="36" y="281" width="100" height="13"/>
+                                    </imageView>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -991,7 +984,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pLr-ez-V0V" userLabel="progressView">
-                                <rect key="frame" x="0.0" y="54" width="1" height="4"/>
+                                <rect key="frame" x="0.0" y="318" width="1" height="2"/>
                                 <color key="backgroundColor" red="0.98431372549999996" green="0.31764705879999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
@@ -1005,8 +998,6 @@
                         <outlet property="progressView" destination="pLr-ez-V0V" id="Xbq-5j-8Ih"/>
                         <outlet property="regionNameLabel" destination="Ywx-WY-NWS" id="sjT-q9-jl9"/>
                         <outlet property="regionView" destination="M1D-51-wYc" id="JK9-mO-lfJ"/>
-                        <outlet property="saveIcon" destination="tfM-Z5-Rae" id="upu-wt-Ekc"/>
-                        <outlet property="saveLabel" destination="yuD-AI-Xsl" id="U2v-aR-GCZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zma-OO-q8w" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2786,6 +2777,7 @@
         <image name="climbing photos horz" width="1049" height="202"/>
         <image name="climbing_photos" width="320" height="1253"/>
         <image name="cream-topo" width="320" height="568"/>
+        <image name="directions-button" width="100" height="13"/>
         <image name="dummy-search" width="284" height="30"/>
         <image name="forum_tab" width="26" height="26"/>
         <image name="forum_tab_selected-1" width="26" height="26"/>
@@ -2800,6 +2792,7 @@
         <image name="prof-puccio-small" width="30" height="30"/>
         <image name="prof-sasha-small" width="30" height="30"/>
         <image name="roped-button" width="70" height="70"/>
+        <image name="save-button" width="91" height="12"/>
         <image name="save-icon" width="7" height="13"/>
         <image name="saved_tab" width="26" height="26"/>
         <image name="saved_tab_selected-1" width="26" height="26"/>
@@ -2823,6 +2816,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="JdO-A1-KsS"/>
-        <segue reference="eXO-8O-Wy8"/>
+        <segue reference="Zuf-uS-GT9"/>
     </inferredMetricsTieBreakers>
 </document>
