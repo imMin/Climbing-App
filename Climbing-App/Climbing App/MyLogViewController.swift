@@ -213,44 +213,44 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
 		lastScrollY = scrollView.contentOffset.y
 	}
 	
-    func scrollViewDidScroll(scrollView: UIScrollView) {
-		println(scrollView.contentOffset.y)
-		var v = scrollView.contentOffset.y/200
-		
-		if scrollView.contentOffset.y == 0 {
-			avatar.transform = CGAffineTransformIdentity
-		}
-		else if scrollView.contentOffset.y > 0 {
-			avatar.transform = CGAffineTransformMakeScale(1-v, 1-v)
-		}
-		else {
-			avatar.transform = CGAffineTransformMakeScale(1-v, 1-v)
-		}
-		
-		
-		if lastScrollY < scrollView.contentOffset.y && scrollView.contentOffset.y > 82 {
-			
-			if navTitle.alpha > 0 {
-				navTitle.alpha -= 0.1
-				tinyHeader.alpha += 0.1
-			}
-			
-			if tinyHeader.frame.origin.y != 22 {
-				tinyHeader.frame.origin.y -= 1
-			}
-		}
-		else if lastScrollY > scrollView.contentOffset.y && scrollView.contentOffset.y < 200 {
-			
-			if navTitle.alpha < 1 {
-				navTitle.alpha += 0.1
-				tinyHeader.alpha -= 0.1
-			}
-			
-			if tinyHeader.frame.origin.y != 62 {
-				tinyHeader.frame.origin.y += 1
-			}
-		}
-    }
+//    func scrollViewDidScroll(scrollView: UIScrollView) {
+//		println(scrollView.contentOffset.y)
+//		var v = scrollView.contentOffset.y/200
+//		
+//		if scrollView.contentOffset.y == 0 {
+//			avatar.transform = CGAffineTransformIdentity
+//		}
+//		else if scrollView.contentOffset.y > 0 {
+//			avatar.transform = CGAffineTransformMakeScale(1-v, 1-v)
+//		}
+//		else {
+//			avatar.transform = CGAffineTransformMakeScale(1-v, 1-v)
+//		}
+//		
+//		
+//		if lastScrollY < scrollView.contentOffset.y && scrollView.contentOffset.y > 82 {
+//			
+//			if navTitle.alpha > 0 {
+//				navTitle.alpha -= 0.1
+//				tinyHeader.alpha += 0.1
+//			}
+//			
+//			if tinyHeader.frame.origin.y != 22 {
+//				tinyHeader.frame.origin.y -= 1
+//			}
+//		}
+//		else if lastScrollY > scrollView.contentOffset.y && scrollView.contentOffset.y < 200 {
+//			
+//			if navTitle.alpha < 1 {
+//				navTitle.alpha += 0.1
+//				tinyHeader.alpha -= 0.1
+//			}
+//			
+//			if tinyHeader.frame.origin.y != 62 {
+//				tinyHeader.frame.origin.y += 1
+//			}
+//		}
+//    }
 	
 	
 	
