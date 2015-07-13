@@ -307,13 +307,13 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
     }
 	
 	func guideSaved(){
-		self.saveLabel.text = "SAVED"
+		self.saveLabel.text = "Saved"
 		self.saveIcon.alpha = 0
 		self.savedIcon.alpha = 1
 	}
 	
 	func guideUnsaved(){
-		self.saveLabel.text = "SAVE GUIDE"
+		self.saveLabel.text = "Save Guide"
 		self.saveIcon.alpha = 1
 		self.savedIcon.alpha = 0
 	}
