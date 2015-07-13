@@ -23,7 +23,9 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 	
 	@IBOutlet weak var savedIcon: UIImageView!
     @IBOutlet weak var regionView: UIImageView!
-    
+	@IBOutlet weak var topBar: UIView!
+	
+	
     var image: UIImage!
 	var region: Region!
 	var manager:CLLocationManager!
@@ -268,6 +270,31 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
         cragMapView.setRegion(coordRegion, animated: false)
 
     }
+	
+	
+	func scrollViewDidScroll(scrollView: UIScrollView) {
+		if scrollView.contentOffset.y > 34 {
+			UIView.animateWithDuration(0.3, animations: { () -> Void in
+				self.topBar.alpha = 1
+			})
+			
+//			if self.topBar.alpha != 1 {
+//				self.topBar.alpha += 0.1
+//			}
+			
+
+		}
+		else {
+			UIView.animateWithDuration(0.3, animations: { () -> Void in
+				self.topBar.alpha = 0
+			})
+			
+//			if self.topBar.alpha != 0 {
+//				self.topBar.alpha -= 0.1
+//			}
+			
+		}
+	}
 	
 	
 //	func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {

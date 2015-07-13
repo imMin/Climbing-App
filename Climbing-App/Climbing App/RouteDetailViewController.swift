@@ -60,7 +60,7 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 		
 		
         // Do any additional setup after loading the view.
-        scrollView.contentSize = CGSizeMake(320, 3450)
+        scrollView.contentSize = CGSizeMake(320, 4450)
 		scrollView.delegate = self
 		
 		
@@ -89,7 +89,7 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 			self.commentBar.alpha = 0.9
 		})
 		
-		videoView.playVideo()
+//		videoView.playVideo()
 	}
 
     override func didReceiveMemoryWarning() {
@@ -282,6 +282,14 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
 		
 	}
 
-
+	func scrollViewDidScroll(scrollView: UIScrollView) {
+		
+		if scrollView.contentOffset.y > 400 && scrollView.contentOffset.y < 900 {
+			videoView.playVideo()
+		}
+		else {
+			videoView.stopVideo()
+		}
+	}
 	
 }

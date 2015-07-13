@@ -240,26 +240,27 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
         
     }
 	
-//	func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
-//		if annotation.isKindOfClass(MKUserLocation) {
-//			return nil
-//		}
-//		
-//		let reuseID = "myAnnotationView"
-//		var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseID)
-//		if (annotationView == nil) {
-//			annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseID)
-//		}
-//		else {
-//			annotationView.annotation = annotation
-//		}
-//		
+	func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+		if annotation.isKindOfClass(MKUserLocation) {
+			return nil
+		}
+		
+		let reuseID = "myAnnotationView"
+		var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseID)
+		if (annotationView == nil) {
+			annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseID)
+		}
+		else {
+			annotationView.annotation = annotation
+		}
+		
 //		annotationView.image = UIImage(named: "custom_pin")
 //		annotationView.canShowCallout = true;
-//		
-//		
-//		return annotationView
-//	}
+		(annotationView as! MKPinAnnotationView).pinColor = MKPinAnnotationColor.Green
+		
+		
+		return annotationView
+	}
 
 //	
 //	func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
