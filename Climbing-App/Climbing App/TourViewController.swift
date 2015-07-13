@@ -21,7 +21,7 @@ class TourViewController: UIViewController, UIScrollViewDelegate {
         
         var filePath = NSBundle.mainBundle().pathForResource("alexclimber", ofType: "gif")
         var gif = NSData(contentsOfFile: filePath!)
-        
+		
         var webViewBG = UIWebView(frame: self.view.frame)
         webViewBG.loadData(gif, MIMEType: "image/gif", textEncodingName: nil, baseURL: nil)
         webViewBG.userInteractionEnabled = false;

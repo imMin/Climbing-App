@@ -173,6 +173,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 				icon.imageView!.alpha = 0
 				UIView.animateWithDuration(0.2, animations: { () -> Void in
 					self.newlyCreatedIconImageView.alpha = 0
+					
 					icon.imageView!.alpha = 100
 					}, completion: { (Bool) -> Void in
 						self.newlyCreatedIconImageView.removeFromSuperview()

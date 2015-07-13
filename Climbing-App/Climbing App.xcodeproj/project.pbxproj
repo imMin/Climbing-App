@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F0CB27F1B5335750094FF72 /* alexclimber.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6F0CB27E1B5335740094FF72 /* alexclimber.gif */; };
 		6F1F9DC21B2E4C3200E284BE /* BrowseCragCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1F9DC11B2E4C3200E284BE /* BrowseCragCell.swift */; };
 		6F1F9DC41B2E76E700E284BE /* LogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1F9DC31B2E76E700E284BE /* LogDetailViewController.swift */; };
 		6F1F9DC61B2E8DE100E284BE /* CragDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1F9DC51B2E8DE100E284BE /* CragDetailViewController.swift */; };
@@ -70,6 +71,7 @@
 
 /* Begin PBXFileReference section */
 		47AAC82F33D8685F05942328 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F0CB27E1B5335740094FF72 /* alexclimber.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = alexclimber.gif; sourceTree = "<group>"; };
 		6F1F9DC11B2E4C3200E284BE /* BrowseCragCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseCragCell.swift; sourceTree = "<group>"; };
 		6F1F9DC31B2E76E700E284BE /* LogDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailViewController.swift; sourceTree = "<group>"; };
 		6F1F9DC51B2E8DE100E284BE /* CragDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CragDetailViewController.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 		A1DC97871B5203A200A41817 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6F0CB27E1B5335740094FF72 /* alexclimber.gif */,
 				A1DC97881B5203C700A41817 /* climber.gif */,
 			);
 			name = Images;
@@ -385,6 +388,7 @@
 				6F63CAE11B33DA37000F0BF4 /* SF-UI-Display-Light.otf in Resources */,
 				6F63CADF1B33DA37000F0BF4 /* SF-UI-Display-Bold.otf in Resources */,
 				8898B2931B33EA54007F07A7 /* VarelaRound-Regular.otf in Resources */,
+				6F0CB27F1B5335750094FF72 /* alexclimber.gif in Resources */,
 				6F63CAE21B33DA37000F0BF4 /* SF-UI-Display-Medium.otf in Resources */,
 				6F63CAE61B33DA37000F0BF4 /* SF-UI-Display-Ultralight.otf in Resources */,
 				6F74C3FB1B29FA5D00C0FD85 /* LaunchScreen.xib in Resources */,

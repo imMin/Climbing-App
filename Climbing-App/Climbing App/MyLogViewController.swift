@@ -40,60 +40,83 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		var query = PFQuery(className: "Log")
-		query.orderByAscending("date")
+		fetchData()
 		
-		
-		// date formatter
-		let dateFormatter = NSDateFormatter()
-		dateFormatter.dateFormat = "MMM dd, YYYY"
-		
-		query.findObjectsInBackgroundWithBlock { (results: [AnyObject]?, error: NSError?) -> Void in
-			self.logs = results as! [PFObject]
-			
-			self.dates[0] = dateFormatter.stringFromDate(self.logs[0]["date"] as! NSDate)
-			
-			var count = 0
-			
-			for (var i = 0; i < self.logs.count; i++){
-				var nextDate = dateFormatter.stringFromDate(self.logs[i]["date"] as! NSDate)
-				
-				if (nextDate != self.dates[self.dates.count-1]){
-					self.dates.append(nextDate)
-					self.climbInDates.append(count)
-					count = 1
-				}
-				else {
-					count++
-				}
-				
-				self.levels.append(self.logs[i]["level"] as! String)
-				self.locations.append(self.logs[i]["location"] as! String)
-				self.types.append(self.logs[i]["type"] as! String)
-				self.styles.append(self.logs[i]["style"] as! String)
-			}
-			self.climbInDates.append(count)
-			
-			println(self.dates)
-			println(self.climbInDates)
-			
-			self.logTableView.delegate = self
-			self.logTableView.dataSource = self
-			self.logTableView.estimatedRowHeight = 69;
-			println(self.profileView.frame.height)
-			println(self.logTableView.contentSize.height)
-			self.contentScrollView.contentSize = CGSizeMake(320, self.profileView.frame.height + self.logTableView.frame.height)
-			self.contentScrollView.delegate = self
-			self.logTableView.scrollEnabled = false
-		}
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "fetchData", name: didSaveNewLog, object: nil)
 	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 	
+	
+	func fetchData() {
+		
+		dates = ["date"]
+		climbInDates = []
+		levels = []
+		locations = []
+		types = []
+		styles = []
+		logs = []
+		
+		var query = PFQuery(className: "Log")
+		query.orderByDescending("date")
+		
+		
+		// date formatter
+		let dateFormatter = NSDateFormatter()
+		dateFormatter.dateFormat = "MMM dd, YYYY"
+		
+		delay(1, { () -> () in
+			query.findObjectsInBackgroundWithBlock { (results: [AnyObject]?, error: NSError?) -> Void in
+				self.logs = results as! [PFObject]
+				
+				self.dates[0] = dateFormatter.stringFromDate(self.logs[0]["date"] as! NSDate)
+				
+				var count = 0
+				
+				for (var i = 0; i < self.logs.count; i++){
+					var nextDate = dateFormatter.stringFromDate(self.logs[i]["date"] as! NSDate)
+					
+					if (nextDate != self.dates[self.dates.count-1]){
+						self.dates.append(nextDate)
+						self.climbInDates.append(count)
+						count = 1
+					}
+					else {
+						count++
+					}
+					
+					self.levels.append(self.logs[i]["level"] as! String)
+					self.locations.append(self.logs[i]["location"] as! String)
+					self.types.append(self.logs[i]["type"] as! String)
+					self.styles.append(self.logs[i]["style"] as! String)
+				}
+				self.climbInDates.append(count)
+				
+				println(self.dates)
+				println(self.climbInDates)
+				
+				self.logTableView.delegate = self
+				self.logTableView.dataSource = self
+				self.logTableView.estimatedRowHeight = 69;
+				println(self.profileView.frame.height)
+				println(self.logTableView.contentSize.height)
+				self.contentScrollView.contentSize = CGSizeMake(320, self.profileView.frame.height + self.logTableView.frame.height)
+				self.contentScrollView.delegate = self
+				self.logTableView.scrollEnabled = false
+				
+				self.logTableView.reloadData()
+			}
+		})
+		
+
+	}
+	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 4
+		
+		return climbInDates[section]
 	}
 	
 	func tableView(tableView: UITableView, sectionForSectionIndexTitle title: String, atIndex index: Int) -> Int {
