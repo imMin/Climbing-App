@@ -12,6 +12,9 @@ import CoreLocation
 
 let didSaveNewRegion = "did you just save a new region?"
 
+let kDidSaveCrag = "kDidSaveCrag"
+
+
 class BrowseCragViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate, MKMapViewDelegate {
 	
 	@IBOutlet weak var cragMapView: MKMapView!
@@ -91,7 +94,13 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
         }
         
 		addCurrentLocationPin()
-
+		
+		
+		if NSUserDefaults.standardUserDefaults().boolForKey(kDidSaveCrag) {
+			guideSaved()
+			
+		}
+		
     }
     
 
@@ -244,6 +253,13 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 		
 		saved = true
 		
+		if NSUserDefaults.standardUserDefaults().boolForKey(kDidSaveCrag) {
+			NSUserDefaults.standardUserDefaults().setBool(false, forKey: kDidSaveCrag)
+			guideUnsaved()
+		}
+		else {
+			NSUserDefaults.standardUserDefaults().setBool(true, forKey: kDidSaveCrag)
+		}
     }
 	
 	func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]) {

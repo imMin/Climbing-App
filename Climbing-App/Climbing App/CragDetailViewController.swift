@@ -56,6 +56,11 @@ class CragDetailViewController: UIViewController, UITableViewDataSource, UITable
         // Do any additional setup after loading the view.
         
         fetchRoutes()
+		
+		if NSUserDefaults.standardUserDefaults().boolForKey(kDidSaveCrag) {
+			guideSaved()
+			
+		}
     }
 
 
@@ -167,6 +172,16 @@ class CragDetailViewController: UIViewController, UITableViewDataSource, UITable
 //		
 		
 //		saved = true
+		
+		
+		if NSUserDefaults.standardUserDefaults().boolForKey(kDidSaveCrag) {
+			NSUserDefaults.standardUserDefaults().setBool(false, forKey: kDidSaveCrag)
+			guideUnsaved()
+		}
+		else {
+			NSUserDefaults.standardUserDefaults().setBool(true, forKey: kDidSaveCrag)
+		}
+
 	}
 	
 	func guideSaved(){
