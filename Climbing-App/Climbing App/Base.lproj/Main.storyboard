@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q8d-4P-2ah">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q8d-4P-2ah">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -690,7 +690,7 @@
                                             <rect key="frame" x="130" y="31" width="60" height="60"/>
                                             <animations/>
                                         </imageView>
-                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUU-I6-FIY">
+                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUU-I6-FIY" userLabel="GraphView">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </scrollView>
@@ -877,75 +877,70 @@
                             </mapView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NPs-wB-K61" userLabel="Nav Header ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="castle-rock-hero" translatesAutoresizingMaskIntoConstraints="NO" id="M1D-51-wYc">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="big-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="rYE-jh-79y">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="save-button" translatesAutoresizingMaskIntoConstraints="NO" id="BP5-rg-lem">
-                                        <rect key="frame" x="195" y="283" width="91" height="12"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSh-Ym-1bC">
-                                        <rect key="frame" x="0.0" y="15" width="44" height="44"/>
-                                        <animations/>
-                                        <state key="normal" image="white-back-arrow">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="didPressBackButton:" destination="3up-dT-Ho2" eventType="touchUpInside" id="Rc6-0j-dXr"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rf-6f-FW5">
-                                        <rect key="frame" x="183" y="268" width="137" height="52"/>
-                                        <animations/>
-                                        <state key="normal">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="didPressSaveButton:" destination="3up-dT-Ho2" eventType="touchUpInside" id="6xL-px-uHm"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Castle Rock" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ywx-WY-NWS">
-                                        <rect key="frame" x="60" y="77" width="200" height="21"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="20"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="37.2306 ° N  -122.0957 ° E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWb-8H-mfk">
-                                        <rect key="frame" x="56" y="101" width="209" height="22"/>
-                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
-                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Saratoga, CA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqd-Ve-r6i">
-                                        <rect key="frame" x="56" y="121" width="209" height="22"/>
-                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
-                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="772-do-wSx">
-                                        <rect key="frame" x="32" y="159" width="257" height="91"/>
-                                        <string key="text">Surrounding Castle Rock State Park is one of the larger climbing regions in the area, hosting a variety of sport, trad, bouldering and top rope problems.</string>
-                                        <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.70000000000000007" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="directions-button" translatesAutoresizingMaskIntoConstraints="NO" id="uAt-4H-knX">
-                                        <rect key="frame" x="36" y="281" width="100" height="13"/>
-                                    </imageView>
-                                </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="A1C-fF-Yod">
-                                <rect key="frame" x="0.0" y="321" width="320" height="199"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="Z6Y-tg-2nC" userLabel="Hero View">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="castle-rock-hero" translatesAutoresizingMaskIntoConstraints="NO" id="M1D-51-wYc">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                        </imageView>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="big-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="rYE-jh-79y">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="37.2306 ° N  -122.0957 ° E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWb-8H-mfk">
+                                            <rect key="frame" x="56" y="101" width="209" height="22"/>
+                                            <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Castle Rock" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ywx-WY-NWS">
+                                            <rect key="frame" x="60" y="77" width="200" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="20"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Saratoga, CA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqd-Ve-r6i">
+                                            <rect key="frame" x="56" y="121" width="209" height="22"/>
+                                            <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="772-do-wSx">
+                                            <rect key="frame" x="32" y="159" width="257" height="91"/>
+                                            <string key="text">Surrounding Castle Rock State Park is one of the larger climbing regions in the area, hosting a variety of sport, trad, bouldering and top rope problems.</string>
+                                            <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="13"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="0.70000000000000007" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rf-6f-FW5">
+                                            <rect key="frame" x="183" y="268" width="137" height="52"/>
+                                            <animations/>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="didPressSaveButton:" destination="3up-dT-Ho2" eventType="touchUpInside" id="6xL-px-uHm"/>
+                                            </connections>
+                                        </button>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="save-button" translatesAutoresizingMaskIntoConstraints="NO" id="BP5-rg-lem">
+                                            <rect key="frame" x="195" y="283" width="91" height="12"/>
+                                        </imageView>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="directions-button" translatesAutoresizingMaskIntoConstraints="NO" id="uAt-4H-knX">
+                                            <rect key="frame" x="36" y="281" width="100" height="13"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BrowseCragCell" rowHeight="70" id="grB-ae-0Hw" customClass="BrowseCragCell" customModule="Climbing_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="22" width="320" height="70"/>
@@ -988,13 +983,23 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSh-Ym-1bC" userLabel="back button">
+                                <rect key="frame" x="0.0" y="15" width="44" height="44"/>
+                                <animations/>
+                                <state key="normal" image="white-back-arrow">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressBackButton:" destination="3up-dT-Ho2" eventType="touchUpInside" id="Rc6-0j-dXr"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pLr-ez-V0V" userLabel="progressView">
                                 <rect key="frame" x="0.0" y="318" width="1" height="2"/>
                                 <color key="backgroundColor" red="0.98431372549999996" green="0.31764705879999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="xQX-sd-VGl"/>
                     <connections>
@@ -1601,7 +1606,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1813" y="3741"/>
+            <point key="canvasLocation" x="1813" y="3944"/>
         </scene>
         <!--Add Photo View Controller-->
         <scene sceneID="p9G-7x-uJv">
@@ -2820,7 +2825,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="eXO-8O-Wy8"/>
         <segue reference="JdO-A1-KsS"/>
-        <segue reference="Zuf-uS-GT9"/>
     </inferredMetricsTieBreakers>
 </document>
