@@ -1345,23 +1345,15 @@
                                             <rect key="frame" x="47" y="92" width="38" height="129"/>
                                             <animations/>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="big-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="tal-0s-Evo">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="243"/>
-                                            <animations/>
-                                        </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="save-icon-gray" translatesAutoresizingMaskIntoConstraints="NO" id="HVU-wR-uc1">
+                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="save-icon-gray" translatesAutoresizingMaskIntoConstraints="NO" id="HVU-wR-uc1">
                                             <rect key="frame" x="197" y="202" width="7" height="13"/>
                                             <animations/>
                                         </imageView>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="directions-button" translatesAutoresizingMaskIntoConstraints="NO" id="Ezk-C1-PKZ">
-                                            <rect key="frame" x="36" y="201" width="100" height="13"/>
-                                            <animations/>
-                                        </imageView>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="save-icon" translatesAutoresizingMaskIntoConstraints="NO" id="0Dq-25-kB9">
+                                        <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="save-icon" translatesAutoresizingMaskIntoConstraints="NO" id="0Dq-25-kB9">
                                             <rect key="frame" x="197" y="202" width="7" height="13"/>
                                             <animations/>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQ8-6f-Dyf">
+                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQ8-6f-Dyf">
                                             <rect key="frame" x="180" y="180" width="120" height="100"/>
                                             <animations/>
                                             <state key="normal">
@@ -1376,7 +1368,7 @@
                                             <animations/>
                                             <color key="backgroundColor" red="0.98431372549999996" green="0.31764705879999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SAVE GUIDE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oA2-vn-s6H">
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SAVE GUIDE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oA2-vn-s6H">
                                             <rect key="frame" x="214" y="199" width="80" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="11"/>
