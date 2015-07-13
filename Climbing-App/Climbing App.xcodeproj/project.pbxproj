@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EA5EB621B53C34400DCAFCE /* alex.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3EA5EB611B53C34400DCAFCE /* alex.mp4 */; };
 		6F0CB27F1B5335750094FF72 /* alexclimber.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6F0CB27E1B5335740094FF72 /* alexclimber.gif */; };
 		6F1F9DC21B2E4C3200E284BE /* BrowseCragCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1F9DC11B2E4C3200E284BE /* BrowseCragCell.swift */; };
 		6F1F9DC41B2E76E700E284BE /* LogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1F9DC31B2E76E700E284BE /* LogDetailViewController.swift */; };
@@ -70,6 +71,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3EA5EB611B53C34400DCAFCE /* alex.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = alex.mp4; sourceTree = "<group>"; };
 		47AAC82F33D8685F05942328 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F0CB27E1B5335740094FF72 /* alexclimber.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = alexclimber.gif; sourceTree = "<group>"; };
 		6F1F9DC11B2E4C3200E284BE /* BrowseCragCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseCragCell.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 		A1DC97871B5203A200A41817 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3EA5EB611B53C34400DCAFCE /* alex.mp4 */,
 				6F0CB27E1B5335740094FF72 /* alexclimber.gif */,
 				A1DC97881B5203C700A41817 /* climber.gif */,
 			);
@@ -381,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F74C3F61B29FA5D00C0FD85 /* Main.storyboard in Resources */,
+				3EA5EB621B53C34400DCAFCE /* alex.mp4 in Resources */,
 				6F63CAE01B33DA37000F0BF4 /* SF-UI-Display-Heavy.otf in Resources */,
 				6F63CAE41B33DA37000F0BF4 /* SF-UI-Display-Semibold.otf in Resources */,
 				A1DC97891B5203C700A41817 /* climber.gif in Resources */,

@@ -12,21 +12,35 @@ class TourViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
-    
     @IBOutlet weak var videoView: UIView!
+	
+	var playerLayer: AVPlayerLayer!
+	
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        var filePath = NSBundle.mainBundle().pathForResource("alexclimber", ofType: "gif")
-        var gif = NSData(contentsOfFile: filePath!)
+//        var filePath = NSBundle.mainBundle().pathForResource("alexclimber", ofType: "gif")
+//        var gif = NSData(contentsOfFile: filePath!)
+//		
+//        var webViewBG = UIWebView(frame: self.view.frame)
+//        webViewBG.loadData(gif, MIMEType: "image/gif", textEncodingName: nil, baseURL: nil)
+//        webViewBG.userInteractionEnabled = false;
+//        videoView.addSubview(webViewBG)
 		
-        var webViewBG = UIWebView(frame: self.view.frame)
-        webViewBG.loadData(gif, MIMEType: "image/gif", textEncodingName: nil, baseURL: nil)
-        webViewBG.userInteractionEnabled = false;
-        videoView.addSubview(webViewBG)
-        
+		
+		var filePath = NSBundle.mainBundle().pathForResource("alex", ofType: "mp4")
+		var mp4 = NSURL(fileURLWithPath: filePath!)
+		playerLayer = AVPlayerLayer(player: AVPlayer(URL: mp4))
+		playerLayer.frame = CGRectMake(0, 0, videoView.frame.size.width, videoView.frame.size.height)
+		videoView.layer.addSublayer(playerLayer)
+		playerLayer.player.play()
+		
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "playVideo:", name: AVPlayerItemDidPlayToEndTimeNotification, object: nil)
+		
+		
         var filter = UIView()
         filter.frame = self.view.frame
         filter.backgroundColor = UIColor.blackColor()
@@ -40,7 +54,14 @@ class TourViewController: UIViewController, UIScrollViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+	
+	
+	func playVideo(notification: NSNotification) {
+		let playerItem = notification.object as! AVPlayerItem
+		playerItem.seekToTime(kCMTimeZero)
+		playerLayer.player.play()
+	}
+	
 
     /*
     // MARK: - Navigation
@@ -62,5 +83,8 @@ class TourViewController: UIViewController, UIScrollViewDelegate {
         pageControl.currentPage = currentPage
         
     }
+	
 
+	
+	
 }
