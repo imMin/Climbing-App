@@ -21,6 +21,9 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 	@IBOutlet weak var saveLabel: UILabel!
 	@IBOutlet weak var saveIcon: UIImageView!
 	
+    @IBOutlet weak var regionView: UIImageView!
+    
+    var image: UIImage!
 	var region: Region!
 	var manager:CLLocationManager!
 	var myLocations:[CLLocation] = []
@@ -226,9 +229,9 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 				self.progressView.alpha = 0
 			}, completion: { (Bool) -> Void in
 				self.progressView.frame.size.width = 1
-				self.saveLabel.frame.origin.x = 273
-				self.saveLabel.text = "Saved"
-				self.saveIcon.alpha = 0
+//				self.saveLabel.frame.origin.x = 273
+//				self.saveLabel.text = "Saved"
+//				self.saveIcon.alpha = 0
 				NSNotificationCenter.defaultCenter().postNotificationName(didSaveNewRegion, object: self)
 			})
 		}

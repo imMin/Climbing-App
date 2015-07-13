@@ -54,9 +54,9 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
         imageButton?.setBackgroundImage(buttonImage, forState: .Normal)
 
 		
-		self.view.frame.size = CGSizeMake(320, 408)
+//		self.view.frame.size = CGSizeMake(320, 408)
 		
-		scrollView.frame.size = CGSizeMake(320, 408)
+//		scrollView.frame.size = CGSizeMake(320, 408)
 		
 		
         // Do any additional setup after loading the view.

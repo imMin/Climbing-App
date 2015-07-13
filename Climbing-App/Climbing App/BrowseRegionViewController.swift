@@ -23,60 +23,66 @@ class Region {
         castleRock.name = "Castle Rock"
         castleRock.distanceString = "5 mi"
         castleRock.countString = "32 routes"
-        castleRock.imageName = "castlerock-region-image"
+        castleRock.imageName = "castle-rock-hero"
         
         var mBeach = Region()
         mBeach.name = "Mickey's Beach"
         mBeach.distanceString = "135 mi"
         mBeach.countString = "37 routes"
-        mBeach.imageName = "mickeys-region-image"
-        
-        var yose = Region()
-        yose.name = "Yosemite"
-        yose.distanceString = "15 mi"
-        yose.countString = "200 routes"
-        yose.imageName = "yosemite-region-image"
+        mBeach.imageName = "mickeys-hero"
         
         var mDiablo = Region()
         mDiablo.name = "Mt. Diablo"
         mDiablo.distanceString = "20 mi"
         mDiablo.countString = "232 routes"
-        mDiablo.imageName = "mtdiablo-region-image"
+        mDiablo.imageName = "mtdiablo-hero"
         
         var mSH = Region()
         mSH.name = "Mt. St. Helena"
         mSH.distanceString = "20 mi"
         mSH.countString = "117 routes"
-        mSH.imageName = "mtsthelena-region-image"
+        mSH.imageName = "mtsthelena-hero"
+        
+        var pinnacles = Region()
+        pinnacles.name = "Pinnacles"
+        pinnacles.distanceString = "20 mi"
+        pinnacles.countString = "117 routes"
+        pinnacles.imageName = "pinnacles-hero"
+        
+        var yose = Region()
+        yose.name = "Yosemite"
+        yose.distanceString = "15 mi"
+        yose.countString = "200 routes"
+        yose.imageName = "yosemite-hero"
+        
+        var bishop = Region()
+        bishop.name = "Bishop"
+        bishop.distanceString = "20 mi"
+        bishop.countString = "117 routes"
+        bishop.imageName = "bishop-hero"
         
         allRegions.append(castleRock)
         allRegions.append(mBeach)
-        allRegions.append(yose)
         allRegions.append(mDiablo)
         allRegions.append(mSH)
+        allRegions.append(pinnacles)
+        allRegions.append(yose)
+        allRegions.append(bishop)
         
         return allRegions
     }
     
     static var savedRegions = [Region]() {
         didSet {
-            println("saved a fucking crag")
+            println("saved a crag")
         }
     }
 }
 
 class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, CLLocationManagerDelegate, MKMapViewDelegate
 {
-
-//	var regions = ["Castle Rock", "Mickey's Beach", "Yosemite", "Mt. Diablo", "Mt. St. Helena"]
     
     var regions = Region.allRegions
-	
-	var distances = ["5 mi", "135 mi", "15 mi", "20 mi", "20 mi"]
-    
-	var climbNumbers = ["32 routes", "37 routes", "200 routes", "232 routes", "117 routes"]
-    
-    var regionImages = ["castlerock-region-image", "mickeys-region-image", "mtdiablo-region-image", "yosemite-region-image", "mtsthelena-region-image"]
     
 	var manager:CLLocationManager!
 	var myLocations:[CLLocation] = []
@@ -152,12 +158,6 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 	func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
 		let cell = regionCollectionView.dequeueReusableCellWithReuseIdentifier("RegionCell",
 		forIndexPath: indexPath) as! RegionCell
-		
-        //Content of cell
-//		cell.regionNameLabel.text = regions[indexPath.row]
-//		cell.climbNumberLabel.text = climbNumbers[indexPath.row]
-//		cell.distanceLabel.text = distances[indexPath.row]
-//        cell.regionView.image = UIImage(named: "\(regionImages[indexPath.row])")
         
         var cellRegion = regions[indexPath.row]
         
@@ -168,15 +168,7 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
         cell.regionView.image = UIImage(named: cellRegion.imageName!)
         
         //Visual style of cell
-        cell.layer.cornerRadius = 4
-        UIColor(red: 234/255, green: 235/255, blue: 234/255, alpha: 1)
-        cell.layer.borderColor = UIColor(red: 234/255, green: 235/255, blue: 234/255, alpha: 1).CGColor
-        cell.layer.borderWidth = 1
-        cell.regionCellContent.layer.shadowColor = UIColor.blackColor().CGColor
-        cell.regionCellContent.layer.shadowOffset = CGSizeMake(1, 3)
-        cell.regionCellContent.layer.shadowOpacity = 0.1
-        cell.layer.backgroundColor = UIColor.clearColor().CGColor
-		
+        cell.layer.cornerRadius = 2
 
 		
         return cell
@@ -188,6 +180,7 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 
 		var viewController = segue.destinationViewController as! BrowseCragViewController
         viewController.region = (sender as! RegionCell).region
+        viewController.image = (sender as! RegionCell).regionView.image
 		
 	}
 	
