@@ -3,17 +3,16 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "yosemite-region-image.png"
+      "filename" : "mtsthelena-hero.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "yosemite-region-image@2x.png"
+      "filename" : "mtsthelena-hero@2x.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x",
-      "filename" : "yosemite-region-image@3x.png"
+      "scale" : "3x"
     }
   ],
   "info" : {

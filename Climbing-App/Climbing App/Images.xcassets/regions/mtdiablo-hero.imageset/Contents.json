@@ -3,17 +3,16 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "castle-rock-pic.png"
+      "filename" : "mtdiablo-hero.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "castle-rock-pic@2x.png"
+      "filename" : "mtdiablo-hero@2x.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x",
-      "filename" : "castle-rock-pic@3x.png"
+      "scale" : "3x"
     }
   ],
   "info" : {

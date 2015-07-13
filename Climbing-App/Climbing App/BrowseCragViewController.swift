@@ -21,6 +21,9 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 	@IBOutlet weak var saveLabel: UILabel!
 	@IBOutlet weak var saveIcon: UIImageView!
 	
+    @IBOutlet weak var regionView: UIImageView!
+    
+    var image: UIImage!
 	var region: Region!
 	var manager:CLLocationManager!
 	var myLocations:[CLLocation] = []
