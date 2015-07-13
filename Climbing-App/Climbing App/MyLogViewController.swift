@@ -10,23 +10,11 @@ import UIKit
 
 class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-//	@IBOutlet weak var scrollView: UIScrollView!
 	@IBOutlet weak var logTableView: UITableView!
-    @IBOutlet weak var contentScrollView: UIScrollView!
     @IBOutlet weak var profileView: UIView!
-	
-//	
-//	var levels = ["5.12c", "5.12a", "5.11a", "V3", "V4", "V5", "V5", "5.11a", "5.11c", "5.11a", "5.10d", "V3", "V2", "V3", "5.10d", "5.10c", "5.10c", "V2", "V2", "5.10a"]
-//	
-//	var locations = ["Mission Cliffs", "Mission Cliffs", "Mission Cliffs", "Planet Granite SF", "Planet Granite SF", "Planet Granite SF", "Planet Granite SF", "Mission Cliffs", "Mission Cliffs", "Mission Cliffs", "Mission Cliffs", "Dogpatch Boulders", "Dogpatch Boulders", "Dogpatch Boulders", "Mickey's Beach", "Mickey's Beach", "Mickey's Beach", "Mickey's Beach", "Mickey's Beach", "Mickey's Beach", "Ironworks"]
-//	
-//	var types = ["Top Rope", "Top Rope", "Lead", "", "", "", "", "Lead", "", "Top Rope","Lead", "Lead", "Lead", "", "","", "", "Top Rope", "Trad", "Top Rope","Top Rope"]
-//	
-//	var styles = ["On-sight", "Flash", "Flash", "Redpoint", "On-sight", "On-sight", "Flash", "Flash", "Redpoint", "On-sight", "On-sight", "Flash", "Flash", "Redpoint", "On-sight", "On-sight", "Flash", "Flash", "Redpoint", "On-sight", "On-sight"]
-//	
-//	var datesOld = ["June 14, 2015", "June 14, 2015", "June 12, 2015", "June 12, 2015", "May 15, 2015", "May 15, 2015", "May 15, 2015", "May 3, 2015", "May 3, 2015", "Apr 2, 2015", "Apr 2, 2015", "Apr 2, 2015", "Apr 2, 2015", "Mar 30, 2015", "Mar 30, 2015", "Mar 30, 2015", "Mar 19, 2015", "Mar 19, 2015", "Mar 19, 2015"]
-	
-//	var dates = ["June 14, 2015", "June 12, 2015", "May 15, 2015", "May 3, 2015", "Apr 2, 2015"]
+	@IBOutlet weak var avatar: UIImageView!
+	@IBOutlet weak var tinyHeader: UIView!
+	@IBOutlet weak var navTitle: UILabel!
 	
 	var dates: [String] = ["date"]
 	var climbInDates: [Int] = []
@@ -36,13 +24,21 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
 	var styles: [String] = []
 	var logs: [PFObject]! = []
 	
+	var lastScrollY: CGFloat!
+	
 	
     override func viewDidLoad() {
         super.viewDidLoad()
 		
+		self.logTableView.delegate = self
+		self.logTableView.dataSource = self
+		self.logTableView.estimatedRowHeight = 69;
+		println(self.profileView.frame.height)
+		println(self.logTableView.contentSize.height)
+		
 		fetchData()
 		
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: "fetchData", name: didSaveNewLog, object: nil)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "insertData", name: didSaveNewLog, object: nil)
 	}
 
     override func didReceiveMemoryWarning() {
@@ -68,51 +64,45 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
 		let dateFormatter = NSDateFormatter()
 		dateFormatter.dateFormat = "MMM dd, YYYY"
 		
-		delay(1, { () -> () in
-			query.findObjectsInBackgroundWithBlock { (results: [AnyObject]?, error: NSError?) -> Void in
-				self.logs = results as! [PFObject]
-				
-				self.dates[0] = dateFormatter.stringFromDate(self.logs[0]["date"] as! NSDate)
-				
-				var count = 0
-				
-				for (var i = 0; i < self.logs.count; i++){
-					var nextDate = dateFormatter.stringFromDate(self.logs[i]["date"] as! NSDate)
-					
-					if (nextDate != self.dates[self.dates.count-1]){
-						self.dates.append(nextDate)
-						self.climbInDates.append(count)
-						count = 1
-					}
-					else {
-						count++
-					}
-					
-					self.levels.append(self.logs[i]["level"] as! String)
-					self.locations.append(self.logs[i]["location"] as! String)
-					self.types.append(self.logs[i]["type"] as! String)
-					self.styles.append(self.logs[i]["style"] as! String)
-				}
-				self.climbInDates.append(count)
-				
-				println(self.dates)
-				println(self.climbInDates)
-				
-				self.logTableView.delegate = self
-				self.logTableView.dataSource = self
-				self.logTableView.estimatedRowHeight = 69;
-				println(self.profileView.frame.height)
-				println(self.logTableView.contentSize.height)
-				self.contentScrollView.contentSize = CGSizeMake(320, self.profileView.frame.height + self.logTableView.frame.height)
-				self.contentScrollView.delegate = self
-				self.logTableView.scrollEnabled = false
-				
-				self.logTableView.reloadData()
-			}
-		})
+		logs = query.findObjects() as! [PFObject]
+		self.dates[0] = dateFormatter.stringFromDate(self.logs[0]["date"] as! NSDate)
 		
-
+		var count = 0
+		
+		for (var i = 0; i < self.logs.count; i++){
+			var nextDate = dateFormatter.stringFromDate(self.logs[i]["date"] as! NSDate)
+			
+			if (nextDate != self.dates[self.dates.count-1]){
+				self.dates.append(nextDate)
+				self.climbInDates.append(count)
+				count = 1
+			}
+			else {
+				count++
+			}
+			
+			self.levels.append(self.logs[i]["level"] as! String)
+			self.locations.append(self.logs[i]["location"] as! String)
+			self.types.append(self.logs[i]["type"] as! String)
+			self.styles.append(self.logs[i]["style"] as! String)
+		}
+		
+		self.climbInDates.append(count)
 	}
+	
+	func insertData() {
+		fetchData()
+		
+		logTableView.reloadData()
+		
+		var newIndexPath = NSIndexPath(forRow: 0, inSection: 0)
+		self.logTableView.selectRowAtIndexPath(newIndexPath, animated: false, scrollPosition: UITableViewScrollPosition.Top)
+		
+		delay(0.5, { () -> () in
+			self.logTableView.deselectRowAtIndexPath(newIndexPath, animated: true)
+		})
+	}
+	
 	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		
@@ -161,18 +151,55 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
 		return 40
 	}
 	
+	
+	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+		tableView.deselectRowAtIndexPath(indexPath, animated: false)
+	}
+	
+	func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+		lastScrollY = scrollView.contentOffset.y
+	}
+	
     func scrollViewDidScroll(scrollView: UIScrollView) {
-        if(scrollView == self.contentScrollView){
-            var contentSrollViewOffset = scrollView.contentOffset.y
-            println(contentSrollViewOffset)
-            if (contentSrollViewOffset > 181){
-                self.logTableView.scrollEnabled = true
-            }
-            else if(contentSrollViewOffset < 181) {
-                self.logTableView.scrollEnabled = false
-            }
-        }
-
+		println(scrollView.contentOffset.y)
+		var v = scrollView.contentOffset.y/200
+		
+		if scrollView.contentOffset.y == 0 {
+			avatar.transform = CGAffineTransformIdentity
+		}
+		else if scrollView.contentOffset.y > 0 {
+			avatar.transform = CGAffineTransformMakeScale(1-v, 1-v)
+		}
+		else {
+			avatar.transform = CGAffineTransformMakeScale(1-v, 1-v)
+		}
+		
+		
+		if lastScrollY < scrollView.contentOffset.y && scrollView.contentOffset.y > 82 {
+			
+			if navTitle.alpha > 0 {
+				navTitle.alpha -= 0.1
+				tinyHeader.alpha += 0.1
+			}
+			
+			if tinyHeader.frame.origin.y != 22 {
+				tinyHeader.frame.origin.y -= 1
+			}
+		}
+		else if lastScrollY > scrollView.contentOffset.y && scrollView.contentOffset.y < 200 {
+			
+			if navTitle.alpha < 1 {
+				navTitle.alpha += 0.1
+				tinyHeader.alpha -= 0.1
+			}
+			
+			if tinyHeader.frame.origin.y != 62 {
+				tinyHeader.frame.origin.y += 1
+			}
+		}
     }
-    
+	
+	
+	
+	
 }
