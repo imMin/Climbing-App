@@ -1523,11 +1523,11 @@
                                                 <animations/>
                                             </imageView>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="vicious-circles-stuff" translatesAutoresizingMaskIntoConstraints="NO" id="l5p-eu-SrI">
-                                                <rect key="frame" x="25" y="58" width="149" height="102"/>
+                                                <rect key="frame" x="25" y="37" width="149" height="102"/>
                                                 <animations/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfF-BF-Op0">
-                                                <rect key="frame" x="18" y="175" width="134" height="36"/>
+                                                <rect key="frame" x="19" y="160" width="134" height="36"/>
                                                 <animations/>
                                                 <state key="normal" image="addcomment-button-1">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1538,7 +1538,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log this climb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhI-zi-FXw">
-                                                <rect key="frame" x="33" y="182" width="104" height="21"/>
+                                                <rect key="frame" x="34" y="167" width="104" height="21"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
