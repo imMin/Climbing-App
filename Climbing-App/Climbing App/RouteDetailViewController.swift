@@ -39,6 +39,7 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
     @IBOutlet weak var imageButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var photoCaptionLabel: UILabel!
     @IBOutlet weak var photosScrollView: UIScrollView!
     @IBOutlet weak var climbingPhotosView: UIImageView!
     @IBOutlet weak var otherCommentsView: UIView!
@@ -253,6 +254,7 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
         newPhoto = image
         newPhotoCaption = string
         imageButton.setBackgroundImage(newPhoto, forState: UIControlState.Normal)
+        photoCaptionLabel.text = string
         addNewPhoto()
     }
     

@@ -1548,10 +1548,10 @@
                                                 <rect key="frame" x="-20" y="135" width="361" height="1855"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xyy-jT-gW0" userLabel="alexCommentCopy">
-                                                        <rect key="frame" x="20" y="4" width="321" height="315"/>
+                                                        <rect key="frame" x="20" y="4" width="321" height="390"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6b-lg-Wpc">
-                                                                <rect key="frame" x="10" y="70" width="300" height="202"/>
+                                                                <rect key="frame" x="10" y="66" width="300" height="300"/>
                                                                 <state key="normal">
                                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
@@ -1588,10 +1588,10 @@
                                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="619-To-x6E">
                                                                 <rect key="frame" x="20" y="9" width="321" height="132"/>
                                                                 <subviews>
-                                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="prof-pic-small" translatesAutoresizingMaskIntoConstraints="NO" id="Fk0-70-qrc">
+                                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="prof-sasha-small" translatesAutoresizingMaskIntoConstraints="NO" id="Fk0-70-qrc">
                                                                         <rect key="frame" x="20" y="4" width="32" height="31"/>
                                                                     </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alex Honnold" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wg-Mv-0GJ">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sasha Wilder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wg-Mv-0GJ">
                                                                         <rect key="frame" x="62" y="4" width="103" height="21"/>
                                                                         <fontDescription key="fontDescription" name="VarelaRound" family="Varela Round" pointSize="14"/>
                                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1684,6 +1684,9 @@
                                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="climbing photos horz" translatesAutoresizingMaskIntoConstraints="NO" id="6SO-Ki-ixn">
                                                         <rect key="frame" x="0.0" y="0.0" width="624" height="120"/>
                                                         <gestureRecognizers/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="aRJ-5s-1X6" appends="YES" id="ley-aQ-HRe"/>
+                                                        </connections>
                                                     </imageView>
                                                 </subviews>
                                             </scrollView>
@@ -1736,6 +1739,7 @@
                         <outlet property="commentField" destination="B4v-Zd-DFF" id="VIV-Lx-Nzn"/>
                         <outlet property="imageButton" destination="f6b-lg-Wpc" id="Hvk-ij-k28"/>
                         <outlet property="otherCommentsView" destination="nCW-kV-wsB" id="3v3-se-dUw"/>
+                        <outlet property="photoCaptionLabel" destination="q4s-Yk-sV0" id="2MA-eR-A2Q"/>
                         <outlet property="photosScrollView" destination="7vE-3j-YkX" id="5Ff-Tz-e7D"/>
                         <outlet property="routeLabel" destination="rGD-PT-Wkb" id="unS-5F-Pfg"/>
                         <outlet property="scrollView" destination="e2T-Vg-f8l" id="sX8-g8-dWx"/>
@@ -1749,9 +1753,9 @@
                         <action selector="onTap:" destination="9fa-Sk-Kgo" id="as0-ru-pbI"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="Zk6-zK-r0B">
+                <tapGestureRecognizer id="aRJ-5s-1X6">
                     <connections>
-                        <action selector="didTapImageButton:" destination="9fa-Sk-Kgo" id="k19-P7-rIc"/>
+                        <action selector="didTapImageButton:" destination="9fa-Sk-Kgo" id="Anm-jn-yW2"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
