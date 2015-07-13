@@ -246,23 +246,28 @@ class SelectRouteViewController: UIViewController, UITableViewDataSource, UITabl
 	}
 	
 	
-//	func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
-//		
-//		let reuseID = "myAnnotationView"
-//		var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseID)
-//		if (annotationView == nil) {
-//			annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseID)
-//		}
-//		else {
-//			annotationView.annotation = annotation
-//		}
-//		
-//		annotationView.image = UIImage(named: "custom_pin")
-//		annotationView.canShowCallout = true;
-//		
-//		
-//		return annotationView
-//	}
+	func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+		if annotation.isKindOfClass(MKUserLocation) {
+			return nil
+		}
+		
+		let reuseID = "myAnnotationView"
+		var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseID)
+		if (annotationView == nil) {
+			annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseID)
+		}
+		else {
+			annotationView.annotation = annotation
+		}
+		
+		//		annotationView.image = UIImage(named: "custom_pin")
+		//		annotationView.canShowCallout = true;
+		(annotationView as! MKPinAnnotationView).pinColor = MKPinAnnotationColor.Green
+		
+		
+		return annotationView
+	}
+
 
 	
 	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
