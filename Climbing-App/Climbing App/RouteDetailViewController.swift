@@ -27,10 +27,9 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
     //	@IBOutlet weak var climbLabel: UILabel!
 
     @IBOutlet weak var commentBar: UIView!
-    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+//    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var videoView: YTPlayerView!
     
-    @IBOutlet weak var commentField: UITextField!
     var hasNewPhoto: Bool = false
     var newPhoto: UIImage!
     var newPhotoCaption: String!
@@ -39,6 +38,7 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
     @IBOutlet weak var imageButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var commentField: UITextField!
     @IBOutlet weak var photoCaptionLabel: UILabel!
     @IBOutlet weak var photosScrollView: UIScrollView!
     @IBOutlet weak var climbingPhotosView: UIImageView!
@@ -266,15 +266,15 @@ class RouteDetailViewController: UIViewController, NYTPhotosViewControllerDelega
         //		let curve = sender.userInfo![UIKeyboardAnimationCurveUserInfoKey] as! UInt
         
         
-        UIView.animateWithDuration(0.5, animations: { () -> Void in
-            self.bottomConstraint.constant = keyboardFrame.size.height - 60
-        })
+//        UIView.animateWithDuration(0.5, animations: { () -> Void in
+//            self.bottomConstraint.constant = keyboardFrame.size.height - 60
+//        })
     }
     
     func keyboardWillHide(sender: NSNotification) {
-        UIView.animateWithDuration(0.5, animations: { () -> Void in
-            self.bottomConstraint.constant = 0
-        })
+//        UIView.animateWithDuration(0.5, animations: { () -> Void in
+//            self.bottomConstraint.constant = 0
+//        })
     }
     
     
