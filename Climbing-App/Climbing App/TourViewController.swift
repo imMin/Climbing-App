@@ -31,21 +31,21 @@ class TourViewController: UIViewController, UIScrollViewDelegate {
 //        videoView.addSubview(webViewBG)
 		
 		
-		var filePath = NSBundle.mainBundle().pathForResource("alex", ofType: "mp4")
-		var mp4 = NSURL(fileURLWithPath: filePath!)
-		playerLayer = AVPlayerLayer(player: AVPlayer(URL: mp4))
-		playerLayer.frame = CGRectMake(0, 0, videoView.frame.size.width, videoView.frame.size.height)
-		videoView.layer.addSublayer(playerLayer)
-		playerLayer.player.play()
-		
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: "playVideo:", name: AVPlayerItemDidPlayToEndTimeNotification, object: nil)
-		
-		
-        var filter = UIView()
-        filter.frame = self.view.frame
-        filter.backgroundColor = UIColor.blackColor()
-        filter.alpha = 0.05
-        videoView.addSubview(filter)
+//		var filePath = NSBundle.mainBundle().pathForResource("alex", ofType: "mp4")
+//		var mp4 = NSURL(fileURLWithPath: filePath!)
+//		playerLayer = AVPlayerLayer(player: AVPlayer(URL: mp4))
+//		playerLayer.frame = CGRectMake(0, 0, videoView.frame.size.width, videoView.frame.size.height)
+//		videoView.layer.addSublayer(playerLayer)
+//		playerLayer.player.play()
+//		
+//		NSNotificationCenter.defaultCenter().addObserver(self, selector: "playVideo:", name: AVPlayerItemDidPlayToEndTimeNotification, object: nil)
+//		
+//		
+//        var filter = UIView()
+//        filter.frame = self.view.frame
+//        filter.backgroundColor = UIColor.blackColor()
+//        filter.alpha = 0.05
+//        videoView.addSubview(filter)
         
         scrollView.contentSize = CGSize(width: 1600, height: 386)
     }
@@ -56,11 +56,11 @@ class TourViewController: UIViewController, UIScrollViewDelegate {
     }
 	
 	
-	func playVideo(notification: NSNotification) {
-		let playerItem = notification.object as! AVPlayerItem
-		playerItem.seekToTime(kCMTimeZero)
-		playerLayer.player.play()
-	}
+//	func playVideo(notification: NSNotification) {
+//		let playerItem = notification.object as! AVPlayerItem
+//		playerItem.seekToTime(kCMTimeZero)
+//		playerLayer.player.play()
+//	}
 	
 
     /*
