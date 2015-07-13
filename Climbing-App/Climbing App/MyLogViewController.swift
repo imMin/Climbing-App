@@ -69,6 +69,7 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
 		// date formatter
 		let dateFormatter = NSDateFormatter()
 		dateFormatter.dateFormat = "MMM dd, YYYY"
+		dateFormatter.timeZone = NSTimeZone(name: "GMT")
 		
 		logs = query.findObjects() as! [PFObject]
 		self.dates[0] = dateFormatter.stringFromDate(self.logs[0]["date"] as! NSDate)
@@ -92,6 +93,9 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
 			self.types.append(self.logs[i]["type"] as! String)
 			self.styles.append(self.logs[i]["style"] as! String)
 			self.graphLevels.append(self.logs[i]["graphLevel"] as! Int)
+			
+//			println(nextDate)
+//			println(self.logs[i]["level"] as! String)
 		}
 		
 		self.climbInDates.append(count)
@@ -176,13 +180,26 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
 		
 		var cell = logTableView.dequeueReusableCellWithIdentifier("LogCell") as! LogCell
 		
+		var previousIndex = 0
 		
-		var log = logs[indexPath.row]
-		cell.levelLabel.text = levels[indexPath.row]
+		if (indexPath.section == 0){
+			var previousIndex = 0
+		}
+			
+		else {
+			for (var i = 0; i < indexPath.section; i++){
+				previousIndex += climbInDates[i]
+			}
+		}
 		
-		cell.locationLabel.text = locations[indexPath.row]
-		cell.typeLabel.text = types[indexPath.row]
-		cell.styleLabel.text = styles[indexPath.row]
+		var rowIndex = previousIndex + indexPath.row
+		
+		var log = logs[rowIndex]
+		cell.levelLabel.text = levels[rowIndex]
+		
+		cell.locationLabel.text = locations[rowIndex]
+		cell.typeLabel.text = types[rowIndex]
+		cell.styleLabel.text = styles[rowIndex]
 		cell.accessoryType = UITableViewCellAccessoryType.None
         
 		return cell
@@ -251,8 +268,5 @@ class MyLogViewController: UIViewController, UITableViewDataSource, UITableViewD
 //			}
 //		}
 //    }
-	
-	
-	
 	
 }
