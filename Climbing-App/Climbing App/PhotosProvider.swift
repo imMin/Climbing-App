@@ -12,7 +12,7 @@ import UIKit
 *   In Swift 1.2, the following file level constants can be moved inside the class for better encapsulation
 */
 let PrimaryImageName = "climbing0"
-var images = ["climbing0", "climbing1", "climbing2", "climbing3", "climbing4"]
+var images = ["climbing0", "climbing6", "climbing3", "climbing4", "climbing1"]
 var credits = ["Castle Rock State Park", "Castle Rock State Park", "Castle Rock State Park", "Castle Rock State Park", "Castle Rock State Park"]
 var summaries = ["Shannon climbs Vicious Circles", "Pretty rocks", "Top rope climb 5.10b", "Beautiful day to climb", "Indian Rock, 5.11c"]
 var titles = ["Jun 2015", "Oct 2014", "Oct 2014", "Jan 2015", "Mar 2015"]

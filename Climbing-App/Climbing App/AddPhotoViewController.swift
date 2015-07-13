@@ -20,12 +20,11 @@ class AddPhotoViewController: UIViewController, TGCameraDelegate, UINavigationCo
     var navController: TGCameraNavigationController!
     var triggerOpen: Bool = true
     
-    @IBOutlet weak var captionTextField: UITextField!
+    @IBOutlet weak var captionTextField: UITextField?
     var delegate: AddPhotoViewControllerDelegate? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -113,7 +112,7 @@ class AddPhotoViewController: UIViewController, TGCameraDelegate, UINavigationCo
     @IBAction func didPressSubmit(sender: AnyObject) {
         if (delegate != nil) {
             println("passing image to delegate")
-            delegate?.passImage(self, image: photoView.image!, string: captionTextView.text)
+            delegate?.passImage(self, image: photoView.image!, string: captionTextField!.text)
         }
 
 //        self.delegate!.addViewControllerDidFinish(self)
