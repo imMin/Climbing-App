@@ -102,9 +102,11 @@ class BrowseRegionViewController: UIViewController, UICollectionViewDataSource, 
 
         mapContainer.alpha = 0
         
-		regionCollectionView.delegate = self
+        regionCollectionView.delegate = self
 		regionCollectionView.dataSource = self
-
+        
+        regionMapView.layer.cornerRadius = 3
+        
 		//Set up Location Manager
 		manager = CLLocationManager()
 		manager.delegate = self

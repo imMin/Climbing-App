@@ -48,6 +48,8 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
     var crags: [PFObject] = [PFObject]()
     var currentLocation: CLLocation!
     var locManager: CLLocationManager!
+    
+    var mapCenterY: CGFloat!
 
 	
     override func viewDidLoad() {
@@ -75,6 +77,7 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 		cragMapView.mapType = MKMapType.Hybrid
 		cragMapView.showsPointsOfInterest = false
 		cragMapView.showsUserLocation = true
+        
 		
 		var coordRegion : MKCoordinateRegion
 		coordRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake(37.2306, -122.0957), MKCoordinateSpanMake(0.4, 0.4))
@@ -102,6 +105,11 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 			
 		}
         
+        mapCenterY = cragMapView.center.y
+        
+        //Visual stuff for crag map
+        cragMapView.center.y = -300
+        cragMapView.layer.cornerRadius = 3
         mapContainer.alpha = 0
     }
     
@@ -211,9 +219,12 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 
         }
     }
-
+    
+    
+    //ANIMATIONS
     @IBAction func onTapDirections(sender: AnyObject) {
         UIView.animateWithDuration(0.5, animations: { () -> Void in
+            self.cragMapView.center.y = self.mapCenterY
             self.mapContainer.alpha = 1
         })
     }
@@ -313,7 +324,7 @@ class BrowseCragViewController: UIViewController, UITableViewDataSource, UITable
 	}
 	
 	func guideUnsaved(){
-		self.saveLabel.text = "Save Guide"
+		self.saveLabel.text = "Save"
 		self.saveIcon.alpha = 1
 		self.savedIcon.alpha = 0
 	}
